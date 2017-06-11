@@ -1,0 +1,39 @@
+body {
+	background-color: #faf8ed;
+	color: #4d544b;
+	font-family: "Times New Roman", Times, serif;
+	margin: 0.5em 2%;
+}
+
+h1, h2 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+hr {
+	margin: 1.5em 0;
+}
+
+ul {
+	list-style-image: url('arrow.png');
+	margin: 1em 0;
+}
+
+li {
+	margin: 0.5em 0;
+}
+
+iframe {
+	margin: 0;
+	width: 98%;
+	height: 1.3em;
+}
+
+dd {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+object {
+	display: block;
+	margin: 1.3em auto;
+}

@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Thibault Raffaillac" />
+		<title>Prototype 1</title>
+		<link rel="stylesheet" type="text/css" href="protos.css" />
+		<style type="text/css">
+			div {
+				background-color: #fae8a3;
+				border: 2pt solid #d9bc4c;
+				box-shadow: 0 0 1em;
+				float: left;
+				font-family: Verdana,Geneva,sans-serif;
+				left: 2em;
+				line-height: 1.3em;
+				margin: 1em;
+				opacity: 0;
+				padding-bottom: .2em;
+				position: absolute;
+				visibility: hidden;
+				transition: opacity 0.5s, visibility 0s linear 0.5s;
+				-moz-transition: opacity 0.5s, visibility 0s linear 0.5s;
+				-webkit-transition: opacity 0.5s, visibility 0s linear 0.5s;
+				-o-transition: opacity 0.5s, visibility 0s linear 0.5s;
+			}
+			.visible {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 0s;
+				-moz-transition-delay: 0s;
+				-webkit-transition-delay: 0s;
+				-o-transition-delay: 0s;
+			}
+			#message0 {
+				position: static;
+				width: 37em;
+			}
+			#message1 {
+				top: 15.7em;
+				width: 22em;
+			}
+			#message2 {
+				top: 18.6em;
+				width: 23em;
+			}
+			#message3 {
+				top: 24.1em;
+				width: 29em;
+			}
+		</style>
+		<script type="text/javascript">
+			current = null;
+			function trigger(id) {
+				message = document.getElementById(id);
+				if (current != null)
+					current.className = null;
+				if (message != current) {
+					message.className = "visible";
+					current = message;
+				} else {
+					current = null;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p><img src="alert.png" alt="click to display the instructions for this prototype" onclick="trigger('message0')" />
+			<script type="text/javascript">document.write("Click on the icons to view the feedback messages.");</script>
+			<noscript>This prototype requires Javascript to function correctly.</noscript>
+		</p>
+		<table>
+			<tr>
+				<td class="margin">1
+2
+3
+4
+5
+6
+7
+8
+9
+<img src="info.png" alt="click to display an info message for line 10" onclick="trigger('message1')" /> 10
+11
+<img src="info.png" alt="click to display an info message for line 12" onclick="trigger('message2')" /> 12
+13
+14
+15
+<img src="alert.png" alt="click to display an alert message for line 16" onclick="trigger('message3')" /> 16
+17
+18
+19</td>
+				<td class="code"><span class="include">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="type">int</span> main()
+{
+	<span class="type">int</span> size, i;
+	cin &gt;&gt; size;
+	vector&lt;<span class="type">int</span>&gt; array(size);
+	<span class="keyword">for</span> (i = <span class="value">0</span>; i &lt; size; i++) {
+		array[i] = rand();
+	}
+	sort(array.begin(), array.end());
+	<span class="keyword">for</span> (i = <span class="value">0</span>; i &lt; size; i++) {
+		cout &lt;&lt; array[i] &lt;&lt; endl;
+	}
+	<span class="keyword">return</span> <span class="value">0</span>;
+}</td>
+			</tr>
+		</table>
+		<div id="message0">
+			<p>Here is the original command-line output from the compiler:</p>
+			<pre>$ cc test.c -o test
+test.c:10:14: info: ‘array’ being initialized once only, it will be stored on the stack since its final size is known at construction.
+test.c:10:14: note: See &lt;Storage of standard containers&gt;.
+test.c:12:14: info: ‘rand()’ being a linear congruential generator by default, it will be vectorized along with the containing loop.
+test.c:12:14: note: See &lt;Vectorizable operations&gt;.
+test.c:16:23: alert: ‘endl’ flushes the output along with inserting ‘\n’. Replacing it with ‘\n’ alone and calling ‘flush()’ after the containing loop would increase performance by 3%.
+test.c:16:23: note: See &lt;Performance of iostream operations&gt;.</pre>
+		</div>
+		<div id="message1">
+			<p><code>array</code> being initialized once only, it will be stored on the stack since its final size is known at construction.</p>
+			<p>See <a href="#">Storage of standard containers</a>.</p>
+		</div>
+		<div id="message2">
+			<p><code>rand()</code> being a linear congruential generator by default, it will be vectorized along with the containing loop.</p>
+			<p>See <a href="#">Vectorizable operations</a>.</p>
+		</div>
+		<div id="message3">
+			<p><code>endl</code> flushes the output along with inserting <code>&apos;\n&apos;</code>. Replacing it with <code>&apos;\n&apos;</code> alone and calling <code>flush()</code> after the containing loop would increase its performance by 3%.</p>
+			<p>See <a href="#">Performance of iostream operations</a>.</p>
+		</div>
+	</body>
+</html>

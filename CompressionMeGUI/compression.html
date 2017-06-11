@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+	<head>
+		<title>Compresser comme un pro avec MeGUI !</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="../style.css" type="text/css" />
+	</head>
+	<body>
+		<h1>Comment bien compresser une vidéo et ainsi devenir encore plus célèbre</h1>
+		<p>Si MeGUI n'est pas encore installé, passez d'abord par l'<a href="installation.html">installation</a>.</p>
+		<ul>
+			Sommaire :
+			<li><a href="#etape1">Etape 1 : Préparation de la vidéo</a></li>
+			<li><a href="#etape2">Etape 2 : Compression vidéo et audio</a></li>
+			<li><a href="#etape3">Etape 3 : Création du fichier final</a></li>
+		</ul>
+		<h2 id="etape1">Etape 1 : Préparation de la vidéo</h2>
+		<p>
+			Avant de compresser votre vidéo, il convient de la préparer un peu (désentrelacement, filtrage, dimensionnement, ...). Tout passe par la création d'un script AVS.<br />
+			<img src="images/compression1-1.png" title="Suivez le guide"><br />
+		</p>
+		<p>
+			La fenêtre de création de script s'affiche, commençons par l'onglet Options.<br />
+			<img src="images/compression1-2.png" title="Quelques boîtes rouges"><br />
+			<ul>
+				<li>Ouvrez d'abord le film à compresser dans Video Input. Une fenêtre de visualisation apparaît vous permettant de vérifier que c'est le bon film, conservez-la ouverte si vous souhaitez rogner les bords.</li>
+				<li>Cochez la case Clever anamorphic encoding. Depuis l'importation des rushs jusqu'à l'exportation du film, la résolution stockée n'est pas la même que celle qui devrait être affichée, elle est redimensionnée à l'affichage lors de la lecture. Vous venez donc d'activer la redimension à l'affichage, et Input DAR indique le rapport longueur/hauteur à l'affichage. Le cadre à droite ne sert que si vous rognez la vidéo, choisissez de préférence Crop mod4 horizontaly.</li>
+				<li>Vous pouvez aussi rogner les bords de la vidéo (Crop) ou redimensionner la résolution stockée (Resize).</li>
+			</ul>
+		</p>
+		<p>
+			Passons à l'onglet Filters.<br />
+			<img src="images/compression1-3.png" title="Je vous épargne les boîtes..."><br />
+			<ol>
+				<li>
+					Dans le groupe Deinterlacing, ne lancez pas d'analyse, elle n'est pas de très bon conseil, de plus nous savons déjà quel filtre nous allons utiliser.<br />
+					Dans Source type, sélectionnez Partially interlaced.<br />
+					Dans Field order, sélectionnez Varying field order.<br />
+					Enfin, cochez Deinterlace et sélectionnez TomsMoComp. Cet excellent filtre supprime l'entrelacement avec brio, et atténue un peu le mauvais désentrelacement effectué par Premiere Pro. Celui-ci divise en effet la résolution verticale par deux, diminuant fortement et de manière irréversible la qualité visuelle, n'utilisez donc JAMAIS le désentrelacement de Premiere Pro.<br />
+				</li>
+				<li>
+					Dans le groupe Filters, sélectionnez Spline36 pour Resize filter si vous avez utilisé la fonction Resize dans l'onglet Options.<br />
+					Cochez Noise Filter et sélectionnez Medium Noise. Ce filtre va virer le bruit de la caméra et atténuer les quelques artefacts laissés par TomsMoComp.<br />
+				</li>
+			</ol>
+		</p>
+		<p>
+			Terminons avec l'onglet Edit.<br />
+			<img src="images/compression1-4.png" title="Il est beau mon script"><br />
+			Ici vous pouvez éditer le script AVS tel qu'il sera enregistré, et vérifier que tous les filtres souhaités seront bien appliqués.<br />
+			Une modification est à apporter : ajoutez comme moi la ligne ConvertToYV12() après l'ouverture de la vidéo. Cela permettra aux deux filtres qui suivent d'accepter de fonctionner.<br />
+		</p>
+		<p>
+			Cliquez finalement sur Save. Une fenêtre de prévisualisation apparaît, cochez-y show DAR et vérifiez que le ratio d'affichage est correct. S'il indique 1,25 alors changez-le en choisissant ITU 4:3 PAL.<br />
+		</p>
+		<h2 id="etape2">Etape 2 : Compression vidéo et audio</h2>
+		<p>
+			De retour à l'écran de base de MeGUI, le script AVS a été automatiquement chargé.<br />
+			<img src="images/compression2-1.png" title="On y est presque..."><br />
+			<ol>
+				<li>
+					Vidéo<br />
+					Dans Encoder settings, sélectionnez un des profils de compression que vous avez modifiés et vérifiez éventuellement dans Config que les réglages de l'<a href="installation.html#etape3">installation</a> n'ont pas changé.<br />
+					Fixez File format à RAWAVC pour pouvoir utiliser l'extension mp4 plus tard.<br />
+					Enfin, cliquez sur Enqueue.<br />
+				</li>
+				<li>
+					Audio<br />
+					Dans Audio Input, ouvrez le film à compresser.<br />
+					Dans Encoder settings, sélectionnez le profil Nero AAC: *scratchpad* et vérifiez éventuellement dans Config que les réglages de l'<a href="installation.html#etape3">installation</a> n'ont toujours pas changé.<br />
+					Fixez Extension à M4A pour pouvoir utiliser l'extension mp4 plus tard.<br />
+					Enfin, cliquez sur Enqueue.<br />
+				</li>
+			</ol>
+		</p>
+		<p>
+			Allons à l'onglet Queue.<br />
+			<img src="images/compression2-2.png" title="A vos marques, prêts, ..."><br />
+			L'audio et la vidéo attendent d'être compressés.<br />
+			Cliquez sur Start et faites une bonne pause, une compression c'est long...<br />
+			ps : Si vous souhaitez utiliser votre PC pendant la compression, n'oubliez pas de descendre la priorité de l'encodage à Below Normal.<br />
+			pps : Si une erreur survient, allez dans l'onglet Log, trouvez le texte de l'erreur et copiez-le dans Google, vous tomberez sur un tas de gens ayant eu exactement le même problème (et qui l'ont résolu bien sûr).<br />
+		</p>
+		<h2 id="etape3">Etape 3 : Création du fichier final</h2>
+		<p>
+			Nous allons à présent muxer l'audio et la vidéo, c'est à dire en faire un seul et même fichier.<br />
+			<img src="images/compression3-1.png" title="Suivez le guide"><br />
+			Voici la fenêtre dédiée au muxing.<br />
+			<img src="images/compression3-2.png" title="je muxe tu muxes il muxe nous muxons vous muxez ils muxent"><br />
+			Indiquez à MeGUI vos fichiers vidéo et audio compressés, renommez Muxed Output comme bon vous semble et cliquez sur Queue.<br />
+			ps : Dans Muxed Output ou même après le muxing, vous pouvez renommer l'extension en .flv, auquel cas vous pourrez utiliser le fichier avec un player web.<br />
+		</p>
+		<p>
+			Pour finir, un tour dans l'onglet Queue, on lance le job correspondant au muxing (ça fait beaucoup d'anglicismes !) et c'est fini !<br />
+		</p>
+		<p>
+			Chez moi, après une compression réussie il arrive que je ne puisse pas éteindre le PC. C'est MeGUI qui ne s'est pas fermé correctement, faites alors un tour par le Gestionnaire des Tâches pour le quitter.<br />
+		</p>
+	</body>
+</html>

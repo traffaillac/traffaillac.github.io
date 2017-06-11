@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Thibault Raffaillac" />
+		<title>Prototype 2</title>
+		<link rel="stylesheet" type="text/css" href="protos.css" />
+		<style type="text/css">
+			div, iframe {
+				float: left;
+				margin: 0 1em .5em;
+			}
+			body>div, iframe {
+				background-color: #fafafa;
+				border: 2pt solid #666;
+				display: none;
+				font-family: Verdana,Geneva,sans-serif;
+				height: 12.5em;
+				margin: .5em;
+				overflow: auto;
+				width: 28em;
+			}
+			button {
+				background-color: #91cdeb;
+				border: 1pt solid #5497b8;
+				color: white;
+				cursor: pointer;
+				float: right;
+				font: small-caps bold medium Verdana,Geneva,sans-serif;
+				margin: .5em 1em;
+				padding: .2em .4em;
+			}
+			button:active {
+				color: black;
+			}
+			.clickable {
+				cursor: pointer;
+			}
+			.bolder {
+				font-weight: bold;
+			}
+			.visible {
+				display: block;
+			}
+		</style>
+		<script type="text/javascript">
+			done1 = false;
+			done2 = false;
+			done3 = false;
+			queried = null;
+			selected = null;
+			function enable(query, select) {
+				if (queried != null)
+					queried.className = null;
+				if (selected != null)
+					selected.className = "clickable";
+				queried = document.getElementById(query);
+				queried.className = "visible";
+				if (select != null) {
+					selected = document.getElementById(select);
+					selected.className = "bolder";
+				}
+			}
+			function nextQuery() {
+				if (done1 == false)
+					enable("query1", "select1");
+				else if (done2 == false)
+					enable("query2", "select2");
+				else if (done3 == false)
+					enable("query3", "select3");
+				else
+					enable("query0", null);
+			}
+			function getValue(collection) {
+				for(var i = 0; i < collection.length; i++) {
+					if(collection[i].checked) {
+						return collection[i].value;
+					}
+				}
+				return "";
+			}
+		</script>
+	</head>
+	<body onload="nextQuery()">
+		<p>
+			<script type="text/javascript">document.write('<img src="info.png" alt="info sign" /> The second frame is dedicated to the discussion with the compiler.');</script>
+			<noscript><img src="alert.png" alt="alert sign" /> This prototype requires Javascript to function correctly.</noscript>
+		</p>
+		<table>
+			<tr>
+				<td class="margin">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</td>
+				<td class="code"><span class="include">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="type">int</span> main()
+{
+	<span class="type">int</span> size, i;
+	cin <span class="clickable" id="select1" title="base set by prefix" onclick="enable('query1','select1')">&gt;&gt; size</span>;
+	vector&lt;<span class="type">int</span>&gt; array(size);
+	<span class="keyword">for</span> (i = <span class="value">0</span>; i &lt; size; i++) {
+		array[i] = <span class="clickable" id="select2" title="linear congruential engine" onclick="enable('query2','select2')">rand()</span>;
+	}
+	<span class="clickable" id="select3" title="introsort" onclick="enable('query3','select3')">sort</span>(array.begin(), array.end());
+	<span class="keyword">for</span> (i = <span class="value">0</span>; i &lt; size; i++) {
+		cout &lt;&lt; array[i] &lt;&lt; endl;
+	}
+	<span class="keyword">return</span> <span class="value">0</span>;
+}</td>
+			</tr>
+		</table>
+		<div id="query1">
+			<p>To improve performance, the algorithm reading integers can be tuned to match the properties of the integer string (See <a href="#">Input routines</a>):</p>
+			<form name="atoi" autocomplete="off">
+				<div>
+					<input type="radio" name="base" value="binary base" id="binary" /> <label for="binary">binary</label><br />
+					<input type="radio" name="base" value="octal base" id="octal" /> <label for="octal">octal</label><br />
+					<input type="radio" name="base" value="decimal base" id="decimal" /> <label for="decimal">decimal</label><br />
+					<input type="radio" name="base" value="base set by prefix" id="prefixed" checked="checked" /> <label for="prefixed">decimal/prefixed</label><br />
+					<input type="radio" name="base" value="hexadecimal base" id="hexadecimal" /> <label for="hexadecimal">hexadecimal</label>
+				</div>
+				<div>
+					<input type="checkbox" name="pos" value=", positive or zero" id="pos" /> <label for="pos">positive or zero</label>
+				</div>
+			</form>
+			<button type="button" onclick="done1=true;selected.title=getValue(document.forms[0].elements['base'])+getValue([document.forms[0].elements['pos']]);nextQuery()" />Proceed</button>
+		</div>
+		<div id="query2">
+			<p>To improve security, the implementation of <code>rand()</code> can be chosen among (See <a href="#">Pseudorandom number generators</a>):</p>
+			<form name="rand" autocomplete="off">
+				<p>
+					<input type="radio" name="engine" value="linear congruential engine" id="faster" checked="checked" /> <label for="faster">linear congruential generator (vectorizable)</label><br />
+					<input type="radio" name="engine" value="substract-with-carry engine" id="fast" /> <label for="fast">substract-with-carry generator (fast)</label><br />
+					<input type="radio" name="engine" value="Mersenne twister engine" id="medium" /> <label for="medium">Mersenne twister generator (medium)</label>
+				</p>
+			</form>
+			<button type="button" onclick="done2=true;selected.title=getValue(document.forms[1].elements['engine']);nextQuery()" />Proceed</button>
+		</div>
+		<div id="query3">
+			<p>The implementation of <code>sort</code> can be chosen among (See <a href="#">Sorting algorithms</a>):</p>
+			<form name="sort" autocomplete="off">
+				<p>
+					<input type="radio" name="algo" value="introsort" id="introsort" checked="checked" /> <label for="introsort">introsort (best on average, <code>log(n)</code> memory)</label><br />
+					<input type="radio" name="algo" value="Timsort" id="timsort" /> <label for="timsort">Timsort (stable, best in <code>n</code>, <code>n</code> memory)</label><br />
+					<input type="radio" name="algo" value="smoothsort" id="smoothsort" /> <label for="smoothsort">smoothsort (best in <code>n</code>)</label><br />
+					<input type="radio" name="algo" value="bubble sort" id="bubble" /> <label for="bubble">bubble sort (tiny, stable, best in <code>n</code>, worst in <code>n²</code>)</label>
+				</p>
+			</form>
+			<button type="button" onclick="done3=true;selected.title=getValue(document.forms[2].elements['algo']);nextQuery()" />Proceed</button>
+		</div>
+		<iframe src="http://www.pandorabots.com/pandora/talk?botid=834b16ca6e34e698" id="query0"><p>iframes must be allowed to display the external Pandorabot frame.</p></iframe>
+	</body>
+</html>

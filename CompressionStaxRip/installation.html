@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+	<head>
+		<title>Installer StaxRip</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="../style.css" type="text/css" />
+	</head>
+	<body>
+		<h1>Installation et paramétrage de StaxRip</h1>
+		<ul>
+			Sommaire :
+			<li><a href="#etape1">Etape 1 : Installation de StaxRip</a></li>
+			<li><a href="#etape2">Etape 2 : Lancement de StaxRip</a></li>
+			<li><a href="#etape3">Etape 3 : Paramétrage de StaxRip</a></li>
+			<li><a href="#liens">Liens</a></li>
+		</ul>
+		<h2 id="etape1">Etape 1 : Installation de StaxRip</h2>
+		<p>
+			J'insiste ici sur le fait que StaxRip est un logiciel pour Windows. L'incontournable logiciel de filtrage Avisynth n'étant disponible que sous Windows (la future version 3 s'étendra cependant à Linux/Mac), il faut malheureusement oublier la compression vidéo sous Linux/Mac.<br />
+		</p>
+		<p>
+			Téléchargez tout d'abord la dernière version de StaxRip <a href="http://sourceforge.net/projects/staxmedia/">ici</a>.<br />
+			<a href="http://sourceforge.net/projects/staxmedia/"><img src="images/installation1-1.png" title="C'est grâce aux adresses permanentes de SourceForge que vous pouvez cliquer sur ce lien bien pratique." /></a><br />
+		</p>
+		<p>
+			Pour décompresser ce .7z, vous aurez besoin de 7-Zip, disponible <a href="http://sourceforge.net/projects/sevenzip/">ici</a>.<br />
+			<a href="http://sourceforge.net/projects/sevenzip/"><img src="images/installation1-2.png" title="Alors que pour le Framework .NET qui suit le lien serait mort d'ici peu si je le donnais ici." /></a><br />
+		</p>
+		<p>
+			Ceci fait, sur l'archive de StaxRip faites Clic droit > 7-Zip > Extraire vers "StaxRip_...\", mais vous pouvez l'extraire n'importe où ailleurs ça n'a aucune importance.<br />
+			Dans le dossier fraîchement créé, le fichier ReadFirst! vous dit que StaxRip a besoin de Microsoft .NET Framework 3.5 pour fonctionner. Suivez le lien si vous ne l'avez pas encore (vous pouvez vérifier dans la liste des programmes installés du Panneau de Configuration s'il est installé).<br />
+		</p>
+		<h2 id="etape2">Etape 2 : Lancement de StaxRip</h2>
+		<p>
+			Au démarrage, StaxRip vous demande où stocker ses paramètres, choisissez Custom, trouvez le dossier de StaxRip et créez-y un dossier Settings pour y stocker ces paramètres.<br />
+			<img src="images/installation2-1.png" title="Ça devrait ressembler à ça." /><br />
+		</p>
+		<p>
+			Sur l'écran de base de StaxRip, allez dans le menu Tools > Applications...<br />
+			<img src="images/installation2-2.png" title="Suivez le guide..." /><br />
+		</p>
+		<p>
+			Le menu des mises à jour s'affiche, cliquez sur Setup et laissez-vous guider. Lors de l'installation de Avisynth, l'installation Minimale suffira.<br />
+			<img src="images/installation2-3.png" title="Plus simple tu meurs." /><br />
+		</p>
+		<h2 id="etape3">Étape 3 : Paramétrage de StaxRip</h2>
+		<p>
+			De retour à l'écran de base de StaxRip, nous allons à présent créer un projet tout prêt qui n'attend que le film à encoder pour que la compression des films soit la plus rapide à l'avenir.<br />
+			Je vous ai préparé une archive contenant les fichiers que je vais vous demander d'importer. Décompressez-la et gardez-la de côté, vous pourrez la supprimer à la fin de l'installation. L'archive est disponible <a href="images/ParametresStaxRip.7z">ici</a>.<br />
+		</p>
+		<p>
+			Commençons par l'encodage vidéo. Allez au menu Profiles > Encoder > Edit Profiles...<br />
+			Là, cliquez sur Import... et importez les fichiers en "x264 Quality - [...].srp". Dans le menu Profiles > Encoder, vous pouvez à présent sélectionner un des profils en x264 Quality qui apparaîtra alors dans l'écran de base de StaxRip.<br />
+			<img src="images/installation3-1.png" title="Ça marche aussi pour les profils audio et les filtres." /><br />
+			J'ai créé ces profils à partir des profils "Unrestricted 1pass Const. Quality" fournis dans le didacticiel sur MeGUI, et qui viennent initialement des profils de Sharktooth (voir liens plus bas). Tous ces profils donneront la même qualité en sortie mais les plus lents donneront une taille de fichier plus faible. L'ordre du plus rapide au plus lent est : Fast, Balanced, HQ, Extra Q et Insane. HQ est un bon compromis que je vous recommande.<br />
+		</p>
+		<p>
+			Continuons avec l'encodage audio. Allez au menu Profiles > Audio 1 > Edit Profiles... et importez de même le fichier "AAC ~125 kbps.srp". N'oubliez pas de le sélectionner pour qu'il apparaisse sur l'écran de base de StaxRip.<br />
+			Ce profil utilise une compression à qualité constante à 0,4.<br />
+		</p>
+		<p>
+			Passons aux filtres appliqués à la vidéo avant compression. Allez au menu Profiles > Filter Setup > Edit Profiles... et importez le fichier "Filtres Phy-TV.srp".<br />
+			Le choix de ces filtres est aussi tiré du didacticiel sur MeGUI.<br />
+		</p>
+		<p>
+			Terminons avec le conteneur qui va réunir l'audio et la vidéo. Cliquez dans le menu Profiles > Container > MP4 (consoles, handhelds), c'est tout !<br />
+			Le muxer réunissant l'audio et la vidéo dans StaxRip produit des fichiers MP4 pouvant directement être lus en streaming par Internet (grâce au moov atom qui doit être présent au début du fichier), contrairement à MeGUI qui doit passer par un muxer externe, YAMB.<br />
+			<img src="images/installation3-2.png" title="Voici ce que vous devriez obtenir." /><br />
+		</p>
+		<p>
+			À présent, allez au menu View > Options... et directement dans l'onglet Advanced.<br />
+			Dans Assistant, décochez les Remind To Cut, Do Compressibility Check et Set Filters.<br />
+			Dans Misc, cochez Delete temp files directory pour ne pas conserver les fichiers intermédiaires et complètement inutiles de chaque compression.<br />
+			<img src="images/installation3-3.png" title="Ceci est le menu des options du projet, à ne pas confondre avec celui des options du logiciel." /><br />
+		</p>
+		<p>
+			Pour enregistrer ce projet et pouvoir en faire le projet par défaut, allez dans le menu File > Save Project As Template... et nommez-le Phy-TV.<br />
+		</p>
+		<p>
+			Terminons avec les options du logiciel, allez dans Tools > Settings...<br />
+			Dans General, décochez Show template project selection on startup et désignez Phy-TV comme Startup Template Project.<br />
+			Dans Help, vous pouvez décocher Show help when dialogs are show first time si comme moi ces fenêtres d'explication vous emm...<br />
+			Enfin dans Applications, je vous conseille de décocher Run with minimized window pour éviter les situations où une fenêtre réduite attend notre approbation indéfiniment alors qu'on ne l'a pas remarquée. Fixez aussi Process Priority à Normal (jamais au delà !) pour accélérer les compressions.<br />
+			<img src="images/installation3-4.png" title="Voici enfin le menu des options du logiciel !" /><br />
+		</p>
+		<h2 id="liens">Liens</h2>
+		<ul>
+			<li><a href="compression.html">compression</a> : Vous pouvez à présent y passer.</li>
+			<li><a href="../CompressionMeGUI/installation.html">CompressionMeGUI</a> : Didacticiel pas-à-pas pour l'utilisation de MeGUI. Je recommande plutôt StaxRip qui permet la modification directe des lignes de commande que n'offre pas MeGUI. Cependant MeGUI est le chouchou de la communauté de compression audio/vidéo qui lui fournit par exemple les excellents profils de compression pour x264. MeGUI est donc à réserver pour les utilisateurs avancés et à utiliser lorsqu'il faudra mettre à jour les profils de compression fournis ici.</li>
+			<li><a href="http://forum.doom9.org/showthread.php?t=129748">Forum Doom9</a> : Ce forum est le repaire des personnes ne parlant que de compression audio/vidéo. Le lien pointe directement sur une liste des GUI pour compresser des vidéos. Le lien dedans vers StaxRip permet d'avoir quelques didacticiels sur l'utilisation de cet excellent logiciel.</li>
+			<li><a href="http://www.doom9.org/software.htm">Useful Software</a> : LA liste de logiciels utiles en matière d'édition vidéo.</li>
+			<li><a href="http://forum.doom9.org/showthread.php?t=139765">New MeGUI x264 presets</a> : Une liste explicative des profils de compression offerts pour x264 dans MeGUI.</li>
+			<li><a href="http://mewiki.project357.com/wiki/X264_Settings">x264 Settings</a> : Page du wiki de MeGUI expliquant les options de ligne de commande de x264 (l'encodeur vidéo).</li>
+		</ul>
+	</body>
+</html>

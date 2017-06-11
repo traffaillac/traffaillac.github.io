@@ -1,0 +1,158 @@
+﻿################################
+# Installation du paquet nginx #
+################################
+	Soyez à l'aise avec le système de gestion de paquets Debian : http://www.debian.org/doc/FAQ/ch-pkgtools.en.html
+A l'avenir, utilisez aptitude (plus élaboré) au lieu de apt-xxx lorsque c'est possible.
+	Suivez les instructions à cette adresse pour installer le paquet "nginx" : http://backports.debian.org/Instructions/
+	Si vous souhaitez plutôt compiler depuis la source (pour ajouter le module mp4 par exemple), faites ainsi (les commandes nécessitant root sont indiqués par un dièse) :
+$ cd /usr/local/src
+# apt-get -t lenny-backports build-dep nginx
+$ apt-get -t lenny-backports source nginx
+$ cd nginx-x.x.x
+Ajoutez les éventuels modules dans le dossier
+Modifiez les options de compilation dans le fichier ./debian/rules
+$ dpkg-buildpackage -rfakeroot -uc -b
+# dpkg -i ../nginx_*deb
+Si des outils comme fakeroot sont manquants, installez-les !
+
+##############################
+# Ajout de l'utilisateur bob #
+##############################
+Installez d'abord le paquet rssh. Celui-ci permet d'isoler le futur compte bob à la seule manipulation des fichiers de son dossier. Mais rssh est nécessaire avant tout parce qu'il permet de régler le umask par défaut pour la création de fichiers, opération impossible par un simple paramétrage d'OpenSSH.
+# aptitude install rssh
+
+$ echo 'user=bob:027:00011:' >> /etc/rssh.conf
+# adduser -s/usr/bin/rssh bob
+Donner un mot de passe par défaut très moche pour les inciter à le changer.
+On ajoute nginx dans le groupe bob afin que le premier puisse accéder aux fichiers du second :
+# adduser www-data bob
+$ chmod 2750 /home/bob
+Notez que l'utilisation du bit setgid permet d'inclure les fichiers créés par nginx dans le quota bob. N'oubliez pas de vérifier que l'utilisateur ne peut pas exécuter un chown ou chgrp. L'absence du bit setuid donne la possibilité à nginx de créer des fichiers qu'il ne souhaite pas modifiables par bob.
+	Un mauvais article sur le sujet : http://articles.slicehost.com/2007/9/18/apache-virtual-hosts-permissions
+	Si vous comptez ajouter de nombreux autres de ces comptes, utilisez des accès avancés (ACL) plutôt qu'ajouter www-data à pleins de groupes.
+
+##############################################
+# Création d'un quota pour l'utilisateur bob #
+##############################################
+	Nous suivons principalement ces documentations : http://www.debian-administration.org/articles/47 et http://www.howtoforge.com/how-to-set-up-journaled-quota-on-debian-lenny
+Le quota est créé pour le groupe bob. Ainsi, tout fichier de bob est accessible en ligne, interdisant d'utiliser le serveur comme simple espace de stockage.
+	Dans /etc/fstab, remplacez la ligne
+/dev/sda3       /home           ext3    defaults        0       2
+par
+/dev/sda3       /home           ext3    defaults,grpjquota=aquota.group,jqfmt=vfsv0        0       2
+Remontez le volume avec ces options :
+# mount -o remount /home
+Chargement du module des quotas dans le noyau :
+# modprobe quota_v2
+# echo "quota_v2" >> /etc/modules
+Créez le fichier où stocker les options de quotas :
+# touch /home/aquota.group
+# chmod 600 /home/aquota.group
+Installation des paquets nécessaires à la gestion des quotas :
+# aptitude install quota quotatool
+Peuplement du fichier de quota :
+# quotacheck -agmv
+Ajout d'un quota de 30000MB pour bob :
+# quotatool -g bob -bl 30000MB /home
+	Après avoir moi-même pas mal galéré dessus, voici quelques solutions aux problèmes que vous risquez de rencontrer :
+Si quotacheck refuse d'opérer en arguant qu'il risque d'endommager des fichiers, il faut simplement désactiver temporairement les quotas (commande quotaoff -agv).
+A l'inverse, l'erreur "Error while detecting kernel quota version: No such process" signifie qu'il faut activer les quotas (quotaon -agv).
+	Enfin, pour consulter l'état actuel des quotas :
+# repquota -ags
+Les quotas utilisateurs n'étant pas activés, l'option -u déclenchera l'erreur "Les points de montage spécifiés n'utilisent pas tous les quotas".
+	Notez que rien n'empêche d'attribuer le quota à l'utilisateur plutôt qu'au groupe. On n'y perd pas tellement au change, par contre il faudra modifier quelques réglages dans la section Ajout de l'utilisateur bob.
+
+########################
+# Paramétrage de nginx #
+########################
+	Remplacez le fichier /etc/nginx/nginx.conf par le texte ci-dessous :
+user www-data;
+worker_processes 2;
+
+events {
+	worker_connections  1024;
+}
+
+http {
+	include       /etc/nginx/mime.types;
+	default_type  application/octet-stream;
+	
+	directio     off;
+	sendfile     on;
+	tcp_nodelay  on;
+	
+	client_body_timeout    5;
+	client_header_timeout  5;
+	client_max_body_size   1k;
+	keepalive_timeout      5 5;
+	send_timeout           5;
+	
+	server_tokens             off;
+	add_header Cache-Control  public;
+	
+	server {
+		server_name  "";
+		return       666;
+	}
+	server {
+		listen       80;
+		server_name  exemple.fr;
+		
+		location / {
+			return 666;
+		}
+		location ~ /bob/download/(.+\.(avi|flv|mp4)$) {
+			expires max;
+			types { }
+			valid_referers none blocked bob.centrale-marseille.fr;
+			if ($invalid_referer) {
+				return 666;
+			}
+			alias /home/bob/$1;
+		}
+		location ~ /bob/.+\.flv$ {
+			expires max;
+			limit_rate 110k;
+			limit_rate_after 0;
+			root /home;
+			valid_referers none blocked bob.centrale-marseille.fr;
+			if ($invalid_referer) {
+				return 666;
+			}
+			flv;
+		}
+		location ~ /bob/.+\.mp4$ {
+			expires max;
+			limit_rate 110k;
+			limit_rate_after 0;
+			root /home;
+			valid_referers none blocked bob.centrale-marseille.fr;
+			if ($invalid_referer) {
+				return 666;
+			}
+			mp4;
+		}
+	}
+}
+	En plus de la configuration proposée par défaut, vous prenons des idées de la documentation suivante : https://calomel.org/nginx.html
+	Quelques explications sur les options choisies :
+* On a fixé worker_processes au nombre de processeurs sur la machine
+* Le choix des options directio, sendfile et tcp_nodelay a nécessité une étude approfondie au delà de la documentation du site nginx. L'avantage principal est que les vidéos seront servies très rapidement et conservées par l'OS en RAM, économisant bande passante et durée de vie des disques durs. Une commande utile pour vérifier que le cache est bien rempli est free -m
+* Les limites des délais sont fixées aux valeurs les plus faibles raisonnablement afin de limiter les attaques.
+* On demande aux éventuels caches intermédiaires de conserver les vidéos, car les résidences à proximité de l'école en sont en fait réseau-lument très éloignées. On soulagera ainsi grandement le réseau. Seuls des experts pourraient voler les vidéos dans les caches publics, et on part du principe qu'ils peuvent déjà les voler sur les ordinateurs des élèves.
+* La première directive server est celle que nginx choisit par défaut. Le code de retour inconnu indique à nginx qu'il ne doit pas répondre. Ici, si on ne demande pas explicitement exemple.fr:80 on n'aura donc aucune réponse.
+* La première directive location agit de même. Si on demande une ressource dont la distribution n'a pas été prévue, pas de réponse.
+* Trois blocs location sont prévus pour bob. Le premier concerne les fichiers proposés en téléchargement direct. Comme ils ne sont pas soumis à une limite de vitesse, ils sont signalés en application/octet-stream pour ne pas pouvoir être utilisés à la place des deux autres blocs. Cependant, il semble que certains navigateurs s'en moquent et détectent par l'extension lorsqu'ils rencontrent application/octet-stream. Il conviendra donc de vérifier occasionellement que bob ne fait pas référence à ce bloc depuis un player vidéo. Les deux autres blocs traitent les fichiers flv et mp4 avec des modules spécialisés qui permettent de sauter à n'importe quelle partie de la vidéo sans en télécharger l'intégralité. Le bloc mp4 ne fonctionnera que si vous avez installé le module de streaming mp4 lite. Dans ces deux modules, la vitesse d'envoi est limitée afin d'économiser la bande passante.
+* Le test lié à valid_referers interdit que la vidéo soit invoquée depuis un autre site que celui de bob.
+
+#######################
+# Dernières remarques #
+#######################
+	Au cours de mes investigations, je suis tombé sur de nombreuses mauvaises solutions. La plupart du temps, il ne faut pas s'arrêter à la première solution trouvée. Il s'agit d'être perfectionniste pour que le service tourne pendant des années.
+	Si vous avez besoin de conseils, d'explications ou si un truc marche pas comme prévu, n'hésitez pas à me contacter par mon compte mail ECM, thibault.raffaillac
+	Voici un résumé des commandes d'admins utiles ici :
+# repquota -ags
+$ free -m
+# /etc/init.d/nginx restart
+# tail /var/log/nginx/error.log
+# tail /var/log/nginx/access.log

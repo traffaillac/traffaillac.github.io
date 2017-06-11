@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+	<head>
+		<title>Installer MeGUI</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="../style.css" type="text/css" />
+	</head>
+	<body>
+		<h1>Installation et paramétrage de MeGUI</h1>
+		Note importante : MeGUI est un excellent logiciel pour avoir un contrôle total sur la compression, cependant il est sujet à quelques bugs. En cas d'erreur (notamment lors des mises à jour), désinstallez MeGUI et recommencez depuis son installation en suivant le didacticiel à la lettre. De plus, pour compresser avec MeGUI vous devrez être en session administrateur.
+		<ul>
+			Sommaire :
+			<li><a href="#etape1">Etape 1 : Installation de MeGUI et AviSynth</a></li>
+			<li><a href="#etape2">Etape 2 : Lancement de MeGUI</a></li>
+			<li><a href="#etape3">Etape 3 : Paramétrage de MeGUI</a></li>
+		</ul>
+		<h2 id="etape1">Etape 1 : Installation de MeGUI et AviSynth</h2>
+		<p>
+			Téléchargez tout d'abord AviSynth <a href="http://sourceforge.net/projects/avisynth2/">ici</a> et installez-le (l'installation minimale suffira).<br />
+			<a href="http://sourceforge.net/projects/avisynth2/"><img src="images/installation1-1.png" title="Le gros bouton vert avec marqué Avisynth dessus" /></a><br />
+		</p>
+		<p>
+			Téléchargez ensuite MeGUI <a href="http://sourceforge.net/projects/megui/">ici</a> et installez-le.<br />
+			<a href="http://sourceforge.net/projects/megui/"><img src="images/installation1-2.png" title="Le gros bouton vert avec marqué megui dessus" /></a><br />
+		</p>
+		<p>
+			Allez dans le dossier Programmes/megui/tools (ou Program Files/megui/tools pour XP et avant) et créez-y un dossier nommé neroaacenc.<br />
+			Téléchargez l'encodeur AAC de Nero <a href="http://www.nero.com/eng/downloads-nerodigital-nero-aac-codec.php">ici</a>.<br />
+			Dans l'archive zip récupérée, cherchez le fichier neroAacEnc.exe et copiez-le dans le dossier neroaacenc que vous avez créé. Supprimez alors sereinement l'archive, nous n'en avons plus besoin.<br />
+			<img src="images/installation1-3.png" title="Voilà à quoi ça doit ressembler" /><br />
+		</p>
+		<p>
+			Si vous ne l'avez pas déjà, téléchargez le codec DV Panasonic <a href="http://users.tpg.com.au/mtam/software/pdvcodec.zip">ici</a>, décompressez le dossier et installez le codec.<br />
+			<img src="images/installation1-4.png" title="Moi, de la pub ???" /><br />
+			<img src="images/installation1-5.png" title="Orgie de couleurs !" /><br />
+			Windows s'étant fait sa propre copie du codec, vous pouvez supprimer le dossier pdvcodec et pdvcodec.zip.<br />
+		</p>
+		<p>
+			Pour finir, redémarrez votre PC sinon MeGUI plantera par la suite !<br />
+		</p>
+		<h2 id="etape2">Etape 2 : Lancement de MeGUI</h2>
+		<p>
+			Au démarrage, MeGUI vous informe normalement que de nouvelles mises à jour sont disponibles, dites oui, autrement suivez le guide.<br />
+			<img src="images/installation2-1.png" title="Si j'entourais pas en rouge vous trouveriez ?" /><br />
+		</p>
+		<p>
+			Ne gardez cochés que le groupe MeGUI et les éléments x264, mp4box, fluxsmooth, tomsmocomp et STx264. Puis cliquez sur Update. Lorsqu'on vous demande quels profils vidéo importer, cochez tous ceux en "x264: Unrestricted 1pass Const. Quality ...".<br />
+			<img src="images/installation2-2.png" title="Ca risque d'être long..." /><br />
+			ps : Avec ces outils, vous pourrez compresser les vidéos exportées par un logiciel de montage. Si un jour vous souhaitez réencoder une vidéo compressée ou un DVD, repassez par ici et téléchargez tous les paquets dans le doûte.<br />
+			pps : Pour installer ultérieurement d'autres profils de compression x264, il vous suffit de faire un clic droit sur STx264 et sélectionner Force (re)install.<br />
+			La mise à jour terminée, vous pouvez fermer cette fenêtre.<br />
+		</p>
+		<p>
+			La version de x264 installée par l'update n'étant pas la plus récente, téléchargez la dernière <a href="http://x264.nl/">ici</a>. Passez par n'importe lequel des liens mirror en face du type de votre processeur (si vous ne savez pas choisissez 32bit). Enregistrez l'exécutable dans Programmes/megui/tools/x264, vous y écraserez l'ancien.<br />
+			<img src="images/installation2-3.png" title="Ne vous inquiétez pas, chaque miroir vous renvoie vers le même refl... fichier" /><br />
+		<p>
+			Allez à présent dans le menu Options->Settings pour indiquer à MeGUI où se trouve le fichier neroAacEnc.exe.<br />
+			<img src="images/installation2-4.png" title="Ne ratez pas les onglets" /><br />
+			Tant que vous êtes dans les options, vous pouvez aussi fixer Default Priority à Normal (jamais au delà !) pour accélérer les compressions et décocher UseAutoUpdate pour que lors du lancement de MeGUI celui-ci arrête de vous proposer de télécharger le reste des plugins dont nous n'avons pas besoin.<br />
+		</p>
+		<h2 id="etape3">Etape 3 : Paramétrage de MeGUI</h2>
+		<p>
+			Retour à l'écran de base de MeGUI. Dans Encoder settings, sélectionnez un des profils en "x264: Unrestricted 1pass Const. Quality ..." et cliquez sur Config. Tous ces profils donneront la même qualité en sortie mais les plus lents donneront une taille de fichier plus faible. L'ordre du plus rapide au plus lent est : Fast, Balanced, HQ, Extra Q et Insane. Comme sur l'image, HQ est un bon compromis que je vous recommande.<br />
+			<img src="images/installation3-1.png" title="Ca commence à faire beaucoup d'images..." /><br />
+			Dans l'onglet Main qui apparaît, fixez Quality à 25,0 et cochez la case Advanced Settings.<br />
+			Une qualité à 25,0 vous donnera une qualité excellente pour un bitrate inférieur à 1000kbps. Sachez aussi que 18,0 est couramment utilisé sur Internet comme qualité maximale.<br />
+			<img src="images/installation3-2.png" title="Une bonne fois pour toutes" /><br />
+			Dans l'onglet Frame-Type, si (et seulement si) la case Keep some B-Frames as reference est cochée, décochez-la et ajoutez la ligne de commande --b-pyramid normal dans l'onglet Misc. Cette modification est due à une mise à jour récente de x264 pas encore répercutée dans MeGUI.<br />
+			<img src="images/installation3-3.png" title="Une bonne fois pour toutes (bis)" /><br />
+			Cliquez enfin sur Update et fermez la fenêtre de configuration de x264.<br />
+			Je vous recommande de mettre à jour ainsi tous les profils afin de pouvoir tous les tester par la suite.<br />
+		</p>
+		<p>
+			A nouveau sur l'écran de base de MeGUI, cliquez sur le bouton Config à droite de la sélection du profil audio "Nero AAC: *scratchpad*".<br />
+			<img src="images/installation3-4.png" title="Et un autre bouton Config" /><br />
+			Sélectionnez Variable Bitrate, fixez le facteur de qualité à 0,4 et on Update le profil *scratchpad*.<br />
+			<img src="images/installation3-5.png" title="Une autre bonne fois pour toutes" /><br />
+			Ce facteur de qualité donne un débit autour de 125kbps, ce qui pour du AAC est déjà une excellente qualité.<br />
+			Ne fixez jamais le facteur de qualité en dessous de 0,31, car la méthode de compression est alors différente et laisse des artefacts dans le son quelle que soit la qualité choisie.<br />
+		</p>
+		<p>
+			Voilà, MeGUI est installé et paramétré. Vous pouvez à présent <a href="compression.html">passer à la compression</a>.<br />
+		</p>
+	</body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Thibault Raffaillac" />
+		<title>Prototype 3</title>
+		<link rel="stylesheet" type="text/css" href="protos.css" />
+		<style type="text/css">
+			div {
+				background-color: black;
+				box-shadow: 0 0 .5em grey;
+				color: #ccc;
+				font: small Verdana,Geneva,sans-serif;
+				opacity: 0;
+				padding: 0 0 .2em;
+				position: absolute;
+				visibility: hidden;
+				transition: opacity 0.3s, visibility 0s linear 0.3s;
+				-moz-transition: opacity 0.3s, visibility 0s linear 0.3s;
+				-webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+				-o-transition: opacity 0.3s, visibility 0s linear 0.3s;
+			}
+			em {
+				font-style: italic;
+			}
+			.understood {
+				color: green;
+			}
+			.partly {
+				color: orange;
+			}
+			.understood:hover,.partly:hover {
+				cursor: help;
+				font-weight: bold;
+			}
+			.visible {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 0s;
+				-moz-transition-delay: 0s;
+				-webkit-transition-delay: 0s;
+				-o-transition-delay: 0s;
+			}
+			#message0 {
+				
+			}
+			#message1 {
+				width: 21.2em;
+			}
+			#message2 {
+				width: 27.8em;
+			}
+			#message3 {
+				width: 22em;
+			}
+			#message4 {
+				width: 25.4em;
+			}
+			#message5 {
+				width: 22.8em;
+			}
+			#message6 {
+				width: 25.8em;
+			}
+			#message7 {
+				width: 23.6em;
+			}
+		</style>
+		<script type="text/javascript">
+			function enable(id, event) {
+				var message = document.getElementById(id);
+				message.style.left = (event.pageX + 16) + "px";
+				message.style.top = (event.pageY + 16) + "px";
+				message.className = "visible";
+			}
+			function disable(id) {
+				document.getElementById(id).className = null;
+			}
+		</script>
+	</head>
+	<body>
+		<p>
+			<script type="text/javascript">document.write('<img src="info.png" alt="info sign" /> The second frame is a representation of how the compiler understands the code.');</script>
+			<noscript><img src="alert.png" alt="alert sign" /> This prototype requires Javascript to function correctly.</noscript>
+		</p>
+		<table>
+			<tr>
+				<td class="margin">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</td>
+				<td class="code"><span class="include" onmouseover="enable('message0',event)" onmouseout="disable('message0')">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;</span>
+<span class="keyword">using namespace</span> std;
+
+<span class="type">int</span> main()
+{
+	<span class="type">int</span> size, i;
+	cin &gt;&gt; size;
+	vector&lt;<span class="type">int</span>&gt; array(size);
+	<span class="keyword">for</span> (i = <span class="value">0</span>; i &lt; size; i++) {
+		array[i] = rand();
+	}
+	sort(array.begin(), array.end());
+	<span class="keyword">for</span> (i = <span class="value">0</span>; i &lt; size; i++) {
+		cout &lt;&lt; array[i] &lt;&lt; endl;
+	}
+	<span class="keyword">return</span> <span class="value">0</span>;
+}</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="margin">1
+2
+3
+4
+5
+6
+7
+8
+
+9
+10
+11
+12
+13
+14
+15
+16
+
+17
+18
+19</td>
+				<td class="code">#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+
+int main()
+{
+	int <span class="understood" onmouseover="enable('message1',event)" onmouseout="disable('message1')">size</span>;
+	int <span class="partly" onmouseover="enable('message2',event)" onmouseout="disable('message2')">i</span>;
+	std::cin <span class="understood" onmouseover="enable('message3',event)" onmouseout="disable('message3')">&gt;&gt; size</span>;
+	std::vector&lt;int&gt; <span class="partly" onmouseover="enable('message4',event)" onmouseout="disable('message4')">array(size)</span>;
+	for (i = 0; i &lt; size; i++) {
+		array[i] = <span class="understood" onmouseover="enable('message5',event)" onmouseout="disable('message5')">rand()</span>;
+	}
+	<span class="understood" onmouseover="enable('message6',event)" onmouseout="disable('message6')">std::sort</span>(array.begin(), array.end());
+	for (i = 0; i &lt; size; i++) {
+		std::cout &lt;&lt; array[i];
+		std::cout <span class="partly" onmouseover="enable('message7',event)" onmouseout="disable('message7')">&lt;&lt; std::endl</span>;
+	}
+	return 0;
+}</td>
+			</tr>
+		</table>
+		<div id="message0">
+			<p>Hover the green text in the <em>other</em> frame.</p>
+		</div>
+		<div id="message1">
+			<p>Register Allocation: <code>size</code> is stored in a register all along its live range.</p>
+		</div>
+		<div id="message2">
+			<p>Live Range: <code>i</code> is used independently in two loops, it should be declared locally in each of them.</p>
+			<p>Register Allocation: <code>i</code> is stored in a register all along its live range.</p>
+			<p>Static Profiling: The variable is expected to range from <code>0</code> upwards.</p>
+		</div>
+		<div id="message3">
+			<p>Input function: The integer properties have been specified, the input function is optimal.</p>
+		</div>
+		<div id="message4">
+			<p>Static Profiling: <code>size</code> is not guaranteed to be non-negative, it could be declared <code>unsigned</code>.</p>
+			<p>Containers Storage: <code>array</code> is stored on the stack thanks to its final size being specified at construction.</p>
+		</div>
+		<div id="message5">
+			<p>Vectorization: <code>rand()</code> will be vectorized with its containing loop.</p>
+		</div>
+		<div id="message6">
+			<p>Algorithms: The implementation for <code>sort</code> was chosen to match the properties of the array.</p>
+		</div>
+		<div id="message7">
+			<p>Iostream: <code>endl</code> is a non-trivial function, it could be replaced by <code>&apos;\n&apos;</code> and <code>flush()</code> be called after the loop.</p>
+		</div>
+	</body>
+</html>
