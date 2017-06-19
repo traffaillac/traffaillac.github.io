@@ -1,31 +1,31 @@
-Le Club de Programmation est structuré en modules d'un à deux mois. L'accent est mis sur une pratique ludique et peu contraignante de la programmation. Ce document a été conçu pour servir de support de cours à une personne organisant un Club de Programmation. Les séances sont pensées au maximum pour qu'il n'y ait pas besoin d'avoir assisté aux précédentes pour réussir, le nombre de fonctions à utiliser dans chacune n'augmente d'ailleurs pas.
+Le Club de Programmation est structurÃ© en modules d'un Ã  deux mois. L'accent est mis sur une pratique ludique et peu contraignante de la programmation. Ce document a Ã©tÃ© conÃ§u pour servir de support de cours Ã  une personne organisant un Club de Programmation. Les sÃ©ances sont pensÃ©es au maximum pour qu'il n'y ait pas besoin d'avoir assistÃ© aux prÃ©cÃ©dentes pour rÃ©ussir, le nombre de fonctions Ã  utiliser dans chacune n'augmente d'ailleurs pas.
 
-Il faut laisser les participants faire des erreurs et créer du code éventuellement mal optimisé pour qu'ils puissent s'approprier les outils mis à leur disposition. Des bonnes pratiques de programmeur seront distillées au cours de l'année (le document ci-contre en est une très bonne source [http://www.research.att.com/~bs/JSF-AV-rules.pdf]).
-La recherche documentaire est une tâche très récurrente pour le programmeur, elle fera partie du Club.
-Enfin l'autonomie demandée aux membres augmentera au fil des modules.
+Il faut laisser les participants faire des erreurs et crÃ©er du code Ã©ventuellement mal optimisÃ© pour qu'ils puissent s'approprier les outils mis Ã  leur disposition. Des bonnes pratiques de programmeur seront distillÃ©es au cours de l'annÃ©e (le document ci-contre en est une trÃ¨s bonne source [http://www.research.att.com/~bs/JSF-AV-rules.pdf]).
+La recherche documentaire est une tÃ¢che trÃ¨s rÃ©currente pour le programmeur, elle fera partie du Club.
+Enfin l'autonomie demandÃ©e aux membres augmentera au fil des modules.
 
-== Module découverte d'OpenGL ==
+== Module dÃ©couverte d'OpenGL ==
 
-La personne responsable de ce module doit avoir au préalable lu un document sur OpenGL. La lecture d'un document sur la SDL n'est pas nécessaire, le fichier SDL_ginfo.h contenu dans l'archive fournie pouvant servir de référence. Le centre de documentation possède justement un livre assez conséquent mais excellent sur OpenGL, bien que quelques didacticiels sur Internet puissent suffire.
+La personne responsable de ce module doit avoir au prÃ©alable lu un document sur OpenGL. La lecture d'un document sur la SDL n'est pas nÃ©cessaire, le fichier SDL_ginfo.h contenu dans l'archive fournie pouvant servir de rÃ©fÃ©rence. Le centre de documentation possÃ¨de justement un livre assez consÃ©quent mais excellent sur OpenGL, bien que quelques didacticiels sur Internet puissent suffire.
 
-=== Séance 1 ===
+=== SÃ©ance 1 ===
 
-Téléchargeons tout d'abord le projet de départ [http://ginfo.centrale-marseille.fr/ressources/ClubProgrammation.7z] et décompressons-le dans le dossier private de notre compte ECM.
-Dans le dossier ClubProgrammation qui est créé, lançons le projet ClubProg.dev qui s'ouvre automatiquement avec DevC++.
+TÃ©lÃ©chargeons tout d'abord le projet de dÃ©part [http://ginfo.centrale-marseille.fr/ressources/ClubProgrammation.7z] et dÃ©compressons-le dans le dossier private de notre compte ECM.
+Dans le dossier ClubProgrammation qui est crÃ©Ã©, lanÃ§ons le projet ClubProg.dev qui s'ouvre automatiquement avec DevC++.
 
-Dans l'espace de travail qui s'affiche, on repère à gauche les fichiers constituant le projet, en bas le log de compilation et en haut les 4 boutons relatifs à la compilation. Compilons et exécutons le projet. Un cadre de fenêtre apparaît et disparaît. Ginfo_Init(); crée cette fenêtre et Ginfo_Quit() la supprime.
+Dans l'espace de travail qui s'affiche, on repÃ¨re Ã  gauche les fichiers constituant le projet, en bas le log de compilation et en haut les 4 boutons relatifs Ã  la compilation. Compilons et exÃ©cutons le projet. Un cadre de fenÃªtre apparaÃ®t et disparaÃ®t. Ginfo_Init(); crÃ©e cette fenÃªtre et Ginfo_Quit() la supprime.
 
-C'est trop court, en ajoutant une ligne SDL_Delay(5000); on temporise pour 5s l'affichage du cadre de fenêtre. Cependant ce cadre reste vide.
+C'est trop court, en ajoutant une ligne SDL_Delay(5000); on temporise pour 5s l'affichage du cadre de fenÃªtre. Cependant ce cadre reste vide.
 
-Ajoutons une ligne SDL_GL_SwapBuffers(); avant le délai pour rafraîchir l'affichage. Nous affichons ainsi une magnifique zone de dessin... noire. Nous sommes à présent prêts à dessiner.
+Ajoutons une ligne SDL_GL_SwapBuffers(); avant le dÃ©lai pour rafraÃ®chir l'affichage. Nous affichons ainsi une magnifique zone de dessin... noire. Nous sommes Ã  prÃ©sent prÃªts Ã  dessiner.
 
-Commençons par indiquer à OpenGL que les points que nous allons lui envoyer doivent former des lignes: glBegin(GL_LINES);
+CommenÃ§ons par indiquer Ã  OpenGL que les points que nous allons lui envoyer doivent former des lignes: glBegin(GL_LINES);
 
-On envoie à présent les points un par un à l'aide de lignes de la forme glVertex2f(x, y); où x et y sont les coordonnées appartenant à [-1.33,1.33]x[-1.0,1.0]. Les coordonnées positives sont en haut à droite.
+On envoie Ã  prÃ©sent les points un par un Ã  l'aide de lignes de la forme glVertex2f(x, y); oÃ¹ x et y sont les coordonnÃ©es appartenant Ã  [-1.33,1.33]x[-1.0,1.0]. Les coordonnÃ©es positives sont en haut Ã  droite.
 
-Ajoutons un peu de couleur avec la ligne glColor3f(rouge, vert, bleu); où les couleurs sont des valeurs en virgule flottante entre 0.0 et 1.0. Chaque point que nous envoyons hérite de la couleur spécifiée dans le précédent glColor dans l'ordre des lignes.
+Ajoutons un peu de couleur avec la ligne glColor3f(rouge, vert, bleu); oÃ¹ les couleurs sont des valeurs en virgule flottante entre 0.0 et 1.0. Chaque point que nous envoyons hÃ©rite de la couleur spÃ©cifiÃ©e dans le prÃ©cÃ©dent glColor dans l'ordre des lignes.
 
-Voici un exemple type de ce que nous avons ajouté entre Ginfo_Init(); et Ginfo_Quit(); :
+Voici un exemple type de ce que nous avons ajoutÃ© entre Ginfo_Init(); et Ginfo_Quit(); :
 
  glBegin(GL_LINES);
     glVertex2f(0.0, 0.0);
@@ -39,19 +39,19 @@ Voici un exemple type de ce que nous avons ajouté entre Ginfo_Init(); et Ginfo_Q
  SDL_GL_SwapBuffers();
  SDL_Delay(5000);
 
-Passons à un peu d'exercice, il s'agit de dessiner une étoile à 5 branches en n'envoyant que 5 points. Il convient pour cela de faire une recherche sur la fonction glBegin et les constantes pouvant lui être envoyées en argument.
+Passons Ã  un peu d'exercice, il s'agit de dessiner une Ã©toile Ã  5 branches en n'envoyant que 5 points. Il convient pour cela de faire une recherche sur la fonction glBegin et les constantes pouvant lui Ãªtre envoyÃ©es en argument.
 
-Ceci fait, il faut à présent remplir l'étoile en n'ajoutant qu'un unique point et avec un autre argument de la fonction glBegin. Cet exercice fait apparaître une des méthodes de remplissage de forme se basant sur un centre à l'aide de GL_TRIANGLE_FAN.
+Ceci fait, il faut Ã  prÃ©sent remplir l'Ã©toile en n'ajoutant qu'un unique point et avec un autre argument de la fonction glBegin. Cet exercice fait apparaÃ®tre une des mÃ©thodes de remplissage de forme se basant sur un centre Ã  l'aide de GL_TRIANGLE_FAN.
 
-=== Séance 2 ===
+=== SÃ©ance 2 ===
 
-Cette séance est destinée à la fois aux personnes venues à la précédente et aux nouvelles.
+Cette sÃ©ance est destinÃ©e Ã  la fois aux personnes venues Ã  la prÃ©cÃ©dente et aux nouvelles.
 
-Dessinons un croissant de Lune. Celui-ci doit être bien courbe (pas un demi-cercle !) pour ne pas pouvoir être rempli avec un GL_TRIANGLE_FAN.
+Dessinons un croissant de Lune. Celui-ci doit Ãªtre bien courbe (pas un demi-cercle !) pour ne pas pouvoir Ãªtre rempli avec un GL_TRIANGLE_FAN.
 
-A présent, remplissons la forme dessinée sans ajouter de point. On se base sur un nouvel argument de glBegin qui montre la deuxième méthode de remplissage de formes longues à l'aide de GL_TRIANGLE_STRIP.
+A prÃ©sent, remplissons la forme dessinÃ©e sans ajouter de point. On se base sur un nouvel argument de glBegin qui montre la deuxiÃ¨me mÃ©thode de remplissage de formes longues Ã  l'aide de GL_TRIANGLE_STRIP.
 
-Pour finir cette séance, nous allons "caméléoniser" la Lune, c'est-à-dire que sa couleur va changer au cours du temps. Pour ce faire, on place le dessin dans une boucle for et on fait varier la couleur en fonction du paramètre de la boucle.
+Pour finir cette sÃ©ance, nous allons "camÃ©lÃ©oniser" la Lune, c'est-Ã -dire que sa couleur va changer au cours du temps. Pour ce faire, on place le dessin dans une boucle for et on fait varier la couleur en fonction du paramÃ¨tre de la boucle.
 
 Voici un exemple de ce que notre code est devenu (toujours entre les lignes Ginfo_Init(); et Ginfo_Quit();) :
 
@@ -65,29 +65,29 @@ Voici un exemple de ce que notre code est devenu (toujours entre les lignes Ginf
     SDL_Delay(40);
  }
 
-Remarquez qu'à présent le délai n'est plus 5s après affichage d'une image unique, mais 40ms entre chaque image, permettant une animation fluide.
+Remarquez qu'Ã  prÃ©sent le dÃ©lai n'est plus 5s aprÃ¨s affichage d'une image unique, mais 40ms entre chaque image, permettant une animation fluide.
 
-=== Séance 3 ===
+=== SÃ©ance 3 ===
 
-Séance création libre ! Fixons tout de même un thème commun pour canaliser les indécis. Je propose "Crash test" mais vous pouvez en choisir un autre.
+SÃ©ance crÃ©ation libre ! Fixons tout de mÃªme un thÃ¨me commun pour canaliser les indÃ©cis. Je propose "Crash test" mais vous pouvez en choisir un autre.
 
-On place comme toujours le dessin dans une boucle for, cependant cette fois ce sont les coordonnées des points qui dépendent du paramètre de boucle.
+On place comme toujours le dessin dans une boucle for, cependant cette fois ce sont les coordonnÃ©es des points qui dÃ©pendent du paramÃ¨tre de boucle.
 
-Il manque cependant quelque chose, il faut réinitialiser l'affichage entre deux dessins de la scène, sinon les déplacements gardent une trainée pas belle sur l'écran. Il s'agit en fait ni plus ni moins de peindre l'écran en noir avant chaque affichage de la scène. Ca se fait en 4 points avec un GL_TRIANGLE_STRIP...
+Il manque cependant quelque chose, il faut rÃ©initialiser l'affichage entre deux dessins de la scÃ¨ne, sinon les dÃ©placements gardent une trainÃ©e pas belle sur l'Ã©cran. Il s'agit en fait ni plus ni moins de peindre l'Ã©cran en noir avant chaque affichage de la scÃ¨ne. Ca se fait en 4 points avec un GL_TRIANGLE_STRIP...
 
-=== Séance 4 ===
+=== SÃ©ance 4 ===
 
-Nouvelle séance création libre ! Le thème que je propose pour celle-ci est "Les miracles de la nature".
+Nouvelle sÃ©ance crÃ©ation libre ! Le thÃ¨me que je propose pour celle-ci est "Les miracles de la nature".
 
-=== Séance 5 ===
+=== SÃ©ance 5 ===
 
-Jusqu'à présent, nos dessins s'affichaient pendant un temps fixe, sans possibilité de déplacer ni fermer la fenêtre. Nous allons y remédier.
+Jusqu'Ã  prÃ©sent, nos dessins s'affichaient pendant un temps fixe, sans possibilitÃ© de dÃ©placer ni fermer la fenÃªtre. Nous allons y remÃ©dier.
 
-Avec la SDL, lorsque l'utilisateur bouge la souris, appuie sur une touche du clavier ou clique sur la croix de fermeture de la fenêtre, un évènement est créé sous la forme d'une structure SDL_Event et stocké en attente d'être traité. Ce système d'évènements est issu du système d'exploitation : la SDL récupère les évènements de Windows, Linux, ... et nous les envoie. Afin que toute action de l'utilisateur ait un effet instantanément visible sur le programme, il nous faut consulter régulièrement les évènements auprès de la SDL.
+Avec la SDL, lorsque l'utilisateur bouge la souris, appuie sur une touche du clavier ou clique sur la croix de fermeture de la fenÃªtre, un Ã©vÃ¨nement est crÃ©Ã© sous la forme d'une structure SDL_Event et stockÃ© en attente d'Ãªtre traitÃ©. Ce systÃ¨me d'Ã©vÃ¨nements est issu du systÃ¨me d'exploitation : la SDL rÃ©cupÃ¨re les Ã©vÃ¨nements de Windows, Linux, ... et nous les envoie. Afin que toute action de l'utilisateur ait un effet instantanÃ©ment visible sur le programme, il nous faut consulter rÃ©guliÃ¨rement les Ã©vÃ¨nements auprÃ¨s de la SDL.
 
-On utilise pour cela la fonction SDL_PollEvent qui remplit la structure SDL_Event qu'elle reçoit en argument avec un évènement à traiter. Elle renvoie 0 s'il ne restait plus d'évènements à traiter.
+On utilise pour cela la fonction SDL_PollEvent qui remplit la structure SDL_Event qu'elle reÃ§oit en argument avec un Ã©vÃ¨nement Ã  traiter. Elle renvoie 0 s'il ne restait plus d'Ã©vÃ¨nements Ã  traiter.
 
-La structure SDL_Event nous renseigne sur la nature de l'évènement (mouvement de souris, appui sur une touche, ...) avec la variable type et contient aussi pour chaque type d'évènement des informations supplémentaires (la nouvelle position de la souris dans la structure motion). Commençons par le type SDL_QUIT. La boucle typique de traitement des évènements ressemblera typiquement à ceci :
+La structure SDL_Event nous renseigne sur la nature de l'Ã©vÃ¨nement (mouvement de souris, appui sur une touche, ...) avec la variable type et contient aussi pour chaque type d'Ã©vÃ¨nement des informations supplÃ©mentaires (la nouvelle position de la souris dans la structure motion). CommenÃ§ons par le type SDL_QUIT. La boucle typique de traitement des Ã©vÃ¨nements ressemblera typiquement Ã  ceci :
 
  SDL_Event event;
  
@@ -101,17 +101,17 @@ La structure SDL_Event nous renseigne sur la nature de l'évènement (mouvement de
     }
  }
 
-L'exercice pour cette séance consiste à afficher la fenêtre vide tant que l'utilisateur ne clique pas sur la croix de fermeture.
+L'exercice pour cette sÃ©ance consiste Ã  afficher la fenÃªtre vide tant que l'utilisateur ne clique pas sur la croix de fermeture.
 
-On remarque que dans ce nouveau programme la fenêtre peut être déplacée en cours de fonctionnement. C'est dû à la circulation des évènements dans un système d'exploitation : les évènements fraîchement générés sont traités par la fenêtre au premier plan, puis successivement par celles apparaissant derrière, enfin par le système d'exploitation lui-même qui leur réserve un traitement par défaut. En traitant les évènements, nous n'en bloquons plus la circulation et l'évènement déplacement de fenêtre peut être traité par défaut par le système d'exploitation qui la déplace effectivement.
+On remarque que dans ce nouveau programme la fenÃªtre peut Ãªtre dÃ©placÃ©e en cours de fonctionnement. C'est dÃ» Ã  la circulation des Ã©vÃ¨nements dans un systÃ¨me d'exploitation : les Ã©vÃ¨nements fraÃ®chement gÃ©nÃ©rÃ©s sont traitÃ©s par la fenÃªtre au premier plan, puis successivement par celles apparaissant derriÃ¨re, enfin par le systÃ¨me d'exploitation lui-mÃªme qui leur rÃ©serve un traitement par dÃ©faut. En traitant les Ã©vÃ¨nements, nous n'en bloquons plus la circulation et l'Ã©vÃ¨nement dÃ©placement de fenÃªtre peut Ãªtre traitÃ© par dÃ©faut par le systÃ¨me d'exploitation qui la dÃ©place effectivement.
 
-Avec cette base de travail, il convient à présent d'ajouter une animation et pourquoi pas une précédemment réalisée. J'impose cependant deux contraintes : l'utilisateur doit pouvoir fermer la fenêtre à tout instant de l'animation, et il ne doit pas y avoir d'affichage dans la boucle de traitement des évènements.
+Avec cette base de travail, il convient Ã  prÃ©sent d'ajouter une animation et pourquoi pas une prÃ©cÃ©demment rÃ©alisÃ©e. J'impose cependant deux contraintes : l'utilisateur doit pouvoir fermer la fenÃªtre Ã  tout instant de l'animation, et il ne doit pas y avoir d'affichage dans la boucle de traitement des Ã©vÃ¨nements.
 
-=== Séance 6 ===
+=== SÃ©ance 6 ===
 
-Le but de cette séance est d'afficher un objet se déplaçant avec la souris. Nous allons donc traiter l'évènement SDL_MOUSEMOTION. Lorsque ce type est détecté, la structure motion peut être consultée afin de récupérer la position de la souris. Si c'est un autre type, il est préférable de considérer que les données dans motion n'ont aucun sens. On stockera donc la position de la souris dans nos propres variables.
+Le but de cette sÃ©ance est d'afficher un objet se dÃ©plaÃ§ant avec la souris. Nous allons donc traiter l'Ã©vÃ¨nement SDL_MOUSEMOTION. Lorsque ce type est dÃ©tectÃ©, la structure motion peut Ãªtre consultÃ©e afin de rÃ©cupÃ©rer la position de la souris. Si c'est un autre type, il est prÃ©fÃ©rable de considÃ©rer que les donnÃ©es dans motion n'ont aucun sens. On stockera donc la position de la souris dans nos propres variables.
 
-Dans la précédente séance, j'ai été volontairement vague quant à la structure à adopter pour résoudre le problème de l'affichage d'une animation avec interaction utilisateur. Je donne ici une piste plus concrète pour structurer le programme. Cela nous permettra aussi de comprendre plus rapidement le code entre nous. Le voici donc (encore entre Ginfo_Init(); et Ginfo_Quit();) :
+Dans la prÃ©cÃ©dente sÃ©ance, j'ai Ã©tÃ© volontairement vague quant Ã  la structure Ã  adopter pour rÃ©soudre le problÃ¨me de l'affichage d'une animation avec interaction utilisateur. Je donne ici une piste plus concrÃ¨te pour structurer le programme. Cela nous permettra aussi de comprendre plus rapidement le code entre nous. Le voici donc (encore entre Ginfo_Init(); et Ginfo_Quit();) :
 
  SDL_Event event;
  int enCours=1, x, y;
@@ -139,47 +139,47 @@ Dans la précédente séance, j'ai été volontairement vague quant à la structure à 
     }
  }
 
-Dans cette structure, le dessin et le traitement des évènements sont correctement séparés, et l'actualisation de l'affichage et la temporisation sont présents en un unique exemplaire. Je rappelle toutefois que l'effacement de l'écran doit se trouver au début de la partie dessin. Lorsque vous commencez un tel programme, créez d'abord cette structure en trois parties dans le premier while, puis remplissez-la, vous gagnerez du temps.
+Dans cette structure, le dessin et le traitement des Ã©vÃ¨nements sont correctement sÃ©parÃ©s, et l'actualisation de l'affichage et la temporisation sont prÃ©sents en un unique exemplaire. Je rappelle toutefois que l'effacement de l'Ã©cran doit se trouver au dÃ©but de la partie dessin. Lorsque vous commencez un tel programme, crÃ©ez d'abord cette structure en trois parties dans le premier while, puis remplissez-la, vous gagnerez du temps.
 
-On remarque au passage que les systèmes d'exploitation n'ont pas le même repaire de coordonnées qu'OpenGL.
+On remarque au passage que les systÃ¨mes d'exploitation n'ont pas le mÃªme repaire de coordonnÃ©es qu'OpenGL.
 
-=== Séance 7 ===
+=== SÃ©ance 7 ===
 
-Encore une séance création libre ! Le thème est très abstrait, puisqu'il s'agit de chercher le beau en prenant en compte les actions de l'utilisateur. J'en vois tout de suite qui ne sauront jamais quoi faire, je leur propose donc de faire un pinceau pour peindre sur l'écran en cliquant avec la souris (SDL_MOUSEBUTTONDOWN), et dont la couleur change selon la vitesse du curseur (voir dans la structure motion).
+Encore une sÃ©ance crÃ©ation libre ! Le thÃ¨me est trÃ¨s abstrait, puisqu'il s'agit de chercher le beau en prenant en compte les actions de l'utilisateur. J'en vois tout de suite qui ne sauront jamais quoi faire, je leur propose donc de faire un pinceau pour peindre sur l'Ã©cran en cliquant avec la souris (SDL_MOUSEBUTTONDOWN), et dont la couleur change selon la vitesse du curseur (voir dans la structure motion).
 
-=== Séance 8 ===
+=== SÃ©ance 8 ===
 
-Oublions un instant le dessin pur pour passer à l'affichage de texte. En pratique, il faut créer en mémoire avec SDL_ttf le dessin représentant le texte à afficher, puis le passer à OpenGL qui l'affiche. Les deux ayant cependant un fonctionnement interne assez différent, je vous épargne les efforts avec la fonction Ginfo_printf. Celle-ci prend les mêmes arguments que la fonction printf, elle ne permet simplement pas le saut de ligne.
+Oublions un instant le dessin pur pour passer Ã  l'affichage de texte. En pratique, il faut crÃ©er en mÃ©moire avec SDL_ttf le dessin reprÃ©sentant le texte Ã  afficher, puis le passer Ã  OpenGL qui l'affiche. Les deux ayant cependant un fonctionnement interne assez diffÃ©rent, je vous Ã©pargne les efforts avec la fonction Ginfo_printf. Celle-ci prend les mÃªmes arguments que la fonction printf, elle ne permet simplement pas le saut de ligne.
 
-La fonction glRasterPos2f permet de positionner le coin bas-gauche du texte à l'écran. Le texte hérite de plus de la couleur spécifiée avec glColor3f. Voici donc un exemple de dessin de texte :
+La fonction glRasterPos2f permet de positionner le coin bas-gauche du texte Ã  l'Ã©cran. Le texte hÃ©rite de plus de la couleur spÃ©cifiÃ©e avec glColor3f. Voici donc un exemple de dessin de texte :
 
  glColor3f(1.0, 0.5, 1.0);
  glRasterPos2f(-0.1, -0.01);
  Ginfo_printf("J'aime le rose !");
 
-Ceci n'est que le dessin, il faut bien entendu y ajouter une structure avec interception d'évènements.
+Ceci n'est que le dessin, il faut bien entendu y ajouter une structure avec interception d'Ã©vÃ¨nements.
 
-Nous allons réaliser un QCM en deux séances. Pour cette séance, il convient de faire la partie dessin, je vous laisse donc préparer plusieurs affichages de texte possibles (avec l'instruction switch) selon une variable qui sera modifiée en séance suivante dans la partie évènements.
+Nous allons rÃ©aliser un QCM en deux sÃ©ances. Pour cette sÃ©ance, il convient de faire la partie dessin, je vous laisse donc prÃ©parer plusieurs affichages de texte possibles (avec l'instruction switch) selon une variable qui sera modifiÃ©e en sÃ©ance suivante dans la partie Ã©vÃ¨nements.
 
-=== Séance 9 ===
+=== SÃ©ance 9 ===
 
-Terminons la Question à Choix Multiples entamée au cours de la séance précédente. Vous avez normalement une (ou plusieurs) variable qui ne demande qu'à être modifiée pour changer l'affichage.
+Terminons la Question Ã  Choix Multiples entamÃ©e au cours de la sÃ©ance prÃ©cÃ©dente. Vous avez normalement une (ou plusieurs) variable qui ne demande qu'Ã  Ãªtre modifiÃ©e pour changer l'affichage.
 
-Dans le traitement des évènements, nous allons donc ajouter un cas SDL_KEYDOWN (ou SDL_KEYUP). Lorsque ce type est détecté, il convient de faire un nouveau test sur la touche qui a été pressée. La variable à tester est event.key.keysym.sym, il convient de faire une recherche sur SDLKey pour connaître les valeurs possibles. Selon la touche qui a été pressée, l'affichage change, nous venons de réaliser un QCM à une question.
+Dans le traitement des Ã©vÃ¨nements, nous allons donc ajouter un cas SDL_KEYDOWN (ou SDL_KEYUP). Lorsque ce type est dÃ©tectÃ©, il convient de faire un nouveau test sur la touche qui a Ã©tÃ© pressÃ©e. La variable Ã  tester est event.key.keysym.sym, il convient de faire une recherche sur SDLKey pour connaÃ®tre les valeurs possibles. Selon la touche qui a Ã©tÃ© pressÃ©e, l'affichage change, nous venons de rÃ©aliser un QCM Ã  une question.
 
-Un petit défi pour terminer la séance, il s'agit de faire un QCM complet, c'est-à-dire une série de questions, avec pourquoi pas un petit résumé à la fin, comme un geekomètre !
+Un petit dÃ©fi pour terminer la sÃ©ance, il s'agit de faire un QCM complet, c'est-Ã -dire une sÃ©rie de questions, avec pourquoi pas un petit rÃ©sumÃ© Ã  la fin, comme un geekomÃ¨tre !
 
-=== Séance 10 ===
+=== SÃ©ance 10 ===
 
-A partir de cette séance, nous passons à la 3D !
+A partir de cette sÃ©ance, nous passons Ã  la 3D !
 
-Il nous va d'abord falloir modifier le fichier SDL_ginfo.h situé dans le dossier include. Ce fichier contient les fonctions Ginfo_Init, Ginfo_Quit et Ginfo_printf créées spécialement pour le Club Programmation. Nous allons modifier la fonction Ginfo_Init.
+Il nous va d'abord falloir modifier le fichier SDL_ginfo.h situÃ© dans le dossier include. Ce fichier contient les fonctions Ginfo_Init, Ginfo_Quit et Ginfo_printf crÃ©Ã©es spÃ©cialement pour le Club Programmation. Nous allons modifier la fonction Ginfo_Init.
 
-Sous le troisième commentaire, une série de fonctions glDisable référence des modules intéressants d'OpenGL. Nous devons en particulier activer GL_DEPTH_TEST. Celui-ci permet que les objets au premier plan soient bien affichés devant les objets en arrière plan quel que soit l'ordre dans lequel on les envoie à OpenGL. Une nouvelle zone mémoire est utilisée pour stocker la profondeur de chaque pixel en plus de la couleur de chaque pixel.
+Sous le troisiÃ¨me commentaire, une sÃ©rie de fonctions glDisable rÃ©fÃ©rence des modules intÃ©ressants d'OpenGL. Nous devons en particulier activer GL_DEPTH_TEST. Celui-ci permet que les objets au premier plan soient bien affichÃ©s devant les objets en arriÃ¨re plan quel que soit l'ordre dans lequel on les envoie Ã  OpenGL. Une nouvelle zone mÃ©moire est utilisÃ©e pour stocker la profondeur de chaque pixel en plus de la couleur de chaque pixel.
 
-Le quatrième commentaire est déjà plus intéressant. L'affichage de la 3D est une projection de l'espace 3D sur un plan 2D, l'écran. C'est un simple calcul matriciel, et c'est pourquoi nous voyons les fonctions d'OpenGL manipuler des matrices. La fonction glViewport spécifie la portion de la fenêtre dans laquelle dessiner la scène, elle est réglée dans SDL_ginfo.h pour dessiner dans la totalité de la fenêtre.
+Le quatriÃ¨me commentaire est dÃ©jÃ  plus intÃ©ressant. L'affichage de la 3D est une projection de l'espace 3D sur un plan 2D, l'Ã©cran. C'est un simple calcul matriciel, et c'est pourquoi nous voyons les fonctions d'OpenGL manipuler des matrices. La fonction glViewport spÃ©cifie la portion de la fenÃªtre dans laquelle dessiner la scÃ¨ne, elle est rÃ©glÃ©e dans SDL_ginfo.h pour dessiner dans la totalitÃ© de la fenÃªtre.
 
-glMatrixMode(GL_PROJECTION); indique à OpenGL que les futures opérations matricielles affecteront la projection de l'univers sur l'écran. On en réinitialise la matrice avec glLoadIdentity(); car toute nouvelle matrice envoyée à OpenGL est multipliée à la précédente. La fonction gluOrtho2D envoie automatiquement à OpenGL une matrice de projection selon la direction z. Remplaçons cette fonction par gluPerspective (il convient de faire une recherche pour savoir quels arguments lui donner), nous aurons de la 3D. Les deux dernières fonctions indiquent que toutes les futures opérations matricielles concerneront le déplacement de la caméra. Voici un exemple de ce que ça peut donner :
+glMatrixMode(GL_PROJECTION); indique Ã  OpenGL que les futures opÃ©rations matricielles affecteront la projection de l'univers sur l'Ã©cran. On en rÃ©initialise la matrice avec glLoadIdentity(); car toute nouvelle matrice envoyÃ©e Ã  OpenGL est multipliÃ©e Ã  la prÃ©cÃ©dente. La fonction gluOrtho2D envoie automatiquement Ã  OpenGL une matrice de projection selon la direction z. RemplaÃ§ons cette fonction par gluPerspective (il convient de faire une recherche pour savoir quels arguments lui donner), nous aurons de la 3D. Les deux derniÃ¨res fonctions indiquent que toutes les futures opÃ©rations matricielles concerneront le dÃ©placement de la camÃ©ra. Voici un exemple de ce que Ã§a peut donner :
 
  glViewport(0, 0, 800, 600);
  glMatrixMode(GL_PROJECTION);
@@ -188,11 +188,11 @@ glMatrixMode(GL_PROJECTION); indique à OpenGL que les futures opérations matrici
  glMatrixMode(GL_MODELVIEW);
  glLoadIdentity();
 
-Revenons maintenant au main.c. Il faut positionner la caméra avant de dessiner. Pour ce faire, on réinitialise d'abord sa position avec glLoadIdentity(); et on la positionne avec la fonction gluLookAt qui prend comme arguments (position, point à regarder, vecteur pieds->tête), donc 9 valeurs.
+Revenons maintenant au main.c. Il faut positionner la camÃ©ra avant de dessiner. Pour ce faire, on rÃ©initialise d'abord sa position avec glLoadIdentity(); et on la positionne avec la fonction gluLookAt qui prend comme arguments (position, point Ã  regarder, vecteur pieds->tÃªte), donc 9 valeurs.
 
-Remplaçons maintenant le code utilisé jusqu'à présent pour effacer l'écran par une fonction standard d'OpenGL qui effacera du même coup le tampon de profondeur que nous venons d'activer. On ajoute donc glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
+RemplaÃ§ons maintenant le code utilisÃ© jusqu'Ã  prÃ©sent pour effacer l'Ã©cran par une fonction standard d'OpenGL qui effacera du mÃªme coup le tampon de profondeur que nous venons d'activer. On ajoute donc glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
-Il convient à présent d'utiliser glVertex3f et glRasterPos3f pour envoyer des coordonnées 3D et le tour est joué ! Voici un exemple de dessin :
+Il convient Ã  prÃ©sent d'utiliser glVertex3f et glRasterPos3f pour envoyer des coordonnÃ©es 3D et le tour est jouÃ© ! Voici un exemple de dessin :
 
  glLoadIdentity();
  gluLookAt(10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0);
@@ -204,22 +204,22 @@ Il convient à présent d'utiliser glVertex3f et glRasterPos3f pour envoyer des co
     glVertex3f(-1.0, -1.0, 1.0);
  glEnd();
 
-Ceci n'est toujours que le dessin, il faut y ajouter la structure précédemment définie.
+Ceci n'est toujours que le dessin, il faut y ajouter la structure prÃ©cÃ©demment dÃ©finie.
 
-=== Séance 11 ===
+=== SÃ©ance 11 ===
 
 Aujourd'hui, nous allons appliquer un effet sympathique et simple avec OpenGL : le motion blur.
 
-Il consiste à créer une rémanence de l'affichage à l'écran. Pour cela, nous allons mélanger l'image à afficher avec l'image précédemment affichée. Cette dernière est stockée dans un troisième tampon, le tampon d'accumulation. Il suffit d'ajouter les trois lignes suivantes avant l'appel à SDL_GL_SwapBuffers :
+Il consiste Ã  crÃ©er une rÃ©manence de l'affichage Ã  l'Ã©cran. Pour cela, nous allons mÃ©langer l'image Ã  afficher avec l'image prÃ©cÃ©demment affichÃ©e. Cette derniÃ¨re est stockÃ©e dans un troisiÃ¨me tampon, le tampon d'accumulation. Il suffit d'ajouter les trois lignes suivantes avant l'appel Ã  SDL_GL_SwapBuffers :
 
  glAccum(GL_ACCUM, 1.0/x);
  glAccum(GL_MULT, x/(x+1.0));
  glAccum(GL_RETURN, 1.0);
 
-La première ligne additionne une fraction du tampon des couleurs au tampon d'accumulation. La seconde ligne renormalise les valeurs de couleur du tampon d'accumulation. Enfin la dernière ligne recopie le tampon d'accumulation sur le tampon des couleurs qui sera affiché à l'écran.
+La premiÃ¨re ligne additionne une fraction du tampon des couleurs au tampon d'accumulation. La seconde ligne renormalise les valeurs de couleur du tampon d'accumulation. Enfin la derniÃ¨re ligne recopie le tampon d'accumulation sur le tampon des couleurs qui sera affichÃ© Ã  l'Ã©cran.
 
-Le motion blur est aussi simple que ça ! La variable x est un réel qui sert à contrôler la durée de la rémanence. Il convient de faire quelques tests pour trouver le nôtre.
+Le motion blur est aussi simple que Ã§a ! La variable x est un rÃ©el qui sert Ã  contrÃ´ler la durÃ©e de la rÃ©manence. Il convient de faire quelques tests pour trouver le nÃ´tre.
 
-Pour la fin de cette séance (et du module Découverte d'OpenGL), pourquoi pas reprendre nos créations précédentes et leur donner des évènements, de la 3D ou même ce flou artistique que nous venons de créer.
+Pour la fin de cette sÃ©ance (et du module DÃ©couverte d'OpenGL), pourquoi pas reprendre nos crÃ©ations prÃ©cÃ©dentes et leur donner des Ã©vÃ¨nements, de la 3D ou mÃªme ce flou artistique que nous venons de crÃ©er.
 
-[[Catégorie : GCP - màj]]
+[[CatÃ©gorie : GCP - mÃ j]]
