@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-	<img src=avatar.jpg style="float:left;margin-right:1.5em;height:11em"/>
+	<img src=avatar.jpg style="border-color:white"/>
 	<h1>Thibault RAFFAILLAC</h1>
 	<p>
 		PhD candidate<br>
@@ -16,7 +16,9 @@
 		Member of <a href=https://www.cristal.univ-lille.fr/>CRIStAL</a> research center<br>
 		Located at <a href=https://www.inria.fr/centre/lille>Inria Lille</a> research center<br>
 		thibault.raffaillac (at) inria.fr<br>
-		<a href=cv.pdf>Short CV (fr)</a> <a href=https://github.com/traffaillac><img src=github.png style="height:1.5em"/></a> <a href=https://fr.linkedin.com/in/traffaillac><img src=linkedin.png style="height:1.5em"/></a>
+		<a href=https://github.com/traffaillac><img src=github.png style="border:none;width:1.5em;margin-right:.5em"/></a>
+		<a href=https://fr.linkedin.com/in/traffaillac><img src=linkedin.png style="border:none;width:1.5em;margin-right:.5em"/></a>
+		<a href=cv.pdf>Short CV (fr)</a>
 	</p>
 </div>
 
@@ -30,14 +32,29 @@
 	In the past I worked for two years on optimizing software for embedded TV decoders.
 </p>
 <h1>Projects</h1>
-<ul>
-	<li><a href="http://smalltalkhub.com/#!/~ThibaultRaffaillac/Animation">Animations in Smalltalk</a> (2016 - present) - Work on expressing animations by extension of function calls: <code>object.setProperty(target) <b>during</b> 2s</code>.
-	<li><a href="http://smalltalkhub.com/#!/~ThibaultRaffaillac/ObjectAugmentation">ECS in Smalltalk</a> (2016) - First attempt at prototyping a variant of Entity Component System architecture.
-	<li><a href="https://github.com/tvlabs/edge264">edge264</a> (2013 - present) - A fast H.264 video decoder I wrote when working on Digital TV software (open-sourced with permission). This is also my test-bench for research on Software Architecture.
-	<li><a href="https://github.com/traffaillac/traf-lib">Contest libraries</a> (2011 - present) - Compact versions of some standard algorithms, initially written for the <a href="http://www.kth.se/student/kurser/kurs/DD2458?l=en" title="This course was awesome.">Problem Solving and Programming under Pressure</a> course.
-	<li>Prototypes (<a href="MSc/proto1.html">1</a>, <a href="MSc/proto2.html">2</a>, <a href="MSc/proto3.html">3</a>) on code views with compiler feedback (2012) - Work made for my <a href="http://www.nada.kth.se/utbildning/grukth/exjobb/rapportlistor/2012/rapporter12/raffaillac_thibault_12084.pdf" title="This university was awesome.">Master Thesis Project</a>.
-	<li><a href="cms2011/admin.html">Assisting interface for easy administration of a CMS</a> (2011) - Study of a novel interface for online Content Management Systems, for the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="This course was awesome too.">Interaction Design</a> course (<a href="traf-DH2626-11.pdf">PDF</a>).
-</ul>
+<div>
+	<img src=ecs.png style="border-color:white"/>
+	<h2>Programming GUIs with the Entity-Component-System model</h2>
+	<p>Software architecture and JavaScript toolkit for prototyping interfaces and interaction techniques</p>
+	<small>[<a href=#ihm18>IHM'18</a>]</small>
+</div>
+<div>
+	<a href=http://smalltalkhub.com/#!/~ThibaultRaffaillac/Animation><img src=animations.svg style=""/></a>
+	<h2>Turning function calls into animations</h2>
+	<p>Extension of function calls for expressing animation of <i>any</i> property with getter+setter, currently implemented for Smalltalk</p>
+	<small>[<a href=#EICS17>EICS'17</a>]</small>
+</div>
+<div>
+	<a href=https://github.com/tvlabs/edge264><img src=edge264.svg /></a>
+	<h2>edge264</h2>
+	<p>Experimental software decoder for the H.264 video format, and test-bench for research on decoding architecture (open-sourced with permission)</p>
+</div>
+<div>
+	<a href=MSc/proto1.html><img src=compiler.png style="border-color:white"/></a>
+	<h2>Exploring the design of compiler feedback</h2>
+	<p>Exhaustive cases and prototypes illustrating the usefulness of a richer communication with compilers</p>
+	<small>[<a href=#PPIG12>PPIG'12</a>] [<a href=#MSc>MSc</a>]</small>
+</div>
 <h1>Publications</h1>
 <ul>
 	<li>Thibault Raffaillac, Stéphane Huot and Stéphane Ducasse.<br>
@@ -70,6 +87,7 @@
 	<li><a href="https://hashcode.withgoogle.com/hashcode_2016.html">Hash Code 2016</a> - Team Brony Express, 153<sup>rd</sup> overall, 1<sup>st</sup> in Lille.
 	<li><a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=64902">The Maze Nightmare</a> (2016) - Short game created with two friends for the Ludum Dare Jam 35. As usual I did the artwork and music. Beware the game is <em>meant</em> to be oppressing...
 	<li><a href="http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=11209">Little Sheep</a> (2012) - Short story-telling game created during 3 days with a friend for the Ludum Dare Jam 23. I did the artwork and music :)
+	<li><a href="cms2011/admin.html">Assisting interface for easy administration of a CMS</a> (2011) - Study of a novel interface for online Content Management Systems, for the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="This course was awesome too.">Interaction Design</a> course (<a href="traf-DH2626-11.pdf">PDF</a>).
 	<li><a href="AssassinationGameApp.mp4">Assassination Game Application</a> (2011) - Video prototype for a Group Project of the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="Did I mention how AMAZING this course was?">Interaction Design</a> course.
 	<li><a href="traf-semanticslab.zip">WHILE compiler</a> (2011) - Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href="http://www.kth.se/student/kurser/kurs/DD2457?l=en" title="meh">Program Semantics and Analysis</a> course (<a href="sample-output.asm">sample output</a>).
 	<li><a href="tuto_direct_VLC.html">Diffusion en direct avec VLC</a> (French, 2011) - Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.

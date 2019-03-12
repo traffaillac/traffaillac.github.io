@@ -1,15 +1,38 @@
 body {
 	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11pt;
 	line-height: 140%;
 	max-width: 800px;
-	margin: 3em auto;
+	margin: 4em auto;
 	text-align: justify;
+}
+
+div,ul {
+	margin: 0 0 1em 0;
+	overflow: hidden;
+}
+
+img {
+	border:1px solid lightgrey;
+	float:left;
+	margin-right:1.5em;
+	width: 11em;
 }
 
 h1 {
 	color: cornflowerblue;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 150%;
+	margin: 0 0 .67em 0;
+}
+h2 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 115%;
+	margin: 0 0 .2em 0;
+}
+
+div p {
+	margin: 0;
 }
 
 ul {
@@ -23,10 +46,6 @@ li {
 li:before {
 	content: '➤';
 	margin: 0 1em;
-}
-
-img {
-	vertical-align: middle;
 }
 
 a:link,a:visited {
