@@ -26,7 +26,7 @@ h1 {
 	color: cornflowerblue;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
 	font-size: 150%;
-	margin: 0 0 .67em 0;
+	margin: 1em 0;
 }
 h2 {
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -35,15 +35,14 @@ h2 {
 }
 
 table {
+	border-collapse: collapse;
 	font-size: small;
 	line-height: 140%;
+	margin-bottom: 1.5em;
 }
-th {
-	font-weight: normal;
+th,td {
+	padding: .3em .7em;
 	vertical-align: top;
-}
-td {
-	padding: 0 0 .5em 1em;
 }
 
 ul {
@@ -51,16 +50,17 @@ ul {
 	padding-left: 3em;
 }
 li {
-	margin-bottom: 0.5em;
+	margin-bottom: 0.4em;
 	text-indent: -3em;
 }
 li:before {
 	content: '➤';
+	font-size: x-small;
 	margin: 0 1em;
 }
 
 a:link,a:visited {
-	color: orangered;
+	color: tomato;
 }
 
 /*iframe {
