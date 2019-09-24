@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang=en><head>
+	<meta charset=utf-8>
+	<meta name=author content="Thibault Raffaillac">
+	<meta name=date content="30 May 2016">
+	<title>A case about parsing errors</title>
+	<link rel=stylesheet href=style.css>
+</head><body>
+	<h1>A case about parsing errors</h1>
+	<p>
+		So this is my first blog post, and I would like to start making a point about parsing errors, as this weekend I was refactoring the error handling architecture in <a href=https://github.com/tvlabs/edge264>edge264</a>, a software decoder for the video codec <a href=https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC>H.264/AVC</a>.
+	<p>
+		Decoding a multimedia stream is a lot of parsing (easily half of the codebase).
+		You receive a bitstream from which you extract a sequence of values, compressed using e.g. <a href=https://en.wikipedia.org/wiki/Exponential-Golomb_coding>Exp-Golomb</a> or <a href=https://en.wikipedia.org/wiki/Arithmetic_coding>Arithmetic coding</a>.
+		These will form a header first, then the actual data, which after a few more stages in decompression yield pixels. But what happens if the bitstream contains an error?
+	
+	<h2>Know your enemy</h2>
+	<p>To my best guess, there are three kinds of errors to expect:
+	<ul>
+		<li>
+			<i>transmission errors</i>.
+			A stream such as digital TV can come through satellite, Internet, Radio Frequency or even hard drive.
+			No transmission being perfect, chunks can be missed, inserted, reordered, corrupted — hopefully not too often.
+			Basically <i>anything can happen</i>.
+		<li>
+			<i>forged stream</i>.
+			This can be a malicious user trying to crash your software by sending unexpected data, or just someone developing an encoder who mistakenly inserted a bug.
+			Though the peskiest, this is arguably the least expectable case of errors, since writing an encoder (even a flawed one) is not a morning breakfast.
+		<li>
+			<i>unsupported features</i>.
+			These happen, major codecs such as <a href=https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding#Profiles>HEVC</a> and <a href=https://en.wikipedia.org/wiki/Advanced_Audio_Coding#Extensions_and_improvements>AAC</a> contain a <i>lot</i> of optional features and extensions, many of which are seldom used.
+			These typically increase the architectural complexity of decoders, thus not all are supported.
+	</ul>
+	<p>
+		In practice, software such as ffmpeg dedicate a decent amount of <a href=https://github.com/FFmpeg/FFmpeg/blob/master/libavcodec/h264_ps.c>code</a> (search for <code>AV_LOG_ERROR</code>) and <a href=https://ffmpeg.org/doxygen/trunk/group__lavu__error.html>documentation</a> to error handling, that is providing an alternate code path in case of erroneous input, and keeping a defined behaviour afterwards.
+		However, they rarely provide a clear strategy for <b>error reporting</b>, that is what should be presented to the end user when something is wrong, and which errors do trigger this behaviour.
+	<p>
+		The common default choice is to provide an error code for every wrong input one can think of, and optionally print out an error message when it is caught.
+		It then becomes of programmer’s responsibility to handle all of them, no matter how frequent they might be in practical streams.
+		In software such as VLC, these messages are eventually forwarded to the user through an Error Console.
+	<p>
+		However, in the context of a multimedia stream, users have no power to fix an incoming bitstream by hand, should any of the above errors actually happen.
+		Their sole ability is probably to move the antenna and catch a clearer signal — if and only if they have access to it.
+		For these users, rendering a black frame is probably just as good as printing <code>[h264 @ 0xba7bc00] illegal bit depth value (28, 8)</code>.
+	<p>
+		Moreover, transport protocols and containers provide mechanisms for detecting errors and possibly recover them.
+		The TCP network protocol reorders incoming packets, and can request resending a missing one.
+		The <a href=https://en.wikipedia.org/wiki/MPEG_transport_stream#Packet>MPEG2-TS</a> multimedia container signals corrupted packets, and is augmented with error detection/correction for digital TV broadcasting.
+		Thus in practice most glitches are detected upstream, such that very few bitstream errors practically make it to the audio/video decoders.
+	
+	<h2>Single out the uses</h2>
+	<p>Let’s proceed by identifying the few uses of a multimedia library, before trying to derive a good error reporting strategy:
+	<ul>
+		<li>
+			playing a video (duh!).
+			As mentioned above, error messages can be minimal here, users are not supposed to have read the 732-pages spec you went through, neither be familiar with such notions as bit depth or color planes (they don’t fly).
+		<li>
+			developing a parent library (ffmpeg) or a multimedia player (VLC).
+			In this case a decoding error is most likely linked to a bug in either library, thus extensive error reporting helps hunting it.
+		<li>
+			developing an encoder for the same format.
+			Here the multimedia library is used to validate candidate streams.
+			Any erroneous value that is silently ignored or clamped to a valid one can result in the shipping of a flawed encoder.
+			As it is then used to compress flawed streams (which still exist after patching the encoder), later decoders have to cope with these special cases.
+			I do have a few such test cases for edge264 – though mostly harmless.
+	</ul>
+	<p>
+		With these in mind, we can see the problem with competing open source H.264 decoders (for <a href=https://github.com/cisco/openh264/blob/master/codec/decoder/core/src/au_parser.cpp>Cisco OpenH264</a>, search for <code>WELS_LOG</code>): they try to match a bit of all uses, without being a perfect fit for any of the three.
+		There are just too many errors a user cannot understand, yet not all irregular inputs are reported.
+	<p>
+		To settle this I want to make a distinction between a <b>validator</b> and a <b>parser</b>.
+		The validator takes a possibly erroneous input stream and reports everything wrong, without actually decoding it.
+		Its output is meant to help fixing the encoding library, or the stream itself, and its goal is to guarantee any accepted stream will comply with the target specification.
+		The parser in turn takes a possibly erroneous stream, but only bothers decoding it for end users.
+		Error reporting is minimal, if not present at all, but the parser should try to recover gracefully from a bad stream because no user will want to fix it.
+	<p>
+		In edge264 I decided to focus on <a href=https://github.com/tvlabs/edge264/blob/master/edge264.c>parsing</a> (search for <code>e->ret</code>) and completely avoid validation, it being a very difficult problem in fact!
+		All input values are silently clamped to the bounds specified in H.264, such that one can always expect a correct internal state.
+		The few mandatory tests for unsupported features are collapsed into common exit branches (5 in total).
+		Also in earlier versions I had no error reporting at all, but that could result in a video player not knowing when to stop trying to decode a flawed stream.
+		Hence the presence of two error codes (for unsupported and erroneous stream).
+	
+	<h2>Conclusion</h2>
+	<p>
+		Ruling out validation from parsing (or explicitly going for both) helps making a clear commitment to which errors are tested, and which are ignored.
+		In the case of edge264 it helped me focus on the rest of the decoding, and put less constraints on code structure (function return values, trace output, no pesky <code>goto fail</code> branches).
+		Further usage will show how it fares in practice, and whether more errors should eventually be reported.
+		As for the actual details of a <i>simple</i> code architecture, these are left for later articles 🙂
+	<p>
+		Also, for coherency in this post I remained in the scope of video decoding, but am pretty much convinced the separation of validation and parsing should also exist in other domains, especially with man-made streams, such as code compilation and <a href=https://validator.w3.org/>HTML parsing</a>.
