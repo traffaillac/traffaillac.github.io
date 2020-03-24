@@ -3,122 +3,176 @@
 <head>
 	<meta charset=utf-8>
 	<title>Thibault Raffaillac</title>
-	<link rel=stylesheet href=style.css>
+	<link rel=stylesheet href=bootstrap.min.css>
 	<meta name=author content="Thibault Raffaillac">
+	<style>
+		html {font-size:11pt}
+		body {font-family:Avenir Next,Avenir,sans-serif; margin:1.5rem auto; max-width:960px}
+		@keyframes rotate {to{transform:rotate(360deg)}}
+		#avatar:hover {animation:rotate 2s linear infinite}
+		h1 {font-size:17pt; font-weight:600; padding:.5rem 0; margin:1.5rem 0; text-align:center}
+		h2 {font-size:11pt; font-weight:600; margin:.75rem .5em}
+		a:not(:hover) h2 {color:#212529}
+		nav a:hover {background-color:#f8f9fa; text-decoration:none}
+		.projects div {border:1px solid #dee2e6; border-radius:.25em; margin-bottom:1em; width:220px}
+		.projects img {width:100%}
+		.projects p {margin:.5em}
+	</style>
 </head>
+
+
+<!-- TODO:
+	_ add slides & posters with publications
+	_ make all outbound links target=_blank
+	_ add background hr for section titles
+	_ fix all side pages
+-->
+
+
 <body>
-<div>
-	<img src=avatar.jpg style="border-color:white"/>
-	<h1 style="margin:.2em 0 .6em 0">Thibault RAFFAILLAC</h1>
-	<p>
-		PhD candidate<br>
-		Member of <a href=http://loki.lille.inria.fr/>Loki</a> research team<br>
-		Member of <a href=https://www.cristal.univ-lille.fr/>CRIStAL</a> research center<br>
-		Located at <a href=https://www.inria.fr/centre/lille>Inria Lille</a> research center<br>
-		thibault.raffaillac (at) inria.fr<br>
-		<a href=https://github.com/traffaillac><img src=github.png style="border:none;width:1.5em;margin-right:.5em"/></a>
-		<a href=https://fr.linkedin.com/in/traffaillac><img src=linkedin.png style="border:none;width:1.5em;margin-right:.5em"/></a>
-		<a href=cv.pdf>Short CV (fr)</a>
-	</p>
+<div class="d-flex justify-content-center align-items-center">
+	<img src=avatar.jpg width=120 id=avatar class="rounded-circle mr-4">
+	<div>
+		<h1 class="bg-white text-left p-0 pl-1 m-0">Thibault Raffaillac</h1>
+		<h2>Teaching Assistant  <a href=https://github.com/traffaillac><img src=github.png width=15></a>  <a href=https://fr.linkedin.com/in/traffaillac><img src=linkedin.png width=15></a></h2>
+		<a href=https://www.ec-lyon.fr/><h2>École Centrale de Lyon</h2></a>
+		<a href=https://liris.cnrs.fr/equipe/sical><h2 class=mb-0>SICAL research team</h2></a>
+	</div>
 </div>
 
-<p>
-	I am a PhD candidate at Inria (France) since November 2015, under the supervision of <a href="http://loki.lille.inria.fr/~huot/">Stéphane Huot</a>.
-	My research focuses on the paradigms and programming constructs that support the prototyping of graphical user interfaces, and the research of new interaction techniques.
-	I observe senior researchers who routinely hack programming systems for implementing new ideas, and propose programming tools to support them.
+
+<nav class="d-flex justify-content-center border-top border-bottom my-4">
+	<a href=#projects class="px-3 py-2">Projects</a>
+	<a href=#publications class="px-3 py-2">Publications</a>
+	<a href=#teaching class="px-3 py-2">Teaching</a>
+	<a href=#misc class="px-3 py-2">Signs of life</a>
+</nav>
+
+
+<div class="mx-auto px-1" style="max-width:720px">
+<p class=text-justify>
+	I am a Teaching Assistant at École Centrale de Lyon, since September 2019.
+	I obtained a PhD in Human-Computer Interaction at the University of Lille, in december 2019.
 </p>
-<p>
-	My research interests also include Software Optimization and Algorithms. With colleagues at Université de Lille, we organize weekly trainings for algorithmic code contests, local hubs for online contests, and we compete as well.
-	In the past I worked for two years on optimizing software for embedded TV decoders.
+<p class=text-justify>
+	My research lies at the boundary between Software Engineering and Human-Computer Interaction.
+	I am interested in improving the ability and proficiency of programmers, in the contexts of User Interfaces and Competitive programming.
+	My work consists in conducting user studies, and researching software architectures, libraries, and language extensions to help them.
+	With colleagues and students at École Centrale de Lyon, we also organize weekly trainings for algorithmic code contests, and we compete as well.
+	In the past I worked for two years on optimizing software for embedded TD decoders.
 </p>
-<h1>Projects</h1>
-<div>
-	<img src=ecs.png style="border-color:white"/>
-	<h2>Programming GUIs with the Entity-Component-System model</h2>
-	<p>Software architecture and JavaScript toolkit for prototyping interfaces and interaction techniques</p>
-	<small>[<a href=#IHM18>IHM'18</a>]</small>
 </div>
-<div>
-	<a href=http://smalltalkhub.com/#!/~ThibaultRaffaillac/Animation><img src=animations.svg style=""/></a>
-	<h2>Turning function calls into animations</h2>
-	<p>Extension of function calls for expressing animation of <i>any</i> property with getter+setter, currently implemented for Smalltalk</p>
-	<small>[<a href=#EICS17>EICS'17</a>]</small>
+
+
+<h1 id=projects>Projects</h1>
+<div class="projects d-flex flex-wrap justify-content-around mx-auto" style="max-width:720px">
+	<div>
+		<img src=weex.png>
+		<h2>Wind farm challenge</h2>
+		<p>Website for a teaching challenge on optimizing energy production (current)</p>
+	</div>
+	<div>
+		<a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>
+			<img src=ecs.png>
+			<h2>Building GUIs with ECS</h2>
+		</a>
+		<p>Adapting a model from video games to Graphical User Interfaces <small>[<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>🥇]</small></p>
+	</div>
+	<div>
+		<a href=http://smalltalkhub.com/#!/~ThibaultRaffaillac/Animation>
+			<img src=animations.svg>
+			<h2>The animation operator</h2>
+		</a>
+		<p>Suffixing setter function calls to turn them into animations <small>[<a href=#EICS17>EICS'17</a>]</small></p>
+	</div>
+	<div>
+		<a href=https://github.com/tvlabs/edge264>
+			<img src=edge264.svg>
+			<h2>edge264</h2>
+		</a>
+		<p>Experimental software decoding architecture for the H.264 video format</p>
+	</div>
+	<div>
+		<a href=MSc/proto1.html>
+			<img src=compiler.png>
+			<h2>Better compiler feedback</h2>
+		</a>
+		<p>Illustrating the usefulness of a richer communication with compilers <small>[<a href=#PPIG12>PPIG'12</a>]</small></p>
+	</div>
 </div>
-<div>
-	<a href=https://github.com/tvlabs/edge264><img src=edge264.svg /></a>
-	<h2>edge264</h2>
-	<p>Experimental software decoder for the H.264 video format, and test-bench for research on decoding architecture (open-sourced with permission)</p>
-</div>
-<div>
-	<a href=MSc/proto1.html><img src=compiler.png style="border-color:white"/></a>
-	<h2>Exploring the design of compiler feedback</h2>
-	<p>Exhaustive cases and prototypes illustrating the usefulness of a richer communication with compilers</p>
-	<small>[<a href=#PPIG12>PPIG'12</a>]</small>
-</div>
-<h1>Publications</h1>
-<table>
-	<!-- EICS 19 33.3% -->
-	<tr id=IHM18><td>[IHM'18]</td><td>
-		T. Raffaillac & S. Huot.<br>
-		<a href=https://doi.org/10.1145/3286689.3286703>Application du modèle Entité-Composant-Système à la programmation d'interactions</a>. [<a href=https://hal.inria.fr/hal-01898859>HAL</a>]<br>
-		<i>À la 30<sup>e</sup> conférence francophone sur l'Interaction Homme-Machine (IHM 2018). (50%)</i>
+
+
+<h1 id=publications>Publications</h1>
+<table class="table table-sm table-borderless mx-auto" style="max-width:720px">
+	<tr id=EICS19>
+		<td>[EICS'19]</td>
+		<td>T. Raffaillac & S. Huot. <a href=https://doi.org/10.1145/3331150>Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model</a>. <i>In the 11<sup>th</sup> Symposium on Engineering Interactive Computing Systems (EICS 2019)</i>. (<abbr title="Acceptance rate">33.3%</abbr>) <a href=https://hal.inria.fr/hal-02147180>[HAL]</a> <span class="badge badge-secondary">Best paper</span></td>
+	</tr>
+	<tr id=IHM18>
+		<td>[IHM'18]</td>
+		<td>T. Raffaillac & S. Huot. <a href=https://doi.org/10.1145/3286689.3286703>Application du modèle Entité-Composant-Système à la programmation d'interactions</a>. <i>À la 30<sup>e</sup> conférence francophone sur l'Interaction Homme-Machine (IHM 2018)</i>. (<abbr title="Acceptance rate">50%</abbr>) <a href=https://hal.inria.fr/hal-01898859>[HAL]</a>
 	</td></tr>
-	<tr id=EICS17><td>[EICS'17]</td><td>
-		T. Raffaillac, S. Huot & S. Ducasse.<br>
-		<a href="https://doi.org/10.1145/3102113.3102134">Turning Function Calls Into Animations</a>. [<a href=https://hal.inria.fr/hal-01564116>HAL</a>]<br>
-		<i>In the 9<sup>th</sup> Symposium on Engineering Interactive Computing Systems (EICS 2017). (35%)</i>
-	</td></tr>
-	<tr><td>[EICS'17]</td><td>
-		T. Raffaillac.<br>
-		<a href=https://doi.org/10.1145/3102113.3102155>Language and System Support for Interaction</a>. (Doctoral Consortium)<br>
-		<i>In the 9<sup>th</sup> Symposium on Engineering Interactive Computing Systems (EICS 2017).</i>
-	</td></tr>
-	<tr id=PPIG12><td>[PPIG'12]</td><td>
-		T. Raffaillac.<br>
-		<a href="http://ppig.org/library/paper/exploring-design-compiler-feedback">Exploring the design of compiler feedback</a>. [<a href="prezi.com/whsoz17g6x_w/11-ppig2012/">Prezi</a>]<br>
-		<i>In the 24<sup>th</sup> Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012).</i>
-	</td></tr>
+	<tr id=EICS17>
+		<td>[EICS'17]</td>
+		<td>T. Raffaillac, S. Huot & S. Ducasse. <a href="https://doi.org/10.1145/3102113.3102134">Turning Function Calls Into Animations</a>. <i>In the 9<sup>th</sup> Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. (<abbr title="Acceptance rate">35%</abbr>) <a href=https://hal.inria.fr/hal-01564116>[HAL]</a></td>
+	</tr>
+	<tr>
+		<td>[EICS'17]</td>
+		<td>T. Raffaillac. <a href=https://doi.org/10.1145/3102113.3102155>Language and System Support for Interaction</a>. (Doctoral Consortium) <i>In the 9<sup>th</sup> Symposium on Engineering Interactive Computing Systems (EICS 2017).</i> <a href=https://hal.inria.fr/hal-02190565>[HAL]</a></td>
+	</tr>
+	<tr id=PPIG12>
+		<td>[PPIG'12]</td>
+		<td>T. Raffaillac. <a href="http://ppig.org/library/paper/exploring-design-compiler-feedback">Exploring the design of compiler feedback</a>. <i>In the 24<sup>th</sup> Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012).</i> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>[Prezi]</a></td>
+	</tr>
 </table>
-<h1>Teaching</h1>
-<table style="border-collapse:collapse;border-top:1.5pt solid black;border-bottom:1.5pt solid black">
-	<tr style="border-bottom:1pt solid black"><th>Period</th><th>Title</th><th>Level</th><th>Institution</th><th>Lab time</th></tr>
-	<tr><td>18/19</td><td>Introduction to human-machine interfaces</td><td>Bachelor S2</td><td>IUT A de Lille</td><td>64h (TA)</td></tr>
-	<tr><td>18/19</td><td>Advanced algorithmics</td><td>Bachelor S3</td><td>IUT A de Lille</td><td>64h (TA)</td></tr>
-	<tr><td>18/19</td><td>Introduction to computer systems</td><td>Bachelor S1</td><td>IUT A de Lille</td><td>64h (TA)</td></tr>
-	<tr><td>17/18</td><td>Web technologies</td><td>Bachelor S2</td><td>Université de Lille</td><td>36h (TA)</td></tr>
-	<tr><td>17/18</td><td>Algorithms and complexity</td><td>Master S1</td><td>Université de Lille</td><td>36h (TA)</td></tr>
+
+
+<h1 id=teaching>Teaching</h1>
+<table class="table table-sm mx-auto" style="max-width:720px">
+	<tr><th>Period</th><th>Title</th><th>Level</th><th>Institution</th><th>Lab time</th></tr>
+	<tr><td>19/20</td><td>Algorithms and data structures</td><td>Bachelor 3</td><td>École Centrale de Lyon</td><td>80h (TA)</td></tr>
+	<tr><td>19/20</td><td>Object-oriented design and programming</td><td>Bachelor 3</td><td>École Centrale de Lyon</td><td>60h (TA)</td></tr>
+	<tr><td>19/20</td><td>Web application project</td><td>Bachelor 3</td><td>École Centrale de Lyon</td><td>30h (TA)</td></tr>
+	<tr><td>19/20</td><td>Supervised project: preparation to code contests</td><td>Bachelor 3</td><td>École Centrale de Lyon</td><td>20h</td></tr>
+	<tr><td>18/19</td><td>Introduction to human-machine interfaces</td><td>Bachelor 1</td><td>IUT A de Lille</td><td>64h (TA)</td></tr>
+	<tr><td>18/19</td><td>Advanced algorithmics</td><td>Bachelor 2</td><td>IUT A de Lille</td><td>64h (TA)</td></tr>
+	<tr><td>18/19</td><td>Introduction to computer systems</td><td>Bachelor 1</td><td>IUT A de Lille</td><td>64h (TA)</td></tr>
+	<tr><td>17/18</td><td>Web technologies</td><td>Bachelor 1</td><td>Université de Lille</td><td>36h (TA)</td></tr>
+	<tr><td>17/18</td><td>Algorithms and complexity</td><td>Master 1</td><td>Université de Lille</td><td>36h (TA)</td></tr>
 </table>
-<!-- 	<li><a href="club_programmation.txt">OpenGL</a> (informal, 2009) - a course I created as a structured programming club in Engineering School.
- -->
-<h1>Public Talks</h1>
-<ul>
-	<li><a href="https://youtu.be/1yzc-EKFVs0?t=28m5s">Animations in Smalltalk</a> (Pharo Days 2017) - Demonstrating my work on expressing animations.
-	<li><a href="https://youtu.be/ltXFtdhKuM8?t=3m25s">Widgetifying objects</a> (ESUG 2016) - Demonstrating a prototype for ECS architecture, and an early version for animations.
-</ul>
-<h1>Signs of Life</h1>
-<ul>
-	<li><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2019">Hash Code 2019</a> — 91<sup>th</sup>/6671 (World), 6<sup>th</sup>/659 (France), team Lokidoki with Marc Baloup
-	<li><a href="https://www.codechef.com/users/traffaillac">CodeChef profile</a> and <a href="https://open.kattis.com/users/traffaillac">Kattis profile</a> (since 2015) — The two programming contest platforms we use the most at the moment.
-	<li><a href="https://catcoder.codingcontest.org/contest/2410/overview">Catalysts Coding Contest</a> (2018) — Team //#include &lt;mercy&gt;, 2<sup>nd</sup> in Lille, for which I participated in organizing the hub.
-	<li><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2018">Hash Code 2018</a> — 1122<sup>th</sup>/3012 (World), team //#include &lt;mercy&gt; with Lucien Mousin.
-	<li><a href="https://catcoder.codingcontest.org/contest/1761/overview">Catalysts Coding Contest</a> (2017) — Team ThiYo, 3<sup>rd</sup> in Lille, where I also helped <a href="https://informatique.univ-lille1.fr/ccc/2017/contest/">organizing the hub</a> (printing T-shirts and communicating to students).
-	<li><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2017">Hash Code 2017</a> — 186<sup>th</sup>/2815 (World), 23<sup>rd</sup>/473 (France), 1<sup>st</sup> in our hub, team ThiYo with Yoann Dufresne.
-	<li><a href="https://meilleurjeudumonde.github.io/meilleurjeudumonde/">Meilleur jeu du monde</a> (2017) — Nerds + Beers = Game dev party...
-	<li><a href="http://shakethatbutton.com/bamboo-that-bends/">Bamboo that bends</a> (2016) — A 3D Twister game made with a team of five people for the ZooMachines Interactive Arts festival, which was <em>way</em> funnier to play than the videos show!
-	<li><a href=parsing.html>A case about parsing errors</a> (2016) — an article about the handling of errors in edge264
-	<li><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2016">Hash Code 2016</a> — 153<sup>rd</sup>/1054 (World), 35<sup>th</sup>/233 (France), <a href="https://informatique.univ-lille.fr/hashcode/2016/qualification/">1<sup>st</sup> in our hub</a>, team Brony Express with Izzatbek Mukhanov and Sébastien Poulmane.
-	<li><a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=64902">The Maze Nightmare</a> (2016) — Short game created with two friends for the Ludum Dare Jam 35. As usual I did the artwork and music. Beware the game is <em>meant</em> to be oppressing...
-	<li><a href="http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=11209">Little Sheep</a> (2012) — Short story-telling game created during 3 days with a friend for the Ludum Dare Jam 23. I did the artwork and music :)
-	<li><a href="cms2011/admin.html">Assisting interface for easy administration of a CMS</a> (2011) — Study of a novel interface for online Content Management Systems, for the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="This course was awesome too.">Interaction Design</a> course (<a href="traf-DH2626-11.pdf">PDF</a>).
-	<li><a href="AssassinationGameApp.mp4">Assassination Game Application</a> (2011) — Video prototype for a Group Project of the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="Did I mention how AMAZING this course was?">Interaction Design</a> course.
-	<li><a href="traf-semanticslab.zip">WHILE compiler</a> (2011) — Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href="http://www.kth.se/student/kurser/kurs/DD2457?l=en" title="meh">Program Semantics and Analysis</a> course (<a href="sample-output.asm">sample output</a>).
-	<li><a href="tuto_direct_VLC.html">Diffusion en direct avec VLC</a> (French, 2011) — Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.
-	<li><a href="installation_vod.txt">Mise en place de VOD</a> (French, 2010) — Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.
-	<li><a href="ginfo2009.mp4">Film de Rentrée du GInfo</a> (French, 2009) — Short movie promoting the Computer Science student association at the annual associations fair of Ecole Centrale Marseille.
-	<li><a href="CompressionStaxRip/installation.html">Compression avec StaxRip</a> (French, 2009) — Tutorial to compress a video exported by Premiere Pro, using the software StaxRip. The parameters would correct the flaws introduced by Premiere (its disastrous deinterlacing filter) and output in a format ready for integration in a Web player.
-	<li><a href="CompressionMeGUI/installation.html">Compression avec MeGUI</a> (French, 2009) — Tutorial to compress a video exported by Premiere Pro, using MeGUI. It was soon superseeded by the tutorial on StaxRip.
-	<li><a href="traf-TIPE2008.zip">La lentille électrostatique</a> (French comments, 2008) — Simultation of an electrostatic lens by shooting electrons in a simple finite element mesh, created for the TIPE exam at the end of the <em>Classes Préparatoires</em>.
-	<li><a href="ModeleEXE.asm">Modèle EXE</a> (French comments, 2008) — Source code for nasm based on the PE/COFF reference, to create an executable file from scratch without linking.
-	<li><a href="traf-TIPE2007.zip">Oscillations d'un Fil</a> (French comments, 2007) — Real-time simulation of a flexible wire using Lagrangian Mechanics and RK4 integration, created for the TIPE exam.
-	<li><a href="CasseBriques.zip">Casse-briques</a> (French comments, 2007) — Breakout-clone where the paddle can tilt.
-	<li><a href="Visionneuse_3D.zip">Visionneuse 3D</a> (French, 2005) — Interactive viewer for 3D objects stored in files. This program ended a 3-year obsession to create a 3D engine, and was my last BASIC program before playing with more modern languages and GUIs.
+
+
+<h1 id=misc>Signs of life</h1>
+<table class="table table-sm mx-auto" style="max-width:720px">
+	<tr><td>Current</td><td><a href="https://open.kattis.com/users/traffaillac">Kattis profile</a>, <a href=https://codeforces.com/profile/ErreurFatale>CodeForces profile</a>, <a href="https://www.codechef.com/users/traffaillac">CodeChef profile</a><br>The programming contest platforms I use the most at the moment.</td></tr>
+	<tr><td>2019</td><td><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2019">Hash Code 2019</a><br>91<sup>th</sup>/6671 (World), 6<sup>th</sup>/659 (France), team <i>Lokidoki</i> with Marc Baloup</td></tr>
+	<tr><td>2018</td><td><a href="https://catcoder.codingcontest.org/contest/2410/overview">Catalysts Coding Contest</a><br>Team <i>//#include &lt;mercy&gt;</i>, 2<sup>nd</sup> in Lille, for which I participated in organizing the hub.</td></tr>
+	<tr><td></td><td><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2018">Hash Code 2018</a><br>1122<sup>th</sup>/3012 (World), team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin.</td></tr>
+	<tr><td>2017</td><td><a href="https://youtu.be/1yzc-EKFVs0?t=28m5s">Demonstrating animations in Pharo Smalltalk</a><br>Presentation given on 19 May at Pharo Days, Lille, France</td></tr>
+	<tr><td></td><td><a href="https://catcoder.codingcontest.org/contest/1761/overview">Catalysts Coding Contest</a><br>Team <i>ThiYo</i>, 3<sup>rd</sup> in Lille, where I also helped <a href="https://informatique.univ-lille1.fr/ccc/2017/contest/">organizing the hub</a> (printing T-shirts and communicating to students).</td></tr>
+	<tr><td></td><td><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2017">Hash Code 2017</a><br>186<sup>th</sup>/2815 (World), 23<sup>rd</sup>/473 (France), 1<sup>st</sup> in our hub, team <i>ThiYo</i> with Yoann Dufresne.</td></tr>
+	<tr><td></td><td><a href="https://meilleurjeudumonde.github.io/meilleurjeudumonde/">Meilleur jeu du monde</a><br>Nerds + Beers = Game dev party... (during FOSDEM 2017)</td></tr>
+	<tr><td>2016</td><td><a href="http://shakethatbutton.com/bamboo-that-bends/">Bamboo that bends</a><br>A 3D Twister game made with a team of five people for the ZooMachines Interactive Arts festival, which was <i>way</i> funnier to play than the videos show!</td></tr>
+	<tr><td></td><td><a href="https://youtu.be/ltXFtdhKuM8?t=3m25s">Early ECS demonstration in Pharo Smalltalk</a><br>Presentation given on 25 August at ESUG 2016, Prague, Czech Republic</td></tr>
+	<tr><td></td><td><a href=parsing.html>A case about parsing errors</a><br>An article about the handling of errors in edge264</td></tr>
+	<tr><td></td><td><a href="https://codingcompetitions.withgoogle.com/hashcode/archive/2016">Hash Code 2016</a><br>153<sup>rd</sup>/1054 (World), 35<sup>th</sup>/233 (France), <a href="https://informatique.univ-lille.fr/hashcode/2016/qualification/">1<sup>st</sup> in our hub</a>, team <i>Brony Express</i> with Izzatbek Mukhanov and Sébastien Poulmane.</td></tr>
+	<tr><td></td><td><a href="http://ludumdare.com/compo/ludum-dare-35/?action=preview&uid=64902">The Maze Nightmare</a><br>Short game created with two friends for the Ludum Dare Jam 35. As usual I did the artwork and music. Beware the game is <i>meant</i> to be oppressing...</td></tr>
+	<tr><td>2012</td><td><a href="http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=11209">Little Sheep</a><br>Short story-telling game created during 3 days with a friend for the Ludum Dare Jam 23. I did the artwork and music :)</td></tr>
+	<tr><td>2011</td><td><a href="cms2011/admin.html">Assisting interface for easy administration of a CMS</a><br>Study of a novel interface for online Content Management Systems, for the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="This course was awesome too.">Interaction Design</a> course. <a href="traf-DH2626-11.pdf">[PDF]</a></td></tr>
+	<tr><td></td><td><a href="AssassinationGameApp.mp4">Assassination Game Application</a><br>Video prototype for a Group Project of the <a href="http://www.kth.se/student/kurser/kurs/DH2626?l=en" title="Did I mention how AMAZING this course was?">Interaction Design</a> course.</td></tr>
+	<tr><td></td><td><a href="traf-semanticslab.zip">WHILE compiler</a><br>Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href="http://www.kth.se/student/kurser/kurs/DD2457?l=en" title="meh">Program Semantics and Analysis</a> course. <a href="sample-output.asm">[sample output]</a></td></tr>
+	<tr><td></td><td><a href="tuto_direct_VLC.html">Diffusion en direct avec VLC</a> (French)<br>Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.</td></tr>
+	<tr><td>2010</td><td><a href="installation_vod.txt">Mise en place de VOD</a> (French)<br>Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.</td></tr>
+	<tr><td>2009</td><td><a href="ginfo2009.mp4">Film de Rentrée du GInfo</a> (French)<br>Short movie promoting the Computer Science student association at the annual associations fair of Ecole Centrale Marseille. A <i>must-watch</i> :)</td></tr>
+	<tr><td></td><td><a href="CompressionStaxRip/installation.html">Compression avec StaxRip</a> (French)<br>Tutorial to compress a video exported by Premiere Pro, using the software StaxRip. The parameters would correct the flaws introduced by Premiere (its disastrous deinterlacing filter) and output in a format ready for integration in a Web player.</td></tr>
+	<tr><td></td><td><a href="CompressionMeGUI/installation.html">Compression avec MeGUI</a> (French)<br>Tutorial to compress a video exported by Premiere Pro, using MeGUI. It was soon superseeded by the tutorial on StaxRip.</td></tr>
+	<tr><td>2008</td><td><a href="traf-TIPE2008.zip">La lentille électrostatique</a> (French comments)<br>Simultation of an electrostatic lens by shooting electrons in a simple finite element mesh, created for the TIPE exam at the end of the <em>Classes Préparatoires</em>.</td></tr>
+	<tr><td></td><td><a href="ModeleEXE.asm">Modèle EXE</a> (French comments)<br>Source code for nasm based on the PE/COFF reference, to create an executable file from scratch without linking.</td></tr>
+	<tr><td>2007</td><td><a href="traf-TIPE2007.zip">Oscillations d'un Fil</a> (French comments)<br>Real-time simulation of a flexible wire using Lagrangian Mechanics and RK4 integration, created for the TIPE exam.</td></tr>
+	<tr><td></td><td><a href="CasseBriques.zip">Casse-briques</a> (French comments)<br>Breakout-clone where the paddle can tilt.</td></tr>
+	<tr><td>2005</td><td><a href="Visionneuse_3D.zip">Visionneuse 3D</a> (French)<br>Interactive viewer for 3D objects stored in files. This program ended a 3-year obsession to create a 3D engine, and was my last BASIC program before playing with more modern languages.</td></tr>
+</table>
+
+
+</body>
+</html>
