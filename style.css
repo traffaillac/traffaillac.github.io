@@ -1,76 +1,141 @@
-body {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 11pt;
-	line-height: 140%;
-	max-width: 800px;
-	margin: 4em auto;
-	text-align: justify;
+/* https://google-webfonts-helper.herokuapp.com/ */
+@font-face {
+	font-family: 'Pacifico';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+	    url('fonts/pacifico-v21-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	    url('fonts/pacifico-v21-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Alegreya';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+	    url('fonts/alegreya-v26-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	    url('fonts/alegreya-v26-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Alegreya';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+	    url('fonts/alegreya-v26-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	    url('fonts/alegreya-v26-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Alegreya';
+	font-style: italic;
+	font-weight: 400;
+	src: local(''),
+	    url('fonts/alegreya-v26-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	    url('fonts/alegreya-v26-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Alegreya';
+	font-style: italic;
+	font-weight: 700;
+	src: local(''),
+	    url('fonts/alegreya-v26-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	    url('fonts/alegreya-v26-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-div {
-	margin: 0 0 1em 0;
-	overflow: hidden;
-}
-div p {
-	margin: 0;
-}
 
-img {
-	border:1px solid lightgrey;
-	float:left;
-	margin-right:1.5em;
-	width: 11em;
-}
 
-h1 {
-	color: cornflowerblue;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 150%;
-	margin: 1em 0 .67em 0;
+@keyframes rainbow {
+	from, to { color: rgb(255, 0, 0) }
+	10%      { color: rgb(255, 154, 0) }
+	20%      { color: rgb(208, 222, 33) }
+	30%      { color: rgb(79, 220, 74) }
+	40%      { color: rgb(63, 218, 216) }
+	50%      { color: rgb(47, 201, 226) }
+	60%      { color: rgb(28, 127, 238) }
+	70%      { color: rgb(95, 21, 242) }
+	80%      { color: rgb(186, 12, 248) }
+	90%      { color: rgb(251, 7, 217) }
+	100%     { color: rgb(255, 0, 0) }
 }
-h2 {
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	font-size: 115%;
-	margin: 0 0 .2em 0;
-}
+@keyframes rotate {to{transform:rotate(360deg)}}
 
-table {
-	border-collapse: collapse;
-	font-size: small;
-	line-height: 140%;
-	margin-bottom: 1.5em;
-}
-th,td {
-	padding: .3em .7em;
-	vertical-align: top;
-}
 
-ul {
-	list-style: none;
-	padding-left: 3em;
-}
-li {
-	margin-bottom: 0.4em;
-	text-indent: -3em;
-}
-li:before {
-	content: '➤';
-	font-size: x-small;
-	margin: 0 1em;
-}
 
-a:link,a:visited {
-	color: tomato;
-}
+* { box-sizing: border-box }
+a,abbr { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px }
+h2>a { text-decoration: none }
+a:hover { animation:rainbow 2s linear infinite }
+body { color: #222 }
+h1 { border-bottom: 1px solid #eee; font: 60px Pacifico; margin: 0; text-align: center }
+h2 { font: 26px Pacifico; margin: 0 }
+h3 { font: 22px Alegreya; margin: 0 }
+h4 { font: 18px Alegreya; margin: 0 }
+p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
 
-/*iframe {
-	margin: 0;
-	width: 98%;
-	height: 1.3em;
-}
 
-object {
-	display: block;
-	margin: 1.3em auto;
+
+.flexcolcenter,.flexcolstretch,.flexcolend { display: flex; flex-direction: column }
+.flexcolcenter { align-items: center }
+.flexcolend {align-items: flex-end }
+.flexrowcenter,.flexrowstretch,.flexrowstart { display: flex; flex-direction: row }
+.flexrowcenter { align-items: center }
+.flexrowstart { align-items: flex-start }
+.card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 8px;
+	border-left: 8px solid #ddd;
+	border-right: 8px solid #ddd;
+	margin: 20px 0 0 0;
+	padding: 4px 10px;
 }
-*/
+.card>img { flex: none; height: 120px; margin-right: 20px }
+.references {
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	align-items: center;
+	margin: 10px 175px 0 175px;
+}
+.references>h4 { margin: 10px 0 0 20px }
+.courses {
+	display: grid;
+	grid-template-columns: max-content 1fr max-content max-content max-content;
+	margin: 0 175px;
+}
+.courses>* {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-bottom: 1px solid #eee;
+	padding: 5px;
+}
+.sign {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 25px 175px 0 175px;
+}
+.sign>h4 { text-align: right }
+.strip { display: flex; flex-direction: row; align-items: center; border-bottom: 1px solid #eee }
+.strip>div:first-child {
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: right;
+	color: grey;
+	opacity: 0.3;
+	flex: none;
+	font: 21px Pacifico;
+	padding-right: 20px;
+	width: 305px;
+}
+.project { border-right: 10px solid forestgreen }
+.publication { border-right: 10px solid darkorange }
+.teaching { border-right: 10px solid dodgerblue }
+.misc { border-right: 10px solid silver }
+.strip>* { padding: 6px 0 6px 20px }
+.strip>img { flex: none; width: 220px }
+.strip>h3 { flex: none; width: 130px }
+.strip h4 { padding-right: 10px }
+.rotate:hover {animation:rotate 2s linear infinite}
