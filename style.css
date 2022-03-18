@@ -41,35 +41,19 @@
 }
 
 
-
-@keyframes rainbow {
-	from, to { color: rgb(255, 0, 0) }
-	10%      { color: rgb(255, 154, 0) }
-	20%      { color: rgb(208, 222, 33) }
-	30%      { color: rgb(79, 220, 74) }
-	40%      { color: rgb(63, 218, 216) }
-	50%      { color: rgb(47, 201, 226) }
-	60%      { color: rgb(28, 127, 238) }
-	70%      { color: rgb(95, 21, 242) }
-	80%      { color: rgb(186, 12, 248) }
-	90%      { color: rgb(251, 7, 217) }
-	100%     { color: rgb(255, 0, 0) }
-}
-@keyframes rotate {to{transform:rotate(360deg)}}
-
+@keyframes rotate {to{transform: rotate(360deg)}}
 
 
 * { box-sizing: border-box }
 a,abbr { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px }
 h2>a { text-decoration: none }
-a:hover { animation:rainbow 2s linear infinite }
+a:hover { color: #bbb }
 body { color: #222 }
 h1 { border-bottom: 1px solid #eee; font: 60px Pacifico; margin: 0; text-align: center }
 h2 { font: 26px Pacifico; margin: 0 }
 h3 { font: 22px Alegreya; margin: 0 }
 h4 { font: 18px Alegreya; margin: 0 }
 p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
-
 
 
 .flexcolcenter,.flexcolstretch,.flexcolend { display: flex; flex-direction: column }
@@ -83,19 +67,19 @@ p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
 	flex-direction: row;
 	align-items: center;
 	border-radius: 8px;
-	border-left: 8px solid #ddd;
-	border-right: 8px solid #ddd;
+	box-shadow: 0 0 8px #ddd;
 	margin: 20px 0 0 0;
-	padding: 4px 10px;
+	padding: 4px;
 }
 .card>img { flex: none; height: 120px; margin-right: 20px }
 .references {
 	display: grid;
 	grid-template-columns: min-content 1fr;
-	align-items: center;
+	align-items: stretch;
 	margin: 10px 175px 0 175px;
 }
-.references>h4 { margin: 10px 0 0 20px }
+.references>h3 { display: flex; flex-direction: column; justify-content: center; padding: 5px 10px }
+.references>h4 { padding: 5px 10px }
 .courses {
 	display: grid;
 	grid-template-columns: max-content 1fr max-content max-content max-content;
@@ -123,17 +107,16 @@ p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
 	flex-direction: column;
 	justify-content: center;
 	text-align: right;
-	color: grey;
-	opacity: 0.3;
+	color: #bbb;
 	flex: none;
 	font: 21px Pacifico;
 	padding-right: 20px;
-	width: 305px;
+	width: 300px;
 }
-.project { border-right: 10px solid forestgreen }
-.publication { border-right: 10px solid darkorange }
-.teaching { border-right: 10px solid dodgerblue }
-.misc { border-right: 10px solid silver }
+.project { box-shadow: inset -50px 0 50px -50px #335c67 }
+.publication { box-shadow: inset -50px 0 50px -50px #e09f3e }
+.teaching { box-shadow: inset -50px 0 50px -50px #540b0e }
+.misc { box-shadow: inset -50px 0 50px -50px #9e2a2b }
 .strip>* { padding: 6px 0 6px 20px }
 .strip>img { flex: none; width: 220px }
 .strip>h3 { flex: none; width: 130px }

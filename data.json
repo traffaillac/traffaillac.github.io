@@ -1,18 +1,18 @@
 [
 	{
 		"type": "project",
-		"title": "WEEX éolien",
-		"text": "Online interface for a week-long challenge on optimizing the energy production of a wind farm.",
-		"image": "weex.png",
-		"start": 2020
+		"title": "Visualization of individual competency evaluations",
+		"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
+		"image": "competences.png",
+		"href": "https://www.ec-lyon.fr/formation/pedagogie/demarche-competences",
+		"start": 2021
 	}, {
 		"type": "project",
-		"title": "Automated grading with DMOJ",
-		"text": "Setting up the <a href=https://github.com/DMOJ>DMOJ</a> platform to serve course exercises and help students automatically test their work [<a href=#Didapro20>Didapro'20</a>].",
-		"image": "dmoj.png",
-		"href": "https://github.com/traffaillac/tdmoj",
-		"start": 2019,
-		"finish": 2019
+		"title": "WEEX éolien",
+		"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is often presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The software is now autonomous and hosts 3 events per year.",
+		"image": "weex.png",
+		"href": "https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun",
+		"start": 2020
 	}, {
 		"type": "project",
 		"title": "Polyphony: building GUIs with ECS",
@@ -20,14 +20,13 @@
 		"image": "ecs.png",
 		"href": "https://gitlab.inria.fr/Loki/PolyphonyECS/",
 		"start": 2016,
-		"finish": 2019,
-		"major": true
+		"finish": 2019
 	}, {
 		"type": "project",
 		"title": "Turning function calls into animations",
 		"text": "Demonstration of a language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].",
 		"image": "animations.svg",
-		"href": "http://smalltalkhub.com/#!/~ThibaultRaffaillac/Animation",
+		"href": "http://smalltalkhub.com/ThibaultRaffaillac/Animation/",
 		"start": 2016,
 		"finish": 2017
 	}, {
@@ -43,7 +42,7 @@
 		"title": "Exploring the design of compiler feedback",
 		"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
 		"image": "compiler.png",
-		"href": "MSc/proto1.html",
+		"href": "content/MasterThesis/proto1.html",
 		"start": 2012,
 		"finish": 2012
 	}, {
@@ -55,14 +54,15 @@
 	}, {
 		"type": "publication",
 		"reference": "[PhD]",
-		"text": "T. Raffaillac. Améliorer les langages et bibliothèques logicielles pour programmer l'interaction. Université de Lille, Inria Lille - Nord Europe. <a href=http://www.theses.fr/2019LILUI104/document>PDF</a> <a href=soutenance.pdf>slides</a>",
+		"text": "T. Raffaillac. Améliorer les langages et bibliothèques logicielles pour programmer l'interaction. Université de Lille, Inria Lille - Nord Europe. <a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
 		"finish": 2019
 	}, {
 		"type": "publication",
 		"id": "EICS19",
 		"reference": "[EICS'19]",
 		"text": "T. Raffaillac & S. Huot. Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model. In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019). <abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>33.3%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180>HAL</a>",
-		"finish": 2019
+		"finish": 2019,
+		"major": true
 	}, {
 		"type": "publication",
 		"id": "IHM18",
@@ -102,7 +102,7 @@
 		"finish": 2022,
 		"title": "Object-oriented design and programming",
 		"role": "teaching assistant and guest lecturer",
-		"text": "introduction to Software Engineering, UML, OOP, Graphical User Interfaces, Python/tkinter",
+		"text": "introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter",
 		"level": "undergraduate",
 		"hours": 144,
 		"institution": "École Centrale de Lyon"
@@ -168,28 +168,38 @@
 		"institution": "Lille University"
 	}, {
 		"type": "misc",
+		"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2020>Advent of Code 2020</a>",
+		"text": "This year I went through all the puzzles of this Christmas-themed challenge.",
+		"finish": 2020
+	}, {
+		"type": "misc",
+		"title": "<a href=content/codejam20.pdf>Code Jam 2020 contest</a>",
+		"text": "Reaching round 3 of this challenging competition",
+		"finish": 2020
+	}, {
+		"type": "misc",
 		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2020>Hash Code 2020 contest</a>",
 		"text": "2826<sup>th</sup>/10724, <!--236<sup>th</sup>/784 (France),--> 2<sup>nd</sup> in our hub, team <i>XoXot</i> with Damien Masson, Nicolas Crosetti and Paul Gallot.",
 		"finish": 2020
 	}, {
 		"type": "misc",
 		"title": "<a href=https://www.fun-mooc.fr/courses/course-v1:enseignementsup+131001+session03/about>MOOC on university teaching</a> (French)",
-		"text": "Followed during 10 weeks for ~2h/week <a href=mooc-enseignement.pdf>[Certificate of completion]</a>",
+		"text": "Followed during 10 weeks for ~2h/week <a href=content/mooc-enseignement.pdf>[Certificate of completion]</a>",
 		"finish": 2020
 	}, {
 		"type": "misc",
 		"title": "<a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2020</a>",
-		"text": "My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I was also glad to score well among French institutions at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
+		"text": "My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I also scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
 		"finish": 2020
 	}, {
 		"type": "misc",
-		"title": "<a href=didapro8-atelier.pdf>Mise en place d’une plateforme de programmation compétitive comme support de TDs</a> (French)",
-		"text": "Workshop given on 5 February during the colloquium Didapro 8, to present the setup and use of DMOJ for automated grading.",
+		"title": "<a href=content/didapro8-atelier.pdf>Mise en place d’une plateforme de programmation compétitive comme support de TDs</a> (French)",
+		"text": "Workshop given on 5 February during the colloquium Didapro 8, to present the <a href=https://github.com/traffaillac/tdmoj>setup and use</a> of DMOJ for automated grading.",
 		"finish": 2020
 	}, {
 		"type": "misc",
 		"title": "<a href=http://www.raid-ecl.fr/menu/edition2019/resultats.php>Raid Centrale Lyon</a>",
-		"text": "Running, cycling and canoeing. We registered for the discovery level with a fellow PhD student and finished 3<sup>rd</sup>.",
+		"text": "Running, cycling and canoeing. We registered for the discovery level with Thierry Gonon and finished 3<sup>rd</sup>.",
 		"finish": 2019
 	}, {
 		"type": "misc",
@@ -229,7 +239,7 @@
 	}, {
 		"type": "misc",
 		"title": "<a href=http://shakethatbutton.com/bamboo-that-bends/>Bamboo that bends</a>",
-		"text": "A 3D Twister game made with a team of five people during the ZooMachines Interactive Arts festival, which was <i>way</i> funnier to play than the videos show!",
+		"text": "A 3D Twister game made with five people during the ZooMachines Interactive Arts festival, which was <i>way</i> funnier than on video!",
 		"finish": 2016
 	}, {
 		"type": "misc",
@@ -238,7 +248,7 @@
 		"finish": 2016
 	}, {
 		"type": "misc",
-		"title": "<a href=parsing.html>A case about parsing errors</a>",
+		"title": "<a href=content/parsing.html>A case about parsing errors</a>",
 		"text": "A blog article about the handling of errors in edge264.",
 		"finish": 2016
 	}, {
@@ -258,67 +268,67 @@
 		"finish": 2012
 	}, {
 		"type": "misc",
-		"title": "<a href=cms2011/admin.html>Assisting interface for easy administration of a CMS</a>",
-		"text": "Study of a novel interface for online Content Management Systems, for the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='This course was awesome.'>Interaction Design</a> course. <a href=traf-DH2626-11.pdf>[PDF]</a>",
+		"title": "<a href=content/cms2011/admin.html>Assisting interface for easy administration of a CMS</a>",
+		"text": "Study of a novel interface for online Content Management Systems, for the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='This course was awesome.'>Interaction Design</a> course. <a href=content/traf-DH2626-11.pdf>[PDF]</a>",
 		"finish": 2011
 	}, {
 		"type": "misc",
-		"title": "<a href=AssassinationGameApp.mp4>Assassination Game Application</a>",
+		"title": "<a href=content/AssassinationGameApp.mp4>Assassination Game Application</a>",
 		"text": "Video prototype for a Group Project of the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='Did I mention how AMAZING this course was?'>Interaction Design</a> course.",
 		"finish": 2011
 	}, {
 		"type": "misc",
-		"title": "<a href=traf-semanticslab.zip>WHILE compiler</a>",
-		"text": "Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href=http://www.kth.se/student/kurser/kurs/DD2457?l=en>Program Semantics and Analysis</a> course. <a href=sample-output.asm>[sample output]</a>",
+		"title": "<a href=content/traf-semanticslab.zip>WHILE compiler</a>",
+		"text": "Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href=http://www.kth.se/student/kurser/kurs/DD2457?l=en>Program Semantics and Analysis</a> course. <a href=content/sample-output.asm>[sample output]</a>",
 		"finish": 2011
 	}, {
 		"type": "misc",
-		"title": "<a href=tuto_direct_VLC.html>Diffusion en direct avec VLC</a> (French)",
+		"title": "<a href=content/tuto_direct_VLC.html>Diffusion en direct avec VLC</a> (French)",
 		"text": "Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.",
 		"finish": 2011
 	}, {
 		"type": "misc",
-		"title": "<a href=installation_vod.txt>Mise en place de VOD</a> (French)",
+		"title": "<a href=content/installation_vod.txt>Mise en place de VOD</a> (French)",
 		"text": "Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.",
 		"finish": 2010
 	}, {
 		"type": "misc",
-		"title": "<a href=ginfo2009.mp4>Film de Rentrée du GInfo</a> (French)",
+		"title": "<a href=content/ginfo2009.mp4>Film de Rentrée du GInfo</a> (French)",
 		"text": "Short movie promoting the Computer Science student association at the annual associations fair of Ecole Centrale Marseille. A <i>must-watch</i> if you've scrolled down this far :)",
 		"finish": 2009
 	}, {
 		"type": "misc",
-		"title": "<a href=CompressionStaxRip/installation.html>Compression avec StaxRip</a> (French)",
+		"title": "<a href=content/CompressionStaxRip/installation.html>Compression avec StaxRip</a> (French)",
 		"text": "Tutorial to compress a video exported by Premiere Pro, using the software StaxRip. The parameters would correct the flaws introduced by Premiere (its disastrous deinterlacing filter) and output in a format ready for integration in a Web player.",
 		"finish": 2009
 	}, {
 		"type": "misc",
-		"title": "<a href=CompressionMeGUI/installation.html>Compression avec MeGUI</a> (French)",
+		"title": "<a href=content/CompressionMeGUI/installation.html>Compression avec MeGUI</a> (French)",
 		"text": "Tutorial to compress a video exported by Premiere Pro, using MeGUI. It was soon superseeded by the tutorial on StaxRip.",
 		"finish": 2009
 	}, {
 		"type": "misc",
-		"title": "<a href=traf-TIPE2008.zip>La lentille électrostatique</a> (French comments)",
+		"title": "<a href=content/traf-TIPE2008.zip>La lentille électrostatique</a> (French comments)",
 		"text": "Simultation of an electrostatic lens by shooting electrons in a simple finite element mesh, created for the TIPE exam at the end of the <i>Classes Préparatoires</i>.",
 		"finish": 2008
 	}, {
 		"type": "misc",
-		"title": "<a href=ModeleEXE.asm>Modèle EXE</a> (French comments)",
+		"title": "<a href=content/ModeleEXE.asm>Modèle EXE</a> (French comments)",
 		"text": "Source code for nasm based on the PE/COFF reference, to create an executable file from scratch without linking.",
 		"finish": 2008
 	}, {
 		"type": "misc",
-		"title": "<a href=traf-TIPE2007.zip>Oscillations d'un Fil</a> (French comments)",
+		"title": "<a href=content/traf-TIPE2007.zip>Oscillations d'un Fil</a> (French comments)",
 		"text": "Real-time simulation of a flexible wire using Lagrangian Mechanics and RK4 integration, created for the TIPE exam.",
 		"finish": 2007
 	}, {
 		"type": "misc",
-		"title": "<a href=CasseBriques.zip>Casse-briques</a> (French comments)",
+		"title": "<a href=content/CasseBriques.zip>Casse-briques</a> (French comments)",
 		"text": "Breakout-clone where the paddle can tilt.",
 		"finish": 2007
 	}, {
 		"type": "misc",
-		"title": "<a href=Visionneuse_3D.zip>Visionneuse 3D</a> (French)",
+		"title": "<a href=content/Visionneuse_3D.zip>Visionneuse 3D</a> (French)",
 		"text": "Interactive viewer for 3D objects stored in files. This program ended a 3-year obsession to create a 3D engine, and was my last BASIC program before playing with more modern languages.",
 		"finish": 2005
 	}

@@ -8,6 +8,7 @@ header = f'''<!doctype html>
 <head>
 	<meta charset=utf-8>
 	<title>Thibault Raffaillac</title>
+	<meta name="viewport" content="width=1200, initial-scale=1">
 	<meta name=author content="Thibault Raffaillac">
 	<link rel="stylesheet" href="normalize.min.css">
 	<link rel="stylesheet" href="style.css">
@@ -17,9 +18,9 @@ header = f'''<!doctype html>
 <div class=flexrowstart style="margin-bottom: 100px">
 <nav>
 <div class=flexcolend style="flex: none; padding-right: 40px; width: 300px">
-	<img class=rotate src=avatar.jpg width=140 style="border-radius: 50%">
+	<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">
 	<span style="font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right">Thibault Raffaillac</span>
-	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font-size: 30px; margin-right: .6em; text-decoration: none">📧</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=github.png width=26></a></span>
+	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font-size: 30px; margin-right: .6em; text-decoration: none">📧</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
 	<h2><a href=index.html#projects>Projects</a></h2>
 	<h2><a href=index.html#publications>Publications</a></h2>
 	<h2><a href=index.html#teaching>Teaching</a></h2>
@@ -45,21 +46,22 @@ header = f'''<!doctype html>
 </p>
 </div>
 </div>'''
-header_projects = '''\n\n\n<h1 id=projects>Projects</h1>
+header_projects = '''\n\n\n<h1 id=projects style="box-shadow: inset 0 -50px 50px -50px #335c67">Projects</h1>
 <p style="margin: 20px 10px 15px 340px">
-	In general I welcome ideas with <i>“Everything is possible”</i>, and dedicate as much time and efforts as necessary to put them into practice.
-	As a consequence I do few projects and spend years on some, but hopefully and eventually they become useful to other people.
+	In general I welcome ideas with <i>“Everything is possible”</i>, and am very much committed to finishing my projects and meeting the needs of end users.
+	As a consequence I do few projects and spend years on some, but hopefully and eventually they become useful to people.
 	The projects below took a significant share of my time and energy.
 </p>'''
-header_publications = '\n\n\n<h1 id=publications style="margin-top: 100px">Publications</h1>\n<div class=references>'
-header_teaching = '''\n\n\n<h1 id=teaching style="margin-top: 100px">Teaching</h1>
+header_publications = '\n\n\n<h1 id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</h1>\n<div class=references>'
+header_teaching = '''\n\n\n<h1 id=teaching style="box-shadow: inset 0 -50px 50px -50px #540b0e; margin-top: 100px">Teaching</h1>
 <div class=courses>
 	<h3><b>Period</b></h3>
 	<h3><b>Course</b></h3>
 	<h3><b>Level</b></h3>
 	<h3><b>Institution</b></h3>
 	<h3><b>Hours</b></h3>'''
-header_misc = '\n\n\n<h1 id=misc style="margin-top: 100px">Signs of life</h1>'
+# FIXME academic duties avec #fff3b0
+header_misc = '\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #9e2a2b; margin-top: 100px">Signs of life</h1>'
 footer = '''\n\n\n<!-- Add target=_blank to all outbound links -->
 <script>
 	for (let a of document.querySelectorAll('a[href^="http"]'))
@@ -86,8 +88,9 @@ with open('index.html', 'w') as f:
 		if e["type"] == 'project':
 			h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
 			interval = e["start"] if e["start"]==e.get("finish",0) else f'{e["start"]}-{e.get("finish", "")}'
-			print(f'<div class=card style="margin-left: {10+pos}px; margin-right: {340-pos}px">', file=f)
-			print(f'\t<img src={e["image"]}>', file=f)
+			bg = 'background-color: rgb(51, 92, 103, 0.2); ' if 'major' in e else ''
+			print(f'<div class=card style="{bg}margin-left: {10+pos}px; margin-right: {340-pos}px">', file=f)
+			print(f'\t<img src=images/{e["image"]}>', file=f)
 			print('\t<div class=flexcolstretch>', file=f)
 			print(f'\t\t<h3>{h3} ({interval})</h3>', file=f)
 			print(f'\t\t<h4>{e["text"]}</h4>', file=f)
@@ -98,8 +101,9 @@ with open('index.html', 'w') as f:
 	print(header_publications, file=f)
 	for e in events:
 		if e["type"] == 'publication':
-			print(f'\t<h3 id={e["id"]}>{e["reference"]}</h3>' if "id" in e else f'\t<h3>{e["reference"]}</h3>', file=f)
-			print(f'\t<h4>{e["text"]}</h4>', file=f)
+			bg = ' style="background-color: rgb(224, 159, 62, 0.2)"' if 'major' in e else ''
+			print(f'\t<h3 id={e["id"]}{bg}>{e["reference"]}</h3>' if "id" in e else f'\t<h3>{e["reference"]}</h3>', file=f)
+			print(f'\t<h4{bg}>{e["text"]}</h4>', file=f)
 	print('</div>', file=f)
 	# section Teaching
 	print(header_teaching, file=f)
@@ -121,7 +125,7 @@ with open('index.html', 'w') as f:
 		if e["type"] == 'misc':
 			if e["finish"] != year:
 				year = e["finish"]
-				print(f'<h2 style="color: #ddd; text-align: center">{year}</h2>', file=f)
+				print(f'<h2 style="color: #ddd; margin-top: 25px; text-align: center">{year}</h2>', file=f)
 			print('<div class=sign>', file=f)
 			print(f'\t<h3><b>{e["title"]}</b></h3>', file=f)
 			print(f'\t<h4>{e["text"]}</h4>', file=f)
@@ -148,7 +152,7 @@ with open('timeline.html', 'w') as f:
 					h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
 					interval = e["start"] if e["start"]==e.get("finish",0) else f'{e["start"]}-{e.get("finish", "")}'
 					print('\t<div class=project>project</div>', file=f)
-					print(f'\t<img src={e["image"]} width=300>', file=f)
+					print(f'\t<img src=images/{e["image"]} width=300>', file=f)
 					print('\t<div class=flexcolstretch style="justify-content: center">', file=f)
 					print(f'\t\t<h3>{h3} ({interval})</h3>', file=f)
 					print(f'\t\t<h4>{e["text"]}</h4>', file=f)
