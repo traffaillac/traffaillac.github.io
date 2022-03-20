@@ -1,9 +1,10 @@
 [
 	{
 		"type": "project",
+		"id": "competencies",
 		"title": "Visualization of individual competency evaluations",
 		"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
-		"image": "competences.png",
+		"image": "competencies.png",
 		"href": "https://www.ec-lyon.fr/formation/pedagogie/demarche-competences",
 		"start": 2021
 	}, {
@@ -167,6 +168,83 @@
 		"hours": 36,
 		"institution": "Lille University"
 	}, {
+		"type": "duty",
+		"text": "Supervision of 4 last-year Engineer5 students from January to March 2022, on creating the initial teacher visualizations for the <a href=#competencies>competency website</a>",
+		"finish": 2022
+	}, {
+		"type": "duty",
+		"text": "Reviewer for CHI'22 and EICS'22",
+		"finish": 2022
+	}, {
+		"type": "duty",
+		"text": "Supervision of 6 Engineer3 students from October 2021 to June 2022, where they participated in programming competitions to represent Centrale Lyon. This time I created a lighter course than previously, focused only on graphs and dynamic programming. With this motivated group Centrale Lyon reached the <a href=https://open.kattis.com/countries/FRA>1<sup>st</sup> rank in France on Kattis</a>, and the group leader also ran a programming club for all students.",
+		"start": 2021,
+		"finish": 2022
+	}, {
+		"type": "duty",
+		"text": "Member of the Sustainable Development and Societal Responsibility local committee from September 2021. We mainly worked on applying the recommendations from COP 2 that was recently signed by the director of Centrale Lyon.",
+		"start": 2021,
+		"finish": 2022
+	}, {
+		"type": "duty",
+		"text": "Supervision of the internship of Pierre Baron from May to August 2021, on refining the visualizations for the <a href=#competencies>competency website</a> and creating a full initial version. He did a great job!",
+		"finish": 2021
+	}, {
+		"type": "duty",
+		"text": "Supervision of 4 last-year Engineer5 students from January to March 2021, on creating the initial student visualizations for the <a href=#competencies>competency website</a>.",
+		"finish": 2021
+	}, {
+		"type": "duty",
+		"text": "Reviewer for CHI'21 and IHM'20'21",
+		"finish": 2021
+	}, {
+		"type": "duty",
+		"text": "Supervision of 2 Engineer4 students on a research project from October 2020 to April 2021, where they built a proof-of-concept of automatic graph visualization for teaching and presented it during <a href=EIAH21>EIAH'21</a>",
+		"start": 2020,
+		"finish": 2021
+	}, {
+		"type": "duty",
+		"text": "Co-supervision (with Olivier Bareille and Cécile Lacoin) of 5 Engineer3 students from October 2020 to June 2021, where they conducted a survey and organized a <i>Mobility Day</i> to try to reduce the number of solo drivers on the campus. I helped mainly with the survey.",
+		"start": 2020,
+		"finish": 2021
+	}, {
+		"type": "duty",
+		"text": "Reviewer for CHI'20",
+		"finish": 2020
+	}, {
+		"type": "duty",
+		"text": "Supervision of 6 Engineer3 students from October 2019 to June 2020, where they participated in programming competitions to represent Centrale Lyon. Their top ranks in order were 82<sup>th</sup>/95 at SWERC, 3181<sup>th</sup>/10724 at Hash Code, 315<sup>th</sup>/4935 at BattleDev, and reaching round 1 at Code Jam. After SWERC I created a custom <a href=#contests20>competitive programming course</a> to help them progress faster.",
+		"start": 2019,
+		"finish": 2020
+	}, {
+		"type": "duty",
+		"text": "Reviewer for IHM'19",
+		"finish": 2019
+	}, {
+		"type": "duty",
+		"text": "Reviewer for IHM'18",
+		"finish": 2018
+	}, {
+		"type": "duty",
+		"text": "Reviewer for IWST'17 and ManLang'17",
+		"finish": 2017
+	}, {
+		"type": "misc",
+		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/round/00000000008caae7>Hash Code 2022 contest</a>",
+		"text": "703<sup>th</sup>/10177, 52<sup>th</sup>/529 in France, team <i>#import mercy</i> on my own.",
+		"finish": 2022
+	}, {
+		"type": "misc",
+		"id": "creative21",
+		"title": "<a href=content/creative21.zip>Creative and competitive programming club</a>",
+		"text": "I ran this club for students from February to April, with sessions alternating between competitive programming and live music coding with FoxDot.",
+		"finish": 2021
+	}, {
+		"type": "misc",
+		"title": "<a href=https://github.com/ClementSparrow/GlobalGameJam2021>Lost Souls Found The Gold You Lost To Save Your Soul</a>",
+		"text": "Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and music (although due to a bug you rarely hear the full version).",
+		"finish": 2021
+	}, {
 		"type": "misc",
 		"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2020>Advent of Code 2020</a>",
 		"text": "This year I went through all the puzzles of this Christmas-themed challenge.",
@@ -174,12 +252,23 @@
 	}, {
 		"type": "misc",
 		"title": "<a href=content/codejam20.pdf>Code Jam 2020 contest</a>",
-		"text": "Reaching round 3 of this challenging competition",
+		"text": "Reaching round 3 of this challenging competition.",
 		"finish": 2020
 	}, {
 		"type": "misc",
 		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2020>Hash Code 2020 contest</a>",
 		"text": "2826<sup>th</sup>/10724, <!--236<sup>th</sup>/784 (France),--> 2<sup>nd</sup> in our hub, team <i>XoXot</i> with Damien Masson, Nicolas Crosetti and Paul Gallot.",
+		"finish": 2020
+	}, {
+		"type": "misc",
+		"title": "<a href=https://github.com/traffaillac/ide-enseignement>Online IDE with supervision</a>",
+		"text": "Online IDE including a Python interpreter, that I coded at the start of the Covid outbreak to allow students to ask for help and show their code remotely (viewed as a mosaic on my side). It lacked modules so students would only use it to show code, but it was super helpful to let them feel supported throughout this event.",
+		"finish": 2020
+	}, {
+		"type": "misc",
+		"id": "contests20",
+		"title": "<a href=content/contests20.zip>Competitive programming course</a>",
+		"text": "Slides for a custom course I created for 6 students, based on the excellent <a href=https://cpbook.net/methodstosolve>Competitive Programming 3</a> book.",
 		"finish": 2020
 	}, {
 		"type": "misc",

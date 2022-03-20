@@ -53,6 +53,7 @@ header_projects = '''\n\n\n<h1 id=projects style="box-shadow: inset 0 -50px 50px
 	The projects below took a significant share of my time and energy.
 </p>'''
 header_publications = '\n\n\n<h1 id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</h1>\n<div class=references>'
+# FIXME je participe souvent à la rédaction des TDs
 header_teaching = '''\n\n\n<h1 id=teaching style="box-shadow: inset 0 -50px 50px -50px #540b0e; margin-top: 100px">Teaching</h1>
 <div class=courses>
 	<h3><b>Period</b></h3>
@@ -61,7 +62,13 @@ header_teaching = '''\n\n\n<h1 id=teaching style="box-shadow: inset 0 -50px 50px
 	<h3><b>Institution</b></h3>
 	<h3><b>Hours</b></h3>'''
 # FIXME academic duties avec #fff3b0
-header_misc = '\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #9e2a2b; margin-top: 100px">Signs of life</h1>'
+header_misc = '''\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #9e2a2b; margin-top: 100px">Signs of life</h1>
+<p style="margin: 20px 175px">
+	This section contains stuff that doesn't fit anywhere else.
+	I do a lot of challenges (with or without programming), to keep myself mentally fit and just have fun from time to time.
+	My main platform for contests training is <a href=https://open.kattis.com/countries/FRA>Kattis</a>, where I hold 2<sup>nd</sup> place in France.
+	I also share my solutions to training problems on <a href=https://github.com/traffaillac/traf-kattis>traf-kattis</a>.
+</p>'''
 footer = '''\n\n\n<!-- Add target=_blank to all outbound links -->
 <script>
 	for (let a of document.querySelectorAll('a[href^="http"]'))
