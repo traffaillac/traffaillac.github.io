@@ -50,12 +50,7 @@ header = f'''<!doctype html>
 </p>
 </div>
 </div>'''
-header_projects = '''\n\n\n<h1 id=projects style="box-shadow: inset 0 -50px 50px -50px #335c67">Projects</h1>
-<p style="margin: 20px 10px 15px 340px">
-	In general I welcome ideas with <i>“Everything is possible”</i>, and am very much committed to finishing my projects and meeting the needs of end users.
-	As a consequence I do few projects and spend years on some, but hopefully and eventually they become useful to people.
-	The projects below took a significant share of my time and energy.
-</p>'''
+header_projects = '''\n\n\n<h1 id=projects style="box-shadow: inset 0 -50px 50px -50px #335c67">Projects</h1>'''
 header_publications = '''\n\n\n<h1 id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</h1>
 <div class=references>'''
 # FIXME je participe souvent à la rédaction des TDs
@@ -96,12 +91,12 @@ with open('index.html', 'w') as f:
 	print(header, file=f)
 	# section Projets
 	print(header_projects, file=f)
-	pos = 330
+	pos = randint(0, 330)
 	for e in events:
 		if e["type"] == 'project':
 			h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
 			period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
-			bg = 'background-color: rgb(51, 92, 103, 0.2); ' if 'major' in e else ''
+			bg = 'background-color: rgb(51, 92, 103, 0.15); ' if 'major' in e else ''
 			Id = f' id={e["id"]}' if "id" in e else ''
 			print(f'<div{Id} class=card style="{bg}margin-left: {10+pos}px; margin-right: {340-pos}px">', file=f)
 			print(f'\t<img src=images/{e["image"]}>', file=f)
@@ -116,7 +111,7 @@ with open('index.html', 'w') as f:
 	for e in events:
 		if e["type"] == 'publication':
 			Id = f' id={e["id"]}' if "id" in e else ''
-			bg = ' style="background-color: rgb(224, 159, 62, 0.2)"' if 'major' in e else ''
+			bg = ' style="background-color: rgb(224, 159, 62, 0.15)"' if 'major' in e else ''
 			print(f'\t<h3{Id}{bg}>{e["reference"]}</h3>', file=f)
 			print(f'\t<h4{bg}>{e["text"]}</h4>', file=f)
 	print('</div>', file=f)
