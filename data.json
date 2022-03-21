@@ -44,8 +44,18 @@
 		"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
 		"image": "compiler.png",
 		"href": "content/MasterThesis/proto1.html",
-		"start": 2012,
 		"finish": 2012
+	}, {
+		"type": "publication",
+		"reference": "[EICS'22]",
+		"text": "T. Raffaillac & S. Huot. What do researchers need when implementing novel interaction techniques? In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022). <i>conditionally accepted</i>",
+		"finish": 2022
+	}, {
+		"type": "publication",
+		"id": "EIAH21",
+		"reference": "[EIAH'21]",
+		"text": "P. Baron, L. Roche & T. Raffaillac. Visualisation automatique de graphes pour l'apprentissage des algorithmes. À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021). <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a>",
+		"finish": 2021
 	}, {
 		"type": "publication",
 		"id": "Didapro20",
@@ -94,7 +104,7 @@
 		"title": "Algorithms and data structures",
 		"role": "teaching assistant",
 		"text": "complexity, sorting, graphs, dynamic programming, Python",
-		"level": "undergraduate",
+		"level": "Engineer1",
 		"hours": 220,
 		"institution": "École Centrale de Lyon"
 	}, {
@@ -104,7 +114,7 @@
 		"title": "Object-oriented design and programming",
 		"role": "teaching assistant and guest lecturer",
 		"text": "introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter",
-		"level": "undergraduate",
+		"level": "Engineer1",
 		"hours": 144,
 		"institution": "École Centrale de Lyon"
 	}, {
@@ -114,8 +124,85 @@
 		"title": "Web application project",
 		"role": "teaching assistant",
 		"text": "client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git",
-		"level": "undergraduate",
+		"level": "Engineer1",
 		"hours": 120,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"finish": 2022,
+		"title": "Computer science specialty project",
+		"role": "supervisor",
+		"text": "4 students working on the initial teacher visualizations for the <a href=#competencies>competency website</a>",
+		"level": "Engineer3",
+		"hours": 2.5,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"start": 2021,
+		"finish": 2022,
+		"title": "Competitive programming project",
+		"role": "supervisor",
+		"text": "6 students competing during a year for their school at <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>CodinGame</a> (4<sup>th</sup>/410) and other challenges. I gave a custom course to help them progress faster. With this motivated group Centrale Lyon also reached the <a href=https://open.kattis.com/countries/FRA>1<sup>st</sup> rank in France on Kattis</a>, and the leader also ran a programming club for all students.",
+		"level": "Engineer1",
+		"hours": 18,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"start": 2021,
+		"finish": 2022,
+		"title": "Student mentoring",
+		"role": "mentor",
+		"text": "counseling 3 students throughout their first year at Centrale Lyon",
+		"level": "Engineer1",
+		"hours": 6,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"finish": 2021,
+		"title": "Internship",
+		"role": "supervisor",
+		"text": "Pierre Baron worked on refining the visualizations for the <a href=#competencies>competency website</a> and creating a full initial version. He did a great job!",
+		"level": "Engineer2",
+		"hours": 8,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"finish": 2021,
+		"title": "Computer science specialty project",
+		"role": "supervisor",
+		"text": "4 last-year students creating the initial student visualizations for the <a href=#competencies>competency website</a>.",
+		"level": "Engineer3",
+		"hours": 2.5,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"start": 2020,
+		"finish": 2021,
+		"title": "Applied research project",
+		"role": "supervisor",
+		"text": "2 students worked during a year on a proof-of-concept of automatic graph visualization for teaching and presented it at <a href=EIAH21>EIAH'21</a>.",
+		"level": "Engineer2",
+		"hours": 10,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"start": 2020,
+		"finish": 2021,
+		"title": "Campus mobility project",
+		"role": "co-supervisor with Olivier Bareille and Cécile Lacoin",
+		"text": "5 students planned a survey and a <i>Mobility Day</i> during a year to try to reduce the number of solo drivers on the campus. I volunteered and helped mainly with the survey.",
+		"level": "Engineer1",
+		"hours": 0,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"start": 2019,
+		"finish": 2020,
+		"title": "Competitive programming project",
+		"role": "supervisor",
+		"text": "6 students competing for their school at SWERC (82<sup>th</sup>/95), Hash Code (3181<sup>th</sup>/10724), BattleDev (315<sup>th</sup>/4935), and reaching round 1 at Code Jam. After SWERC I created a custom <a href=#contests20>competitive programming course</a> to help them progress faster.",
+		"level": "Engineer1",
+		"hours": 18,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
@@ -124,7 +211,7 @@
 		"title": "Introduction to human-machine interfaces",
 		"role": "teaching assistant",
 		"text": "programming Graphical User Interfaces with JavaFX, event-based programming, user interface mockups, usability evaluation and heuristics",
-		"level": "undergraduate",
+		"level": "DUT1",
 		"hours": 64,
 		"institution": "Lille University/IUT A"
 	}, {
@@ -134,7 +221,7 @@
 		"title": "Advanced algorithms",
 		"role": "teaching assistant",
 		"text": "recursive and iterative algorithms, recursive and advanced data structures",
-		"level": "undergraduate",
+		"level": "DUT2",
 		"hours": 64,
 		"institution": "Lille University/IUT A"
 	}, {
@@ -144,7 +231,7 @@
 		"title": "Introduction to computer systems",
 		"role": "teaching assistant",
 		"text": "coding numbers and text, computer architecture, operating systems, scripting and the terminal, processes and files",
-		"level": "undergraduate",
+		"level": "DUT1",
 		"hours": 64,
 		"institution": "Lille University/IUT A"
 	}, {
@@ -154,7 +241,7 @@
 		"title": "Web technologies",
 		"role": "teaching assistant",
 		"text": "client-side Web technologies HTML/CSS/JavaScript",
-		"level": "undergraduate",
+		"level": "License1",
 		"hours": 36,
 		"institution": "Lille University"
 	}, {
@@ -164,21 +251,12 @@
 		"title": "Algorithms and complexity",
 		"role": "teaching assistant",
 		"text": "divide and conquer, dynamic programming, greedy algorithms, complexity analysis, P/NP and reduction",
-		"level": "graduate",
+		"level": "Master1",
 		"hours": 36,
 		"institution": "Lille University"
 	}, {
 		"type": "duty",
-		"text": "Supervision of 4 last-year Engineer5 students from January to March 2022, on creating the initial teacher visualizations for the <a href=#competencies>competency website</a>",
-		"finish": 2022
-	}, {
-		"type": "duty",
 		"text": "Reviewer for CHI'22 and EICS'22",
-		"finish": 2022
-	}, {
-		"type": "duty",
-		"text": "Supervision of 6 Engineer3 students from October 2021 to June 2022, where they participated in programming competitions to represent Centrale Lyon. This time I created a lighter course than previously, focused only on graphs and dynamic programming. With this motivated group Centrale Lyon reached the <a href=https://open.kattis.com/countries/FRA>1<sup>st</sup> rank in France on Kattis</a>, and the group leader also ran a programming club for all students.",
-		"start": 2021,
 		"finish": 2022
 	}, {
 		"type": "duty",
@@ -187,34 +265,11 @@
 		"finish": 2022
 	}, {
 		"type": "duty",
-		"text": "Supervision of the internship of Pierre Baron from May to August 2021, on refining the visualizations for the <a href=#competencies>competency website</a> and creating a full initial version. He did a great job!",
-		"finish": 2021
-	}, {
-		"type": "duty",
-		"text": "Supervision of 4 last-year Engineer5 students from January to March 2021, on creating the initial student visualizations for the <a href=#competencies>competency website</a>.",
-		"finish": 2021
-	}, {
-		"type": "duty",
 		"text": "Reviewer for CHI'21 and IHM'20'21",
 		"finish": 2021
 	}, {
 		"type": "duty",
-		"text": "Supervision of 2 Engineer4 students on a research project from October 2020 to April 2021, where they built a proof-of-concept of automatic graph visualization for teaching and presented it during <a href=EIAH21>EIAH'21</a>",
-		"start": 2020,
-		"finish": 2021
-	}, {
-		"type": "duty",
-		"text": "Co-supervision (with Olivier Bareille and Cécile Lacoin) of 5 Engineer3 students from October 2020 to June 2021, where they conducted a survey and organized a <i>Mobility Day</i> to try to reduce the number of solo drivers on the campus. I helped mainly with the survey.",
-		"start": 2020,
-		"finish": 2021
-	}, {
-		"type": "duty",
 		"text": "Reviewer for CHI'20",
-		"finish": 2020
-	}, {
-		"type": "duty",
-		"text": "Supervision of 6 Engineer3 students from October 2019 to June 2020, where they participated in programming competitions to represent Centrale Lyon. Their top ranks in order were 82<sup>th</sup>/95 at SWERC, 3181<sup>th</sup>/10724 at Hash Code, 315<sup>th</sup>/4935 at BattleDev, and reaching round 1 at Code Jam. After SWERC I created a custom <a href=#contests20>competitive programming course</a> to help them progress faster.",
-		"start": 2019,
 		"finish": 2020
 	}, {
 		"type": "duty",
@@ -241,7 +296,7 @@
 		"finish": 2021
 	}, {
 		"type": "misc",
-		"title": "<a href=https://github.com/ClementSparrow/GlobalGameJam2021>Lost Souls Found The Gold You Lost To Save Your Soul</a>",
+		"title": "<a href=https://clementsparrow.github.io/GlobalGameJam2021/index.html>Lost Souls Found The Gold You Lost To Save Your Soul</a>",
 		"text": "Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and music (although due to a bug you rarely hear the full version).",
 		"finish": 2021
 	}, {
@@ -380,6 +435,11 @@
 		"title": "<a href=content/installation_vod.txt>Mise en place de VOD</a> (French)",
 		"text": "Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.",
 		"finish": 2010
+	}, {
+		"type": "misc",
+		"title": "<a href=content/club_programmation.txt>Club programmation</a>",
+		"text": "Support material for an OpenGL course I created at Centrale Marseille.",
+		"finish": 2009
 	}, {
 		"type": "misc",
 		"title": "<a href=content/ginfo2009.mp4>Film de Rentrée du GInfo</a> (French)",
