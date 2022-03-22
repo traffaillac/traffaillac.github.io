@@ -68,7 +68,7 @@ header_misc = '''\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #
 	This section contains stuff that doesn't fit anywhere else.
 	I do a lot of challenges (with or without programming), to keep myself mentally fit and just have fun from time to time.
 	My main platform for contests training is <a href=https://open.kattis.com/countries/FRA>Kattis</a>, where I hold 2<sup>nd</sup> place in France.
-	I also share my solutions to training problems on <a href=https://github.com/traffaillac/traf-kattis>traf-kattis</a>.
+	I also share my solutions to training problems on <a href=https://github.com/traffaillac/traf-kattis>GitHub</a>.
 </p>'''
 footer = '''\n\n\n<!-- Add target=_blank to all outbound links -->
 <script>
