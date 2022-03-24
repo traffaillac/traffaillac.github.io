@@ -297,7 +297,7 @@
 	}, {
 		"type": "misc",
 		"title": "<a href=https://clementsparrow.github.io/GlobalGameJam2021/index.html>Lost Souls Found The Gold You Lost To Save Your Soul</a>",
-		"text": "Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and music (although due to a bug you rarely hear the full version).",
+		"text": "Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and incremental music (although due to a bug you rarely hear the full version).",
 		"finish": 2021
 	}, {
 		"type": "misc",
