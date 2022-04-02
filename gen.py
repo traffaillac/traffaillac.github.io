@@ -1,6 +1,9 @@
 # TODO :
 # _ convert all sizes to em and reduce base size by 90%
+# _ make the timeline the index to make it more straightforward to find
 # _ for Teaching, replace institutions by their logos
+# _ membre du Gdr glihm
+# _ générer le cv également à partir des données
 
 from datetime import date
 from json import load
@@ -46,7 +49,7 @@ header = f'''<!doctype html>
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
 <p>
-	On a personal note I am an avid hiker, cook, cyclist, and guitar player 🤘.
+	On a personal note I am a passionate hiker, cook, cyclist, and guitar player 🤘.
 </p>
 </div>
 </div>'''
@@ -65,10 +68,11 @@ header_duties = '''\n\n\n<h1 id=duties style="box-shadow: inset 0 -50px 50px -50
 <div class=duties>'''
 header_misc = '''\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #9e2a2b; margin-top: 100px">Signs of life</h1>
 <p style="margin: 20px 175px 15px 175px">
-	This section contains stuff that doesn't fit anywhere else.
-	I do a lot of challenges (with or without programming), to keep myself mentally fit and just have fun from time to time.
-	My main platform for contests training is <a href=https://open.kattis.com/countries/FRA>Kattis</a>, where I hold 2<sup>nd</sup> place in France.
-	I also share my solutions to training problems on <a href=https://github.com/traffaillac/traf-kattis>GitHub</a>.
+	This section contains stuff that doesn't fit anywhere else (mostly challenges).
+	I believe technical mastery is essential to tackle impossible societal challenges.
+	So I dedicate about 5% of my time to organizing local training sessions for contests and challenges.
+	These events are a lot of fun and a good way to test the skills of prospective students.
+	My main platform for contests training is Kattis, where I hold <a href=https://open.kattis.com/countries/FRA>2<sup>nd</sup> place in France</a>.
 </p>'''
 footer = '''\n\n\n<!-- Add target=_blank to all outbound links -->
 <script>
