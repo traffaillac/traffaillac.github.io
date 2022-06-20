@@ -4,6 +4,7 @@
 # _ for Teaching, replace institutions by their logos
 # _ membre du Gdr glihm
 # _ générer le cv également à partir des données
+# _ remplacer duties par service
 
 from datetime import date
 from json import load
@@ -38,7 +39,7 @@ header = f'''<!doctype html>
 </nav>
 <div class=flexcolstretch style="margin: 55px 40px 0 40px">
 <p>
-	I am a contractual teacher-researcher at École Centrale de Lyon, member of the LIRIS laboratory and Sical research team, since September 2019.
+	Hi! I am a contractual teacher-researcher at École Centrale de Lyon, member of the LIRIS laboratory and Sical research team, since September 2019.
 	I obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (October 2012), worked in Paris as R&D engineer on optimizing software for embedded TV decoders (December 2012 — June 2014), did a short internship at Inria Saclay (March 2015 — August 2015), and obtained a PhD in Human-Computer Interaction at Inria Lille (November 2015 — December 2019).
 </p>
 <p>
