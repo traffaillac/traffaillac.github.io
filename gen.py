@@ -1,10 +1,13 @@
 # TODO :
+# _ renommer Projects en Engineering et Publications en Research
+# _ remplacer les liens HAL par PDF direct
 # _ convert all sizes to em and reduce base size by 90%
 # _ make the timeline the index to make it more straightforward to find
 # _ for Teaching, replace institutions by their logos
 # _ membre du Gdr glihm
 # _ générer le cv également à partir des données
-# _ remplacer duties par service
+# _ remplacer duties par service & Awards, et ajouter les best papers
+# _ ajouter un footer indiquant la date de génération automatique
 
 from datetime import date
 from json import load
@@ -26,7 +29,7 @@ header = f'''<!doctype html>
 <div class=flexrowstart style="margin-bottom: 100px">
 <nav>
 <div class=flexcolend style="flex: none; padding-right: 40px; width: 300px">
-	<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">
+	<!--<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">-->
 	<span style="font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right">Thibault Raffaillac</span>
 	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font-size: 30px; margin-right: .6em; text-decoration: none">📧</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
 	<h2><a href=index.html#projects>Projects</a></h2>
@@ -39,13 +42,13 @@ header = f'''<!doctype html>
 </nav>
 <div class=flexcolstretch style="margin: 55px 40px 0 40px">
 <p>
-	Hi! I am a contractual teacher-researcher at École Centrale de Lyon, member of the LIRIS laboratory and Sical research team, since September 2019.
+	I am a contractual teacher-researcher at École Centrale de Lyon, member of the LIRIS laboratory and Sical research team, since September 2019.
 	I obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (October 2012), worked in Paris as R&D engineer on optimizing software for embedded TV decoders (December 2012 — June 2014), did a short internship at Inria Saclay (March 2015 — August 2015), and obtained a PhD in Human-Computer Interaction at Inria Lille (November 2015 — December 2019).
 </p>
 <p>
-	These days I contribute to the development of the competency-based curriculum and multidisciplinary teaching activities, while providing technical support for teachers to manage courses with digital content.
+	These days I contribute to the development of the competency-based curriculum and innovative teaching activities at Centrale Lyon.
 	I am a member of the Sustainable Development and Societal Responsibility local committee, and try to be as proactive as possible in that domain.
-	As a teacher I am involved in User Interfaces, Algorithmics, Data Structures, Software Engineering, and Competitive Programming for which I host regular trainings.
+	As a teacher I have given courses on User Interfaces and Competitive Programming, and have been assistant in Algorithmics, Software Engineering and Web Development.
 	As a researcher my main motivation is to make it easy to program applications with user interaction.
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
@@ -56,9 +59,21 @@ header = f'''<!doctype html>
 </div>'''
 header_projects = '''\n\n\n<h1 id=projects style="box-shadow: inset 0 -50px 50px -50px #335c67">Projects</h1>'''
 header_publications = '''\n\n\n<h1 id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</h1>
+<p style="margin: 30px 175px 30px 175px">
+	My research focuses mainly on the programming of complex interactive systems.
+	In the case of graphical interfaces, this complexity is due to the large number of objects and behaviors to manage, and I have proposed models [<a href=#EICS19>EICS'19</a>, <a href=#EICS17>EICS'17</a>] and principles [<a href=#EICS22>EICS'22</a>] to give more concise mental representations.
+	In the case of data structures, this complexity is due to the effort of abstraction to navigate between visual representation and code, and I have initiated a tool allowing to work directly on visual graphs [<a href=#EIAH21>EIAH'21</a>].
+	Finally, in the case of compilers, the complexity is due to the numerous transformations that lead from the source code to the executable file, and I explored the idea of a human-compiler communication to improve the understanding [<a href=#PPIG12>PPIG'12</a>].
+</p>
 <div class=references>'''
 # FIXME je participe souvent à la rédaction des TDs
 header_teaching = '''\n\n\n<h1 id=teaching style="box-shadow: inset 0 -50px 50px -50px #540b0e; margin-top: 100px">Teaching</h1>
+<p style="margin: 30px 175px 30px 175px">
+	I really enjoy teaching and supervision activities.
+	Aside from courses, I have provided assistance to pedagogical innovation, co-organizing 5 editions of an interdisciplinary weekly challenge, and developing a Web site supporting the competency-based evaluations at Centrale Lyon.
+	I have also been hosting Competitive Programming trainings since 2015, first in University of Lille then at Centrale Lyon, for which I have given and refined advanced courses on the topic.
+	In 2021 we pushed Centrale Lyon to the first rank among the French institutions on <a href=https://open.kattis.com/countries/FRA>Kattis</a>, reached the 4<sup>th</sup> place during the <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>CodinGame Fall Challenge</a>, then got 54<sup>th</sup> and 64<sup>th</sup> places at the major European competition <a href=https://judge.swerc.eu/public>SWERC</a>.
+</p>
 <div class=courses>
 	<h3><b>Period</b></h3>
 	<h3><b>Course</b></h3>
@@ -118,7 +133,7 @@ with open('index.html', 'w') as f:
 			Id = f' id={e["id"]}' if "id" in e else ''
 			bg = ' style="background-color: rgb(224, 159, 62, 0.15)"' if 'major' in e else ''
 			print(f'\t<h3{Id}{bg}>{e["reference"]}</h3>', file=f)
-			print(f'\t<h4{bg}>{e["text"]}</h4>', file=f)
+			print(f'\t<h4{bg}>{e["authors"]}. <b>{e["title"]}</b>. <i>{e["proceedings"]}</i>. {e["misc"]}</h4>', file=f)
 	print('</div>', file=f)
 	# section Teaching
 	print(header_teaching, file=f)
@@ -186,7 +201,7 @@ with open('timeline.html', 'w') as f:
 				elif etype == 'publication':
 					print('\t<div class=publication>publication</div>', file=f)
 					print(f'\t<h3>{e["reference"]}</h3>', file=f)
-					print(f'\t<h4>{e["text"]}</h4>', file=f)
+					print(f'\t<h4{bg}>{e["authors"]}. <b>{e["title"]}</b>. <i>{e["proceedings"]}</i>. {e["misc"]}</h4>', file=f)
 				elif etype == 'teaching':
 					print('\t<div class=teaching>teaching</div>', file=f)
 					print('\t<div class=flexcolstretch style="justify-content: center">', file=f)

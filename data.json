@@ -47,55 +47,84 @@
 		"finish": 2012
 	}, {
 		"type": "publication",
+		"id": "EICS22",
 		"reference": "[EICS'22]",
-		"text": "T. Raffaillac & S. Huot. What do researchers need when implementing novel interaction techniques? In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022). <i>conditionally accepted</i>",
-		"finish": 2022
+		"authors": "T. Raffaillac & S. Huot",
+		"title": "What do researchers need when implementing novel interaction techniques?",
+		"proceedings": "In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)",
+		"misc": "<abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=content/eics22-slides.pdf>slides</a>",
+		"finish": 2022,
+		"major": true
 	}, {
 		"type": "publication",
 		"id": "EIAH21",
 		"reference": "[EIAH'21]",
-		"text": "P. Baron, L. Roche & T. Raffaillac. Visualisation automatique de graphes pour l'apprentissage des algorithmes. À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021). <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a>",
+		"authors": "P. Baron, L. Roche & T. Raffaillac",
+		"title": "Visualisation automatique de graphes pour l'apprentissage des algorithmes",
+		"proceedings": "À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)",
+		"misc": "<a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a>",
 		"finish": 2021
 	}, {
 		"type": "publication",
 		"id": "Didapro20",
 		"reference": "[Didapro'20]",
-		"text": "T. Raffaillac, F. Chavanon & R. Vuillemot. Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants. (Poster) À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8). <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a>",
+		"authors": "T. Raffaillac, F. Chavanon & R. Vuillemot",
+		"title": "Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants",
+		"proceedings": "À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)",
+		"misc": "<i>Poster</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a>",
 		"finish": 2020
 	}, {
 		"type": "publication",
 		"reference": "[PhD]",
-		"text": "T. Raffaillac. Améliorer les langages et bibliothèques logicielles pour programmer l'interaction. Université de Lille, Inria Lille - Nord Europe. <a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
+		"authors": "T. Raffaillac",
+		"title": "Améliorer les langages et bibliothèques logicielles pour programmer l'interaction",
+		"proceedings": "Université de Lille, Inria Lille - Nord Europe",
+		"misc": "<a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
 		"finish": 2019
 	}, {
 		"type": "publication",
 		"id": "EICS19",
 		"reference": "[EICS'19]",
-		"text": "T. Raffaillac & S. Huot. Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model. In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019). <abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180>HAL</a>",
+		"authors": "T. Raffaillac & S. Huot",
+		"title": "Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model",
+		"proceedings": "In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)",
+		"misc": "<abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180>HAL</a> <a href=content/eics19-slides.pdf>slides</a>",
 		"finish": 2019,
 		"major": true
 	}, {
 		"type": "publication",
 		"id": "IHM18",
 		"reference": "[IHM'18]",
-		"text": "T. Raffaillac & S. Huot. Application du modèle Entité-Composant-Système à la programmation d'interactions. À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018). (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859>HAL</a>",
+		"authors": "T. Raffaillac & S. Huot",
+		"title": "Application du modèle Entité-Composant-Système à la programmation d'interactions",
+		"proceedings": "À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)",
+		"misc": "(<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859>HAL</a> <a href=content/ihm18-slides.pdf>slides</a>",
 		"finish": 2018
 	}, {
 		"type": "publication",
 		"id": "EICS17",
 		"reference": "[EICS'17]",
-		"text": "T. Raffaillac, S. Huot & S. Ducasse. Turning Function Calls Into Animations. In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017). (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116>HAL</a>",
+		"authors": "T. Raffaillac, S. Huot & S. Ducasse",
+		"title": "Turning Function Calls Into Animations",
+		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
+		"misc": "<i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116>HAL</a> <a href=content/eics17-slides.pdf>slides</a>",
 		"finish": 2017
 	}, {
 		"type": "publication",
 		"reference": "[EICS'17]",
-		"text": "T. Raffaillac. Language and System Support for Interaction. (Doctoral Consortium) In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017). <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565>HAL</a>",
+		"authors": "T. Raffaillac",
+		"title": "Language and System Support for Interaction",
+		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
+		"misc": "<i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565>HAL</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a>",
 		"finish": 2017
 	}, {
 		"type": "publication",
 		"id": "PPIG12",
 		"reference": "[PPIG'12]",
-		"text": "T. Raffaillac. Exploring the design of compiler feedback. In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012). <a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a>",
+		"authors": "T. Raffaillac",
+		"title": "Exploring the design of compiler feedback",
+		"proceedings": "In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)",
+		"misc": "<a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a>",
 		"finish": 2012
 	}, {
 		"type": "teaching",
@@ -129,80 +158,23 @@
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
+		"start": 2019,
 		"finish": 2022,
-		"title": "Computer science specialty project",
+		"title": "Students projects and mentoring",
 		"role": "supervisor",
-		"text": "4 students working on the initial teacher visualizations for the <a href=#competencies>competency website</a>",
-		"level": "Engineer3",
-		"hours": 2.5,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2021,
-		"finish": 2022,
-		"title": "Competitive programming project",
-		"role": "supervisor",
-		"text": "6 students competing during a year for their school at <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>CodinGame</a> (4<sup>th</sup>/410) and other challenges. I gave a custom course to help them progress faster. With this motivated group Centrale Lyon also reached the <a href=https://open.kattis.com/countries/FRA>1<sup>st</sup> rank in France on Kattis</a>, and the leader also ran a programming club for all students.",
-		"level": "Engineer1",
-		"hours": 18,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2021,
-		"finish": 2022,
-		"title": "Student mentoring",
-		"role": "mentor",
-		"text": "counseling 3 students throughout their first year at Centrale Lyon",
-		"level": "Engineer1",
-		"hours": 6,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"finish": 2021,
-		"title": "Internship",
-		"role": "supervisor",
-		"text": "Pierre Baron worked on refining the visualizations for the <a href=#competencies>competency website</a> and creating a full initial version. He did a great job!",
-		"level": "Engineer2",
-		"hours": 8,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"finish": 2021,
-		"title": "Computer science specialty project",
-		"role": "supervisor",
-		"text": "4 last-year students creating the initial student visualizations for the <a href=#competencies>competency website</a>.",
-		"level": "Engineer3",
-		"hours": 2.5,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2020,
-		"finish": 2021,
-		"title": "Applied research project",
-		"role": "supervisor",
-		"text": "2 students worked during a year on a proof-of-concept of automatic graph visualization for teaching and presented it at <a href=#EIAH21>EIAH'21</a>.",
-		"level": "Engineer2",
-		"hours": 10,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2020,
-		"finish": 2021,
-		"title": "Campus mobility project",
-		"role": "co-supervisor with Olivier Bareille and Cécile Lacoin",
-		"text": "5 students planned a survey and a <i>Mobility Day</i> during a year to try to reduce the number of solo drivers on the campus. I volunteered and helped mainly with the survey.",
-		"level": "Engineer1",
-		"hours": 0,
+		"text": "6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students",
+		"level": "Eng. 1/2/3",
+		"hours": 65,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
 		"start": 2019,
-		"finish": 2020,
-		"title": "Competitive programming project",
-		"role": "supervisor",
-		"text": "6 students competing for their school at SWERC (82<sup>th</sup>/95), Hash Code (3181<sup>th</sup>/10724), BattleDev (315<sup>th</sup>/4935), and reaching round 1 at Code Jam. After SWERC I created a custom <a href=#contests20>competitive programming course</a> to help them progress faster.",
-		"level": "Engineer1",
-		"hours": 18,
+		"finish": 2022,
+		"title": "WEEX éolienne",
+		"role": "co-organizer",
+		"text": "5 editions of a week-long multidisciplinary pedagogical event",
+		"level": "Eng. 1/2",
+		"hours": 60,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
@@ -256,13 +228,17 @@
 		"institution": "Lille University"
 	}, {
 		"type": "duty",
-		"text": "Reviewer for CHI'22 and EICS'22",
+		"text": "Reviewer for CHI'22 and EICS'22, session chair at EICS'22",
 		"finish": 2022
 	}, {
 		"type": "duty",
-		"text": "Member of the Sustainable Development and Societal Responsibility local committee from September 2021. We mainly worked on applying the recommendations from COP 2 that was recently signed by the director of Centrale Lyon.",
+		"text": "Member of the Sustainable Development and Societal Responsibility local committee from September 2021. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.",
 		"start": 2021,
 		"finish": 2022
+	}, {
+		"type": "duty",
+		"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction)",
+		"start": 2021
 	}, {
 		"type": "duty",
 		"text": "Reviewer for CHI'21 and IHM'20'21",

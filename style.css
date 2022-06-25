@@ -83,6 +83,7 @@ p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
 .courses {
 	display: grid;
 	grid-template-columns: max-content 1fr max-content max-content max-content;
+	border-top: 1px solid #eee;
 	margin: 0 175px;
 }
 .courses>* {
