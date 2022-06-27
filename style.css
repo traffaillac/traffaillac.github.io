@@ -93,9 +93,9 @@ p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
 	border-bottom: 1px solid #eee;
 	padding: 5px;
 }
-.duties { margin: 20px 175px 0 175px }
-.duties>* { margin-top: 10px }
-.duties>*:before { content: "•   " }
+.academic { margin: 20px 175px 0 175px }
+.academic>* { margin-top: 10px }
+.academic>*:before { content: "•   " }
 .sign {
 	display: flex;
 	flex-direction: row;
@@ -117,13 +117,21 @@ p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
 	padding-right: 20px;
 	width: 300px;
 }
-.project { box-shadow: inset -50px 0 50px -50px #335c67 }
+.engineering { box-shadow: inset -50px 0 50px -50px #335c67 }
 .publication { box-shadow: inset -50px 0 50px -50px #e09f3e }
 .teaching { box-shadow: inset -50px 0 50px -50px #540b0e }
-.duty { box-shadow: inset -50px 0 50px -50px #ffd200 }
+.academia { box-shadow: inset -50px 0 50px -50px #ffd200 }
 .misc { box-shadow: inset -50px 0 50px -50px #9e2a2b }
 .strip>* { padding: 6px 0 6px 20px }
 .strip>img { flex: none; width: 220px }
 .strip>h3 { flex: none; width: 130px }
 .strip h4 { padding-right: 10px }
 .rotate:hover {animation:rotate 2s linear infinite}
+#footer {
+	margin: 100px auto 0 auto;
+	padding: 10px 15px;
+	border-radius: 30px;
+	font-size: 18px;
+	border: 1px solid #bbb;
+	width: max-content;
+}

@@ -1,6 +1,6 @@
 [
 	{
-		"type": "project",
+		"type": "engineering",
 		"id": "competencies",
 		"title": "Visualization of individual competency evaluations",
 		"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
@@ -8,14 +8,14 @@
 		"href": "https://www.ec-lyon.fr/formation/pedagogie/demarche-competences",
 		"start": 2021
 	}, {
-		"type": "project",
+		"type": "engineering",
 		"title": "WEEX éolien",
 		"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is often presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The software is now autonomous and hosts 3 events per year.",
 		"image": "weex.png",
 		"href": "https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun",
 		"start": 2020
 	}, {
-		"type": "project",
+		"type": "engineering",
 		"title": "Polyphony: building GUIs with ECS",
 		"text": "Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].",
 		"image": "ecs.png",
@@ -23,7 +23,7 @@
 		"start": 2016,
 		"finish": 2019
 	}, {
-		"type": "project",
+		"type": "engineering",
 		"title": "Turning function calls into animations",
 		"text": "Demonstration of a language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].",
 		"image": "animations.svg",
@@ -31,7 +31,7 @@
 		"start": 2016,
 		"finish": 2017
 	}, {
-		"type": "project",
+		"type": "engineering",
 		"title": "edge264",
 		"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.",
 		"image": "edge264.svg",
@@ -39,7 +39,7 @@
 		"start": 2013,
 		"major": true
 	}, {
-		"type": "project",
+		"type": "engineering",
 		"title": "Exploring the design of compiler feedback",
 		"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
 		"image": "compiler.png",
@@ -52,7 +52,7 @@
 		"authors": "T. Raffaillac & S. Huot",
 		"title": "What do researchers need when implementing novel interaction techniques?",
 		"proceedings": "In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)",
-		"misc": "<abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=content/eics22-slides.pdf>slides</a>",
+		"misc": "<abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a>",
 		"finish": 2022,
 		"major": true
 	}, {
@@ -88,7 +88,7 @@
 		"authors": "T. Raffaillac & S. Huot",
 		"title": "Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model",
 		"proceedings": "In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)",
-		"misc": "<abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180>HAL</a> <a href=content/eics19-slides.pdf>slides</a>",
+		"misc": "<abbr title='Best paper award'>🏆</abbr> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a>",
 		"finish": 2019,
 		"major": true
 	}, {
@@ -98,7 +98,7 @@
 		"authors": "T. Raffaillac & S. Huot",
 		"title": "Application du modèle Entité-Composant-Système à la programmation d'interactions",
 		"proceedings": "À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)",
-		"misc": "(<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859>HAL</a> <a href=content/ihm18-slides.pdf>slides</a>",
+		"misc": "(<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a>",
 		"finish": 2018
 	}, {
 		"type": "publication",
@@ -107,7 +107,7 @@
 		"authors": "T. Raffaillac, S. Huot & S. Ducasse",
 		"title": "Turning Function Calls Into Animations",
 		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
-		"misc": "<i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116>HAL</a> <a href=content/eics17-slides.pdf>slides</a>",
+		"misc": "<i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a>",
 		"finish": 2017
 	}, {
 		"type": "publication",
@@ -115,7 +115,7 @@
 		"authors": "T. Raffaillac",
 		"title": "Language and System Support for Interaction",
 		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
-		"misc": "<i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565>HAL</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a>",
+		"misc": "<i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a>",
 		"finish": 2017
 	}, {
 		"type": "publication",
@@ -227,38 +227,56 @@
 		"hours": 36,
 		"institution": "Lille University"
 	}, {
-		"type": "duty",
+		"type": "academia",
+		"text": "<b>Best Paper Award</b> at <a href=#EICS22>EICS'22</a>",
+		"finish": 2022
+	}, {
+		"type": "academia",
 		"text": "Reviewer for CHI'22 and EICS'22, session chair at EICS'22",
 		"finish": 2022
 	}, {
-		"type": "duty",
-		"text": "Member of the Sustainable Development and Societal Responsibility local committee from September 2021. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.",
+		"type": "academia",
+		"text": "Member of the Sustainable Development and Societal Responsibility local committee in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.",
 		"start": 2021,
 		"finish": 2022
 	}, {
-		"type": "duty",
-		"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction)",
+		"type": "academia",
+		"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021",
 		"start": 2021
 	}, {
-		"type": "duty",
+		"type": "academia",
 		"text": "Reviewer for CHI'21 and IHM'20'21",
 		"finish": 2021
 	}, {
-		"type": "duty",
+		"type": "academia",
 		"text": "Reviewer for CHI'20",
 		"finish": 2020
 	}, {
-		"type": "duty",
+		"type": "academia",
+		"text": "<b>Best Paper Award</b> at <a href=#EICS19>EICS'19</a>",
+		"finish": 2019
+	}, {
+		"type": "academia",
 		"text": "Reviewer for IHM'19",
 		"finish": 2019
 	}, {
-		"type": "duty",
+		"type": "academia",
 		"text": "Reviewer for IHM'18",
 		"finish": 2018
 	}, {
-		"type": "duty",
+		"type": "academia",
 		"text": "Reviewer for IWST'17 and ManLang'17",
 		"finish": 2017
+	}, {
+		"type": "misc",
+		"title": "<a href=https://clementsparrow.github.io/Pattern-Script/src/play.html?p=a05b012f072a84c5d9af5d8f441cb832>Coyote Time Lord</a>",
+		"text": "Minimalist 2D game with time-altering mechanisms, created with Clément Pillias for the 50<sup>th</sup> Ludum Dare Jam. I did the eerie music, the sounds and the sprites.",
+		"finish": 2022
+	}, {
+		"type": "misc",
+		"title": "<a href=https://swerc.eu/2021/theme/scoreboard/public/>SWERC 2021</a>",
+		"text": "My second participation as a coach, with teams ECL 2 (54<sup>th</sup>/97) and CentraleMegaStomp (64<sup>th</sup>/97). A remarkable result for Engineering students as well as first-timers!",
+		"finish": 2022
 	}, {
 		"type": "misc",
 		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/round/00000000008caae7>Hash Code 2022 contest</a>",
@@ -308,7 +326,7 @@
 		"finish": 2020
 	}, {
 		"type": "misc",
-		"title": "<a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2020</a>",
+		"title": "<a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2019</a>",
 		"text": "My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I also scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
 		"finish": 2020
 	}, {

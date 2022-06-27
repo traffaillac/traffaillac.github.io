@@ -1,13 +1,6 @@
-# TODO :
-# _ renommer Projects en Engineering et Publications en Research
-# _ remplacer les liens HAL par PDF direct
-# _ convert all sizes to em and reduce base size by 90%
-# _ make the timeline the index to make it more straightforward to find
+# MAYDO :
 # _ for Teaching, replace institutions by their logos
-# _ membre du Gdr glihm
 # _ générer le cv également à partir des données
-# _ remplacer duties par service & Awards, et ajouter les best papers
-# _ ajouter un footer indiquant la date de génération automatique
 
 from datetime import date
 from json import load
@@ -32,12 +25,12 @@ header = f'''<!doctype html>
 	<!--<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">-->
 	<span style="font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right">Thibault Raffaillac</span>
 	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font-size: 30px; margin-right: .6em; text-decoration: none">📧</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
-	<h2><a href=index.html#projects>Projects</a></h2>
-	<h2><a href=index.html#publications>Publications</a></h2>
-	<h2><a href=index.html#teaching>Teaching</a></h2>
-	<h2><a href=index.html#duties>Academic duties</a></h2>
-	<h2><a href=index.html#misc>Signs of life</a></h2>
-	<h2><a href=timeline.html#{date.today().year}>Timeline</a></h2>
+	<h2><a href=index.html#{date.today().year}>Timeline</a></h2>
+	<h2><a href=sections.html#engineering>Engineering</a></h2>
+	<h2><a href=sections.html#publications>Publications</a></h2>
+	<h2><a href=sections.html#teaching>Teaching</a></h2>
+	<h2><a href=sections.html#academia>Service & Awards</a></h2>
+	<h2><a href=sections.html#misc>Signs of life</a></h2>
 </div>
 </nav>
 <div class=flexcolstretch style="margin: 55px 40px 0 40px">
@@ -57,13 +50,13 @@ header = f'''<!doctype html>
 </p>
 </div>
 </div>'''
-header_projects = '''\n\n\n<h1 id=projects style="box-shadow: inset 0 -50px 50px -50px #335c67">Projects</h1>'''
+header_engineering = '''\n\n\n<h1 id=engineering style="box-shadow: inset 0 -50px 50px -50px #335c67">Engineering</h1>'''
 header_publications = '''\n\n\n<h1 id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</h1>
 <p style="margin: 30px 175px 30px 175px">
-	My research focuses mainly on the programming of complex interactive systems.
+	My research focuses mainly on reducing complexity when programming interactive systems.
 	In the case of graphical interfaces, this complexity is due to the large number of objects and behaviors to manage, and I have proposed models [<a href=#EICS19>EICS'19</a>, <a href=#EICS17>EICS'17</a>] and principles [<a href=#EICS22>EICS'22</a>] to give more concise mental representations.
-	In the case of data structures, this complexity is due to the effort of abstraction to navigate between visual representation and code, and I have initiated a tool allowing to work directly on visual graphs [<a href=#EIAH21>EIAH'21</a>].
-	Finally, in the case of compilers, the complexity is due to the numerous transformations that lead from the source code to the executable file, and I explored the idea of a human-compiler communication to improve the understanding [<a href=#PPIG12>PPIG'12</a>].
+	In the case of data structures, this complexity is due to the abstraction effort required to navigate between visual representation and code, and I have initiated a tool allowing to work directly on visual graphs [<a href=#EIAH21>EIAH'21</a>].
+	Finally, in the case of compilers, the complexity is due to the numerous transformations that lead from the source code to the executable file, and I explored the idea of a human-compiler communication to improve its understanding [<a href=#PPIG12>PPIG'12</a>].
 </p>
 <div class=references>'''
 # FIXME je participe souvent à la rédaction des TDs
@@ -72,7 +65,7 @@ header_teaching = '''\n\n\n<h1 id=teaching style="box-shadow: inset 0 -50px 50px
 	I really enjoy teaching and supervision activities.
 	Aside from courses, I have provided assistance to pedagogical innovation, co-organizing 5 editions of an interdisciplinary weekly challenge, and developing a Web site supporting the competency-based evaluations at Centrale Lyon.
 	I have also been hosting Competitive Programming trainings since 2015, first in University of Lille then at Centrale Lyon, for which I have given and refined advanced courses on the topic.
-	In 2021 we pushed Centrale Lyon to the first rank among the French institutions on <a href=https://open.kattis.com/countries/FRA>Kattis</a>, reached the 4<sup>th</sup> place during the <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>CodinGame Fall Challenge</a>, then got 54<sup>th</sup> and 64<sup>th</sup> places at the major European competition <a href=https://judge.swerc.eu/public>SWERC</a>.
+	In 2021 we raised Centrale Lyon to the top rank among the French institutions on <a href=https://open.kattis.com/countries/FRA>Kattis</a>, reached the 4<sup>th</sup> place during the <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>CodinGame Fall Challenge</a>, then got 54<sup>th</sup> and 64<sup>th</sup> places at the major European competition <a href=https://judge.swerc.eu/public>SWERC</a>.
 </p>
 <div class=courses>
 	<h3><b>Period</b></h3>
@@ -80,17 +73,17 @@ header_teaching = '''\n\n\n<h1 id=teaching style="box-shadow: inset 0 -50px 50px
 	<h3><b>Level</b></h3>
 	<h3><b>Institution</b></h3>
 	<h3><b>Hours</b></h3>'''
-header_duties = '''\n\n\n<h1 id=duties style="box-shadow: inset 0 -50px 50px -50px #ffd200; margin-top: 100px">Academic duties</h1>
-<div class=duties>'''
+header_academia = '''\n\n\n<h1 id=academia style="box-shadow: inset 0 -50px 50px -50px #ffd200; margin-top: 100px">Service & Awards</h1>
+<div class=academic>'''
 header_misc = '''\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #9e2a2b; margin-top: 100px">Signs of life</h1>
 <p style="margin: 20px 175px 15px 175px">
 	This section contains stuff that doesn't fit anywhere else (mostly challenges).
-	I believe technical mastery is essential to tackle impossible societal challenges.
-	So I dedicate about 5% of my time to organizing local training sessions for contests and challenges.
+	I believe technical mastery is essential to tackle impossible societal challenges, so I dedicate about 5% of my time to organizing local training sessions for contests and challenges.
 	These events are a lot of fun and a good way to test the skills of prospective students.
 	My main platform for contests training is Kattis, where I hold <a href=https://open.kattis.com/countries/FRA>2<sup>nd</sup> place in France</a>.
 </p>'''
-footer = '''\n\n\n<!-- Add target=_blank to all outbound links -->
+footer = f'''\n\n\n<p id=footer>Page generated on {date.today()} using a <a href=gen.py>custom Python script</a>.</p>
+<!-- Add target=_blank to all outbound links -->
 <script>
 	for (let a of document.querySelectorAll('a[href^="http"]'))
 		a.setAttribute("target", "_blank")
@@ -106,14 +99,14 @@ with open('data.json') as f:
 
 
 
-# génération de la page principale
-with open('index.html', 'w') as f:
+# génération de la page classée par sections
+with open('sections.html', 'w') as f:
 	print(header, file=f)
 	# section Projets
-	print(header_projects, file=f)
+	print(header_engineering, file=f)
 	pos = randint(0, 330)
 	for e in events:
-		if e["type"] == 'project':
+		if e["type"] == 'engineering':
 			h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
 			period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
 			bg = 'background-color: rgb(51, 92, 103, 0.15); ' if 'major' in e else ''
@@ -150,10 +143,10 @@ with open('index.html', 'w') as f:
 			print(f'\t<h4>{e["institution"]}</h4>', file=f)
 			print(f'\t<h4 style="text-align: center">{e["hours"]}</h4>', file=f)
 	print('</div>', file=f)
-	# section Academic duties
-	print(header_duties, file=f)
+	# section Service & Awards
+	print(header_academia, file=f)
 	for e in events:
-		if e["type"] == 'duty':
+		if e["type"] == 'academia':
 			Id = f' id={e["id"]}' if "id" in e else ''
 			print(f'<h3{Id}>{e["text"]}</h3>', file=f)
 	print('</div>', file=f)
@@ -175,7 +168,7 @@ with open('index.html', 'w') as f:
 
 
 # génération de la timeline
-with open('timeline.html', 'w') as f:
+with open('index.html', 'w') as f:
 	print(header, file=f)
 	for year in range(date.today().year, 2004, -1):
 		# On imprime l'année uniquement s'il y a des évènements à y rapporter
@@ -190,9 +183,9 @@ with open('timeline.html', 'w') as f:
 				Id = f' id={e["id"]}' if "id" in e else ''
 				print(f'<div{Id} class=strip>', file=f)
 				period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
-				if etype == 'project':
+				if etype == 'engineering':
 					h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
-					print('\t<div class=project>project</div>', file=f)
+					print('\t<div class=engineering>engineering</div>', file=f)
 					print(f'\t<img src=images/{e["image"]} width=300>', file=f)
 					print('\t<div class=flexcolstretch style="justify-content: center">', file=f)
 					print(f'\t\t<h3>{h3} ({period})</h3>', file=f)
@@ -209,8 +202,8 @@ with open('timeline.html', 'w') as f:
 					print(f'\t\t<h4><i>{e["role"]}</i> at <i>{e["level"]}</i> level for <i>{e["hours"]}h</i> at <i>{e["institution"]}</i></h4>', file=f)
 					print(f'\t\t<h4>{e["text"]}</h4>', file=f)
 					print('\t</div>', file=f)
-				elif etype == 'duty':
-					print('\t<div class=duty>academic duty</div>', file=f)
+				elif etype == 'academia':
+					print('\t<div class=academia>academic</div>', file=f)
 					print(f'<h4>{e["text"]}</h4>', file=f)
 				elif etype == 'misc':
 					print('\t<div class=misc>sign of life</div>', file=f)
