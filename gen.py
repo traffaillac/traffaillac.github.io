@@ -82,7 +82,7 @@ header_misc = '''\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #
 	These events are a lot of fun and a good way to test the skills of prospective students.
 	My main platform for contests training is Kattis, where I hold <a href=https://open.kattis.com/countries/FRA>2<sup>nd</sup> place in France</a>.
 </p>'''
-footer = f'''\n\n\n<p id=footer>Page generated on {date.today()} using a <a href=gen.py>custom Python script</a>.</p>
+footer = f'''\n\n\n<p id=footer>Page generated on {date.today()} using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
 <!-- Add target=_blank to all outbound links -->
 <script>
 	for (let a of document.querySelectorAll('a[href^="http"]'))
