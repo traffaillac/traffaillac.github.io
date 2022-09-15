@@ -53,7 +53,8 @@ h1 { border-bottom: 1px solid #eee; font: 60px Pacifico; margin: 0; text-align: 
 h2 { font: 26px Pacifico; margin: 0 }
 h3 { font: 22px Alegreya; margin: 0 }
 h4 { font: 18px Alegreya; margin: 0 }
-p { font: 22px Alegreya; line-height: 1.5; margin: 0 0 1.5em 0 }
+p { font: 22px Alegreya; line-height: 1.5; margin: 1.5em 0 0 0 }
+ul { font: 17px Alegreya; line-height: 1.5; margin: .2em 0 0 1em; padding: 0 }
 
 
 .flexcolcenter,.flexcolstretch,.flexcolend { display: flex; flex-direction: column }

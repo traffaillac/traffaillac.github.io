@@ -33,16 +33,24 @@ header = f'''<!doctype html>
 	<h2><a href=sections.html#misc>Signs of life</a></h2>
 </div>
 </nav>
-<div class=flexcolstretch style="margin: 55px 40px 0 40px">
+<div class=flexcolstretch style="margin: 20px 40px 0 40px">
 <p>
-	I am a contractual teacher-researcher at École Centrale de Lyon, member of the LIRIS laboratory and Sical research team, since September 2019.
-	I obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (October 2012), worked in Paris as R&D engineer on optimizing software for embedded TV decoders (December 2012 — June 2014), did a short internship at Inria Saclay (March 2015 — August 2015), and obtained a PhD in Human-Computer Interaction at Inria Lille (November 2015 — December 2019).
+	I am a postdoctoral researcher at INRAE and CIRAD in Montpellier, member of research units <a href=https://umr-sens.fr/>SENS</a> and <a href=https://umr-selmet.cirad.fr/>SELMET</a> since September 2022.
+	In the past I :
 </p>
+<ul>
+	<li>obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012),</li>
+	<li>worked as R&D engineer in Paris on optimizing software for embedded TV decoders (December 2012 – June 2014),</li>
+	<li>did a short internship at Inria Saclay (March 2015 – August 2015),</li>
+	<li>obtained a PhD in Human-Computer Interaction at Inria Lille (November 2015 – December 2019),</li>
+	<li>and worked as teacher/engineer/researcher at École Centrale de Lyon (September 2019 – September 2022).</li>
+</ul>
 <p>
-	These days I contribute to the development of the competency-based curriculum and innovative teaching activities at Centrale Lyon.
-	I am a member of the Sustainable Development and Societal Responsibility local committee, and try to be as proactive as possible in that domain.
+	My research field is Human-Computer Interaction.
+	I currently work on designing graphical interfaces atop agent-based simulations, to explore possible futures in the management of pastoral territories.
+	In parallel I work on the interactions between researchers and engineers of UI frameworks, to improve the impact of research on the evolution of frameworks.
+	I have been a member of the Sustainable Development and Societal Responsibility committee at Centrale Lyon, and am very much driven by that domain.
 	As a teacher I have given courses on User Interfaces and Competitive Programming, and have been assistant in Algorithmics, Software Engineering and Web Development.
-	As a researcher my main motivation is to make it easy to program applications with user interaction.
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
 <p>
