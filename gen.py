@@ -88,7 +88,7 @@ header_misc = '''\n\n\n<h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #
 	This section contains stuff that doesn't fit anywhere else (mostly challenges).
 	I believe technical mastery is essential to tackle impossible societal challenges, so I dedicate about 5% of my time to organizing local training sessions for contests and challenges.
 	These events are a lot of fun and a good way to test the skills of prospective students.
-	My main platform for contests training is Kattis, where I hold <a href=https://open.kattis.com/countries/FRA>2<sup>nd</sup> place in France</a>.
+	My main platform for contests training is Kattis, where I hold <a href=https://open.kattis.com/countries/FRA>3<sup>rd</sup> place in France</a>.
 </p>'''
 footer = f'''\n\n\n<p id=footer>Page generated on {date.today()} using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
 <!-- Add target=_blank to all outbound links -->
