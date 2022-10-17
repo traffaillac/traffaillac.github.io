@@ -24,7 +24,7 @@ header = f'''<!doctype html>
 <div class=flexcolend style="flex: none; padding-right: 40px; width: 300px">
 	<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">
 	<span style="font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right">Thibault Raffaillac</span>
-	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font-size: 30px; margin-right: .6em; text-decoration: none">📧</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
+	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font: 26px Pacifico; margin-right: .6em; text-decoration: none">email contact</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
 	<h2><a href=index.html#{date.today().year}>Timeline</a></h2>
 	<h2><a href=sections.html#engineering>Engineering</a></h2>
 	<h2><a href=sections.html#publications>Publications</a></h2>
