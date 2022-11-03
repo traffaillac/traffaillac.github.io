@@ -271,6 +271,11 @@
 		"finish": 2017
 	}, {
 		"type": "misc",
+		"title": "<a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)",
+		"text": "Slides that I created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.",
+		"finish": 2022
+	}, {
+		"type": "misc",
 		"title": "<a href=https://clementsparrow.github.io/Pattern-Script/src/play.html?p=a05b012f072a84c5d9af5d8f441cb832>Coyote Time Lord</a>",
 		"text": "Minimalist 2D game with time-altering mechanisms, created with Clément Pillias for the 50<sup>th</sup> Ludum Dare Jam. I did the eerie music, the sounds and the sprites.",
 		"finish": 2022
