@@ -54,7 +54,7 @@ header = f'''<!doctype html>
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
 <p>
-	On a personal note I am a passionate hiker, cook, cyclist, and choir singer 🤘.
+	On a personal note I am a passionate hiker, cook, cyclist, and musician ♫.
 </p>
 </div>
 </div>'''
