@@ -39,11 +39,11 @@ header = f'''<!doctype html>
 	In the past I :
 </p>
 <ul>
-	<li>obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012),</li>
-	<li>worked as R&D engineer in Paris on optimizing software for embedded TV decoders (December 2012 – June 2014),</li>
-	<li>did a short internship at Inria Saclay (March 2015 – August 2015),</li>
-	<li>obtained a PhD in Human-Computer Interaction at Inria Lille (November 2015 – December 2019),</li>
-	<li>and worked as teacher/engineer/researcher at École Centrale de Lyon (September 2019 – September 2022).</li>
+	<li>worked as teacher, researcher and engineer at École Centrale de Lyon (September 2019 – September 2022).</li>
+	<li>did a PhD in Human-Computer Interaction supervised by <a href=https://loki.lille.inria.fr/~huot/>Stéphane Huot</a> at Inria Lille (November 2015 – December 2019).</li>
+	<li>did a short internship at Inria Saclay (March 2015 – August 2015).</li>
+	<li>worked as R&D engineer in Paris on optimizing software for embedded TV decoders (December 2012 – June 2014).</li>
+	<li>did a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012).</li>
 </ul>
 <p>
 	My research field is Human-Computer Interaction.
@@ -54,7 +54,7 @@ header = f'''<!doctype html>
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
 <p>
-	On a personal note I am a passionate hiker, cook, cyclist, and guitar player 🤘.
+	On a personal note I am a passionate hiker, cook, cyclist, and choir singer 🤘.
 </p>
 </div>
 </div>'''
