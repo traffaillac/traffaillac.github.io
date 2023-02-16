@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang=fr>
+<head>
+	<meta charset=utf-8>
+	<title>Pattern Space Exploration</title>
+	<link rel=stylesheet href=normalize.min.css>
+	<link rel=stylesheet href=nouislider.min.css>
+	<style>
+		*,*::before,*::after { box-sizing: border-box }
+		.flexcolcenter,.flexcolcenterwrap,.flexcolstretch,.flexcolstretchwrap,.flexrowcenter,.flexrowcenterwrap,.flexrowstretch,.flexrowstretchwrap { display: flex }
+		.flexcolcenter,.flexcolcenterwrap,.flexcolstretch,.flexcolstretchwrap { flex-direction: column }
+		.flexcolcenterwrap,.flexcolstretchwrap,.flexrowcenterwrap,.flexrowstretchwrap { flex-wrap: wrap }
+		.flexcolcenter,.flexcolcenterwrap,.flexrowcenter,.flexrowcenterwrap { align-items: center }
+		body,text { font-family: Trebuchet MS }
+		circle { cursor: default; fill: dodgerblue; stroke-width: 1px; stroke: #fff }
+		circle:hover { fill: darkorchid }
+		select { font-size: 14px; border: none; background: #eee; border-radius: 6px; padding: 1px }
+		.noUi-target { height: 10px }
+		.noUi-connect { background: slateblue }
+		.noUi-horizontal .noUi-handle { cursor: grab; height: 18px; width: 18px; top: -5px; right: -9px; border-radius: 9px; box-shadow: none }
+		.noUi-handle:after,.noUi-handle:before { display: none }
+		.noUi-handle:active { cursor: grabbing !important }
+		.noUi-tooltip { font-size: 12px }
+		#tooltip { position: absolute; text-align: right; padding: 4px; border: 1px solid grey; background-color: ghostwhite; font-size: 12px; border-radius: 4px; transform: translate(-100%, -50%); z-index: 1000 }
+	</style>
+	<script src=d3.v7.min.js></script>
+	<script src=nouislider.min.js></script>
+	<script src=scatterplot.js></script>
+</head>
+<body class=flexrowstretch style="width: 100vw; height: 100vh">
+	<div id=div_params class=flexcolstretch style="width: 45%; border-right: 1px solid lightgrey; overflow: scroll"></div>
+	<div class=flexcolstretch style="width: 55%">
+		<div style="flex: none; margin: 8px 8px 4px 8px; text-align: left">
+			<select id=sel_ord1 onchange="chg_vis(svg_in, sel_abs1, sel_ord1)"></select>
+		</div>
+		<svg id=svg_in style="flex: auto"></svg>
+		<div class=flexrowcenter style="flex: none; margin: 4px 8px; justify-content: space-between">
+			<select id=sel_ord2 onchange="chg_vis(svg_out, sel_abs2, sel_ord2)"></select>
+			<select id=sel_abs1 onchange="chg_vis(svg_in, sel_abs1, sel_ord1)" style="text-align: right"></select>
+		</div>
+		<svg id=svg_out style="flex: auto"></svg>
+		<div style="flex: none; margin: 4px 8px 8px 8px; text-align: right">
+			<select id=sel_abs2 onchange="chg_vis(svg_out, sel_abs2, sel_ord2)" style="text-align: right"></select>
+		</div>
+	</div>
+	<div id=tooltip style="display: none"></div>
+	<!-- NOTES :
+		_ demander aux auteurs d'OpenMOLE de générer un CSV avec des noms de colonnes non redondants
+		_ animer les points lors du changement d'axes
+		_ faut-il désaggréger les points ?
+	-->
+	<script>
+// fonction à appeler lorsqu'on modifie les sliders des paramètres
+function chg_params() {
+	int_sel = Array.from(div_params.children).map(div => div.lastElementChild.noUiSlider.get(true));
+	for (let [svg, abs, ord] of [[svg_in, sel_abs1, sel_ord1], [svg_out, sel_abs2, sel_ord2]]) {
+		let rect = svg.lastElementChild;
+		let i = cols.indexOf(abs.value);
+		let j = cols.indexOf(ord.value);
+		let [li, hi] = int_sel[i], [Li, Hi] = int_all[i];
+		let [lj, hj] = int_sel[j], [Lj, Hj] = int_all[j];
+		let x = svg.xscale, y = svg.yscale;
+		if (li === Li && hi === Hi && lj === Lj && hj === Hj) {
+			rect.setAttribute("display", "none");
+		} else {
+			rect.setAttribute("x", x(li));
+			rect.setAttribute("y", y(hj));
+			rect.setAttribute("width", x(hi) - x(li));
+			rect.setAttribute("height", y(lj) - y(hj));
+			rect.setAttribute("display", null);
+		}
+		d3.select(svg).selectAll("circle")
+			.data(data)
+			.join("circle")
+			.style("fill", "lightgrey")
+			.filter(d => int_sel.every((s, k) => d[k]>=s[0] && d[k]<=s[1]))
+			.style("fill", null);
+	}
+}
+
+// fonction à appeler lorsqu'on modifie les axes des visualisations
+function chg_vis(svg, abs, ord) {
+	scatterplot(svg, data, int_all, cols.indexOf(abs.value), cols.indexOf(ord.value), {top: 6, right: 30, bottom: 18, left: 60});
+	chg_params();
+}
+
+(async () => {
+	let csv = d3.csvParseRows(await (await fetch("test.csv")).text());
+	iobjs = csv[0].findIndex(c => c.startsWith("objective$")) - 2;
+	cols = csv[0].slice(2, csv[0].indexOf("evolution$samples")).map((c, i) => i<iobjs?c:c.slice(10));
+	data = csv.slice(1).map(r => r.slice(2, 3+cols.length).map(parseFloat));
+	int_all = cols.map((c, i) => d3.extent(data, d => d[i]));
+	int_sel = int_all;
+	
+	// génération de la liste de paramètres à contrôler
+	for (let [i, c] of cols.entries()) {
+		div_params.insertAdjacentHTML("beforeend", `<div class=flexcolstretch style="background-color: white; border-bottom: 1px solid lightgrey">
+			<span style="text-align: center; margin: 8px 0"><b>${i<iobjs?"Entrée":"Sortie"} :</b> ${c}</span>
+			<div style="margin: 24px 40px 12px 40px"></div>
+		</div>`);
+		let slider = noUiSlider.create(div_params.lastElementChild.lastElementChild, {
+			start: int_all[i],
+			connect: true,
+			range: {min: int_all[i][0], max: int_all[i][1]},
+			tooltips: true});
+		slider.on("slide", chg_params);
+	}
+	
+	// génération des visualisations initiales
+	for (let sel of [sel_abs1, sel_ord1, sel_abs2, sel_ord2]) {
+		sel.insertAdjacentHTML("beforeend", `<optgroup label="Entrées"></optgroup>`)
+		sel.insertAdjacentHTML("beforeend", `<optgroup label="Sorties"></optgroup>`)
+		for (let [i, c] of cols.entries()) {
+			sel.children[+(i>=iobjs)].insertAdjacentHTML("beforeend", `<option>${c}</option>`);
+		}
+	}
+	sel_abs1.value = cols[0];
+	sel_ord1.value = cols[1];
+	sel_abs2.value = cols[iobjs];
+	sel_ord2.value = cols[iobjs+1];
+	scatterplot(svg_in, data, int_all, 0, 1, {top: 6, right: 30, bottom: 18, left: 60});
+	scatterplot(svg_out, data, int_all, iobjs, iobjs+1, {top: 6, right: 30, bottom: 18, left: 60});
+})();
+	</script>
+</body>
+</html>
