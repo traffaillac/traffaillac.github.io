@@ -28,10 +28,11 @@
 	<script src=scatterplot.js></script>
 </head>
 <body class=flexrowstretch style="width: 100vw; height: 100vh">
-	<div id=div_params class=flexcolstretch style="width: 45%; border-right: 1px solid lightgrey; overflow: scroll">
+	<div class=flexcolstretch style="width: 45%; border-right: 1px solid lightgrey; overflow: scroll">
 		<div style="text-align: center; border-bottom: 1px solid lightgrey; padding: 16px">
 			<input type=file accept=text/csv onchange="charger(this.files[0])">
 		</div>
+		<div id=div_params class=flexcolstretch></div>
 	</div>
 	<div class=flexcolstretch style="width: 55%">
 		<div style="flex: none; margin: 8px 8px 4px 8px; text-align: left">
@@ -97,8 +98,7 @@ async function charger(f) {
 	int_sel = int_all;
 	
 	// génération de la liste de paramètres à contrôler
-	while (div_params.children.length > 1)
-		div_params.removeChild(div_params.lastChild);
+	div_params.textContent = "";
 	for (let [i, c] of cols.entries()) {
 		div_params.insertAdjacentHTML("beforeend", `<div class=flexcolstretch style="background-color: white; border-bottom: 1px solid lightgrey">
 			<span style="text-align: center; margin: 8px 0"><b>${i<iobjs?"Entrée":"Sortie"} :</b> ${c}</span>
