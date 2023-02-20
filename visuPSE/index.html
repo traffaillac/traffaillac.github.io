@@ -28,7 +28,11 @@
 	<script src=scatterplot.js></script>
 </head>
 <body class=flexrowstretch style="width: 100vw; height: 100vh">
-	<div id=div_params class=flexcolstretch style="width: 45%; border-right: 1px solid lightgrey; overflow: scroll"></div>
+	<div id=div_params class=flexcolstretch style="width: 45%; border-right: 1px solid lightgrey; overflow: scroll">
+		<div style="text-align: center; border-bottom: 1px solid lightgrey; padding: 16px">
+			<input type=file accept=text/csv onchange="charger(this.files[0])">
+		</div>
+	</div>
 	<div class=flexcolstretch style="width: 55%">
 		<div style="flex: none; margin: 8px 8px 4px 8px; text-align: left">
 			<select id=sel_ord1 onchange="chg_vis(svg_in, sel_abs1, sel_ord1)"></select>
@@ -84,8 +88,8 @@ function chg_vis(svg, abs, ord) {
 	chg_params();
 }
 
-(async () => {
-	let csv = d3.csvParseRows(await (await fetch("test.csv")).text());
+async function charger(f) {
+	let csv = d3.csvParseRows(await f.text());
 	iobjs = csv[0].findIndex(c => c.startsWith("objective$")) - 2;
 	cols = csv[0].slice(2, csv[0].indexOf("evolution$samples")).map((c, i) => i<iobjs?c:c.slice(10));
 	data = csv.slice(1).map(r => r.slice(2, 3+cols.length).map(parseFloat));
@@ -93,6 +97,8 @@ function chg_vis(svg, abs, ord) {
 	int_sel = int_all;
 	
 	// génération de la liste de paramètres à contrôler
+	while (div_params.children.length > 1)
+		div_params.removeChild(div_params.lastChild);
 	for (let [i, c] of cols.entries()) {
 		div_params.insertAdjacentHTML("beforeend", `<div class=flexcolstretch style="background-color: white; border-bottom: 1px solid lightgrey">
 			<span style="text-align: center; margin: 8px 0"><b>${i<iobjs?"Entrée":"Sortie"} :</b> ${c}</span>
@@ -118,8 +124,12 @@ function chg_vis(svg, abs, ord) {
 	sel_ord1.value = cols[1];
 	sel_abs2.value = cols[iobjs];
 	sel_ord2.value = cols[iobjs+1];
-	scatterplot(svg_in, data, int_all, 0, 1, {top: 6, right: 30, bottom: 18, left: 60});
-	scatterplot(svg_out, data, int_all, iobjs, iobjs+1, {top: 6, right: 30, bottom: 18, left: 60});
+	scatterplot(svg_in, data, int_all, 0, 1);
+	scatterplot(svg_out, data, int_all, iobjs, iobjs+1);
+}
+
+(async () => {
+	charger(await fetch("test.csv"));
 })();
 	</script>
 </body>
