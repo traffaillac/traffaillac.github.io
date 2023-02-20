@@ -114,6 +114,7 @@ async function charger(f) {
 	
 	// génération des visualisations initiales
 	for (let sel of [sel_abs1, sel_ord1, sel_abs2, sel_ord2]) {
+		sel.textContent = "";
 		sel.insertAdjacentHTML("beforeend", `<optgroup label="Entrées"></optgroup>`)
 		sel.insertAdjacentHTML("beforeend", `<optgroup label="Sorties"></optgroup>`)
 		for (let [i, c] of cols.entries()) {
