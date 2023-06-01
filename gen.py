@@ -1,6 +1,7 @@
 # MAYDO :
 # _ for Teaching, replace institutions by their logos
 # _ générer le cv également à partir des données
+# _ research assistant for ECL
 
 from datetime import date
 from json import load
