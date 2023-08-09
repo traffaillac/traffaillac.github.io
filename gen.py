@@ -2,6 +2,8 @@
 # _ for Teaching, replace institutions by their logos
 # _ générer le cv également à partir des données
 # _ research assistant for ECL
+# _ update email
+# _ top 2 Kattis
 
 from datetime import date
 from json import load
