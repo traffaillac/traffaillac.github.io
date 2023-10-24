@@ -9,40 +9,34 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-
-
-<body class=flexcolstretch style="margin: 100px 0">
-<div class=flexrowstart style="margin-bottom: 100px">
-<nav>
-<div class=flexcolend style="flex: none; padding-right: 40px; width: 300px">
+<body class=flexcolstretch>
+<div class=flexrowstart style="padding: 70px 10px">
+<nav class=flexcolend style="flex: none; width: 230px">
 	<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">
-	<span style="font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right">Thibault Raffaillac</span>
-	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font: 26px Pacifico; margin-right: .6em; text-decoration: none">email contact</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
-	<h2><a href=index.html#2023>Timeline</a></h2>
-	<h2><a href=sections.html#engineering>Engineering</a></h2>
-	<h2><a href=sections.html#publications>Publications</a></h2>
-	<h2><a href=sections.html#teaching>Teaching</a></h2>
-	<h2><a href=sections.html#academia>Service & Awards</a></h2>
-	<h2><a href=sections.html#misc>Signs of life</a></h2>
-</div>
+	<titre><a href=index.html>Thibault Raffaillac</a></titre>
+	<lienmenu><a href=sections.html#projects>Projects</a></lienmenu>
+	<lienmenu><a href=sections.html#publications>Publications</a></lienmenu>
+	<lienmenu><a href=sections.html#teaching>Teaching</a></lienmenu>
+	<lienmenu><a href=sections.html#academia>Academic service</a></lienmenu>
+	<lienmenu><a href=sections.html#misc>Signs of life</a></lienmenu>
+	<lienmenu><a href="maikto:thibaukt.raffaikkac@inrae.fr" onmouseover="this.href=this.href.replace(/k/g,'l')">email</a>  <a href=https://github.com/traffaillac><img class=rotate src=images/github.png width=26></a></lienmenu>
 </nav>
-<div class=flexcolstretch style="margin: 20px 40px 0 40px">
+<div class=flexcolstretch style="margin: 40px 0 0 70px">
 <p>
 	I am a postdoctoral researcher at INRAE and CIRAD in Montpellier, member of research units <a href=https://umr-sens.fr/>SENS</a> and <a href=https://umr-selmet.cirad.fr/>SELMET</a> since September 2022.
 	In the past I :
 </p>
 <ul>
-	<li>worked as teacher, researcher and engineer at École Centrale de Lyon (September 2019 – September 2022).</li>
-	<li>did a PhD in Human-Computer Interaction supervised by <a href=https://loki.lille.inria.fr/~huot/>Stéphane Huot</a> at Inria Lille (November 2015 – December 2019).</li>
-	<li>did a short internship at Inria Saclay (March 2015 – August 2015).</li>
+	<li>obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012).</li>
 	<li>worked as R&D engineer in Paris on optimizing software for embedded TV decoders (December 2012 – June 2014).</li>
-	<li>did a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012).</li>
+	<li>did an internship supervised by <a href=https://ex-situ.lri.fr/people/mackay>Wendy Mackay</a> at Inria Saclay (March 2015 – August 2015).</li>
+	<li>did a PhD in Human-Computer Interaction supervised by <a href=https://loki.lille.inria.fr/~huot/>Stéphane Huot</a> at Inria Lille (November 2015 – December 2019).</li>
+	<li>worked as research assistant at École Centrale de Lyon (September 2019 – August 2022).</li>
 </ul>
 <p>
-	My research field is Human-Computer Interaction.
-	I currently work on designing graphical interfaces atop agent-based simulations, to explore possible futures in the management of pastoral territories.
-	In parallel I work on the interactions between researchers and engineers of UI frameworks, to improve the impact of research on the evolution of frameworks.
-	I have been a member of the Sustainable Development and Societal Responsibility committee at Centrale Lyon, and am very much driven by that domain.
+	My research field is Human-Computer Interaction, where I work on the engineering of graphical user interfaces and visualizations in socio-ecological contexts.
+	My core motivation is to explore and improve the impacts of research on society.
+	I have experimented with writing awarded articles for engineering and research communities (<a href=#EICS19>EICS'19</a>, <a href=#EICS22>EICS'22</a>), developing and actively promoting an open source project (<a href=https://github.com/tvlabs/edge264>edge264</a>), co-chairing two working groups on Ecology and Sustainability, and being involved in interdisciplinary action research projects.
 	As a teacher I have given courses on User Interfaces and Competitive Programming, and have been assistant in Algorithmics, Software Engineering and Web Development.
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
@@ -53,182 +47,183 @@
 </div>
 
 
-
-<h1 id=engineering style="box-shadow: inset 0 -50px 50px -50px #335c67">Engineering</h1>
-<div id=competencies class=card style="margin-left: 276px; margin-right: 74px">
+<titresection id=projects style="box-shadow: inset 0 -50px 50px -50px #335c67">Projects</titresection>
+<projet id=competencies style="margin-left: 69px; margin-right: 281px">
 	<img src=images/competencies.png>
 	<div class=flexcolstretch>
-		<h3><a href=https://www.ec-lyon.fr/formation/pedagogie/demarche-competences>Visualization of individual competency evaluations</a> (2021-2022)</h3>
-		<h4>Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.</h4>
+		<b><a href=https://www.ec-lyon.fr/formation/pedagogie/demarche-competences>Visualization of individual competency evaluations</a> (2021-2022)</b>
+		<div>Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.</div>
 	</div>
-</div>
-<div class=card style="margin-left: 38px; margin-right: 312px">
+</projet>
+<projet style="margin-left: 205px; margin-right: 145px">
 	<img src=images/weex.png>
 	<div class=flexcolstretch>
-		<h3><a href=https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun>WEEX éolien</a> (2020-2022)</h3>
-		<h4>Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.</h4>
+		<b><a href=https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun>WEEX éolien</a> (2020-2022)</b>
+		<div>Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.</div>
 	</div>
-</div>
-<div class=card style="margin-left: 246px; margin-right: 104px">
+</projet>
+<projet style="margin-left: 55px; margin-right: 295px">
 	<img src=images/ecs.png>
 	<div class=flexcolstretch>
-		<h3><a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>Polyphony: building GUIs with ECS</a> (2016-2019)</h3>
-		<h4>Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].</h4>
+		<b><a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>Polyphony: building GUIs with ECS</a> (2016-2019)</b>
+		<div>Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].</div>
 	</div>
-</div>
-<div class=card style="margin-left: 318px; margin-right: 32px">
+</projet>
+<projet style="margin-left: 169px; margin-right: 181px">
 	<img src=images/animations.svg>
 	<div class=flexcolstretch>
-		<h3><a href=http://smalltalkhub.com/ThibaultRaffaillac/Animation/>Turning function calls into animations</a> (2016-2017)</h3>
-		<h4>Demonstration of a language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].</h4>
+		<b><a href=http://smalltalkhub.com/ThibaultRaffaillac/Animation/>Turning function calls into animations</a> (2016-2017)</b>
+		<div>Demonstration of a language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].</div>
 	</div>
-</div>
-<div class=card style="background-color: rgb(51, 92, 103, 0.15); margin-left: 158px; margin-right: 192px">
-	<img src=images/edge264.svg>
+</projet>
+<projet style="background-color: rgb(51, 92, 103, 0.15); margin-left: 315px; margin-right: 35px">
+	<img src=images/edge264.jpg>
 	<div class=flexcolstretch>
-		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
-		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
+		<b><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</b>
+		<div>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</div>
 	</div>
-</div>
-<div class=card style="margin-left: 33px; margin-right: 317px">
+</projet>
+<projet style="margin-left: 252px; margin-right: 98px">
 	<img src=images/compiler.png>
 	<div class=flexcolstretch>
-		<h3><a href=content/MasterThesis/proto1.html>Exploring the design of compiler feedback</a> (2012)</h3>
-		<h4>Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].</h4>
+		<b><a href=content/MasterThesis/proto1.html>Exploring the design of compiler feedback</a> (2012)</b>
+		<div>Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].</div>
 	</div>
-</div>
+</projet>
+<titresection id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</titresection><conteneur><p>
+
+My research in HCI has focused mainly on reducing complexity when programming interactive systems.
+In the case of graphical interfaces, this complexity is due to the large number of objects and behaviors to manage, and I have proposed models [<a href=#EICS19>EICS'19</a>, <a href=#EICS17>EICS'17</a>] and principles [<a href=#EICS22>EICS'22</a>] to give more concise mental representations.
+In the case of data structures, this complexity is due to the abstraction effort required to navigate between visual representation and code, and I have initiated a tool allowing to work directly on visual graphs [<a href=#EIAH21>EIAH'21</a>].
+Finally, in the case of compilers, the complexity is due to the numerous transformations that lead from the source code to the executable file, and I explored the idea of a human-compiler communication to improve its understanding [<a href=#PPIG12>PPIG'12</a>].
+
+</p><references>
+<sousreference>International peer-reviewed conferences</sousreference>
+	<div class=flexrowcenter id=EICS22 style="background-color: rgb(224, 159, 62, 0.15)">EICS'22</div>
+	<div style="background-color: rgb(224, 159, 62, 0.15)">T. Raffaillac & S. Huot. <b>What do researchers need when implementing novel interaction techniques?</b>. <i>In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)</i>. <a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a></div>
+	<div class=flexrowcenter id=EICS19 style="background-color: rgb(224, 159, 62, 0.15)">EICS'19</div>
+	<div style="background-color: rgb(224, 159, 62, 0.15)">T. Raffaillac & S. Huot. <b>Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model</b>. <i>In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)</i>. <a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a></div>
+	<div class=flexrowcenter id=EICS17>EICS'17</div>
+	<div>T. Raffaillac, S. Huot & S. Ducasse. <b>Turning Function Calls Into Animations</b>. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a></div>
+	<div class=flexrowcenter id=PPIG12>PPIG'12</div>
+	<div>T. Raffaillac. <b>Exploring the design of compiler feedback</b>. <i>In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)</i>. <a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a></div>
+<sousreference>National peer-reviewed conferences</sousreference>
+	<div class=flexrowcenter id=IHM23>IHM'23</div>
+	<div>T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur. <b>Développement d’une interface de simulation multi-agents pour la gestion concertée des territoires pastoraux de moyenne montagne</b>. <i>À la 34e conférence francophone sur l'Interaction Homme-Machine</i>. <a href=https://dl.acm.org/doi/10.1145/3577590.3589606>DOI</a> <a href=https://hal.science/hal-04046136/document>PDF</a> <a href=content/ihm23-poster.jpg>poster</a> <a href=content/ihm23-slide.pdf>slide</a></div>
+	<div class=flexrowcenter id=IHM18>IHM'18</div>
+	<div>T. Raffaillac & S. Huot. <b>Application du modèle Entité-Composant-Système à la programmation d'interactions</b>. <i>À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)</i>. (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a></div>
+<sousreference>Works in progress, extended abstracts and posters</sousreference>
+	<div class=flexrowcenter id=Rochebrune23>Rochebrune'23</div>
+	<div>T. Raffaillac. <b>Interagir avec les nombres</b>. <i>Aux 29<sup>e</sup> journées de Rochebrune 2023</i>. <a href=content/rb23.pdf>PDF</a> <a href=content/rb23-slides.pdf>slides</a></div>
+	<div class=flexrowcenter id=EIAH21>EIAH'21</div>
+	<div>P. Baron, L. Roche & T. Raffaillac. <b>Visualisation automatique de graphes pour l'apprentissage des algorithmes</b>. <i>À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)</i>. <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a></div>
+	<div class=flexrowcenter id=Didapro20>Didapro'20</div>
+	<div>T. Raffaillac, F. Chavanon & R. Vuillemot. <b>Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants</b>. <i>À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)</i>. <i>Poster</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a></div>
+	<div class=flexrowcenter>EICS'17</div>
+	<div>T. Raffaillac. <b>Language and System Support for Interaction</b>. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a></div>
+<sousreference>Theses and dissertations</sousreference>
+	<div class=flexrowcenter>PhD</div>
+	<div>T. Raffaillac. <b>Améliorer les langages et bibliothèques logicielles pour programmer l'interaction</b>. <i>Doctoral thesis from the University of Lille</i>. <a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a></div>
+	<div class=flexrowcenter>MSc</div>
+	<div>T. Raffaillac. <b>Exploring the design of compiler feedback</b>. <i>Master thesis from KTH Royal Institute of Technology</i>. <a href=content/master-thesis.pdf>PDF</a> <a href=https://prezi.com/izuzcudeivh9/degree-thesis-presentation/>slides</a></div>
+</references></conteneur>
+<titresection id=teaching style="box-shadow: inset 0 -50px 50px -50px #540b0e">Teaching</titresection><conteneur><p>
+
+I really enjoy teaching and innovative educational activities.
+In 2019 at Centrale Lyon I volunteered to develop the software for an innovative week-long educational event held several times a year, the <a href=https://youtu.be/FeiMQfe_QVU?t=59>WEEX éolienne</a>.
+Then in 2020 I developed a website to display individual skills assessments as part of the implementation of the Competency-Based Education at Centrale Lyon.
+I have also organized competitive programming trainings since 2015, in Lille, Lyon and Montpellier, and gave advanced courses on the topic.
+In 2021 we raised Centrale Lyon to the <a href=https://open.kattis.com/countries/FRA>top rank</a> among the French institutions on the international training platform Kattis, reached the <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>4<sup>th</sup> place</a> at CodinGame Fall Challenge 2021, then got the <a href=https://judge.swerc.eu/public>54<sup>th</sup> and 64<sup>th</sup> places</a> at the major European competition SWERC 2021.
+
+</p><cours><b>Period</b><b>Course</b><b>Level</b><b>Institution</b><b>Hours</b>
+	<center>2019-2022</center>
+	<div class=flexcolstretch>
+		<b>Algorithms and data structures (teaching assistant)</b>
+		<div>complexity, sorting, graphs, dynamic programming, Python</div>
+	</div>
+	<div>Engineer1</div>
+	<div>École Centrale de Lyon</div>
+	<center>209</center>
+	<center>2019-2022</center>
+	<div class=flexcolstretch>
+		<b>Object-oriented design and programming (teaching assistant and guest lecturer)</b>
+		<div>introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter</div>
+	</div>
+	<div>Engineer1</div>
+	<div>École Centrale de Lyon</div>
+	<center>146</center>
+	<center>2019-2022</center>
+	<div class=flexcolstretch>
+		<b>Web application project (teaching assistant)</b>
+		<div>client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git</div>
+	</div>
+	<div>Engineer1</div>
+	<div>École Centrale de Lyon</div>
+	<center>124</center>
+	<center>2019-2022</center>
+	<div class=flexcolstretch>
+		<b>WEEX éolienne (co-organizer)</b>
+		<div>5 editions of a week-long multidisciplinary pedagogical event</div>
+	</div>
+	<div>Eng. 1/2</div>
+	<div>École Centrale de Lyon</div>
+	<center>92</center>
+	<center>2019-2022</center>
+	<div class=flexcolstretch>
+		<b>Students projects and mentoring (supervisor)</b>
+		<div>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</div>
+	</div>
+	<div>Eng. 1/2/3</div>
+	<div>École Centrale de Lyon</div>
+	<center>56</center>
+	<center>2018-2019</center>
+	<div class=flexcolstretch>
+		<b>Introduction to human-machine interfaces (teaching assistant)</b>
+		<div>programming Graphical User Interfaces with JavaFX, event-based programming, user interface mockups, usability evaluation and heuristics</div>
+	</div>
+	<div>DUT1</div>
+	<div>Lille University/IUT A</div>
+	<center>64</center>
+	<center>2018-2019</center>
+	<div class=flexcolstretch>
+		<b>Advanced algorithms (teaching assistant)</b>
+		<div>recursive and iterative algorithms, recursive and advanced data structures</div>
+	</div>
+	<div>DUT2</div>
+	<div>Lille University/IUT A</div>
+	<center>64</center>
+	<center>2018-2019</center>
+	<div class=flexcolstretch>
+		<b>Introduction to computer systems (teaching assistant)</b>
+		<div>coding numbers and text, computer architecture, operating systems, scripting and the terminal, processes and files</div>
+	</div>
+	<div>DUT1</div>
+	<div>Lille University/IUT A</div>
+	<center>64</center>
+	<center>2017-2018</center>
+	<div class=flexcolstretch>
+		<b>Web technologies (teaching assistant)</b>
+		<div>client-side Web technologies HTML/CSS/JavaScript</div>
+	</div>
+	<div>Bachelor1</div>
+	<div>Lille University</div>
+	<center>36</center>
+	<center>2017-2018</center>
+	<div class=flexcolstretch>
+		<b>Algorithms and complexity (teaching assistant)</b>
+		<div>divide and conquer, dynamic programming, greedy algorithms, complexity analysis, P/NP and reduction</div>
+	</div>
+	<div>Master1</div>
+	<div>Lille University</div>
+	<center>36</center>
+</cours></conteneur>
 
 
 
-<h1 id=publications style="box-shadow: inset 0 -50px 50px -50px #e09f3e; margin-top: 100px">Publications</h1>
-<p style="margin: 30px 175px 30px 175px">
-	My research focuses mainly on reducing complexity when programming interactive systems.
-	In the case of graphical interfaces, this complexity is due to the large number of objects and behaviors to manage, and I have proposed models [<a href=#EICS19>EICS'19</a>, <a href=#EICS17>EICS'17</a>] and principles [<a href=#EICS22>EICS'22</a>] to give more concise mental representations.
-	In the case of data structures, this complexity is due to the abstraction effort required to navigate between visual representation and code, and I have initiated a tool allowing to work directly on visual graphs [<a href=#EIAH21>EIAH'21</a>].
-	Finally, in the case of compilers, the complexity is due to the numerous transformations that lead from the source code to the executable file, and I explored the idea of a human-compiler communication to improve its understanding [<a href=#PPIG12>PPIG'12</a>].
-</p>
-<div class=references>
-	<h3 id=EICS22 style="background-color: rgb(224, 159, 62, 0.15)">[EICS'22]</h3>
-	<h4 style="background-color: rgb(224, 159, 62, 0.15)">T. Raffaillac & S. Huot. <b>What do researchers need when implementing novel interaction techniques?</b>. <i>In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)</i>. <a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a></h4>
-	<h3 id=EIAH21>[EIAH'21]</h3>
-	<h4>P. Baron, L. Roche & T. Raffaillac. <b>Visualisation automatique de graphes pour l'apprentissage des algorithmes</b>. <i>À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)</i>. <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a></h4>
-	<h3 id=Didapro20>[Didapro'20]</h3>
-	<h4>T. Raffaillac, F. Chavanon & R. Vuillemot. <b>Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants</b>. <i>À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)</i>. <i>Poster</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a></h4>
-	<h3>[PhD]</h3>
-	<h4>T. Raffaillac. <b>Améliorer les langages et bibliothèques logicielles pour programmer l'interaction</b>. <i>Université de Lille, Inria Lille - Nord Europe</i>. <a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a></h4>
-	<h3 id=EICS19 style="background-color: rgb(224, 159, 62, 0.15)">[EICS'19]</h3>
-	<h4 style="background-color: rgb(224, 159, 62, 0.15)">T. Raffaillac & S. Huot. <b>Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model</b>. <i>In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)</i>. <a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a></h4>
-	<h3 id=IHM18>[IHM'18]</h3>
-	<h4>T. Raffaillac & S. Huot. <b>Application du modèle Entité-Composant-Système à la programmation d'interactions</b>. <i>À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)</i>. (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a></h4>
-	<h3 id=EICS17>[EICS'17]</h3>
-	<h4>T. Raffaillac, S. Huot & S. Ducasse. <b>Turning Function Calls Into Animations</b>. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a></h4>
-	<h3>[EICS'17]</h3>
-	<h4>T. Raffaillac. <b>Language and System Support for Interaction</b>. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a></h4>
-	<h3 id=PPIG12>[PPIG'12]</h3>
-	<h4>T. Raffaillac. <b>Exploring the design of compiler feedback</b>. <i>In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)</i>. <a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a></h4>
-</div>
-
-
-
-<h1 id=teaching style="box-shadow: inset 0 -50px 50px -50px #540b0e; margin-top: 100px">Teaching</h1>
-<p style="margin: 30px 175px 30px 175px">
-	I really enjoy teaching and supervision activities.
-	Aside from courses, I have provided assistance to pedagogical innovation, co-organizing 5 editions of an interdisciplinary weekly challenge, and developing a Web site supporting the competency-based evaluations at Centrale Lyon.
-	I have also been hosting Competitive Programming trainings since 2015, first in University of Lille then at Centrale Lyon, for which I have given and refined advanced courses on the topic.
-	In 2021 we raised Centrale Lyon to the top rank among the French institutions on <a href=https://open.kattis.com/countries/FRA>Kattis</a>, reached the 4<sup>th</sup> place during the <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>CodinGame Fall Challenge</a>, then got 54<sup>th</sup> and 64<sup>th</sup> places at the major European competition <a href=https://judge.swerc.eu/public>SWERC</a>.
-</p>
-<div class=courses>
-	<h3><b>Period</b></h3>
-	<h3><b>Course</b></h3>
-	<h3><b>Level</b></h3>
-	<h3><b>Institution</b></h3>
-	<h3><b>Hours</b></h3>
-	<h4 style="text-align: center">2019-2022</h4>
-	<div>
-		<h4><b>Algorithms and data structures (teaching assistant)</b></h4>
-		<h4>complexity, sorting, graphs, dynamic programming, Python</h4>
-	</div>
-	<h4>Engineer1</h4>
-	<h4>École Centrale de Lyon</h4>
-	<h4 style="text-align: center">220</h4>
-	<h4 style="text-align: center">2019-2022</h4>
-	<div>
-		<h4><b>Object-oriented design and programming (teaching assistant and guest lecturer)</b></h4>
-		<h4>introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter</h4>
-	</div>
-	<h4>Engineer1</h4>
-	<h4>École Centrale de Lyon</h4>
-	<h4 style="text-align: center">144</h4>
-	<h4 style="text-align: center">2019-2022</h4>
-	<div>
-		<h4><b>Web application project (teaching assistant)</b></h4>
-		<h4>client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git</h4>
-	</div>
-	<h4>Engineer1</h4>
-	<h4>École Centrale de Lyon</h4>
-	<h4 style="text-align: center">120</h4>
-	<h4 style="text-align: center">2019-2022</h4>
-	<div>
-		<h4><b>Students projects and mentoring (supervisor)</b></h4>
-		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
-	</div>
-	<h4>Eng. 1/2/3</h4>
-	<h4>École Centrale de Lyon</h4>
-	<h4 style="text-align: center">65</h4>
-	<h4 style="text-align: center">2019-2022</h4>
-	<div>
-		<h4><b>WEEX éolienne (co-organizer)</b></h4>
-		<h4>5 editions of a week-long multidisciplinary pedagogical event</h4>
-	</div>
-	<h4>Eng. 1/2</h4>
-	<h4>École Centrale de Lyon</h4>
-	<h4 style="text-align: center">60</h4>
-	<h4 style="text-align: center">2018-2019</h4>
-	<div>
-		<h4><b>Introduction to human-machine interfaces (teaching assistant)</b></h4>
-		<h4>programming Graphical User Interfaces with JavaFX, event-based programming, user interface mockups, usability evaluation and heuristics</h4>
-	</div>
-	<h4>DUT1</h4>
-	<h4>Lille University/IUT A</h4>
-	<h4 style="text-align: center">64</h4>
-	<h4 style="text-align: center">2018-2019</h4>
-	<div>
-		<h4><b>Advanced algorithms (teaching assistant)</b></h4>
-		<h4>recursive and iterative algorithms, recursive and advanced data structures</h4>
-	</div>
-	<h4>DUT2</h4>
-	<h4>Lille University/IUT A</h4>
-	<h4 style="text-align: center">64</h4>
-	<h4 style="text-align: center">2018-2019</h4>
-	<div>
-		<h4><b>Introduction to computer systems (teaching assistant)</b></h4>
-		<h4>coding numbers and text, computer architecture, operating systems, scripting and the terminal, processes and files</h4>
-	</div>
-	<h4>DUT1</h4>
-	<h4>Lille University/IUT A</h4>
-	<h4 style="text-align: center">64</h4>
-	<h4 style="text-align: center">2017-2018</h4>
-	<div>
-		<h4><b>Web technologies (teaching assistant)</b></h4>
-		<h4>client-side Web technologies HTML/CSS/JavaScript</h4>
-	</div>
-	<h4>License1</h4>
-	<h4>Lille University</h4>
-	<h4 style="text-align: center">36</h4>
-	<h4 style="text-align: center">2017-2018</h4>
-	<div>
-		<h4><b>Algorithms and complexity (teaching assistant)</b></h4>
-		<h4>divide and conquer, dynamic programming, greedy algorithms, complexity analysis, P/NP and reduction</h4>
-	</div>
-	<h4>Master1</h4>
-	<h4>Lille University</h4>
-	<h4 style="text-align: center">36</h4>
-</div>
-
-
-
-<h1 id=academia style="box-shadow: inset 0 -50px 50px -50px #ffd200; margin-top: 100px">Service & Awards</h1>
+<h1 id=academia style="box-shadow: inset 0 -50px 50px -50px #ffd200; margin-top: 100px">Academic service</h1>
 <div class=academic>
+<h3>Co-chair of the French working group <i>IHM & écologie</i> since 2023</h3>
+<h3>Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction)</h3>
 <h3><a href=content/best-paper-eics22.pdf>Best Paper Award</a> at <a href=#EICS22>EICS'22</a></h3>
 <h3>Reviewer for CHI'22 and EICS'22, session chair at EICS'22</h3>
 <h3>Member of the Sustainable Development and Societal Responsibility local committee in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.</h3>
@@ -245,12 +240,33 @@
 
 <h1 id=misc style="box-shadow: inset 0 -50px 50px -50px #9e2a2b; margin-top: 100px">Signs of life</h1>
 <p style="margin: 20px 175px 15px 175px">
-	This section contains stuff that doesn't fit anywhere else (mostly challenges).
-	I believe technical mastery is essential to tackle impossible societal challenges, so I dedicate about 5% of my time to organizing local training sessions for contests and challenges.
+	This section contains stuff that doesn't fit anywhere else.
+	I believe technical mastery is essential to tackle impossible societal challenges, so I dedicate a good amount of time to organizing local training sessions for contests and challenges.
 	These events are a lot of fun and a good way to test the skills of prospective students.
-	My main platform for contests training is Kattis, where I hold <a href=https://open.kattis.com/countries/FRA>4<sup>th</sup> place in France</a>.
+	My main platform for contests training is Kattis, where I hold the <a href=https://open.kattis.com/countries/FRA>2<sup>nd</sup> place in France</a>.
 </p>
+<h2 style="color: #ddd; margin-top: 25px; text-align: center">2023</h2>
+<div class=sign>
+	<h3><b><a href=content/pb23.pdf>Co-conception participative de modèles et de simulations multi-agents pour l’aide à la décision multi-acteurs</a> (French)</b></h3>
+	<h4>Slides of a talk given during the <a href=https://printemps-baillarguet.cirad.fr/>Printemps de Baillarguet</a>.</h4>
+</div>
+<div class=sign>
+	<h3><b><a href=content/sens23.pdf>Comment (ré)concilier les Interfaces Humains-Machines avec les Transitions ?</a> (French)</b></h3>
+	<h4>Slides of a talk given to the SENS research unit.</h4>
+</div>
+<div class=sign>
+	<h3><b><a href=content/selmet23.pdf>Interfaces et visualisations pour la concertation et la prospection en contexte pastoral</a> (French)</b></h3>
+	<h4>Slides of a talk given to the SELMET research unit, to report on the progress of my postdoc.</h4>
+</div>
+<div class=sign>
+	<h3><b><a href=https://www.hdigitag.fr/Calendrier/DigitAgora-2023>DigitAgora 2023</a></b></h3>
+	<h4>Participation in a round table on "Digital technology to improve production" in plenary session (<a href=content/digitagora23.pdf>introductory slides</a>).</h4>
+</div>
 <h2 style="color: #ddd; margin-top: 25px; text-align: center">2022</h2>
+<div class=sign>
+	<h3><b><a href=content/seminaire-ecriture.md>Séminaire d'écriture</a> (French)</b></h3>
+	<h4>Notes for a 2-hour course I gave to PhD students on writing scientific articles.</h4>
+</div>
 <div class=sign>
 	<h3><b><a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)</b></h3>
 	<h4>Slides that I created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.</h4>
@@ -435,7 +451,7 @@
 
 
 
-<p id=footer>Page generated on 2023-07-26 using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
+<p id=footer>Page generated on 2023-10-24 using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
 <!-- Add target=_blank to all outbound links -->
 <script>
 	for (let a of document.querySelectorAll('a[href^="http"]'))

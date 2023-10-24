@@ -1,6 +1,6 @@
 [
 	{
-		"type": "engineering",
+		"type": "project",
 		"id": "competencies",
 		"title": "Visualization of individual competency evaluations",
 		"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
@@ -9,7 +9,7 @@
 		"start": 2021,
 		"finish": 2022
 	}, {
-		"type": "engineering",
+		"type": "project",
 		"title": "WEEX éolien",
 		"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.",
 		"image": "weex.png",
@@ -17,7 +17,7 @@
 		"start": 2020,
 		"finish": 2022
 	}, {
-		"type": "engineering",
+		"type": "project",
 		"title": "Polyphony: building GUIs with ECS",
 		"text": "Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].",
 		"image": "ecs.png",
@@ -25,7 +25,7 @@
 		"start": 2016,
 		"finish": 2019
 	}, {
-		"type": "engineering",
+		"type": "project",
 		"title": "Turning function calls into animations",
 		"text": "Demonstration of a language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].",
 		"image": "animations.svg",
@@ -33,15 +33,15 @@
 		"start": 2016,
 		"finish": 2017
 	}, {
-		"type": "engineering",
+		"type": "project",
 		"title": "edge264",
 		"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.",
-		"image": "edge264.svg",
+		"image": "edge264.jpg",
 		"href": "https://github.com/tvlabs/edge264",
 		"start": 2013,
 		"major": true
 	}, {
-		"type": "engineering",
+		"type": "project",
 		"title": "Exploring the design of compiler feedback",
 		"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
 		"image": "compiler.png",
@@ -49,8 +49,29 @@
 		"finish": 2012
 	}, {
 		"type": "publication",
+		"audience": "national",
+		"id": "IHM23",
+		"reference": "IHM'23",
+		"authors": "T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur",
+		"title": "Développement d’une interface de simulation multi-agents pour la gestion concertée des territoires pastoraux de moyenne montagne",
+		"proceedings": "À la 34e conférence francophone sur l'Interaction Homme-Machine",
+		"misc": "<a href=https://dl.acm.org/doi/10.1145/3577590.3589606>DOI</a> <a href=https://hal.science/hal-04046136/document>PDF</a> <a href=content/ihm23-poster.jpg>poster</a> <a href=content/ihm23-slide.pdf>slide</a>",
+		"finish": 2023
+	}, {
+		"type": "publication",
+		"audience": "abstract",
+		"id": "Rochebrune23",
+		"reference": "Rochebrune'23",
+		"authors": "T. Raffaillac",
+		"title": "Interagir avec les nombres",
+		"proceedings": "Aux 29<sup>e</sup> journées de Rochebrune 2023",
+		"misc": "<a href=content/rb23.pdf>PDF</a> <a href=content/rb23-slides.pdf>slides</a>",
+		"finish": 2023
+	}, {
+		"type": "publication",
+		"audience": "international",
 		"id": "EICS22",
-		"reference": "[EICS'22]",
+		"reference": "EICS'22",
 		"authors": "T. Raffaillac & S. Huot",
 		"title": "What do researchers need when implementing novel interaction techniques?",
 		"proceedings": "In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)",
@@ -59,8 +80,9 @@
 		"major": true
 	}, {
 		"type": "publication",
+		"audience": "abstract",
 		"id": "EIAH21",
-		"reference": "[EIAH'21]",
+		"reference": "EIAH'21",
 		"authors": "P. Baron, L. Roche & T. Raffaillac",
 		"title": "Visualisation automatique de graphes pour l'apprentissage des algorithmes",
 		"proceedings": "À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)",
@@ -68,8 +90,9 @@
 		"finish": 2021
 	}, {
 		"type": "publication",
+		"audience": "abstract",
 		"id": "Didapro20",
-		"reference": "[Didapro'20]",
+		"reference": "Didapro'20",
 		"authors": "T. Raffaillac, F. Chavanon & R. Vuillemot",
 		"title": "Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants",
 		"proceedings": "À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)",
@@ -77,16 +100,18 @@
 		"finish": 2020
 	}, {
 		"type": "publication",
-		"reference": "[PhD]",
+		"audience": "thesis",
+		"reference": "PhD",
 		"authors": "T. Raffaillac",
 		"title": "Améliorer les langages et bibliothèques logicielles pour programmer l'interaction",
-		"proceedings": "Université de Lille, Inria Lille - Nord Europe",
+		"proceedings": "Doctoral thesis from the University of Lille",
 		"misc": "<a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
 		"finish": 2019
 	}, {
 		"type": "publication",
+		"audience": "international",
 		"id": "EICS19",
-		"reference": "[EICS'19]",
+		"reference": "EICS'19",
 		"authors": "T. Raffaillac & S. Huot",
 		"title": "Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model",
 		"proceedings": "In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)",
@@ -95,8 +120,9 @@
 		"major": true
 	}, {
 		"type": "publication",
+		"audience": "national",
 		"id": "IHM18",
-		"reference": "[IHM'18]",
+		"reference": "IHM'18",
 		"authors": "T. Raffaillac & S. Huot",
 		"title": "Application du modèle Entité-Composant-Système à la programmation d'interactions",
 		"proceedings": "À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)",
@@ -104,8 +130,9 @@
 		"finish": 2018
 	}, {
 		"type": "publication",
+		"audience": "international",
 		"id": "EICS17",
-		"reference": "[EICS'17]",
+		"reference": "EICS'17",
 		"authors": "T. Raffaillac, S. Huot & S. Ducasse",
 		"title": "Turning Function Calls Into Animations",
 		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
@@ -113,7 +140,8 @@
 		"finish": 2017
 	}, {
 		"type": "publication",
-		"reference": "[EICS'17]",
+		"audience": "abstract",
+		"reference": "EICS'17",
 		"authors": "T. Raffaillac",
 		"title": "Language and System Support for Interaction",
 		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
@@ -121,8 +149,18 @@
 		"finish": 2017
 	}, {
 		"type": "publication",
+		"audience": "thesis",
+		"reference": "MSc",
+		"authors": "T. Raffaillac",
+		"title": "Exploring the design of compiler feedback",
+		"proceedings": "Master thesis from KTH Royal Institute of Technology",
+		"misc": "<a href=content/master-thesis.pdf>PDF</a> <a href=https://prezi.com/izuzcudeivh9/degree-thesis-presentation/>slides</a>",
+		"finish": 2012
+	}, {
+		"type": "publication",
+		"audience": "international",
 		"id": "PPIG12",
-		"reference": "[PPIG'12]",
+		"reference": "PPIG'12",
 		"authors": "T. Raffaillac",
 		"title": "Exploring the design of compiler feedback",
 		"proceedings": "In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)",
@@ -136,7 +174,7 @@
 		"role": "teaching assistant",
 		"text": "complexity, sorting, graphs, dynamic programming, Python",
 		"level": "Engineer1",
-		"hours": 220,
+		"hours": 209,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
@@ -146,7 +184,7 @@
 		"role": "teaching assistant and guest lecturer",
 		"text": "introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter",
 		"level": "Engineer1",
-		"hours": 144,
+		"hours": 146,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
@@ -156,17 +194,7 @@
 		"role": "teaching assistant",
 		"text": "client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git",
 		"level": "Engineer1",
-		"hours": 120,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2019,
-		"finish": 2022,
-		"title": "Students projects and mentoring",
-		"role": "supervisor",
-		"text": "6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students",
-		"level": "Eng. 1/2/3",
-		"hours": 65,
+		"hours": 124,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
@@ -176,7 +204,17 @@
 		"role": "co-organizer",
 		"text": "5 editions of a week-long multidisciplinary pedagogical event",
 		"level": "Eng. 1/2",
-		"hours": 60,
+		"hours": 92,
+		"institution": "École Centrale de Lyon"
+	}, {
+		"type": "teaching",
+		"start": 2019,
+		"finish": 2022,
+		"title": "Students projects and mentoring",
+		"role": "supervisor",
+		"text": "6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students",
+		"level": "Eng. 1/2/3",
+		"hours": 56,
 		"institution": "École Centrale de Lyon"
 	}, {
 		"type": "teaching",
@@ -215,7 +253,7 @@
 		"title": "Web technologies",
 		"role": "teaching assistant",
 		"text": "client-side Web technologies HTML/CSS/JavaScript",
-		"level": "License1",
+		"level": "Bachelor1",
 		"hours": 36,
 		"institution": "Lille University"
 	}, {
@@ -228,6 +266,14 @@
 		"level": "Master1",
 		"hours": 36,
 		"institution": "Lille University"
+	}, {
+		"type": "academia",
+		"text": "Co-chair of the French working group <i>IHM & écologie</i> since 2023",
+		"start": 2023
+	}, {
+		"type": "academia",
+		"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction)",
+		"start": 2023
 	}, {
 		"type": "academia",
 		"text": "<a href=content/best-paper-eics22.pdf>Best Paper Award</a> at <a href=#EICS22>EICS'22</a>",
@@ -269,6 +315,31 @@
 		"type": "academia",
 		"text": "Reviewer for IWST'17 and ManLang'17",
 		"finish": 2017
+	}, {
+		"type": "misc",
+		"title": "<a href=content/pb23.pdf>Co-conception participative de modèles et de simulations multi-agents pour l’aide à la décision multi-acteurs</a> (French)",
+		"text": "Slides of a talk given during the <a href=https://printemps-baillarguet.cirad.fr/>Printemps de Baillarguet</a>.",
+		"finish": 2023
+	}, {
+		"type": "misc",
+		"title": "<a href=content/sens23.pdf>Comment (ré)concilier les Interfaces Humains-Machines avec les Transitions ?</a> (French)",
+		"text": "Slides of a talk given to the SENS research unit.",
+		"finish": 2023
+	}, {
+		"type": "misc",
+		"title": "<a href=content/selmet23.pdf>Interfaces et visualisations pour la concertation et la prospection en contexte pastoral</a> (French)",
+		"text": "Slides of a talk given to the SELMET research unit, to report on the progress of my postdoc.",
+		"finish": 2023
+	}, {
+		"type": "misc",
+		"title": "<a href=https://www.hdigitag.fr/Calendrier/DigitAgora-2023>DigitAgora 2023</a>",
+		"text": "Participation in a round table on \"Digital technology to improve production\" in plenary session (<a href=content/digitagora23.pdf>introductory slides</a>).",
+		"finish": 2023
+	}, {
+		"type": "misc",
+		"title": "<a href=content/seminaire-ecriture.md>Séminaire d'écriture</a> (French)",
+		"text": "Notes for a 2-hour course I gave to PhD students on writing scientific articles.",
+		"finish": 2022
 	}, {
 		"type": "misc",
 		"title": "<a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)",

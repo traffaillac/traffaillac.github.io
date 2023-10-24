@@ -9,40 +9,34 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 
-
-
-<body class=flexcolstretch style="margin: 100px 0">
-<div class=flexrowstart style="margin-bottom: 100px">
-<nav>
-<div class=flexcolend style="flex: none; padding-right: 40px; width: 300px">
+<body class=flexcolstretch>
+<div class=flexrowstart style="padding: 70px 10px">
+<nav class=flexcolend style="flex: none; width: 230px">
 	<img class=rotate src=images/avatar.jpg width=140 style="border-radius: 50%">
-	<span style="font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right">Thibault Raffaillac</span>
-	<span><a href="maikto:thibaukt.raffaikkac@ec-kyon.fr" onmouseover="this.href=this.href.replace(/k/g,'l')" class=nodot style="font: 26px Pacifico; margin-right: .6em; text-decoration: none">email contact</a><a href=https://github.com/traffaillac class=nodot><img class=rotate src=images/github.png width=26></a></span>
-	<h2><a href=index.html#2023>Timeline</a></h2>
-	<h2><a href=sections.html#engineering>Engineering</a></h2>
-	<h2><a href=sections.html#publications>Publications</a></h2>
-	<h2><a href=sections.html#teaching>Teaching</a></h2>
-	<h2><a href=sections.html#academia>Service & Awards</a></h2>
-	<h2><a href=sections.html#misc>Signs of life</a></h2>
-</div>
+	<titre><a href=index.html>Thibault Raffaillac</a></titre>
+	<lienmenu><a href=sections.html#projects>Projects</a></lienmenu>
+	<lienmenu><a href=sections.html#publications>Publications</a></lienmenu>
+	<lienmenu><a href=sections.html#teaching>Teaching</a></lienmenu>
+	<lienmenu><a href=sections.html#academia>Academic service</a></lienmenu>
+	<lienmenu><a href=sections.html#misc>Signs of life</a></lienmenu>
+	<lienmenu><a href="maikto:thibaukt.raffaikkac@inrae.fr" onmouseover="this.href=this.href.replace(/k/g,'l')">email</a>  <a href=https://github.com/traffaillac><img class=rotate src=images/github.png width=26></a></lienmenu>
 </nav>
-<div class=flexcolstretch style="margin: 20px 40px 0 40px">
+<div class=flexcolstretch style="margin: 40px 0 0 70px">
 <p>
 	I am a postdoctoral researcher at INRAE and CIRAD in Montpellier, member of research units <a href=https://umr-sens.fr/>SENS</a> and <a href=https://umr-selmet.cirad.fr/>SELMET</a> since September 2022.
 	In the past I :
 </p>
 <ul>
-	<li>worked as teacher, researcher and engineer at École Centrale de Lyon (September 2019 – September 2022).</li>
-	<li>did a PhD in Human-Computer Interaction supervised by <a href=https://loki.lille.inria.fr/~huot/>Stéphane Huot</a> at Inria Lille (November 2015 – December 2019).</li>
-	<li>did a short internship at Inria Saclay (March 2015 – August 2015).</li>
+	<li>obtained a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012).</li>
 	<li>worked as R&D engineer in Paris on optimizing software for embedded TV decoders (December 2012 – June 2014).</li>
-	<li>did a double degree in Engineering and Computer Science from Centrale Marseille and KTH Royal Institute of Technology (September 2008 – October 2012).</li>
+	<li>did an internship supervised by <a href=https://ex-situ.lri.fr/people/mackay>Wendy Mackay</a> at Inria Saclay (March 2015 – August 2015).</li>
+	<li>did a PhD in Human-Computer Interaction supervised by <a href=https://loki.lille.inria.fr/~huot/>Stéphane Huot</a> at Inria Lille (November 2015 – December 2019).</li>
+	<li>worked as research assistant at École Centrale de Lyon (September 2019 – August 2022).</li>
 </ul>
 <p>
-	My research field is Human-Computer Interaction.
-	I currently work on designing graphical interfaces atop agent-based simulations, to explore possible futures in the management of pastoral territories.
-	In parallel I work on the interactions between researchers and engineers of UI frameworks, to improve the impact of research on the evolution of frameworks.
-	I have been a member of the Sustainable Development and Societal Responsibility committee at Centrale Lyon, and am very much driven by that domain.
+	My research field is Human-Computer Interaction, where I work on the engineering of graphical user interfaces and visualizations in socio-ecological contexts.
+	My core motivation is to explore and improve the impacts of research on society.
+	I have experimented with writing awarded articles for engineering and research communities (<a href=#EICS19>EICS'19</a>, <a href=#EICS22>EICS'22</a>), developing and actively promoting an open source project (<a href=https://github.com/tvlabs/edge264>edge264</a>), co-chairing two working groups on Ecology and Sustainability, and being involved in interdisciplinary action research projects.
 	As a teacher I have given courses on User Interfaces and Competitive Programming, and have been assistant in Algorithmics, Software Engineering and Web Development.
 	I work hard to explore unconventional paths, most of my spare time going into compulsively crafting code then sharing it with engineering and academic communities.
 </p>
@@ -54,25 +48,73 @@
 
 
 
+
+
 <h1 id=2023>2023</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
+<div id=IHM23 class=strip>
+	<div class=publication>Publications</div>
+	<h3>IHM'23</h3>
+	<h4>T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur. Développement d’une interface de simulation multi-agents pour la gestion concertée des territoires pastoraux de moyenne montagne. <i>À la 34e conférence francophone sur l'Interaction Homme-Machine</i>. <a href=https://dl.acm.org/doi/10.1145/3577590.3589606>DOI</a> <a href=https://hal.science/hal-04046136/document>PDF</a> <a href=content/ihm23-poster.jpg>poster</a> <a href=content/ihm23-slide.pdf>slide</a></h4>
+</div>
+<div id=Rochebrune23 class=strip>
+	<div class=publication>Publications</div>
+	<h3>Rochebrune'23</h3>
+	<h4>T. Raffaillac. Interagir avec les nombres. <i>Aux 29<sup>e</sup> journées de Rochebrune 2023</i>. <a href=content/rb23.pdf>PDF</a> <a href=content/rb23-slides.pdf>slides</a></h4>
+</div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
+<h4>Co-chair of the French working group <i>IHM & écologie</i> since 2023</h4>
+</div>
+<div class=strip>
+	<div class=academia>Academic service</div>
+<h4>Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction)</h4>
+</div>
+<div class=strip>
+	<div class=academia>Academic service</div>
 <h4>Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021</h4>
+</div>
+<div class=strip>
+	<div class=misc>Signs of life</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3><a href=content/pb23.pdf>Co-conception participative de modèles et de simulations multi-agents pour l’aide à la décision multi-acteurs</a> (French)</h3>
+		<h4>Slides of a talk given during the <a href=https://printemps-baillarguet.cirad.fr/>Printemps de Baillarguet</a>.</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=misc>Signs of life</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3><a href=content/sens23.pdf>Comment (ré)concilier les Interfaces Humains-Machines avec les Transitions ?</a> (French)</h3>
+		<h4>Slides of a talk given to the SENS research unit.</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=misc>Signs of life</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3><a href=content/selmet23.pdf>Interfaces et visualisations pour la concertation et la prospection en contexte pastoral</a> (French)</h3>
+		<h4>Slides of a talk given to the SELMET research unit, to report on the progress of my postdoc.</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=misc>Signs of life</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3><a href=https://www.hdigitag.fr/Calendrier/DigitAgora-2023>DigitAgora 2023</a></h3>
+		<h4>Participation in a round table on "Digital technology to improve production" in plenary session (<a href=content/digitagora23.pdf>introductory slides</a>).</h4>
+	</div>
 </div>
 
 
 
 <h1 id=2022>2022</h1>
 <div id=competencies class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/competencies.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://www.ec-lyon.fr/formation/pedagogie/demarche-competences>Visualization of individual competency evaluations</a> (2021-2022)</h3>
@@ -80,7 +122,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/weex.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun>WEEX éolien</a> (2020-2022)</h3>
@@ -88,97 +130,104 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div id=EICS22 class=strip>
-	<div class=publication>publication</div>
-	<h3>[EICS'22]</h3>
-	<h4>T. Raffaillac & S. Huot. <b>What do researchers need when implementing novel interaction techniques?</b>. <i>In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)</i>. <a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a></h4>
+	<div class=publication>Publications</div>
+	<h3>EICS'22</h3>
+	<h4>T. Raffaillac & S. Huot. What do researchers need when implementing novel interaction techniques?. <i>In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)</i>. <a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a></h4>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Algorithms and data structures (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>220h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>209h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>complexity, sorting, graphs, dynamic programming, Python</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Object-oriented design and programming (2019-2022)</h3>
-		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>144h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>146h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Web application project (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>120h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>124h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
-	<div class=flexcolstretch style="justify-content: center">
-		<h3>Students projects and mentoring (2019-2022)</h3>
-		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>65h</i> at <i>École Centrale de Lyon</i></h4>
-		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
-	</div>
-</div>
-<div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>WEEX éolienne (2019-2022)</h3>
-		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>60h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>92h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>5 editions of a week-long multidisciplinary pedagogical event</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=teaching>Teaching</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3>Students projects and mentoring (2019-2022)</h3>
+		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>56h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=academia>Academic service</div>
 <h4><a href=content/best-paper-eics22.pdf>Best Paper Award</a> at <a href=#EICS22>EICS'22</a></h4>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Reviewer for CHI'22 and EICS'22, session chair at EICS'22</h4>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Member of the Sustainable Development and Societal Responsibility local committee in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.</h4>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021</h4>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3><a href=content/seminaire-ecriture.md>Séminaire d'écriture</a> (French)</h3>
+		<h4>Notes for a 2-hour course I gave to PhD students on writing scientific articles.</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)</h3>
 		<h4>Slides that I created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://clementsparrow.github.io/Pattern-Script/src/play.html?p=a05b012f072a84c5d9af5d8f441cb832>Coyote Time Lord</a></h3>
 		<h4>Minimalist 2D game with time-altering mechanisms, created with Clément Pillias for the 50<sup>th</sup> Ludum Dare Jam. I did the eerie music, the sounds and the sprites.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://swerc.eu/2021/theme/scoreboard/public/>SWERC 2021</a></h3>
 		<h4>My second participation as a coach, with teams ECL 2 (54<sup>th</sup>/97) and CentraleMegaStomp (64<sup>th</sup>/97). A remarkable result for Engineering students as well as first-timers!</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://codingcompetitions.withgoogle.com/hashcode/round/00000000008caae7>Hash Code 2022 contest</a></h3>
 		<h4>703<sup>th</sup>/10177, 52<sup>th</sup>/529 in France, team <i>#import mercy</i> on my own.</h4>
@@ -189,7 +238,7 @@
 
 <h1 id=2021>2021</h1>
 <div id=competencies class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/competencies.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://www.ec-lyon.fr/formation/pedagogie/demarche-competences>Visualization of individual competency evaluations</a> (2021-2022)</h3>
@@ -197,7 +246,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/weex.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun>WEEX éolien</a> (2020-2022)</h3>
@@ -205,79 +254,79 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div id=EIAH21 class=strip>
-	<div class=publication>publication</div>
-	<h3>[EIAH'21]</h3>
-	<h4>P. Baron, L. Roche & T. Raffaillac. <b>Visualisation automatique de graphes pour l'apprentissage des algorithmes</b>. <i>À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)</i>. <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a></h4>
+	<div class=publication>Publications</div>
+	<h3>EIAH'21</h3>
+	<h4>P. Baron, L. Roche & T. Raffaillac. Visualisation automatique de graphes pour l'apprentissage des algorithmes. <i>À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)</i>. <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a></h4>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Algorithms and data structures (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>220h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>209h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>complexity, sorting, graphs, dynamic programming, Python</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Object-oriented design and programming (2019-2022)</h3>
-		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>144h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>146h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Web application project (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>120h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>124h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
-	<div class=flexcolstretch style="justify-content: center">
-		<h3>Students projects and mentoring (2019-2022)</h3>
-		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>65h</i> at <i>École Centrale de Lyon</i></h4>
-		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
-	</div>
-</div>
-<div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>WEEX éolienne (2019-2022)</h3>
-		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>60h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>92h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>5 editions of a week-long multidisciplinary pedagogical event</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=teaching>Teaching</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3>Students projects and mentoring (2019-2022)</h3>
+		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>56h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=academia>Academic service</div>
 <h4>Member of the Sustainable Development and Societal Responsibility local committee in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.</h4>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021</h4>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Reviewer for CHI'21 and IHM'20'21</h4>
 </div>
 <div id=creative21 class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/creative21.zip>Creative and competitive programming club</a></h3>
 		<h4>I ran this club for students from February to April, with sessions alternating between competitive programming and live music coding with FoxDot.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://clementsparrow.github.io/GlobalGameJam2021/index.html>Lost Souls Found The Gold You Lost To Save Your Soul</a></h3>
 		<h4>Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and incremental music (although due to a bug you rarely hear the full version).</h4>
@@ -288,7 +337,7 @@
 
 <h1 id=2020>2020</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/weex.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun>WEEX éolien</a> (2020-2022)</h3>
@@ -296,113 +345,113 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div id=Didapro20 class=strip>
-	<div class=publication>publication</div>
-	<h3>[Didapro'20]</h3>
-	<h4>T. Raffaillac, F. Chavanon & R. Vuillemot. <b>Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants</b>. <i>À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)</i>. <i>Poster</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a></h4>
+	<div class=publication>Publications</div>
+	<h3>Didapro'20</h3>
+	<h4>T. Raffaillac, F. Chavanon & R. Vuillemot. Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants. <i>À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)</i>. <i>Poster</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a></h4>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Algorithms and data structures (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>220h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>209h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>complexity, sorting, graphs, dynamic programming, Python</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Object-oriented design and programming (2019-2022)</h3>
-		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>144h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>146h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Web application project (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>120h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>124h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
-	<div class=flexcolstretch style="justify-content: center">
-		<h3>Students projects and mentoring (2019-2022)</h3>
-		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>65h</i> at <i>École Centrale de Lyon</i></h4>
-		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
-	</div>
-</div>
-<div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>WEEX éolienne (2019-2022)</h3>
-		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>60h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>92h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>5 editions of a week-long multidisciplinary pedagogical event</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=teaching>Teaching</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3>Students projects and mentoring (2019-2022)</h3>
+		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>56h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=academia>Academic service</div>
 <h4>Reviewer for CHI'20</h4>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/traffaillac/Advent-of-Code-2020>Advent of Code 2020</a></h3>
 		<h4>This year I went through all the puzzles of this Christmas-themed challenge.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/codejam20.pdf>Code Jam 2020 contest</a></h3>
 		<h4>Reaching round 3 of this challenging competition.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2020>Hash Code 2020 contest</a></h3>
 		<h4>2826<sup>th</sup>/10724, <!--236<sup>th</sup>/784 (France),--> 2<sup>nd</sup> in our hub, team <i>XoXot</i> with Damien Masson, Nicolas Crosetti and Paul Gallot.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/traffaillac/ide-enseignement>Online IDE with supervision</a></h3>
 		<h4>Online IDE including a Python interpreter, that I coded at the start of the Covid outbreak to allow students to ask for help and show their code remotely (viewed as a mosaic on my side). It lacked modules so students would only use it to show code, but it was super helpful to let them feel supported throughout this event.</h4>
 	</div>
 </div>
 <div id=contests20 class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/contests20.zip>Competitive programming course</a></h3>
 		<h4>Slides for a custom course I created for 6 students, based on the excellent <a href=https://cpbook.net/methodstosolve>Competitive Programming 3</a> book.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://www.fun-mooc.fr/courses/course-v1:enseignementsup+131001+session03/about>MOOC on university teaching</a> (French)</h3>
 		<h4>Followed during 10 weeks for ~2h/week <a href=content/mooc-enseignement.pdf>[Certificate of completion]</a></h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2019</a></h3>
 		<h4>My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I also scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/didapro8-atelier.pdf>Mise en place d’une plateforme de programmation compétitive comme support de TDs</a> (French)</h3>
 		<h4>Workshop given on 5 February during the colloquium Didapro 8, to present the <a href=https://github.com/traffaillac/tdmoj>setup and use</a> of DMOJ for automated grading.</h4>
@@ -413,7 +462,7 @@
 
 <h1 id=2019>2019</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/ecs.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>Polyphony: building GUIs with ECS</a> (2016-2019)</h3>
@@ -421,65 +470,65 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=publication>publication</div>
-	<h3>[PhD]</h3>
-	<h4>T. Raffaillac. <b>Améliorer les langages et bibliothèques logicielles pour programmer l'interaction</b>. <i>Université de Lille, Inria Lille - Nord Europe</i>. <a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a></h4>
+	<div class=publication>Publications</div>
+	<h3>PhD</h3>
+	<h4>T. Raffaillac. Améliorer les langages et bibliothèques logicielles pour programmer l'interaction. <i>Doctoral thesis from the University of Lille</i>. <a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a></h4>
 </div>
 <div id=EICS19 class=strip>
-	<div class=publication>publication</div>
-	<h3>[EICS'19]</h3>
-	<h4>T. Raffaillac & S. Huot. <b>Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model</b>. <i>In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)</i>. <a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a></h4>
+	<div class=publication>Publications</div>
+	<h3>EICS'19</h3>
+	<h4>T. Raffaillac & S. Huot. Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model. <i>In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)</i>. <a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a></h4>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Algorithms and data structures (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>220h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>209h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>complexity, sorting, graphs, dynamic programming, Python</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Object-oriented design and programming (2019-2022)</h3>
-		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>144h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant and guest lecturer</i> at <i>Engineer1</i> level for <i>146h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Web application project (2019-2022)</h3>
-		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>120h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>teaching assistant</i> at <i>Engineer1</i> level for <i>124h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
-	<div class=flexcolstretch style="justify-content: center">
-		<h3>Students projects and mentoring (2019-2022)</h3>
-		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>65h</i> at <i>École Centrale de Lyon</i></h4>
-		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
-	</div>
-</div>
-<div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>WEEX éolienne (2019-2022)</h3>
-		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>60h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4><i>co-organizer</i> at <i>Eng. 1/2</i> level for <i>92h</i> at <i>École Centrale de Lyon</i></h4>
 		<h4>5 editions of a week-long multidisciplinary pedagogical event</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
+	<div class=flexcolstretch style="justify-content: center">
+		<h3>Students projects and mentoring (2019-2022)</h3>
+		<h4><i>supervisor</i> at <i>Eng. 1/2/3</i> level for <i>56h</i> at <i>École Centrale de Lyon</i></h4>
+		<h4>6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students</h4>
+	</div>
+</div>
+<div class=strip>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Introduction to human-machine interfaces (2018-2019)</h3>
 		<h4><i>teaching assistant</i> at <i>DUT1</i> level for <i>64h</i> at <i>Lille University/IUT A</i></h4>
@@ -487,7 +536,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Advanced algorithms (2018-2019)</h3>
 		<h4><i>teaching assistant</i> at <i>DUT2</i> level for <i>64h</i> at <i>Lille University/IUT A</i></h4>
@@ -495,7 +544,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Introduction to computer systems (2018-2019)</h3>
 		<h4><i>teaching assistant</i> at <i>DUT1</i> level for <i>64h</i> at <i>Lille University/IUT A</i></h4>
@@ -503,22 +552,22 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4><a href=content/best-paper-eics19.pdf>Best Paper Award</a> at <a href=#EICS19>EICS'19</a></h4>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Reviewer for IHM'19</h4>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=http://www.raid-ecl.fr/menu/edition2019/resultats.php>Raid Centrale Lyon</a></h3>
 		<h4>Running, cycling and canoeing. We registered for the discovery level with Thierry Gonon and finished 3<sup>rd</sup>.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2019>Hash Code 2019 contest</a></h3>
 		<h4>91<sup>th</sup>/6671, 6<sup>th</sup> in France, team <i>Lokidoki</i> on my own.</h4>
@@ -529,7 +578,7 @@
 
 <h1 id=2018>2018</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/ecs.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>Polyphony: building GUIs with ECS</a> (2016-2019)</h3>
@@ -537,20 +586,20 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div id=IHM18 class=strip>
-	<div class=publication>publication</div>
-	<h3>[IHM'18]</h3>
-	<h4>T. Raffaillac & S. Huot. <b>Application du modèle Entité-Composant-Système à la programmation d'interactions</b>. <i>À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)</i>. (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a></h4>
+	<div class=publication>Publications</div>
+	<h3>IHM'18</h3>
+	<h4>T. Raffaillac & S. Huot. Application du modèle Entité-Composant-Système à la programmation d'interactions. <i>À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)</i>. (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a></h4>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Introduction to human-machine interfaces (2018-2019)</h3>
 		<h4><i>teaching assistant</i> at <i>DUT1</i> level for <i>64h</i> at <i>Lille University/IUT A</i></h4>
@@ -558,7 +607,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Advanced algorithms (2018-2019)</h3>
 		<h4><i>teaching assistant</i> at <i>DUT2</i> level for <i>64h</i> at <i>Lille University/IUT A</i></h4>
@@ -566,7 +615,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Introduction to computer systems (2018-2019)</h3>
 		<h4><i>teaching assistant</i> at <i>DUT1</i> level for <i>64h</i> at <i>Lille University/IUT A</i></h4>
@@ -574,15 +623,15 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Web technologies (2017-2018)</h3>
-		<h4><i>teaching assistant</i> at <i>License1</i> level for <i>36h</i> at <i>Lille University</i></h4>
+		<h4><i>teaching assistant</i> at <i>Bachelor1</i> level for <i>36h</i> at <i>Lille University</i></h4>
 		<h4>client-side Web technologies HTML/CSS/JavaScript</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Algorithms and complexity (2017-2018)</h3>
 		<h4><i>teaching assistant</i> at <i>Master1</i> level for <i>36h</i> at <i>Lille University</i></h4>
@@ -590,18 +639,18 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Reviewer for IHM'18</h4>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://catcoder.codingcontest.org/contest/2410/overview>Catalysts Coding Contest</a></h3>
 		<h4>Team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin, 2<sup>nd</sup> in Lille, for which I participated in organizing the hub.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2018>Hash Code 2018 contest</a></h3>
 		<h4>1122<sup>th</sup>/3012, team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin.</h4>
@@ -612,7 +661,7 @@
 
 <h1 id=2017>2017</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/ecs.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>Polyphony: building GUIs with ECS</a> (2016-2019)</h3>
@@ -620,7 +669,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/animations.svg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=http://smalltalkhub.com/ThibaultRaffaillac/Animation/>Turning function calls into animations</a> (2016-2017)</h3>
@@ -628,33 +677,33 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div id=EICS17 class=strip>
-	<div class=publication>publication</div>
-	<h3>[EICS'17]</h3>
-	<h4>T. Raffaillac, S. Huot & S. Ducasse. <b>Turning Function Calls Into Animations</b>. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a></h4>
+	<div class=publication>Publications</div>
+	<h3>EICS'17</h3>
+	<h4>T. Raffaillac, S. Huot & S. Ducasse. Turning Function Calls Into Animations. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a></h4>
 </div>
 <div class=strip>
-	<div class=publication>publication</div>
-	<h3>[EICS'17]</h3>
-	<h4>T. Raffaillac. <b>Language and System Support for Interaction</b>. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a></h4>
+	<div class=publication>Publications</div>
+	<h3>EICS'17</h3>
+	<h4>T. Raffaillac. Language and System Support for Interaction. <i>In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)</i>. <i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a></h4>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Web technologies (2017-2018)</h3>
-		<h4><i>teaching assistant</i> at <i>License1</i> level for <i>36h</i> at <i>Lille University</i></h4>
+		<h4><i>teaching assistant</i> at <i>Bachelor1</i> level for <i>36h</i> at <i>Lille University</i></h4>
 		<h4>client-side Web technologies HTML/CSS/JavaScript</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=teaching>teaching</div>
+	<div class=teaching>Teaching</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3>Algorithms and complexity (2017-2018)</h3>
 		<h4><i>teaching assistant</i> at <i>Master1</i> level for <i>36h</i> at <i>Lille University</i></h4>
@@ -662,32 +711,32 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=academia>academic</div>
+	<div class=academia>Academic service</div>
 <h4>Reviewer for IWST'17 and ManLang'17</h4>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://youtu.be/1yzc-EKFVs0?t=28m5s>Demonstrating animations in Pharo Smalltalk</a></h3>
 		<h4>Presentation given on 19 May during Pharo Days in Lille, France.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://catcoder.codingcontest.org/contest/1761/overview>Catalysts Coding Contest</a></h3>
 		<h4>Team <i>ThiYo</i> with Yoann Dufresne, 3<sup>rd</sup> in Lille, where I also helped <a href=https://informatique.univ-lille1.fr/ccc/2017/contest/>organizing the hub</a> (printing T-shirts and communicating to students).</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2017>Hash Code 2017 contest</a></h3>
 		<h4>186<sup>th</sup>/2815, <!--23<sup>rd</sup>/473 (France),--> 1<sup>st</sup> in our hub, team <i>ThiYo</i> with Yoann Dufresne.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://meilleurjeudumonde.github.io/meilleurjeudumonde/>Meilleur jeu du monde</a></h3>
 		<h4>Nerds + Beers = Game dev party... (during FOSDEM 2017)</h4>
@@ -698,7 +747,7 @@
 
 <h1 id=2016>2016</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/ecs.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://gitlab.inria.fr/Loki/PolyphonyECS/>Polyphony: building GUIs with ECS</a> (2016-2019)</h3>
@@ -706,7 +755,7 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/animations.svg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=http://smalltalkhub.com/ThibaultRaffaillac/Animation/>Turning function calls into animations</a> (2016-2017)</h3>
@@ -714,43 +763,43 @@
 	</div>
 </div>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=http://shakethatbutton.com/bamboo-that-bends/>Bamboo that bends</a></h3>
 		<h4>A 3D Twister game made with five people during the ZooMachines Interactive Arts festival, which was <i>way</i> funnier than on video!</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://youtu.be/ltXFtdhKuM8?t=3m25s>Early ECS demonstration in Pharo Smalltalk</a></h3>
 		<h4>Presentation given on 25 August at ESUG 2016, Prague, Czech Republic.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/parsing.html>A case about parsing errors</a></h3>
 		<h4>A blog article about the handling of errors in edge264.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2016>Hash Code 2016 contest</a></h3>
 		<h4>153<sup>rd</sup>/1054, <!--35<sup>th</sup>/233 (France),--> <a href=https://informatique.univ-lille.fr/hashcode/2016/qualification/>1<sup>st</sup> in our hub</a>, team <i>Brony Express</i> with Izzatbek Mukhanov and Sébastien Poulmane.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=http://yoann-dufresne.github.io/LD35/>The Maze Nightmare</a></h3>
 		<h4>Short game created with Yoann Dufresne and Matthieu Falce for the Ludum Dare Jam 35. As usual I did the artwork and music. Beware the game is <i>meant</i> to be oppressing...</h4>
@@ -761,8 +810,8 @@
 
 <h1 id=2015>2015</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
@@ -773,8 +822,8 @@
 
 <h1 id=2014>2014</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
@@ -785,8 +834,8 @@
 
 <h1 id=2013>2013</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
-	<img src=images/edge264.svg width=300>
+	<div class=engineering>Projects</div>
+	<img src=images/edge264.jpg width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=https://github.com/tvlabs/edge264>edge264</a> (2013-)</h3>
 		<h4>Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.</h4>
@@ -797,20 +846,25 @@
 
 <h1 id=2012>2012</h1>
 <div class=strip>
-	<div class=engineering>engineering</div>
+	<div class=engineering>Projects</div>
 	<img src=images/compiler.png width=300>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/MasterThesis/proto1.html>Exploring the design of compiler feedback</a> (2012)</h3>
 		<h4>Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].</h4>
 	</div>
 </div>
+<div class=strip>
+	<div class=publication>Publications</div>
+	<h3>MSc</h3>
+	<h4>T. Raffaillac. Exploring the design of compiler feedback. <i>Master thesis from KTH Royal Institute of Technology</i>. <a href=content/master-thesis.pdf>PDF</a> <a href=https://prezi.com/izuzcudeivh9/degree-thesis-presentation/>slides</a></h4>
+</div>
 <div id=PPIG12 class=strip>
-	<div class=publication>publication</div>
-	<h3>[PPIG'12]</h3>
-	<h4>T. Raffaillac. <b>Exploring the design of compiler feedback</b>. <i>In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)</i>. <a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a></h4>
+	<div class=publication>Publications</div>
+	<h3>PPIG'12</h3>
+	<h4>T. Raffaillac. Exploring the design of compiler feedback. <i>In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)</i>. <a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a></h4>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=11209>Little Sheep</a></h3>
 		<h4>Short story-telling game created with Alexandre Kohen during 3 days for the Ludum Dare Jam 23. I did the artwork and music :)</h4>
@@ -821,28 +875,28 @@
 
 <h1 id=2011>2011</h1>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/cms2011/admin.html>Assisting interface for easy administration of a CMS</a></h3>
 		<h4>Study of a novel interface for online Content Management Systems, for the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='This course was awesome.'>Interaction Design</a> course. <a href=content/traf-DH2626-11.pdf>[PDF]</a></h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/AssassinationGameApp.mp4>Assassination Game Application</a></h3>
 		<h4>Video prototype for a Group Project of the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='Did I mention how AMAZING this course was?'>Interaction Design</a> course.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/traf-semanticslab.zip>WHILE compiler</a></h3>
 		<h4>Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href=http://www.kth.se/student/kurser/kurs/DD2457?l=en>Program Semantics and Analysis</a> course. <a href=content/sample-output.asm>[sample output]</a></h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/tuto_direct_VLC.html>Diffusion en direct avec VLC</a> (French)</h3>
 		<h4>Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.</h4>
@@ -853,7 +907,7 @@
 
 <h1 id=2010>2010</h1>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/installation_vod.txt>Mise en place de VOD</a> (French)</h3>
 		<h4>Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.</h4>
@@ -864,28 +918,28 @@
 
 <h1 id=2009>2009</h1>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/club_programmation.txt>Club programmation</a></h3>
 		<h4>Support material for an OpenGL course I created at Centrale Marseille.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/ginfo2009.mp4>Film de Rentrée du GInfo</a> (French)</h3>
 		<h4>Short movie promoting the Computer Science student association at the annual associations fair of Ecole Centrale Marseille. A <i>must-watch</i> if you've scrolled down this far :)</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/CompressionStaxRip/installation.html>Compression avec StaxRip</a> (French)</h3>
 		<h4>Tutorial to compress a video exported by Premiere Pro, using the software StaxRip. The parameters would correct the flaws introduced by Premiere (its disastrous deinterlacing filter) and output in a format ready for integration in a Web player.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/CompressionMeGUI/installation.html>Compression avec MeGUI</a> (French)</h3>
 		<h4>Tutorial to compress a video exported by Premiere Pro, using MeGUI. It was soon superseeded by the tutorial on StaxRip.</h4>
@@ -896,14 +950,14 @@
 
 <h1 id=2008>2008</h1>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/traf-TIPE2008.zip>La lentille électrostatique</a> (French comments)</h3>
 		<h4>Simultation of an electrostatic lens by shooting electrons in a simple finite element mesh, created for the TIPE exam at the end of the <i>Classes Préparatoires</i>.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/ModeleEXE.asm>Modèle EXE</a> (French comments)</h3>
 		<h4>Source code for nasm based on the PE/COFF reference, to create an executable file from scratch without linking.</h4>
@@ -914,14 +968,14 @@
 
 <h1 id=2007>2007</h1>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/traf-TIPE2007.zip>Oscillations d'un Fil</a> (French comments)</h3>
 		<h4>Real-time simulation of a flexible wire using Lagrangian Mechanics and RK4 integration, created for the TIPE exam.</h4>
 	</div>
 </div>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/CasseBriques.zip>Casse-briques</a> (French comments)</h3>
 		<h4>Breakout-clone where the paddle can tilt.</h4>
@@ -932,7 +986,7 @@
 
 <h1 id=2005>2005</h1>
 <div class=strip>
-	<div class=misc>sign of life</div>
+	<div class=misc>Signs of life</div>
 	<div class=flexcolstretch style="justify-content: center">
 		<h3><a href=content/Visionneuse_3D.zip>Visionneuse 3D</a> (French)</h3>
 		<h4>Interactive viewer for 3D objects stored in files. This program ended a 3-year obsession to create a 3D engine, and was my last BASIC program before playing with more modern languages.</h4>
@@ -941,7 +995,7 @@
 
 
 
-<p id=footer>Page generated on 2023-07-26 using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
+<p id=footer>Page generated on 2023-10-24 using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
 <!-- Add target=_blank to all outbound links -->
 <script>
 	for (let a of document.querySelectorAll('a[href^="http"]'))
