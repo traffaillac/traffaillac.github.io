@@ -1,5 +1,6 @@
 # MAYDO :
 # _ fix the display of projects on narrow screens
+# _ ajouter les formations MISSABMS et ComMod
 
 from datetime import date
 from json import load
