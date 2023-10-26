@@ -1,7 +1,5 @@
 # MAYDO :
 # _ fix the display of projects on narrow screens
-# _ add the postdoc projects
-# _ host the PDFs
 
 from datetime import date
 from json import load

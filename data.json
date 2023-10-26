@@ -1,5 +1,21 @@
 [{
 	"type": "project",
+	"id": "pastofutur",
+	"title": "Pastofutur",
+	"text": "Producing an analytical and action framework based on interdisciplinarity, using the concepts of ecosystem services associated with pastoral areas and the concept of multifunctionality of pastoral activity, to strengthen the participation of societies in defining the future of pastoralism [<a href=IHM23>IHM'23</a>].",
+	"image": "pastofutur.png",
+	"href": "https://umr-selmet.cirad.fr/projet-scientifique/nos-projets/pastofutur",
+	"start": 2022
+}, {
+	"type": "project",
+	"id": "dscatt",
+	"title": "DSCATT: Soil carbon sequestration in farming systems",
+	"text": "Developing sustainable and productive agricultural systems while increasing soil carbon sequestration, and raising awareness on the role of soil management to mitigate greenhouse gas emissions. I work on interfaces for multi-agent models simulating the regrowth of an acacia forest in Senegal.",
+	"image": "dscatt.jpg",
+	"href": "https://dscatt.net/",
+	"start": 2022
+}, {
+	"type": "project",
 	"id": "competencies",
 	"title": "Visualization of individual competency evaluations",
 	"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
@@ -109,7 +125,7 @@
 	"authors": "T. Raffaillac, F. Chavanon & R. Vuillemot",
 	"title": "Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants",
 	"proceedings": "In the 8<sup>th</sup> colloque Didapro-DidaSTIC, Feb. 2020",
-	"misc": "<i>(poster)</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a>",
+	"misc": "<i>(poster)</i> <a href=content/didapro8-poster.pdf>PDF</a>",
 	"finish": 2020
 }, {
 	"type": "publication",
@@ -186,7 +202,7 @@
 	"authors": "T. Raffaillac",
 	"title": "Exploring the design of compiler feedback",
 	"proceedings": "Proceedings of the 24<sup>th</sup> Annual Workshop of the Psychology of Programming Interest Group, PPIG, Nov. 2012, pp. 139–150",
-	"misc": "<a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a>",
+	"misc": "<a href=content/ppig12.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a>",
 	"finish": 2012
 },
 
