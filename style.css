@@ -42,35 +42,47 @@
 
 
 @keyframes rotate {to{transform: rotate(360deg)}}
+.rotate:hover {animation:rotate 2s linear infinite}
 
 
 * { box-sizing: border-box }
 a,abbr { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px }
 h2>a { text-decoration: none }
 a:hover { color: #bbb }
-body { color: #222 }
-h1 { border-bottom: 1px solid #eee; font: 60px Pacifico; margin: 0; text-align: center }
-h2 { font: 24px Pacifico; margin: 0 }
-h3 { font: 20px Alegreya; margin: 0 }
-h4 { font: 16px Alegreya; margin: 0 }
-p { font: 19px Alegreya; line-height: 1.4; margin: 19px 0 0 0 }
-ul { font: 19px Alegreya; line-height: 1.4; margin: 6px 0 0 1em; padding: 0 }
+body { font: 18px Alegreya; line-height: 1.4; color: #222 }
+p { margin: 18px 0 0 0 }
+ul { margin: 9px 0 0 1em; padding: 0 }
 
 
 /* Custom tags in French to avoid collisions */
-titre { font: 36px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right; text-decoration: none }
+titre { font: 32px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right; text-decoration: none }
 titre>a { text-decoration: none }
-lienmenu { font: 27px Pacifico; margin: 0 }
+lienmenu { font: 24px Pacifico; margin: 0 }
 lienmenu>a { text-decoration: none }
-titresection { border-bottom: 1px solid #eee; font: 54px Pacifico; text-align: center; margin: 100px 0 20px 0 }
+titresection { border-bottom: 1px solid #eee; font: 50px Pacifico; text-align: center; margin: 100px 0 20px 0 }
 conteneur { display: flex; max-width: 992px; padding: 0 10px; margin: auto; flex-direction: column; justify-content: stretch }
-projet { display: flex; margin: 30px 0 0 0; padding: 8px; font: 19px Alegreya; flex-direction: row; align-items: center; border-radius: 8px; box-shadow: 0 0 8px #ddd }
-projet>img { flex: none; height: 120px; margin-right: 16px }
-references { display: grid; margin-top: 20px; font: 16px Alegreya; grid-template-columns: min-content 1fr; align-items: stretch }
-sousreference { margin: 15px 0 5px 0; font: 27px Pacifico; text-align: center; grid-column: 1/3 }
+projet { display: flex; margin: 30px 0 0 0; padding: 8px; flex-direction: row; align-items: center; border-radius: 8px; box-shadow: 0 0 8px #ddd }
+projet>img { flex: none; width: 200px; margin-right: 16px }
+references { display: grid; margin-top: 20px; grid-template-columns: max-content 1fr; align-items: stretch }
+sousreference { margin: 15px 0 5px 0; font: 24px Pacifico; color: #ccc; text-align: center; grid-column: 1/3 }
 references>* { padding: 4px }
-cours { display: grid; margin-top: 40px; font: 16px Alegreya; grid-template-columns: max-content 1fr max-content max-content max-content; border-top: 1px solid #eee }
+cours { display: grid; margin-top: 40px; grid-template-columns: max-content 1fr max-content max-content max-content; border-top: 1px solid #eee }
 cours>* { display: flex; padding: 2px 4px; flex-direction: column; justify-content: center; border-bottom: 1px solid #eee }
+anneesigne { font: 24px Pacifico; color: #ccc; margin-top: 30px; text-align: center }
+signe { display: flex; margin-top: 19px; flex-direction: row; align-items: center; justify-content: space-between }
+signe>div { text-align: right }
+annee { border-bottom: 1px solid #eee; font: 50px Pacifico; text-align: center }
+bande { display: flex; flex-direction: row; align-items: center; border-bottom: 1px solid #eee }
+margeproject,margepublication,margetalk,margeteaching,margeacademia,margemisc { padding-right: 35px; align-self: stretch; width: 275px; display: flex; flex-direction: column; justify-content: center; text-align: right; color: #ccc; flex: none; font: 20px Pacifico }
+margeproject>a,margepublication>a,margetalk>a,margeteaching>a,margeacademia>a,margemisc>a { text-decoration: none }
+margeproject { box-shadow: inset -50px 0 50px -50px #0f4c5c }
+margepublication { box-shadow: inset -50px 0 50px -50px #f48c06 }
+margetalk { box-shadow: inset -50px 0 50px -50px #ffba08 }
+margeteaching { box-shadow: inset -50px 0 50px -50px #7f5539 }
+margeacademia { box-shadow: inset -50px 0 50px -50px #ddb892 }
+margemisc { box-shadow: inset -50px 0 50px -50px #5f0f40 }
+bande>img { flex: none; width: 200px; margin: 8px 0 8px 12px }
+bande>div { margin: 8px 10px 8px 12px }
 
 
 .flexcolcenter,.flexcolstretch,.flexcolend { display: flex; flex-direction: column }
@@ -79,76 +91,3 @@ cours>* { display: flex; padding: 2px 4px; flex-direction: column; justify-conte
 .flexrowcenter,.flexrowstretch,.flexrowstart { display: flex; flex-direction: row }
 .flexrowcenter { align-items: center }
 .flexrowstart { align-items: flex-start }
-.card {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	border-radius: 8px;
-	box-shadow: 0 0 8px #ddd;
-	margin: 20px 0 0 0;
-	padding: 4px;
-}
-.card>img { flex: none; height: 120px; margin-right: 20px }
-.references {
-	display: grid;
-	grid-template-columns: min-content 1fr;
-	align-items: stretch;
-	margin: 10px 175px 0 175px;
-}
-.references>h3 { display: flex; flex-direction: column; justify-content: center; padding: 5px 10px }
-.references>h4 { padding: 5px 10px }
-.courses {
-	display: grid;
-	grid-template-columns: max-content 1fr max-content max-content max-content;
-	border-top: 1px solid #eee;
-	margin: 0 175px;
-}
-.courses>* {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border-bottom: 1px solid #eee;
-	padding: 5px;
-}
-.academic { margin: 20px 175px 0 175px }
-.academic>* { margin-top: 10px }
-.academic>*:before { content: "•   " }
-.sign {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	margin: 25px 175px 0 175px;
-}
-.sign>h4 { text-align: right }
-.strip { display: flex; flex-direction: row; align-items: center; border-bottom: 1px solid #eee }
-.strip>div:first-child {
-	align-self: stretch;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: right;
-	color: #bbb;
-	flex: none;
-	font: 21px Pacifico;
-	padding-right: 20px;
-	width: 300px;
-}
-.engineering { box-shadow: inset -50px 0 50px -50px #335c67 }
-.publication { box-shadow: inset -50px 0 50px -50px #e09f3e }
-.teaching { box-shadow: inset -50px 0 50px -50px #540b0e }
-.academia { box-shadow: inset -50px 0 50px -50px #ffd200 }
-.misc { box-shadow: inset -50px 0 50px -50px #9e2a2b }
-.strip>* { padding: 6px 0 6px 20px }
-.strip>img { flex: none; width: 220px }
-.strip>h3 { flex: none; width: 160px }
-.strip h4 { padding-right: 10px }
-.rotate:hover {animation:rotate 2s linear infinite}
-#footer {
-	margin: 100px auto 0 auto;
-	padding: 10px 15px;
-	border-radius: 30px;
-	font-size: 18px;
-	border: 1px solid #bbb;
-	width: max-content;
-}

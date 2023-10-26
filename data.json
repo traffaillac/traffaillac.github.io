@@ -1,556 +1,595 @@
-[
-	{
-		"type": "project",
-		"id": "competencies",
-		"title": "Visualization of individual competency evaluations",
-		"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
-		"image": "competencies.png",
-		"href": "https://www.ec-lyon.fr/formation/pedagogie/demarche-competences",
-		"start": 2021,
-		"finish": 2022
-	}, {
-		"type": "project",
-		"title": "WEEX éolien",
-		"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.",
-		"image": "weex.png",
-		"href": "https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun",
-		"start": 2020,
-		"finish": 2022
-	}, {
-		"type": "project",
-		"title": "Polyphony: building GUIs with ECS",
-		"text": "Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].",
-		"image": "ecs.png",
-		"href": "https://gitlab.inria.fr/Loki/PolyphonyECS/",
-		"start": 2016,
-		"finish": 2019
-	}, {
-		"type": "project",
-		"title": "Turning function calls into animations",
-		"text": "Demonstration of a language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].",
-		"image": "animations.svg",
-		"href": "http://smalltalkhub.com/ThibaultRaffaillac/Animation/",
-		"start": 2016,
-		"finish": 2017
-	}, {
-		"type": "project",
-		"title": "edge264",
-		"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.",
-		"image": "edge264.jpg",
-		"href": "https://github.com/tvlabs/edge264",
-		"start": 2013,
-		"major": true
-	}, {
-		"type": "project",
-		"title": "Exploring the design of compiler feedback",
-		"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
-		"image": "compiler.png",
-		"href": "content/MasterThesis/proto1.html",
-		"finish": 2012
-	}, {
-		"type": "publication",
-		"audience": "national",
-		"id": "IHM23",
-		"reference": "IHM'23",
-		"authors": "T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur",
-		"title": "Développement d’une interface de simulation multi-agents pour la gestion concertée des territoires pastoraux de moyenne montagne",
-		"proceedings": "À la 34e conférence francophone sur l'Interaction Homme-Machine",
-		"misc": "<a href=https://dl.acm.org/doi/10.1145/3577590.3589606>DOI</a> <a href=https://hal.science/hal-04046136/document>PDF</a> <a href=content/ihm23-poster.jpg>poster</a> <a href=content/ihm23-slide.pdf>slide</a>",
-		"finish": 2023
-	}, {
-		"type": "publication",
-		"audience": "abstract",
-		"id": "Rochebrune23",
-		"reference": "Rochebrune'23",
-		"authors": "T. Raffaillac",
-		"title": "Interagir avec les nombres",
-		"proceedings": "Aux 29<sup>e</sup> journées de Rochebrune 2023",
-		"misc": "<a href=content/rb23.pdf>PDF</a> <a href=content/rb23-slides.pdf>slides</a>",
-		"finish": 2023
-	}, {
-		"type": "publication",
-		"audience": "international",
-		"id": "EICS22",
-		"reference": "EICS'22",
-		"authors": "T. Raffaillac & S. Huot",
-		"title": "What do researchers need when implementing novel interaction techniques?",
-		"proceedings": "In the 14th Symposium on Engineering Interactive Computing Systems (EICS 2022)",
-		"misc": "<a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>26.8%</abbr>) <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a>",
-		"finish": 2022,
-		"major": true
-	}, {
-		"type": "publication",
-		"audience": "abstract",
-		"id": "EIAH21",
-		"reference": "EIAH'21",
-		"authors": "P. Baron, L. Roche & T. Raffaillac",
-		"title": "Visualisation automatique de graphes pour l'apprentissage des algorithmes",
-		"proceedings": "À la 10e Conférence sur les Environnements Informatiques pour l’Apprentissage Humain (EIAH 2021)",
-		"misc": "<a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a>",
-		"finish": 2021
-	}, {
-		"type": "publication",
-		"audience": "abstract",
-		"id": "Didapro20",
-		"reference": "Didapro'20",
-		"authors": "T. Raffaillac, F. Chavanon & R. Vuillemot",
-		"title": "Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants",
-		"proceedings": "À la 8e édition du colloque Didapro-DidaSTIC (Didapro 8)",
-		"misc": "<i>Poster</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a>",
-		"finish": 2020
-	}, {
-		"type": "publication",
-		"audience": "thesis",
-		"reference": "PhD",
-		"authors": "T. Raffaillac",
-		"title": "Améliorer les langages et bibliothèques logicielles pour programmer l'interaction",
-		"proceedings": "Doctoral thesis from the University of Lille",
-		"misc": "<a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
-		"finish": 2019
-	}, {
-		"type": "publication",
-		"audience": "international",
-		"id": "EICS19",
-		"reference": "EICS'19",
-		"authors": "T. Raffaillac & S. Huot",
-		"title": "Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model",
-		"proceedings": "In the 11th Symposium on Engineering Interactive Computing Systems (EICS 2019)",
-		"misc": "<a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> (<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a>",
-		"finish": 2019,
-		"major": true
-	}, {
-		"type": "publication",
-		"audience": "national",
-		"id": "IHM18",
-		"reference": "IHM'18",
-		"authors": "T. Raffaillac & S. Huot",
-		"title": "Application du modèle Entité-Composant-Système à la programmation d'interactions",
-		"proceedings": "À la 30e conférence francophone sur l'Interaction Homme-Machine (IHM 2018)",
-		"misc": "(<abbr title='Acceptance rate'>33%</abbr>) <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a>",
-		"finish": 2018
-	}, {
-		"type": "publication",
-		"audience": "international",
-		"id": "EICS17",
-		"reference": "EICS'17",
-		"authors": "T. Raffaillac, S. Huot & S. Ducasse",
-		"title": "Turning Function Calls Into Animations",
-		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
-		"misc": "<i>Late Breaking Result</i> (<abbr title='Acceptance rate'>35%</abbr>) <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a>",
-		"finish": 2017
-	}, {
-		"type": "publication",
-		"audience": "abstract",
-		"reference": "EICS'17",
-		"authors": "T. Raffaillac",
-		"title": "Language and System Support for Interaction",
-		"proceedings": "In the 9th Symposium on Engineering Interactive Computing Systems (EICS 2017)",
-		"misc": "<i>Doctoral Consortium</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a>",
-		"finish": 2017
-	}, {
-		"type": "publication",
-		"audience": "thesis",
-		"reference": "MSc",
-		"authors": "T. Raffaillac",
-		"title": "Exploring the design of compiler feedback",
-		"proceedings": "Master thesis from KTH Royal Institute of Technology",
-		"misc": "<a href=content/master-thesis.pdf>PDF</a> <a href=https://prezi.com/izuzcudeivh9/degree-thesis-presentation/>slides</a>",
-		"finish": 2012
-	}, {
-		"type": "publication",
-		"audience": "international",
-		"id": "PPIG12",
-		"reference": "PPIG'12",
-		"authors": "T. Raffaillac",
-		"title": "Exploring the design of compiler feedback",
-		"proceedings": "In the 24th Annual Workshop of the Psychology of Programming Interest Group (PPIG 2012)",
-		"misc": "<a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a>",
-		"finish": 2012
-	}, {
-		"type": "teaching",
-		"start": 2019,
-		"finish": 2022,
-		"title": "Algorithms and data structures",
-		"role": "teaching assistant",
-		"text": "complexity, sorting, graphs, dynamic programming, Python",
-		"level": "Engineer1",
-		"hours": 209,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2019,
-		"finish": 2022,
-		"title": "Object-oriented design and programming",
-		"role": "teaching assistant and guest lecturer",
-		"text": "introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter",
-		"level": "Engineer1",
-		"hours": 146,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2019,
-		"finish": 2022,
-		"title": "Web application project",
-		"role": "teaching assistant",
-		"text": "client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git",
-		"level": "Engineer1",
-		"hours": 124,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2019,
-		"finish": 2022,
-		"title": "WEEX éolienne",
-		"role": "co-organizer",
-		"text": "5 editions of a week-long multidisciplinary pedagogical event",
-		"level": "Eng. 1/2",
-		"hours": 92,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2019,
-		"finish": 2022,
-		"title": "Students projects and mentoring",
-		"role": "supervisor",
-		"text": "6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students",
-		"level": "Eng. 1/2/3",
-		"hours": 56,
-		"institution": "École Centrale de Lyon"
-	}, {
-		"type": "teaching",
-		"start": 2018,
-		"finish": 2019,
-		"title": "Introduction to human-machine interfaces",
-		"role": "teaching assistant",
-		"text": "programming Graphical User Interfaces with JavaFX, event-based programming, user interface mockups, usability evaluation and heuristics",
-		"level": "DUT1",
-		"hours": 64,
-		"institution": "Lille University/IUT A"
-	}, {
-		"type": "teaching",
-		"start": 2018,
-		"finish": 2019,
-		"title": "Advanced algorithms",
-		"role": "teaching assistant",
-		"text": "recursive and iterative algorithms, recursive and advanced data structures",
-		"level": "DUT2",
-		"hours": 64,
-		"institution": "Lille University/IUT A"
-	}, {
-		"type": "teaching",
-		"start": 2018,
-		"finish": 2019,
-		"title": "Introduction to computer systems",
-		"role": "teaching assistant",
-		"text": "coding numbers and text, computer architecture, operating systems, scripting and the terminal, processes and files",
-		"level": "DUT1",
-		"hours": 64,
-		"institution": "Lille University/IUT A"
-	}, {
-		"type": "teaching",
-		"start": 2017,
-		"finish": 2018,
-		"title": "Web technologies",
-		"role": "teaching assistant",
-		"text": "client-side Web technologies HTML/CSS/JavaScript",
-		"level": "Bachelor1",
-		"hours": 36,
-		"institution": "Lille University"
-	}, {
-		"type": "teaching",
-		"start": 2017,
-		"finish": 2018,
-		"title": "Algorithms and complexity",
-		"role": "teaching assistant",
-		"text": "divide and conquer, dynamic programming, greedy algorithms, complexity analysis, P/NP and reduction",
-		"level": "Master1",
-		"hours": 36,
-		"institution": "Lille University"
-	}, {
-		"type": "academia",
-		"text": "Co-chair of the French working group <i>IHM & écologie</i> since 2023",
-		"start": 2023
-	}, {
-		"type": "academia",
-		"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction)",
-		"start": 2023
-	}, {
-		"type": "academia",
-		"text": "<a href=content/best-paper-eics22.pdf>Best Paper Award</a> at <a href=#EICS22>EICS'22</a>",
-		"finish": 2022
-	}, {
-		"type": "academia",
-		"text": "Reviewer for CHI'22 and EICS'22, session chair at EICS'22",
-		"finish": 2022
-	}, {
-		"type": "academia",
-		"text": "Member of the Sustainable Development and Societal Responsibility local committee in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.",
-		"start": 2021,
-		"finish": 2022
-	}, {
-		"type": "academia",
-		"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021",
-		"start": 2021
-	}, {
-		"type": "academia",
-		"text": "Reviewer for CHI'21 and IHM'20'21",
-		"finish": 2021
-	}, {
-		"type": "academia",
-		"text": "Reviewer for CHI'20",
-		"finish": 2020
-	}, {
-		"type": "academia",
-		"text": "<a href=content/best-paper-eics19.pdf>Best Paper Award</a> at <a href=#EICS19>EICS'19</a>",
-		"finish": 2019
-	}, {
-		"type": "academia",
-		"text": "Reviewer for IHM'19",
-		"finish": 2019
-	}, {
-		"type": "academia",
-		"text": "Reviewer for IHM'18",
-		"finish": 2018
-	}, {
-		"type": "academia",
-		"text": "Reviewer for IWST'17 and ManLang'17",
-		"finish": 2017
-	}, {
-		"type": "misc",
-		"title": "<a href=content/pb23.pdf>Co-conception participative de modèles et de simulations multi-agents pour l’aide à la décision multi-acteurs</a> (French)",
-		"text": "Slides of a talk given during the <a href=https://printemps-baillarguet.cirad.fr/>Printemps de Baillarguet</a>.",
-		"finish": 2023
-	}, {
-		"type": "misc",
-		"title": "<a href=content/sens23.pdf>Comment (ré)concilier les Interfaces Humains-Machines avec les Transitions ?</a> (French)",
-		"text": "Slides of a talk given to the SENS research unit.",
-		"finish": 2023
-	}, {
-		"type": "misc",
-		"title": "<a href=content/selmet23.pdf>Interfaces et visualisations pour la concertation et la prospection en contexte pastoral</a> (French)",
-		"text": "Slides of a talk given to the SELMET research unit, to report on the progress of my postdoc.",
-		"finish": 2023
-	}, {
-		"type": "misc",
-		"title": "<a href=https://www.hdigitag.fr/Calendrier/DigitAgora-2023>DigitAgora 2023</a>",
-		"text": "Participation in a round table on \"Digital technology to improve production\" in plenary session (<a href=content/digitagora23.pdf>introductory slides</a>).",
-		"finish": 2023
-	}, {
-		"type": "misc",
-		"title": "<a href=content/seminaire-ecriture.md>Séminaire d'écriture</a> (French)",
-		"text": "Notes for a 2-hour course I gave to PhD students on writing scientific articles.",
-		"finish": 2022
-	}, {
-		"type": "misc",
-		"title": "<a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)",
-		"text": "Slides that I created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.",
-		"finish": 2022
-	}, {
-		"type": "misc",
-		"title": "<a href=https://clementsparrow.github.io/Pattern-Script/src/play.html?p=a05b012f072a84c5d9af5d8f441cb832>Coyote Time Lord</a>",
-		"text": "Minimalist 2D game with time-altering mechanisms, created with Clément Pillias for the 50<sup>th</sup> Ludum Dare Jam. I did the eerie music, the sounds and the sprites.",
-		"finish": 2022
-	}, {
-		"type": "misc",
-		"title": "<a href=https://swerc.eu/2021/theme/scoreboard/public/>SWERC 2021</a>",
-		"text": "My second participation as a coach, with teams ECL 2 (54<sup>th</sup>/97) and CentraleMegaStomp (64<sup>th</sup>/97). A remarkable result for Engineering students as well as first-timers!",
-		"finish": 2022
-	}, {
-		"type": "misc",
-		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/round/00000000008caae7>Hash Code 2022 contest</a>",
-		"text": "703<sup>th</sup>/10177, 52<sup>th</sup>/529 in France, team <i>#import mercy</i> on my own.",
-		"finish": 2022
-	}, {
-		"type": "misc",
-		"id": "creative21",
-		"title": "<a href=content/creative21.zip>Creative and competitive programming club</a>",
-		"text": "I ran this club for students from February to April, with sessions alternating between competitive programming and live music coding with FoxDot.",
-		"finish": 2021
-	}, {
-		"type": "misc",
-		"title": "<a href=https://clementsparrow.github.io/GlobalGameJam2021/index.html>Lost Souls Found The Gold You Lost To Save Your Soul</a>",
-		"text": "Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and incremental music (although due to a bug you rarely hear the full version).",
-		"finish": 2021
-	}, {
-		"type": "misc",
-		"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2020>Advent of Code 2020</a>",
-		"text": "This year I went through all the puzzles of this Christmas-themed challenge.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=content/codejam20.pdf>Code Jam 2020 contest</a>",
-		"text": "Reaching round 3 of this challenging competition.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2020>Hash Code 2020 contest</a>",
-		"text": "2826<sup>th</sup>/10724, <!--236<sup>th</sup>/784 (France),--> 2<sup>nd</sup> in our hub, team <i>XoXot</i> with Damien Masson, Nicolas Crosetti and Paul Gallot.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=https://github.com/traffaillac/ide-enseignement>Online IDE with supervision</a>",
-		"text": "Online IDE including a Python interpreter, that I coded at the start of the Covid outbreak to allow students to ask for help and show their code remotely (viewed as a mosaic on my side). It lacked modules so students would only use it to show code, but it was super helpful to let them feel supported throughout this event.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"id": "contests20",
-		"title": "<a href=content/contests20.zip>Competitive programming course</a>",
-		"text": "Slides for a custom course I created for 6 students, based on the excellent <a href=https://cpbook.net/methodstosolve>Competitive Programming 3</a> book.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=https://www.fun-mooc.fr/courses/course-v1:enseignementsup+131001+session03/about>MOOC on university teaching</a> (French)",
-		"text": "Followed during 10 weeks for ~2h/week <a href=content/mooc-enseignement.pdf>[Certificate of completion]</a>",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2019</a>",
-		"text": "My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I also scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=content/didapro8-atelier.pdf>Mise en place d’une plateforme de programmation compétitive comme support de TDs</a> (French)",
-		"text": "Workshop given on 5 February during the colloquium Didapro 8, to present the <a href=https://github.com/traffaillac/tdmoj>setup and use</a> of DMOJ for automated grading.",
-		"finish": 2020
-	}, {
-		"type": "misc",
-		"title": "<a href=http://www.raid-ecl.fr/menu/edition2019/resultats.php>Raid Centrale Lyon</a>",
-		"text": "Running, cycling and canoeing. We registered for the discovery level with Thierry Gonon and finished 3<sup>rd</sup>.",
-		"finish": 2019
-	}, {
-		"type": "misc",
-		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2019>Hash Code 2019 contest</a>",
-		"text": "91<sup>th</sup>/6671, 6<sup>th</sup> in France, team <i>Lokidoki</i> on my own.",
-		"finish": 2019
-	}, {
-		"type": "misc",
-		"title": "<a href=https://catcoder.codingcontest.org/contest/2410/overview>Catalysts Coding Contest</a>",
-		"text": "Team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin, 2<sup>nd</sup> in Lille, for which I participated in organizing the hub.",
-		"finish": 2018
-	}, {
-		"type": "misc",
-		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2018>Hash Code 2018 contest</a>",
-		"text": "1122<sup>th</sup>/3012, team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin.",
-		"finish": 2018
-	}, {
-		"type": "misc",
-		"title": "<a href=https://youtu.be/1yzc-EKFVs0?t=28m5s>Demonstrating animations in Pharo Smalltalk</a>",
-		"text": "Presentation given on 19 May during Pharo Days in Lille, France.",
-		"finish": 2017
-	}, {
-		"type": "misc",
-		"title": "<a href=https://catcoder.codingcontest.org/contest/1761/overview>Catalysts Coding Contest</a>",
-		"text": "Team <i>ThiYo</i> with Yoann Dufresne, 3<sup>rd</sup> in Lille, where I also helped <a href=https://informatique.univ-lille1.fr/ccc/2017/contest/>organizing the hub</a> (printing T-shirts and communicating to students).",
-		"finish": 2017
-	}, {
-		"type": "misc",
-		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2017>Hash Code 2017 contest</a>",
-		"text": "186<sup>th</sup>/2815, <!--23<sup>rd</sup>/473 (France),--> 1<sup>st</sup> in our hub, team <i>ThiYo</i> with Yoann Dufresne.",
-		"finish": 2017
-	}, {
-		"type": "misc",
-		"title": "<a href=https://meilleurjeudumonde.github.io/meilleurjeudumonde/>Meilleur jeu du monde</a>",
-		"text": "Nerds + Beers = Game dev party... (during FOSDEM 2017)",
-		"finish": 2017
-	}, {
-		"type": "misc",
-		"title": "<a href=http://shakethatbutton.com/bamboo-that-bends/>Bamboo that bends</a>",
-		"text": "A 3D Twister game made with five people during the ZooMachines Interactive Arts festival, which was <i>way</i> funnier than on video!",
-		"finish": 2016
-	}, {
-		"type": "misc",
-		"title": "<a href=https://youtu.be/ltXFtdhKuM8?t=3m25s>Early ECS demonstration in Pharo Smalltalk</a>",
-		"text": "Presentation given on 25 August at ESUG 2016, Prague, Czech Republic.",
-		"finish": 2016
-	}, {
-		"type": "misc",
-		"title": "<a href=content/parsing.html>A case about parsing errors</a>",
-		"text": "A blog article about the handling of errors in edge264.",
-		"finish": 2016
-	}, {
-		"type": "misc",
-		"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2016>Hash Code 2016 contest</a>",
-		"text": "153<sup>rd</sup>/1054, <!--35<sup>th</sup>/233 (France),--> <a href=https://informatique.univ-lille.fr/hashcode/2016/qualification/>1<sup>st</sup> in our hub</a>, team <i>Brony Express</i> with Izzatbek Mukhanov and Sébastien Poulmane.",
-		"finish": 2016
-	}, {
-		"type": "misc",
-		"title": "<a href=http://yoann-dufresne.github.io/LD35/>The Maze Nightmare</a>",
-		"text": "Short game created with Yoann Dufresne and Matthieu Falce for the Ludum Dare Jam 35. As usual I did the artwork and music. Beware the game is <i>meant</i> to be oppressing...",
-		"finish": 2016
-	}, {
-		"type": "misc",
-		"title": "<a href=http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=11209>Little Sheep</a>",
-		"text": "Short story-telling game created with Alexandre Kohen during 3 days for the Ludum Dare Jam 23. I did the artwork and music :)",
-		"finish": 2012
-	}, {
-		"type": "misc",
-		"title": "<a href=content/cms2011/admin.html>Assisting interface for easy administration of a CMS</a>",
-		"text": "Study of a novel interface for online Content Management Systems, for the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='This course was awesome.'>Interaction Design</a> course. <a href=content/traf-DH2626-11.pdf>[PDF]</a>",
-		"finish": 2011
-	}, {
-		"type": "misc",
-		"title": "<a href=content/AssassinationGameApp.mp4>Assassination Game Application</a>",
-		"text": "Video prototype for a Group Project of the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='Did I mention how AMAZING this course was?'>Interaction Design</a> course.",
-		"finish": 2011
-	}, {
-		"type": "misc",
-		"title": "<a href=content/traf-semanticslab.zip>WHILE compiler</a>",
-		"text": "Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href=http://www.kth.se/student/kurser/kurs/DD2457?l=en>Program Semantics and Analysis</a> course. <a href=content/sample-output.asm>[sample output]</a>",
-		"finish": 2011
-	}, {
-		"type": "misc",
-		"title": "<a href=content/tuto_direct_VLC.html>Diffusion en direct avec VLC</a> (French)",
-		"text": "Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.",
-		"finish": 2011
-	}, {
-		"type": "misc",
-		"title": "<a href=content/installation_vod.txt>Mise en place de VOD</a> (French)",
-		"text": "Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.",
-		"finish": 2010
-	}, {
-		"type": "misc",
-		"title": "<a href=content/club_programmation.txt>Club programmation</a>",
-		"text": "Support material for an OpenGL course I created at Centrale Marseille.",
-		"finish": 2009
-	}, {
-		"type": "misc",
-		"title": "<a href=content/ginfo2009.mp4>Film de Rentrée du GInfo</a> (French)",
-		"text": "Short movie promoting the Computer Science student association at the annual associations fair of Ecole Centrale Marseille. A <i>must-watch</i> if you've scrolled down this far :)",
-		"finish": 2009
-	}, {
-		"type": "misc",
-		"title": "<a href=content/CompressionStaxRip/installation.html>Compression avec StaxRip</a> (French)",
-		"text": "Tutorial to compress a video exported by Premiere Pro, using the software StaxRip. The parameters would correct the flaws introduced by Premiere (its disastrous deinterlacing filter) and output in a format ready for integration in a Web player.",
-		"finish": 2009
-	}, {
-		"type": "misc",
-		"title": "<a href=content/CompressionMeGUI/installation.html>Compression avec MeGUI</a> (French)",
-		"text": "Tutorial to compress a video exported by Premiere Pro, using MeGUI. It was soon superseeded by the tutorial on StaxRip.",
-		"finish": 2009
-	}, {
-		"type": "misc",
-		"title": "<a href=content/traf-TIPE2008.zip>La lentille électrostatique</a> (French comments)",
-		"text": "Simultation of an electrostatic lens by shooting electrons in a simple finite element mesh, created for the TIPE exam at the end of the <i>Classes Préparatoires</i>.",
-		"finish": 2008
-	}, {
-		"type": "misc",
-		"title": "<a href=content/ModeleEXE.asm>Modèle EXE</a> (French comments)",
-		"text": "Source code for nasm based on the PE/COFF reference, to create an executable file from scratch without linking.",
-		"finish": 2008
-	}, {
-		"type": "misc",
-		"title": "<a href=content/traf-TIPE2007.zip>Oscillations d'un Fil</a> (French comments)",
-		"text": "Real-time simulation of a flexible wire using Lagrangian Mechanics and RK4 integration, created for the TIPE exam.",
-		"finish": 2007
-	}, {
-		"type": "misc",
-		"title": "<a href=content/CasseBriques.zip>Casse-briques</a> (French comments)",
-		"text": "Breakout-clone where the paddle can tilt.",
-		"finish": 2007
-	}, {
-		"type": "misc",
-		"title": "<a href=content/Visionneuse_3D.zip>Visionneuse 3D</a> (French)",
-		"text": "Interactive viewer for 3D objects stored in files. This program ended a 3-year obsession to create a 3D engine, and was my last BASIC program before playing with more modern languages.",
-		"finish": 2005
-	}
-]
+[{
+	"type": "project",
+	"id": "competencies",
+	"title": "Visualization of individual competency evaluations",
+	"text": "Website supporting per-student formative evaluations of competencies. It includes a complete pipeline to fetch grades from teachers, and two dashboards for students and teachers.",
+	"image": "competencies.png",
+	"href": "https://www.ec-lyon.fr/formation/pedagogie/demarche-competences",
+	"start": 2021,
+	"finish": 2022
+}, {
+	"type": "project",
+	"title": "WEEX éolien",
+	"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.",
+	"image": "weex.png",
+	"href": "https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun",
+	"start": 2020,
+	"finish": 2022
+}, {
+	"type": "project",
+	"title": "Polyphony: building GUIs with ECS",
+	"text": "Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].",
+	"image": "ecs.png",
+	"href": "https://gitlab.inria.fr/Loki/PolyphonyECS/",
+	"start": 2016,
+	"finish": 2019
+}, {
+	"type": "project",
+	"title": "Turning function calls into animations",
+	"text": "Demonstration of a programming language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].",
+	"image": "animations.svg",
+	"href": "http://smalltalkhub.com/ThibaultRaffaillac/Animation/",
+	"start": 2016,
+	"finish": 2017
+}, {
+	"type": "project",
+	"title": "edge264",
+	"id": "edge264",
+	"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.",
+	"image": "edge264.jpg",
+	"href": "https://github.com/tvlabs/edge264",
+	"start": 2013,
+	"major": true
+}, {
+	"type": "project",
+	"title": "Exploring the design of compiler feedback",
+	"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
+	"image": "compiler.png",
+	"href": "content/MasterThesis/proto1.html",
+	"finish": 2012
+},
+
+
+
+{
+	"type": "publication",
+	"audience": "misc",
+	"id": "IHM23",
+	"reference": "IHM'23",
+	"authors": "T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur",
+	"title": "Développement d’une interface de simulation multi-agents pour la gestion concertée des territoires pastoraux de moyenne montagne",
+	"proceedings": "Adjunct proceedings of the 34<sup>th</sup> Conference on l'Interaction Humain-Machine, April 2023, art. 6, pp. 1–6",
+	"misc": "<i>(work in progress)</i> <a href=https://dl.acm.org/doi/10.1145/3577590.3589606>DOI</a> <a href=https://hal.science/hal-04046136/document>PDF</a> <a href=content/ihm23-poster.jpg>poster</a> <a href=content/ihm23-slide.pdf>slide</a>",
+	"finish": 2023
+}, {
+	"type": "publication",
+	"audience": "misc",
+	"id": "Rochebrune23",
+	"reference": "Rochebrune'23",
+	"authors": "T. Raffaillac",
+	"title": "Interagir avec les nombres",
+	"proceedings": "In the 29<sup>th</sup> journées de Rochebrune 2023, Jan. 2023",
+	"misc": "<i>(workshop)</i> <a href=content/rb23.pdf>PDF</a> <a href=content/rb23-slides.pdf>slides</a>",
+	"finish": 2023
+}, {
+	"type": "publication",
+	"audience": "misc",
+	"reference": "HuFaMo'22",
+	"authors": "M. Savary-Leblanc, X. Le Pallec, P. Palanque, C. Martinie, A. Blouin, F. Jouault, M. Clavreul, T. Raffaillac",
+	"title": "Mining human factors general trends from+ 100k UML class diagrams",
+	"proceedings": "Companion proceedings of the 25<sup>th</sup> International Conference on Model Driven Engineering Languages and Systems, HuFaMo, Oct. 2022, pp. 913–922",
+	"misc": "<i>(workshop)</i> <a href=https://doi.org/10.1145/3550356.3559098>DOI</a>",
+	"finish": 2022
+}, {
+	"type": "publication",
+	"audience": "international",
+	"id": "EICS22",
+	"reference": "EICS'22",
+	"authors": "T. Raffaillac & S. Huot",
+	"title": "What do researchers need when implementing novel interaction techniques?",
+	"proceedings": "Proceedings of the ACM on Human-Computer Interaction, Volume 6, EICS, June 2022, art. 159, pp. 1–30",
+	"misc": "<a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> <abbr title='Acceptance rate'>27%</abbr> <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a>",
+	"finish": 2022,
+	"major": true
+}, {
+	"type": "publication",
+	"audience": "misc",
+	"id": "EIAH21",
+	"reference": "EIAH'21",
+	"authors": "P. Baron, L. Roche & T. Raffaillac",
+	"title": "Visualisation automatique de graphes pour l'apprentissage des algorithmes",
+	"proceedings": "Proceedings of the 10<sup>th</sup> Conférence sur les Environnements Informatiques pour l’Apprentissage Humain, EIAH, June 2021, pp. 372–376",
+	"misc": "<i>(poster)</i> <a href=https://hal.archives-ouvertes.fr/hal-03290328/document>PDF</a> <a href=https://www.youtube.com/watch?v=xW_t5q7wqxc>video</a>",
+	"finish": 2021
+}, {
+	"type": "publication",
+	"audience": "misc",
+	"id": "Didapro20",
+	"reference": "Didapro'20",
+	"authors": "T. Raffaillac, F. Chavanon & R. Vuillemot",
+	"title": "Utilisation d’un juge en ligne pour l’évaluation automatique des programmes des étudiants",
+	"proceedings": "In the 8<sup>th</sup> colloque Didapro-DidaSTIC, Feb. 2020",
+	"misc": "<i>(poster)</i> <a href=https://www.didapro.org/8/wp-content/uploads/sites/4/2020/01/Didapro_8_paper_30.pdf>PDF</a>",
+	"finish": 2020
+}, {
+	"type": "publication",
+	"audience": "misc",
+	"reference": "Didapro'20",
+	"authors": "T. Raffaillac, F. Chavanon & R. Vuillemot.",
+	"title": "Mise en place d'une plateforme de programmation compétitive comme support de TDs",
+	"proceedings": "In the 8<sup>th</sup> colloque Didapro-DidaSTIC, Feb. 2020",
+	"misc": "<i>(course)</i> <a href=content/didapro8-atelier.pdf>PDF</a> <a href=https://github.com/traffaillac/tdmoj>GitHub</a>",
+	"finish": 2020
+}, {
+	"type": "publication",
+	"audience": "thesis",
+	"reference": "PhD",
+	"authors": "T. Raffaillac",
+	"title": "Améliorer les langages et bibliothèques logicielles pour programmer l'interaction",
+	"proceedings": "Doctoral thesis from the University of Lille",
+	"misc": "<a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
+	"finish": 2019
+}, {
+	"type": "publication",
+	"audience": "international",
+	"id": "EICS19",
+	"reference": "EICS'19",
+	"authors": "T. Raffaillac & S. Huot",
+	"title": "Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model",
+	"proceedings": "Proceedings of the ACM on Human-Computer Interaction, Volume 3, EICS, Juin 2019, art. 8, pp. 1–22",
+	"misc": "<a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> <abbr title='Acceptance rate'>33%</abbr> <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a>",
+	"finish": 2019,
+	"major": true
+}, {
+	"type": "publication",
+	"audience": "national",
+	"id": "IHM18",
+	"reference": "IHM'18",
+	"authors": "T. Raffaillac & S. Huot",
+	"title": "Application du modèle Entité-Composant-Système à la programmation d'interactions",
+	"proceedings": "Proceedings of the 30<sup>th</sup> Conference on l'Interaction Humain-Machine, IHM, Oct. 2018, pp. 42–51",
+	"misc": "<abbr title='Acceptance rate'>33%</abbr> <a href=https://doi.org/10.1145/3286689.3286703>DOI</a> <a href=https://hal.inria.fr/hal-01898859/document>PDF</a> <a href=content/ihm18-slides.pdf>slides</a>",
+	"finish": 2018
+}, {
+	"type": "publication",
+	"audience": "international",
+	"id": "EICS17",
+	"reference": "EICS'17",
+	"authors": "T. Raffaillac, S. Huot & S. Ducasse",
+	"title": "Turning Function Calls Into Animations",
+	"proceedings": "Proceedings of the 9<sup>th</sup> Symposium on Engineering Interactive Computing Systems, EICS, Juin 2017, pp. 81–86",
+	"misc": "<abbr title='Acceptance rate'>35%</abbr> <a href=https://doi.org/10.1145/3102113.3102134>DOI</a> <a href=https://hal.inria.fr/hal-01564116/document>PDF</a> <a href=content/eics17-slides.pdf>slides</a>",
+	"finish": 2017
+}, {
+	"type": "publication",
+	"audience": "misc",
+	"reference": "EICS'17",
+	"authors": "T. Raffaillac",
+	"title": "Language and System Support for Interaction",
+	"proceedings": "Proceedings of the 9th Symposium on Engineering Interactive Computing Systems, EICS, June 2017, pp. 149–152",
+	"misc": "<i>(doctoral consortium)</i> <a href=https://doi.org/10.1145/3102113.3102155>DOI</a> <a href=https://hal.inria.fr/hal-02190565/document>PDF</a> <a href=content/dc17-slides.pdf>slides</a> <a href=content/dc17-poster.pdf>poster</a>",
+	"finish": 2017
+}, {
+	"type": "publication",
+	"audience": "thesis",
+	"reference": "MSc",
+	"authors": "T. Raffaillac",
+	"title": "Exploring the design of compiler feedback",
+	"proceedings": "Master thesis from KTH Royal Institute of Technology",
+	"misc": "<a href=content/master-thesis.pdf>PDF</a> <a href=https://prezi.com/izuzcudeivh9/degree-thesis-presentation/>slides</a>",
+	"finish": 2012
+}, {
+	"type": "publication",
+	"audience": "international",
+	"id": "PPIG12",
+	"reference": "PPIG'12",
+	"authors": "T. Raffaillac",
+	"title": "Exploring the design of compiler feedback",
+	"proceedings": "Proceedings of the 24<sup>th</sup> Annual Workshop of the Psychology of Programming Interest Group, PPIG, Nov. 2012, pp. 139–150",
+	"misc": "<a href=https://ppig.org/files/2012-PPIG-24th-Raffaillac.pdf>PDF</a> <a href=https://prezi.com/whsoz17g6x_w/11-ppig2012/>slides</a>",
+	"finish": 2012
+},
+
+
+
+{
+	"type": "talk",
+	"date": "2023-06-20",
+	"title": "Comment (ré)concilier les Interfaces Humains-Machines avec les Transitions ?",
+	"venue": "Monthly seminar of the SENS research unit, Montpellier, France",
+	"misc": "45min <a href=content/sens23.pdf>slides</a>",
+	"finish": 2023
+}, {
+	"type": "talk",
+	"date": "2023-04-19",
+	"title": "Le numérique pour mieux produire (agroécologie - protection des cultures - productions animales durables - phénotypage rapide in situ)",
+	"venue": "<a href=https://www.hdigitag.fr/Calendrier/DigitAgora-2023>DigitAgora 2023</a>, Montpellier, France",
+	"misc": "<i>(round-table)</i> 50min <a href=content/digitagora23.pdf>slides</a>",
+	"finish": 2023
+}, {
+	"type": "talk",
+	"date": "2022-12-15",
+	"title": "L'écriture scientifique",
+	"venue": "Yearly PhD seminar from SENS, Valflaunès, France",
+	"misc": "<i>(course)</i> 2h <a href=content/seminaire-ecriture.md>notes</a>",
+	"finish": 2022
+}, {
+	"type": "talk",
+	"date": "2022-09-01",
+	"title": "L'informatique en 2040 (un exercice de design spéculatif)",
+	"venue": "Sustainable Development and Societal Responsibility committee, Centrale Lyon, France",
+	"misc": "30 min <a href=content/design-speculatif.pdf>slides</a>",
+	"finish": 2022
+}, {
+	"type": "talk",
+	"date": "2017-05-19",
+	"title": "Animations in Pharo Smalltalk",
+	"venue": "<a href=https://pharo.org/2017PharoDays>Pharo Days</a>, Lille, France",
+	"misc": "<i>(demo)</i> 10min <a href=https://youtu.be/1yzc-EKFVs0?t=28m5s>video</a>",
+	"finish": 2017
+}, {
+	"type": "talk",
+	"date": "2016-08-25",
+	"title": "Early ECS in Pharo Smalltalk",
+	"venue": "<a href=http://www.esug.org/wiki/pier/Conferences/2016>ESUG 2016</a>, Prague, Czech Republic",
+	"misc": "<i>(demo)</i> 10min <a href=https://youtu.be/ltXFtdhKuM8?t=3m25s>video</a>",
+	"finish": 2016
+},
+
+
+
+{
+	"type": "teaching",
+	"start": 2019,
+	"finish": 2022,
+	"title": "Algorithms and data structures",
+	"role": "teaching assistant",
+	"text": "complexity, sorting, graphs, dynamic programming, Python",
+	"level": "Engineer1",
+	"hours": 209,
+	"institution": "École Centrale de Lyon"
+}, {
+	"type": "teaching",
+	"start": 2019,
+	"finish": 2022,
+	"title": "Object-oriented design and programming",
+	"role": "teaching assistant and guest lecturer",
+	"text": "introduction to Software Engineering, UML, OOP, Graphical User Interfaces (<a href=content/cours_IHM_slides.pdf>slides</a>, <a href=content/cours_IHM_support.pdf>support</a>), Python/tkinter",
+	"level": "Engineer1",
+	"hours": 146,
+	"institution": "École Centrale de Lyon"
+}, {
+	"type": "teaching",
+	"start": 2019,
+	"finish": 2022,
+	"title": "Web application project",
+	"role": "teaching assistant",
+	"text": "client-server architecture, HTML, CSS, JavaScript, JSON, Python, SQLite, team working, git",
+	"level": "Engineer1",
+	"hours": 124,
+	"institution": "École Centrale de Lyon"
+}, {
+	"type": "teaching",
+	"start": 2019,
+	"finish": 2022,
+	"title": "WEEX éolienne",
+	"role": "co-organizer",
+	"text": "5 editions of a week-long multidisciplinary pedagogical event",
+	"level": "Eng. 1/2",
+	"hours": 92,
+	"institution": "École Centrale de Lyon"
+}, {
+	"type": "teaching",
+	"start": 2019,
+	"finish": 2022,
+	"title": "Students projects and mentoring",
+	"role": "supervisor",
+	"text": "6 projects (2 to 9 months), 1 intership (3 months), mentoring of 3 students",
+	"level": "Eng. 1/2/3",
+	"hours": 56,
+	"institution": "École Centrale de Lyon"
+}, {
+	"type": "teaching",
+	"start": 2018,
+	"finish": 2019,
+	"title": "Introduction to human-machine interfaces",
+	"role": "teaching assistant",
+	"text": "programming Graphical User Interfaces with JavaFX, event-based programming, user interface mockups, usability evaluation and heuristics",
+	"level": "DUT1",
+	"hours": 64,
+	"institution": "Lille University/IUT A"
+}, {
+	"type": "teaching",
+	"start": 2018,
+	"finish": 2019,
+	"title": "Advanced algorithms",
+	"role": "teaching assistant",
+	"text": "recursive and iterative algorithms, recursive and advanced data structures",
+	"level": "DUT2",
+	"hours": 64,
+	"institution": "Lille University/IUT A"
+}, {
+	"type": "teaching",
+	"start": 2018,
+	"finish": 2019,
+	"title": "Introduction to computer systems",
+	"role": "teaching assistant",
+	"text": "coding numbers and text, computer architecture, operating systems, scripting and the terminal, processes and files",
+	"level": "DUT1",
+	"hours": 64,
+	"institution": "Lille University/IUT A"
+}, {
+	"type": "teaching",
+	"start": 2017,
+	"finish": 2018,
+	"title": "Web technologies",
+	"role": "teaching assistant",
+	"text": "client-side Web technologies HTML/CSS/JavaScript",
+	"level": "Bachelor1",
+	"hours": 36,
+	"institution": "Lille University"
+}, {
+	"type": "teaching",
+	"start": 2017,
+	"finish": 2018,
+	"title": "Algorithms and complexity",
+	"role": "teaching assistant",
+	"text": "divide and conquer, dynamic programming, greedy algorithms, complexity analysis, P/NP and reduction",
+	"level": "Master1",
+	"hours": 36,
+	"institution": "Lille University"
+},
+
+
+
+{
+	"type": "academia",
+	"text": "Co-chair of the French working group <i>IHM & écologie</i> since 2023",
+	"start": 2023
+}, {
+	"type": "academia",
+	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction)",
+	"start": 2023
+}, {
+	"type": "academia",
+	"text": "<a href=content/best-paper-eics22.pdf>Best Paper Award</a> at <a href=#EICS22>EICS'22</a>",
+	"finish": 2022
+}, {
+	"type": "academia",
+	"text": "Reviewer for CHI'22 and EICS'22, session chair at EICS'22",
+	"finish": 2022
+}, {
+	"type": "academia",
+	"text": "Member of the Sustainable Development and Societal Responsibility local committee at Centrale Lyon in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.",
+	"start": 2021,
+	"finish": 2022
+}, {
+	"type": "academia",
+	"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021",
+	"start": 2021
+}, {
+	"type": "academia",
+	"text": "Reviewer for CHI'21 and IHM'20'21",
+	"finish": 2021
+}, {
+	"type": "academia",
+	"text": "Reviewer for CHI'20",
+	"finish": 2020
+}, {
+	"type": "academia",
+	"text": "<a href=content/best-paper-eics19.pdf>Best Paper Award</a> at <a href=#EICS19>EICS'19</a>",
+	"finish": 2019
+}, {
+	"type": "academia",
+	"text": "Reviewer for IHM'19",
+	"finish": 2019
+}, {
+	"type": "academia",
+	"text": "Reviewer for IHM'18",
+	"finish": 2018
+}, {
+	"type": "academia",
+	"text": "Reviewer for IWST'17 and ManLang'17",
+	"finish": 2017
+},
+
+
+
+{
+	"type": "misc",
+	"title": "<a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)",
+	"text": "Slides that I created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.",
+	"finish": 2022
+}, {
+	"type": "misc",
+	"title": "<a href=https://clementsparrow.github.io/Pattern-Script/src/play.html?p=a05b012f072a84c5d9af5d8f441cb832>Coyote Time Lord</a>",
+	"text": "Minimalist 2D game with time-altering mechanisms, created with Clément Pillias for the 50<sup>th</sup> Ludum Dare Jam. I did the eerie music, the sounds and the sprites.",
+	"finish": 2022
+}, {
+	"type": "misc",
+	"title": "<a href=https://swerc.eu/2021/theme/scoreboard/public/>SWERC 2021</a>",
+	"text": "My second participation as a coach, with teams ECL 2 (54<sup>th</sup>/97) and CentraleMegaStomp (64<sup>th</sup>/97). A remarkable result for Engineering students as well as first-timers!",
+	"finish": 2022
+}, {
+	"type": "misc",
+	"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/round/00000000008caae7>Hash Code 2022 contest</a>",
+	"text": "703<sup>th</sup>/10177, 52<sup>th</sup>/529 in France, team <i>#import mercy</i> on my own.",
+	"finish": 2022
+}, {
+	"type": "misc",
+	"id": "creative21",
+	"title": "<a href=content/creative21.zip>Creative and competitive programming club</a>",
+	"text": "I ran this club for students from February to April, with sessions alternating between competitive programming and live music coding with FoxDot.",
+	"finish": 2021
+}, {
+	"type": "misc",
+	"title": "<a href=https://clementsparrow.github.io/GlobalGameJam2021/index.html>Lost Souls Found The Gold You Lost To Save Your Soul</a>",
+	"text": "Pacman-like game created with Clément Pillias and Nicole Pong for the Global Game Jam 2021. I did the UI, level design and incremental music (although due to a bug you cannot hear the full version).",
+	"finish": 2021
+}, {
+	"type": "misc",
+	"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2020>Advent of Code 2020</a>",
+	"text": "This year I went through all the puzzles of this Christmas-themed challenge.",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"title": "<a href=content/codejam20.pdf>Code Jam 2020 contest</a>",
+	"text": "Reaching round 3 of this challenging competition.",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2020>Hash Code 2020 contest</a>",
+	"text": "2826<sup>th</sup>/10724, <!--236<sup>th</sup>/784 (France),--> 2<sup>nd</sup> in our hub, team <i>XoXot</i> with Damien Masson, Nicolas Crosetti and Paul Gallot.",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"title": "<a href=https://github.com/traffaillac/ide-enseignement>Online IDE with supervision</a>",
+	"text": "Online IDE including a Python interpreter, that I coded at the start of the Covid outbreak to allow students to ask for help and show their code remotely (viewed as a mosaic on my side). It lacked modules so students would only use it to show code, but it was super helpful to let them feel supported throughout this event.",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"id": "contests20",
+	"title": "<a href=content/contests20.zip>Competitive programming course</a>",
+	"text": "Slides for a custom course I created for 6 students, based on the excellent <a href=https://cpbook.net/methodstosolve>Competitive Programming 3</a> book.",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"title": "<a href=https://www.fun-mooc.fr/courses/course-v1:enseignementsup+131001+session03/about>MOOC on university teaching</a> (French)",
+	"text": "Followed during 10 weeks for ~2h/week <a href=content/mooc-enseignement.pdf>[Certificate of completion]</a>",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"title": "<a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2019</a>",
+	"text": "My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I also scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
+	"finish": 2020
+}, {
+	"type": "misc",
+	"title": "<a href=http://www.raid-ecl.fr/menu/edition2019/resultats.php>Raid Centrale Lyon</a>",
+	"text": "Running, cycling and canoeing. We registered for the discovery level with Thierry Gonon and finished 3<sup>rd</sup>.",
+	"finish": 2019
+}, {
+	"type": "misc",
+	"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2019>Hash Code 2019 contest</a>",
+	"text": "91<sup>th</sup>/6671, 6<sup>th</sup> in France, team <i>Lokidoki</i> on my own.",
+	"finish": 2019
+}, {
+	"type": "misc",
+	"title": "<a href=https://catcoder.codingcontest.org/contest/2410/overview>Catalysts Coding Contest</a>",
+	"text": "Team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin, 2<sup>nd</sup> in Lille, for which I participated in organizing the hub.",
+	"finish": 2018
+}, {
+	"type": "misc",
+	"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2018>Hash Code 2018 contest</a>",
+	"text": "1122<sup>th</sup>/3012, team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin.",
+	"finish": 2018
+}, {
+	"type": "misc",
+	"title": "<a href=https://catcoder.codingcontest.org/contest/1761/overview>Catalysts Coding Contest</a>",
+	"text": "Team <i>ThiYo</i> with Yoann Dufresne, 3<sup>rd</sup> in Lille, where I also helped <a href=https://informatique.univ-lille1.fr/ccc/2017/contest/>organizing the hub</a> (printing T-shirts and communicating to students).",
+	"finish": 2017
+}, {
+	"type": "misc",
+	"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2017>Hash Code 2017 contest</a>",
+	"text": "186<sup>th</sup>/2815, <!--23<sup>rd</sup>/473 (France),--> 1<sup>st</sup> in our hub, team <i>ThiYo</i> with Yoann Dufresne.",
+	"finish": 2017
+}, {
+	"type": "misc",
+	"title": "<a href=https://meilleurjeudumonde.github.io/meilleurjeudumonde/>Meilleur jeu du monde</a>",
+	"text": "Nerds + Beers = Game dev party... (during FOSDEM 2017)",
+	"finish": 2017
+}, {
+	"type": "misc",
+	"title": "<a href=http://shakethatbutton.com/bamboo-that-bends/>Bamboo that bends</a>",
+	"text": "A 3D Twister game made with five people during the ZooMachines Interactive Arts festival, which was <i>way</i> funnier than on video!",
+	"finish": 2016
+}, {
+	"type": "misc",
+	"title": "<a href=content/parsing.html>A case about parsing errors</a>",
+	"text": "A blog article about the handling of errors in <a href=#edge264>edge264</a>.",
+	"finish": 2016
+}, {
+	"type": "misc",
+	"title": "<a href=https://codingcompetitions.withgoogle.com/hashcode/archive/2016>Hash Code 2016 contest</a>",
+	"text": "153<sup>rd</sup>/1054, <!--35<sup>th</sup>/233 (France),--> <a href=https://informatique.univ-lille.fr/hashcode/2016/qualification/>1<sup>st</sup> in our hub</a>, team <i>Brony Express</i> with Izzatbek Mukhanov and Sébastien Poulmane.",
+	"finish": 2016
+}, {
+	"type": "misc",
+	"title": "<a href=http://yoann-dufresne.github.io/LD35/>The Maze Nightmare</a>",
+	"text": "Short game created with Yoann Dufresne and Matthieu Falce for the Ludum Dare Jam 35. As usual I did the artwork and music. Beware the game is <i>meant</i> to be oppressing...",
+	"finish": 2016
+}, {
+	"type": "misc",
+	"title": "<a href=http://www.ludumdare.com/compo/ludum-dare-23/?action=preview&uid=11209>Little Sheep</a>",
+	"text": "Short story-telling game created with Alexandre Kohen during 3 days for the Ludum Dare Jam 23. I did the artwork and music :)",
+	"finish": 2012
+}, {
+	"type": "misc",
+	"title": "<a href=content/cms2011/admin.html>Assisting interface for easy administration of a CMS</a>",
+	"text": "Study of a novel interface for online Content Management Systems, for the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='This course was awesome.'>Interaction Design</a> course. <a href=content/traf-DH2626-11.pdf>[PDF]</a>",
+	"finish": 2011
+}, {
+	"type": "misc",
+	"title": "<a href=content/AssassinationGameApp.mp4>Assassination Game Application</a>",
+	"text": "Video prototype for a Group Project of the <a href=http://www.kth.se/student/kurser/kurs/DH2626?l=en title='Did I mention how AMAZING this course was?'>Interaction Design</a> course.",
+	"finish": 2011
+}, {
+	"type": "misc",
+	"title": "<a href=content/traf-semanticslab.zip>WHILE compiler</a>",
+	"text": "Optimizing compiler backend written in Java for a subset of the WHILE language to UNIX x64 assembly, for the <a href=http://www.kth.se/student/kurser/kurs/DD2457?l=en>Program Semantics and Analysis</a> course. <a href=content/sample-output.asm>[sample output]</a>",
+	"finish": 2011
+}, {
+	"type": "misc",
+	"title": "<a href=content/tuto_direct_VLC.html>Diffusion en direct avec VLC</a> (French)",
+	"text": "Interactive tutorial to easily set up a high-quality real-time video broadcast using VLC.",
+	"finish": 2011
+}, {
+	"type": "misc",
+	"title": "<a href=content/installation_vod.txt>Mise en place de VOD</a> (French)",
+	"text": "Step-by-step documentation to install and fine-tune a Video-on-Demand server on Linux.",
+	"finish": 2010
+}, {
+	"type": "misc",
+	"title": "<a href=content/club_programmation.txt>Club programmation</a>",
+	"text": "Support material for an OpenGL course I created at Centrale Marseille.",
+	"finish": 2009
+}, {
+	"type": "misc",
+	"title": "<a href=content/ginfo2009.mp4>Film de Rentrée du GInfo</a> (French)",
+	"text": "Short movie promoting the Computer Science student association at the annual associations fair of Ecole Centrale Marseille. A <i>must-watch</i> if you've scrolled down this far :)",
+	"finish": 2009
+}, {
+	"type": "misc",
+	"title": "<a href=content/CompressionStaxRip/installation.html>Compression avec StaxRip</a> (French)",
+	"text": "Tutorial to compress a video exported by Premiere Pro, using the software StaxRip. The parameters would correct the flaws introduced by Premiere (its disastrous deinterlacing filter) and output in a format ready for integration in a Web player.",
+	"finish": 2009
+}, {
+	"type": "misc",
+	"title": "<a href=content/CompressionMeGUI/installation.html>Compression avec MeGUI</a> (French)",
+	"text": "Tutorial to compress a video exported by Premiere Pro, using MeGUI. It was soon superseeded by the tutorial on StaxRip.",
+	"finish": 2009
+}, {
+	"type": "misc",
+	"title": "<a href=content/traf-TIPE2008.zip>La lentille électrostatique</a> (French comments)",
+	"text": "Simultation of an electrostatic lens by shooting electrons in a simple finite element mesh, created for the TIPE exam at the end of the <i>Classes Préparatoires</i>.",
+	"finish": 2008
+}, {
+	"type": "misc",
+	"title": "<a href=content/ModeleEXE.asm>Modèle EXE</a> (French comments)",
+	"text": "Source code for nasm based on the PE/COFF reference, to create an executable file from scratch without linking.",
+	"finish": 2008
+}, {
+	"type": "misc",
+	"title": "<a href=content/traf-TIPE2007.zip>Oscillations d'un Fil</a> (French comments)",
+	"text": "Real-time simulation of a flexible wire using Lagrangian Mechanics and RK4 integration, created for the TIPE exam.",
+	"finish": 2007
+}, {
+	"type": "misc",
+	"title": "<a href=content/CasseBriques.zip>Casse-briques</a> (French comments)",
+	"text": "Breakout-clone where the paddle can tilt.",
+	"finish": 2007
+}, {
+	"type": "misc",
+	"title": "<a href=content/Visionneuse_3D.zip>Visionneuse 3D</a> (French)",
+	"text": "Interactive viewer for 3D objects stored in files. This program ended a 3-year obsession to create a 3D engine, and was my last BASIC program before playing with more modern languages.",
+	"finish": 2005
+}]
