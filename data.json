@@ -73,7 +73,7 @@
 	"id": "IHM23",
 	"reference": "IHM'23",
 	"authors": "T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur",
-	"title": "Développement d’une interface de simulation multi-agents pour la gestion concertée des territoires pastoraux de moyenne montagne",
+	"title": "Development of a multi-agent simulation interface for the joint management of mid-mountain pastoral territories",
 	"proceedings": "Adjunct proceedings of the 34<sup>th</sup> Conference on l'Interaction Humain-Machine, April 2023, art. 6, pp. 1–6",
 	"misc": "<i>(work in progress)</i> <a href=https://dl.acm.org/doi/10.1145/3577590.3589606>DOI</a> <a href=https://hal.science/hal-04046136/document>PDF</a> <a href=content/ihm23-poster.jpg>poster</a> <a href=content/ihm23-slide.pdf>slide</a>",
 	"finish": 2023
@@ -83,7 +83,7 @@
 	"id": "Rochebrune23",
 	"reference": "Rochebrune'23",
 	"authors": "T. Raffaillac",
-	"title": "Interagir avec les nombres",
+	"title": "Interacting with numbers",
 	"proceedings": "In the 29<sup>th</sup> journées de Rochebrune 2023, Jan. 2023",
 	"misc": "<i>(workshop)</i> <a href=content/rb23.pdf>PDF</a> <a href=content/rb23-slides.pdf>slides</a>",
 	"finish": 2023
@@ -225,7 +225,7 @@
 }, {
 	"type": "talk",
 	"date": "2022-12-15",
-	"title": "L'écriture scientifique",
+	"title": "Scientific writing",
 	"venue": "Yearly PhD seminar from SENS, Valflaunès, France",
 	"misc": "<i>(course)</i> 2h <a href=content/seminaire-ecriture.md>notes</a>",
 	"finish": 2022
