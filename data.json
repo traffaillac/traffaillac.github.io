@@ -368,10 +368,6 @@
 	"start": 2023
 }, {
 	"type": "academia",
-	"text": "<a href=content/best-paper-eics22.pdf>Best Paper Award</a> at <a href=#EICS22>EICS'22</a>",
-	"finish": 2022
-}, {
-	"type": "academia",
 	"text": "Reviewer for CHI'22 and EICS'22, session chair at EICS'22",
 	"finish": 2022
 }, {
@@ -391,10 +387,6 @@
 	"type": "academia",
 	"text": "Reviewer for CHI'20",
 	"finish": 2020
-}, {
-	"type": "academia",
-	"text": "<a href=content/best-paper-eics19.pdf>Best Paper Award</a> at <a href=#EICS19>EICS'19</a>",
-	"finish": 2019
 }, {
 	"type": "academia",
 	"text": "Reviewer for IHM'19",
