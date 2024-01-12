@@ -1,6 +1,5 @@
 # MAYDO :
 # _ fix the display of projects on narrow screens
-# _ ajouter les formations MISSABMS et ComMod
 # _ host the assests for the games I took part in
 
 from css_html_js_minify import process_single_css_file, process_single_html_file
@@ -18,7 +17,7 @@ I have also organized competitive programming trainings since 2015, in Lille, Ly
 In 2021 we raised Centrale Lyon to the <a href=https://open.kattis.com/countries/FRA>top rank</a> among the French institutions on the international training platform Kattis, reached the <a href=https://www.codingame.com/contests/escape/fall-challenge-2021>4<sup>th</sup> place</a> at CodinGame Fall Challenge 2021, then got the <a href=https://judge.swerc.eu/public>54<sup>th</sup> and 64<sup>th</sup> places</a> at the major European competition SWERC 2021.
 '''
 intro_publications = '''
-My research in HCI has focused mainly on reducing complexity when programming interactive systems.
+For the most part my research has focused on reducing complexity when programming interactive systems.
 In the case of graphical interfaces, this complexity is due to the large number of objects and behaviors to manage, and I have proposed models [<a href=#EICS19>EICS'19</a>, <a href=#EICS17>EICS'17</a>] and principles [<a href=#EICS22>EICS'22</a>] to give more concise mental representations.
 In the case of data structures, this complexity is due to the abstraction effort required to navigate between visual representation and code, and I have initiated a tool allowing to work directly on visual graphs [<a href=#EIAH21>EIAH'21</a>].
 Finally, in the case of compilers, the complexity is due to the numerous transformations that lead from the source code to the executable file, and I explored the idea of a human-compiler communication to improve its understanding [<a href=#PPIG12>PPIG'12</a>].

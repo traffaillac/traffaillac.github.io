@@ -2,9 +2,17 @@
 	"type": "project",
 	"id": "pastofutur",
 	"title": "Pastofutur",
-	"text": "Producing an analytical and action framework based on interdisciplinarity, using the concepts of ecosystem services associated with pastoral areas and the concept of multifunctionality of pastoral activity, to strengthen the participation of societies in defining the future of pastoralism [<a href=#IHM23>IHM'23</a>].",
+	"text": "Producing an analytical and action framework based on interdisciplinarity, using the concepts of ecosystem services associated with pastoral areas and the concept of multifunctionality of pastoral activity, to strengthen the participation of societies in defining the future of pastoralism [<a href=#IHM23>IHM'23</a>, <a href=#CHI24>CHI'24</a>].",
 	"image": "pastofutur.png",
 	"href": "https://umr-selmet.cirad.fr/projet-scientifique/nos-projets/pastofutur",
+	"start": 2022,
+	"major": true
+}, {
+	"type": "project",
+	"id": "metaphores",
+	"title": "Interactive collection of metaphors",
+	"text": "Developing an online interface and visualizations to collect and display a network of <a href=https://hal.science/hal-04124348>metaphors related to the soil</a> during “metaphoring” workshops. This work will be on display in the CIRAD booth at the <a href=https://en.wikipedia.org/wiki/Paris_International_Agricultural_Show>Paris International Agricultural Show</a>.",
+	"image": "metaphores.png",
 	"start": 2022
 }, {
 	"type": "project",
@@ -13,17 +21,7 @@
 	"text": "Developing sustainable and productive agricultural systems while increasing soil carbon sequestration, and raising awareness on the role of soil management to mitigate greenhouse gas emissions. I work on interfaces for multi-agent models simulating the regrowth of an acacia forest in Senegal.",
 	"image": "dscatt.jpg",
 	"href": "https://dscatt.net/",
-	"start": 2022,
-	"finish": 2023
-}, {
-	"type": "project",
-	"id": "metaphores",
-	"title": "Interactive collection of metaphors",
-	"text": "TODO",
-	"image": "TODO",
-	"href": "TODO",
-	"start": 2022,
-	"finish": 2024
+	"start": 2022
 }, {
 	"type": "project",
 	"id": "competencies",
@@ -48,7 +46,8 @@
 	"image": "ecs.png",
 	"href": "https://gitlab.inria.fr/Loki/PolyphonyECS/",
 	"start": 2016,
-	"finish": 2019
+	"finish": 2019,
+	"major": true
 }, {
 	"type": "project",
 	"title": "Turning function calls into animations",
@@ -61,7 +60,7 @@
 	"type": "project",
 	"title": "edge264",
 	"id": "edge264",
-	"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.",
+	"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community [<a href=#FOSDEM24>FOSDEM'24</a>].",
 	"image": "edge264.jpg",
 	"href": "https://github.com/tvlabs/edge264",
 	"start": 2013,
@@ -230,6 +229,14 @@
 
 {
 	"type": "talk",
+	"id": "FOSDEM24",
+	"date": "2024-02-04",
+	"title": "Innovations in H.264/AVC software decoding",
+	"venue": "<a href=https://fosdem.org/2024/schedule/event/fosdem-2024-2931-innovations-in-h-264-avc-software-decoding-architecture-and-optimization-of-a-block-based-video-decoder-to-reach-10-faster-speed-and-3x-code-reduction-over-the-state-of-the-art-/>FOSDEM 2024</a>, Bruxelles, Belgium",
+	"misc": "30min",
+	"finish": 2024
+}, {
+	"type": "talk",
 	"date": "2023-06-20",
 	"title": "Comment (ré)concilier les Interfaces Humains-Machines avec les Transitions ?",
 	"venue": "Monthly seminar of the SENS research unit, Montpellier, France",
@@ -380,11 +387,15 @@
 
 {
 	"type": "academia",
-	"text": "Co-chair of the French working group <i>IHM & écologie</i> since 2023",
+	"text": "Reviewer for CHI'23 and EICS'23",
+	"finish": 2023
+}, {
+	"type": "academia",
+	"text": "Co-chair of the French working group <a href=https://ihmecologie.afihm.org/>IHM & écologie</a> since 2023",
 	"start": 2023
 }, {
 	"type": "academia",
-	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction)",
+	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction) since 2023",
 	"start": 2023
 }, {
 	"type": "academia",
@@ -437,6 +448,11 @@
 	"type": "misc",
 	"title": "<a href=https://www.agropolis.fr/MISS-ABMS-2023>MISS-ABMS summer school</a>",
 	"text": "Followed during 2 weeks on agent-based modeling and simulation. <a href=content/course-missabms.pdf>Certificate of completion</a>",
+	"finish": 2023
+}, {
+	"type": "misc",
+	"title": "<a href=https://open.kattis.com/countries/FRA>Training on Kattis</a>",
+	"text": "During the summer I climbed up 500 points on Kattis (about <a href=https://github.com/traffaillac/traf-kattis>100 small programming problems</a>) to get back in good shape for programming",
 	"finish": 2023
 }, {
 	"type": "misc",
