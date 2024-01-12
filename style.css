@@ -46,20 +46,21 @@
 
 
 * { box-sizing: border-box }
-a,abbr { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px }
+abbr { text-decoration-thickness: 1px; text-underline-offset: 3px }
+a { text-decoration: none; color: royalblue }
 h2>a { text-decoration: none }
 a:hover { color: #bbb }
 body { font: 18px Alegreya; line-height: 1.4; color: #222 }
-p { margin: 18px 0 0 0 }
-ul { margin: 9px 0 0 1em; padding: 0 }
+p { margin: 1rem 0 0 0 }
+ul { margin: 0 0 0 1em; padding: 0 }
 
 
 /* Custom tags in French to avoid collisions */
 titre { font: 32px Pacifico; line-height: 1.2; margin: .5em 0; text-align: right; text-decoration: none }
-titre>a { text-decoration: none }
+titre>a { color: black }
 lienmenu { font: 24px Pacifico; margin: 0 }
-lienmenu>a { text-decoration: none }
-titresection { border-bottom: 1px solid #eee; font: 50px Pacifico; text-align: center; margin: 100px 0 20px 0 }
+lienmenu>a { color: black }
+titresection { border-bottom: 1px solid #eee; font: 50px Pacifico; text-align: center; margin: 60px 0 20px 0 }
 conteneur { display: flex; max-width: 992px; padding: 0 10px; margin: auto; flex-direction: column; justify-content: stretch }
 projet { display: flex; margin: 30px 0 0 0; padding: 8px; flex-direction: row; align-items: center; border-radius: 8px; box-shadow: 0 0 8px #ddd }
 projet>img { flex: none; width: 200px; margin-right: 16px }
@@ -73,8 +74,8 @@ signe { display: flex; margin-top: 19px; flex-direction: row; align-items: cente
 signe>div { text-align: right }
 annee { border-bottom: 1px solid #eee; font: 50px Pacifico; text-align: center }
 bande { display: flex; flex-direction: row; align-items: center; border-bottom: 1px solid #eee }
-margeproject,margepublication,margetalk,margeteaching,margeacademia,margemisc { padding-right: 35px; align-self: stretch; width: 275px; display: flex; flex-direction: column; justify-content: center; text-align: right; color: #ccc; flex: none; font: 20px Pacifico }
-margeproject>a,margepublication>a,margetalk>a,margeteaching>a,margeacademia>a,margemisc>a { text-decoration: none }
+margeproject,margepublication,margetalk,margeteaching,margeacademia,margemisc { padding-right: 35px; align-self: stretch; width: 220px; display: flex; flex-direction: column; justify-content: center; text-align: right; color: #ccc; flex: none; font: 20px Pacifico }
+margeproject>a,margepublication>a,margetalk>a,margeteaching>a,margeacademia>a,margemisc>a { color: inherit }
 margeproject { box-shadow: inset -50px 0 50px -50px #0f4c5c }
 margepublication { box-shadow: inset -50px 0 50px -50px #f48c06 }
 margetalk { box-shadow: inset -50px 0 50px -50px #ffba08 }

@@ -3,6 +3,7 @@
 # _ ajouter les formations MISSABMS et ComMod
 # _ host the assests for the games I took part in
 
+from css_html_js_minify import process_single_css_file, process_single_html_file
 from datetime import date
 from json import load
 from random import randint
@@ -46,7 +47,7 @@ with open('data.json') as f:
 
 
 # génération de la page classée par sections
-with open('sections.html', 'w') as f:
+with open('index.html', 'w') as f:
 	with open('index-header.html', 'r') as h:
 		print(h.read(), file=f)
 	# section Projets
@@ -129,11 +130,12 @@ with open('sections.html', 'w') as f:
 			print('</signe>', file=f)
 	print("</conteneur>", file=f)
 	print(footer, file=f)
+process_single_html_file("index.html", overwrite=True)
 
 
 
 # génération de la timeline
-with open('index.html', 'w') as f:
+with open('timeline.html', 'w') as f:
 	with open('index-header.html', 'r') as h:
 		print(h.read(), file=f)
 	for year in range(date.today().year, 2004, -1):
@@ -151,23 +153,24 @@ with open('index.html', 'w') as f:
 				period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
 				if etype == 'project':
 					h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
-					print('\t<margeproject><a href=sections.html#projects>Projects</a></margeproject>', file=f)
+					print('\t<margeproject><a href=index.html#projects>Projects</a></margeproject>', file=f)
 					print(f'\t<img src=images/{e["image"]}>', file=f)
 					print(f'\t<div><b>{h3} ({period})</b><br>{e["text"]}</div>', file=f)
 				elif etype == 'publication':
-					print('\t<margepublication><a href=sections.html#publications>Publications</a></margepublication>', file=f)
+					print('\t<margepublication><a href=index.html#publications>Publications</a></margepublication>', file=f)
 					print(f'\t<div>{e["authors"]}. <b>{e["title"]}</b>. <i>{e["proceedings"]}</i>. {e["misc"]}</div>', file=f)
 				elif etype == 'talk':
-					print('\t<margetalk><a href=sections.html#talks>Invited talks</a></margetalk>', file=f)
+					print('\t<margetalk><a href=index.html#talks>Invited talks</a></margetalk>', file=f)
 					print(f'\t<div{Id}>{e["date"]} - <b>{e["title"]}</b>. <i>{e["venue"]}</i>. {e["misc"]}</div>', file=f)
 				elif etype == 'teaching':
-					print('\t<margeteaching><a href=sections.html#teaching>Teaching</a></margeteaching>', file=f)
+					print('\t<margeteaching><a href=index.html#teaching>Teaching</a></margeteaching>', file=f)
 					print(f'\t<div><b>{e["title"]} ({period})</b><br><i>{e["role"]}</i> at <i>{e["level"]}</i> level for <i>{e["hours"]}h</i> at <i>{e["institution"]}</i><br>{e["text"]}</div>', file=f)
 				elif etype == 'academia':
-					print('\t<margeacademia><a href=sections.html#academia>Academic service</a></margeacademia>', file=f)
+					print('\t<margeacademia><a href=index.html#academia>Academic service</a></margeacademia>', file=f)
 					print(f'\t<div>{e["text"]}</div>', file=f)
 				elif etype == 'misc':
-					print('\t<margemisc><a href=sections.html#misc>Signs of life</a></margemisc>', file=f)
+					print('\t<margemisc><a href=index.html#misc>Signs of life</a></margemisc>', file=f)
 					print(f'\t<div><b>{e["title"]}</b><br>{e["text"]}</div>', file=f)
 				print('</bande>', file=f)
 	print(footer, file=f)
+process_single_html_file("timeline.html", overwrite=True)
