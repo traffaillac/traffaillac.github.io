@@ -34,7 +34,7 @@
 }, {
 	"type": "project",
 	"title": "WEEX éolien",
-	"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and is has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.",
+	"text": "Server and online interface supporting a week-long teaching activity, in which students compete in groups to optimize the energy production of a wind farm. This activity is very much appreciated by students, and has been presented as a flagship of Centrale Lyon's <a href=https://www.youtube.com/watch?v=FeiMQfe_QVU>innovation</a>. The platform is now autonomous and hosts 3 events per year.",
 	"image": "weex.png",
 	"href": "https://www.ec-lyon.fr/actualites/2020/weex-donner-du-sens-aux-enseignements-du-tronc-commun",
 	"start": 2020,
@@ -437,7 +437,7 @@
 {
 	"type": "misc",
 	"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2023>Advent of Code 2023</a>",
-	"text": "Once again I went through all the puzzles of this Christmas-themed challenge.",
+	"text": "Going through all the puzzles of this Christmas-themed challenge (two puzzles each morning of December).",
 	"finish": 2023
 }, {
 	"type": "misc",
@@ -452,12 +452,12 @@
 }, {
 	"type": "misc",
 	"title": "<a href=https://open.kattis.com/countries/FRA>Training on Kattis</a>",
-	"text": "During the summer I climbed up 500 points on Kattis (about <a href=https://github.com/traffaillac/traf-kattis>100 small programming problems</a>) to get back in good shape for programming",
+	"text": "Climbing up 500 points on Kattis during the summer to get back in good shape for programming (about <a href=https://github.com/traffaillac/traf-kattis>100 small programming problems</a>)",
 	"finish": 2023
 }, {
 	"type": "misc",
 	"title": "<a href=content/tips_informatique.pdf>Tips en Informatique</a> (French)",
-	"text": "Slides that I created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.",
+	"text": "Slides created to help students from Centrale Lyon make better use of their computers. I keep them updated for my colleagues at CIRAD.",
 	"finish": 2022
 }, {
 	"type": "misc",
@@ -467,7 +467,7 @@
 }, {
 	"type": "misc",
 	"title": "<a href=https://swerc.eu/2021/theme/scoreboard/public/>SWERC 2021</a>",
-	"text": "My second participation as a coach, with teams ECL 2 (54<sup>th</sup>/97) and CentraleMegaStomp (64<sup>th</sup>/97). A remarkable result for Engineering students as well as first-timers!",
+	"text": "Second participation as a coach, with teams ECL 2 (54<sup>th</sup>/97) and CentraleMegaStomp (64<sup>th</sup>/97). A remarkable result for Engineering students as well as first-timers!",
 	"finish": 2022
 }, {
 	"type": "misc",
@@ -478,7 +478,7 @@
 	"type": "misc",
 	"id": "creative21",
 	"title": "<a href=content/creative21.zip>Creative and competitive programming club</a>",
-	"text": "I ran this club for students from February to April, with sessions alternating between competitive programming and live music coding with FoxDot.",
+	"text": "Running a club for students from February to April, partly during a Covid lockdown, with sessions alternating between competitive programming and live music coding with FoxDot.",
 	"finish": 2021
 }, {
 	"type": "misc",
@@ -488,7 +488,7 @@
 }, {
 	"type": "misc",
 	"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2020>Advent of Code 2020</a>",
-	"text": "This year I went through all the puzzles of this Christmas-themed challenge.",
+	"text": "Going through all the puzzles of this Christmas-themed challenge (two puzzles each morning of December).",
 	"finish": 2020
 }, {
 	"type": "misc",
@@ -503,13 +503,13 @@
 }, {
 	"type": "misc",
 	"title": "<a href=https://github.com/traffaillac/ide-enseignement>Online IDE with supervision</a>",
-	"text": "Online IDE including a Python interpreter, that I coded at the start of the Covid outbreak to allow students to ask for help and show their code remotely (viewed as a mosaic on my side). It lacked modules so students would only use it to show code, but it was super helpful to let them feel supported throughout this event.",
+	"text": "Online IDE including a Python interpreter, coded at the start of the Covid outbreak to allow students to ask for help and show their code remotely (viewed as a mosaic on my side). It lacked modules so students would only use it to show code, but it was super helpful to let them feel supported throughout this event.",
 	"finish": 2020
 }, {
 	"type": "misc",
 	"id": "contests20",
 	"title": "<a href=content/contests20.zip>Competitive programming course</a>",
-	"text": "Slides for a custom course I created for 6 students, based on the excellent <a href=https://cpbook.net/methodstosolve>Competitive Programming 3</a> book.",
+	"text": "Slides for a custom course created for 6 students, based on the excellent <a href=https://cpbook.net/methodstosolve>Competitive Programming 3</a> book.",
 	"finish": 2020
 }, {
 	"type": "misc",
@@ -519,7 +519,7 @@
 }, {
 	"type": "misc",
 	"title": "<a href=https://swerc.eu/2019/theme/scoreboard/public/>SWERC 2019</a>",
-	"text": "My very first participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I also scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
+	"text": "First participation, as a coach, with teams ECL 1 (82<sup>th</sup>/98) and ECL 2 (84<sup>th</sup>/98). I scored well at the <a href=https://swerc.eu/2019/theme/scoreboard_public/public/>coaches contest</a>.",
 	"finish": 2020
 }, {
 	"type": "misc",
@@ -534,7 +534,7 @@
 }, {
 	"type": "misc",
 	"title": "<a href=https://catcoder.codingcontest.org/contest/2410/overview>Catalysts Coding Contest</a>",
-	"text": "Team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin, 2<sup>nd</sup> in Lille, for which I participated in organizing the hub.",
+	"text": "Team <i>//#include &lt;mercy&gt;</i> with Lucien Mousin, 2<sup>nd</sup> in Lille, with participation in organizing the hub.",
 	"finish": 2018
 }, {
 	"type": "misc",
@@ -543,8 +543,8 @@
 	"finish": 2018
 }, {
 	"type": "misc",
-	"title": "<a href=https://catcoder.codingcontest.org/contest/1761/overview>Catalysts Coding Contest</a>",
-	"text": "Team <i>ThiYo</i> with Yoann Dufresne, 3<sup>rd</sup> in Lille, where I also helped <a href=https://informatique.univ-lille1.fr/ccc/2017/contest/>organizing the hub</a> (printing T-shirts and communicating to students).",
+	"title": "<a href=https://informatique.univ-lille1.fr/ccc/2017/contest/>Catalysts Coding Contest</a>",
+	"text": "Team <i>ThiYo</i> with Yoann Dufresne, 3<sup>rd</sup> in Lille, with help in organizing the hub (printing T-shirts and communicating to students).",
 	"finish": 2017
 }, {
 	"type": "misc",
