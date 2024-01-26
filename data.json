@@ -162,7 +162,7 @@
 	"authors": "T. Raffaillac",
 	"title": "Améliorer les langages et bibliothèques logicielles pour programmer l'interaction",
 	"proceedings": "Doctoral thesis from the University of Lille",
-	"misc": "<a href=content/manuscrit.pdf>PDF</a> <a href=content/soutenance.pdf>slides</a>",
+	"misc": "<a href=https://theses.hal.science/tel-04369360/document>PDF</a> <a href=content/soutenance.pdf>slides</a>",
 	"finish": 2019
 }, {
 	"type": "publication",
