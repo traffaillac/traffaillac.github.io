@@ -61,7 +61,6 @@
 			Here the multimedia library is used to validate candidate streams.
 			Any erroneous value that is silently ignored or clamped to a valid one can result in the shipping of a flawed encoder.
 			As it is then used to compress flawed streams (which still exist after patching the encoder), later decoders have to cope with these special cases.
-			I do have a few such test cases for edge264 – though mostly harmless.
 	</ul>
 	<p>
 		With these in mind, we can see the problem with competing open source H.264 decoders (for <a href=https://github.com/cisco/openh264/blob/master/codec/decoder/core/src/au_parser.cpp>Cisco OpenH264</a>, search for <code>WELS_LOG</code>): they try to match a bit of all uses, without being a perfect fit for any of the three.
