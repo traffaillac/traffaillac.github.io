@@ -123,7 +123,7 @@
 	"authors": "T. Raffaillac & S. Huot",
 	"title": "What do researchers need when implementing novel interaction techniques?",
 	"proceedings": "Proceedings of the ACM on Human-Computer Interaction, Volume 6, EICS, June 2022, art. 159, pp. 1–30",
-	"misc": "<a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> <abbr title='Acceptance rate'>27%</abbr> <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://tel.archives-ouvertes.fr/INRIA/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a>",
+	"misc": "<a href=content/best-paper-eics22.pdf title='Best paper award'>🏆</a> <abbr title='Acceptance rate'>27%</abbr> <a href=https://doi.org/10.1145/3532209>DOI</a> <a href=https://inria.hal.science/hal-03699729/document>PDF</a> <a href=content/eics22-slides.pdf>slides</a>",
 	"finish": 2022,
 	"major": true
 }, {
@@ -172,7 +172,7 @@
 	"authors": "T. Raffaillac & S. Huot",
 	"title": "Polyphony: Programming Interfaces and Interactions with the Entity-Component-System Model",
 	"proceedings": "Proceedings of the ACM on Human-Computer Interaction, Volume 3, EICS, Juin 2019, art. 8, pp. 1–22",
-	"misc": "<a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> <abbr title='Acceptance rate'>33%</abbr> <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://hal.inria.fr/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a>",
+	"misc": "<a href=content/best-paper-eics19.pdf title='Best paper award'>🏆</a> <abbr title='Acceptance rate'>33%</abbr> <a href=https://doi.org/10.1145/3331150>DOI</a> <a href=https://inria.hal.science/hal-02147180/document>PDF</a> <a href=content/eics19-slides.pdf>slides</a>",
 	"finish": 2019,
 	"major": true
 }, {
