@@ -1,6 +1,7 @@
 # MAYDO :
 # _ fix the display of projects on narrow screens
 # _ host the assests for the games I took part in
+# _ look at https://ihupont.github.io/
 
 from css_html_js_minify import process_single_css_file, process_single_html_file
 from datetime import date
