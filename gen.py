@@ -47,7 +47,7 @@ with open('data.json') as f:
 
 
 # génération de la page classée par sections
-with open('index.html', 'w') as f:
+with open('sections.html', 'w') as f:
 	with open('index-header.html', 'r') as h:
 		print(h.read(), file=f)
 	# section Projets
@@ -56,7 +56,7 @@ with open('index.html', 'w') as f:
 	for e in events:
 		if e["type"] == 'project':
 			h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
-			period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
+			period = f'{e["start"]} – {e.get("finish","")}' if "start" in e else e["finish"]
 			bg = 'background-color: rgb(15, 76, 92, 0.15); ' if 'major' in e else ''
 			Id = f' id={e["id"]}' if "id" in e else ''
 			print(f'<projet{Id} style="{bg}margin-left: {10+pos}px; margin-right: {340-pos}px">', file=f)
@@ -95,7 +95,7 @@ with open('index.html', 'w') as f:
 	print("</p><cours><b>Period</b><b>Course</b><b>Level</b><b>Institution</b><b>Hours</b>", file=f)
 	for e in events:
 		if e["type"] == 'teaching':
-			period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
+			period = f'{e["start"]} – {e.get("finish","")}' if "start" in e else e["finish"]
 			Id = f' id={e["id"]}' if "id" in e else ''
 			print(f'\t<center>{period}</center>', file=f)
 			print('\t<div class=flexcolstretch>', file=f)
@@ -130,12 +130,12 @@ with open('index.html', 'w') as f:
 			print('</signe>', file=f)
 	print("</conteneur>", file=f)
 	print(footer, file=f)
-process_single_html_file("index.html", overwrite=True)
+process_single_html_file("sections.html", overwrite=True)
 
 
 
 # génération de la timeline
-with open('timeline.html', 'w') as f:
+with open('index.html', 'w') as f:
 	with open('index-header.html', 'r') as h:
 		print(h.read(), file=f)
 	for year in range(date.today().year, 2004, -1):
@@ -150,27 +150,27 @@ with open('timeline.html', 'w') as f:
 			if e.get('start', finish) <= year <= finish:
 				Id = f' id={e["id"]}' if "id" in e else ''
 				print(f'<bande{Id}>', file=f)
-				period = f'{e["start"]}-{e.get("finish","")}' if "start" in e else e["finish"]
+				period = f'{e["start"]} – {e.get("finish","")}' if "start" in e else e["finish"]
 				if etype == 'project':
 					h3 = f'<a href={e["href"]}>{e["title"]}</a>' if "href" in e else e["title"]
-					print('\t<margeproject><a href=index.html#projects>Projects</a></margeproject>', file=f)
+					print('\t<margeproject><a href=sections.html#projects>Projects</a></margeproject>', file=f)
 					print(f'\t<img src=images/{e["image"]}>', file=f)
 					print(f'\t<div><b>{h3} ({period})</b><br>{e["text"]}</div>', file=f)
 				elif etype == 'publication':
-					print('\t<margepublication><a href=index.html#publications>Publications</a></margepublication>', file=f)
+					print('\t<margepublication><a href=sections.html#publications>Publications</a></margepublication>', file=f)
 					print(f'\t<div>{e["authors"]}. <b>{e["title"]}</b>. <i>{e["proceedings"]}</i>. {e["misc"]}</div>', file=f)
 				elif etype == 'talk':
-					print('\t<margetalk><a href=index.html#talks>Invited talks</a></margetalk>', file=f)
+					print('\t<margetalk><a href=sections.html#talks>Invited talks</a></margetalk>', file=f)
 					print(f'\t<div{Id}>{e["date"]} - <b>{e["title"]}</b>. <i>{e["venue"]}</i>. {e["misc"]}</div>', file=f)
 				elif etype == 'teaching':
-					print('\t<margeteaching><a href=index.html#teaching>Teaching</a></margeteaching>', file=f)
+					print('\t<margeteaching><a href=sections.html#teaching>Teaching</a></margeteaching>', file=f)
 					print(f'\t<div><b>{e["title"]} ({period})</b><br><i>{e["role"]}</i> at <i>{e["level"]}</i> level for <i>{e["hours"]}h</i> at <i>{e["institution"]}</i><br>{e["text"]}</div>', file=f)
 				elif etype == 'academia':
-					print('\t<margeacademia><a href=index.html#academia>Academic service</a></margeacademia>', file=f)
+					print('\t<margeacademia><a href=sections.html#academia>Academic service</a></margeacademia>', file=f)
 					print(f'\t<div>{e["text"]}</div>', file=f)
 				elif etype == 'misc':
-					print('\t<margemisc><a href=index.html#misc>Signs of life</a></margemisc>', file=f)
+					print('\t<margemisc><a href=sections.html#misc>Signs of life</a></margemisc>', file=f)
 					print(f'\t<div><b>{e["title"]}</b><br>{e["text"]}</div>', file=f)
 				print('</bande>', file=f)
 	print(footer, file=f)
-process_single_html_file("timeline.html", overwrite=True)
+process_single_html_file("index.html", overwrite=True)

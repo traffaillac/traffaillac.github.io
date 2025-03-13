@@ -1,27 +1,38 @@
 [{
 	"type": "project",
+	"title": "edge264",
+	"id": "edge264",
+	"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community.",
+	"image": "edge264.jpg",
+	"href": "https://github.com/tvlabs/edge264",
+	"start": 2013,
+	"major": true
+}, {
+	"type": "project",
 	"id": "pastofutur",
 	"title": "Pastofutur",
-	"text": "Producing an analytical and action framework based on interdisciplinarity, using the concepts of ecosystem services associated with pastoral areas and the concept of multifunctionality of pastoral activity, to strengthen the participation of societies in defining the future of pastoralism [<a href=#IHM23>IHM'23</a>, <a href=#CHI24>CHI'24</a>].",
+	"text": "Producing an analytical and action framework based on interdisciplinarity, using the concepts of ecosystem services associated with pastoral areas and the concept of multifunctionality of pastoral activity, to strengthen the participation of societies in defining the future of pastoralism.",
 	"image": "pastofutur.png",
 	"href": "https://umr-selmet.cirad.fr/projet-scientifique/nos-projets/pastofutur",
 	"start": 2022,
-	"major": true
+	"finish": 2024
 }, {
 	"type": "project",
 	"id": "metaphores",
 	"title": "Interactive collection of metaphors",
-	"text": "Developing an online interface and visualizations to collect and display a network of <a href=https://hal.science/hal-04124348>metaphors related to the soil</a> during “metaphoring” workshops. This work will be on display in the CIRAD booth at the <a href=https://en.wikipedia.org/wiki/Paris_International_Agricultural_Show>Paris International Agricultural Show</a>.",
+	"text": "Developing an online interface and visualizations to collect and display a network of <a href=https://hal.science/hal-04124348>metaphors related to the soil</a> during “metaphoring” workshops. This work was on display in the CIRAD booth at the <a href=https://en.wikipedia.org/wiki/Paris_International_Agricultural_Show>Paris International Agricultural Show</a> in 2024.",
 	"image": "metaphores.png",
-	"start": 2022
+	"start": 2022,
+	"finish": 2024
 }, {
 	"type": "project",
 	"id": "dscatt",
 	"title": "DSCATT: Soil carbon sequestration in farming systems",
-	"text": "Developing sustainable and productive agricultural systems while increasing soil carbon sequestration, and raising awareness on the role of soil management to mitigate greenhouse gas emissions. I work on interfaces for multi-agent models simulating the regrowth of an acacia forest in Senegal.",
+	"text": "Developing sustainable and productive agricultural systems while increasing soil carbon sequestration, and raising awareness on the role of soil management to mitigate greenhouse gas emissions. I worked on GUIs to run and analyze a multi-agent model simulating agriculture-forest interactions in Senegal.",
 	"image": "dscatt.jpg",
 	"href": "https://dscatt.net/",
-	"start": 2022
+	"start": 2022,
+	"finish": 2024
 }, {
 	"type": "project",
 	"id": "competencies",
@@ -42,7 +53,7 @@
 }, {
 	"type": "project",
 	"title": "Polyphony: building GUIs with ECS",
-	"text": "Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface [<a href=#IHM18>IHM'18</a>, <a href=#EICS19>EICS'19</a>].",
+	"text": "Proof-of-concept and technical walkthrough on adapting the Entity-Component-System model to the architecture of a Graphical User Interface.",
 	"image": "ecs.png",
 	"href": "https://gitlab.inria.fr/Loki/PolyphonyECS/",
 	"start": 2016,
@@ -51,24 +62,15 @@
 }, {
 	"type": "project",
 	"title": "Turning function calls into animations",
-	"text": "Demonstration of a programming language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform [<a href=#EICS17>EICS'17</a>].",
+	"text": "Demonstration of a programming language extension to express animations in Graphical User Interfaces, implemented in the Pharo/Smalltalk platform.",
 	"image": "animations.svg",
 	"href": "http://smalltalkhub.com/ThibaultRaffaillac/Animation/",
 	"start": 2016,
 	"finish": 2017
 }, {
 	"type": "project",
-	"title": "edge264",
-	"id": "edge264",
-	"text": "Experimental software decoder for the H.264 video codec, which I keep developing in my spare time to research new programming practices and to make a useful contribution to the open source community [<a href=#FOSDEM24>FOSDEM'24</a>].",
-	"image": "edge264.jpg",
-	"href": "https://github.com/tvlabs/edge264",
-	"start": 2013,
-	"major": true
-}, {
-	"type": "project",
 	"title": "Exploring the design of compiler feedback",
-	"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful [<a href=#PPIG12>PPIG'12</a>].",
+	"text": "Three visual prototypes of an IDE interface with a richer communication with compilers, along with an exhaustive list of cases where they could be useful.",
 	"image": "compiler.png",
 	"href": "content/MasterThesis/proto1.html",
 	"finish": 2012
@@ -83,8 +85,8 @@
 	"reference": "CHI'24",
 	"authors": "T. Raffaillac, N. Boukhelifa, E. Crouzat, F. Stark, J.-P. Müller, J. Lasseur",
 	"title": "Supporting Interdisciplinary Research with Cards-based Workshops - A Case Study on Participatory Planning for Mountain Pastoralism",
-	"proceedings": "Extended Abstracts of the 2024 CHI Conference on Human Factors in Computing Systems, May 2024",
-	"misc": "<i>(case study, to appear)</i> <a href=https://doi.org/10.1145/3613905.3637107>DOI</a>",
+	"proceedings": "Extended Abstracts of the 2024 CHI Conference on Human Factors in Computing Systems, May 2024, art. 531, pp. 1–8",
+	"misc": "<a href=https://doi.org/10.1145/3613905.3637107>DOI</a> <a href=https://hal.science/hal-04507358v1/file/chi24_raffaillac.pdf>PDF</a> <a href=https://www.youtube.com/watch?v=GB04dOhi73k>video</a>",
 	"finish": 2024
 }, {
 	"type": "publication",
@@ -228,6 +230,14 @@
 
 
 {
+	"type": "talk",
+	"id": "FOSDEM25",
+	"date": "2025-02-02",
+	"title": "More innovations in H.264/AVC software decoding",
+	"venue": "<a href=https://fosdem.org/2025/>FOSDEM 2025</a>, Brussels, Belgium",
+	"misc": "40min <a href=https://fosdem.org/2025/schedule/event/fosdem-2025-5455-more-innovations-in-h-264-avc-software-decoding/>video</a>",
+	"finish": 2025
+}, {
 	"type": "talk",
 	"id": "FOSDEM24",
 	"date": "2024-02-04",
@@ -387,16 +397,27 @@
 
 {
 	"type": "academia",
+	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction) (2023 – 2025)",
+	"start": 2023,
+	"finish": 2025
+}, {
+	"type": "academia",
+	"text": "Co-chair of the French working group <a href=https://ihmecologie.afihm.org/>IHM & écologie</a> (2023 – 2024)",
+	"start": 2023,
+	"finish": 2024
+}, {
+	"type": "academia",
+	"text": "Reviewer for CHI'24 and EICS'24",
+	"finish": 2024
+}, {
+	"type": "academia",
 	"text": "Reviewer for CHI'23 and EICS'23",
 	"finish": 2023
 }, {
 	"type": "academia",
-	"text": "Co-chair of the French working group <a href=https://ihmecologie.afihm.org/>IHM & écologie</a> since 2023",
-	"start": 2023
-}, {
-	"type": "academia",
-	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction) since 2023",
-	"start": 2023
+	"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) (2021 – 2023)",
+	"start": 2021,
+	"finish": 2023
 }, {
 	"type": "academia",
 	"text": "Reviewer for CHI'22 and EICS'22, session chair at EICS'22",
@@ -406,10 +427,6 @@
 	"text": "Member of the Sustainable Development and Societal Responsibility local committee at Centrale Lyon in 2021-2022. I worked mainly on extracting teaching measures from the COP2 agreement that was signed by the director, and helped promote and structure the first course on Ecological Transition.",
 	"start": 2021,
 	"finish": 2022
-}, {
-	"type": "academia",
-	"text": "Member of the French working group <i>glihm</i> (Software Engineering and Human-Computer Interaction) since 2021",
-	"start": 2021
 }, {
 	"type": "academia",
 	"text": "Reviewer for CHI'21 and IHM'20'21",
@@ -493,7 +510,7 @@
 }, {
 	"type": "misc",
 	"title": "<a href=content/codejam20.pdf>Code Jam 2020 contest</a>",
-	"text": "Reaching round 3 of this challenging competition.",
+	"text": "Reaching round 2 of this challenging competition.",
 	"finish": 2020
 }, {
 	"type": "misc",
