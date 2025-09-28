@@ -169,6 +169,8 @@ with open('index.html', 'w') as f:
 					print(f'\t<div>{e["text"]}</div>', file=f)
 				elif etype == 'misc':
 					print('\t<margemisc><a href=sections.html#misc>Signs of life</a></margemisc>', file=f)
+					if "image" in e:
+						print(f'\t<img src=images/{e["image"]}>', file=f)
 					print(f'\t<div><b>{e["title"]}</b><br>{e["text"]}</div>', file=f)
 				print('</bande>', file=f)
 	print(footer, file=f)

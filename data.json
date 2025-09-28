@@ -20,7 +20,7 @@
 	"type": "project",
 	"id": "metaphores",
 	"title": "Interactive collection of metaphors",
-	"text": "Developing an online interface and visualizations to collect and display a network of <a href=https://hal.science/hal-04124348>metaphors related to the soil</a> during “metaphoring” workshops. This work was on display in the CIRAD booth at the <a href=https://en.wikipedia.org/wiki/Paris_International_Agricultural_Show>Paris International Agricultural Show</a> in 2024.",
+	"text": "Developing an online interface and visualizations to collect and display a network of <a href=https://hal.science/hal-04124348>metaphors related to the soil</a> during “metaphoring” workshops.",
 	"image": "metaphores.png",
 	"start": 2022,
 	"finish": 2024
@@ -397,9 +397,9 @@
 
 {
 	"type": "academia",
-	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction) (2023 – 2025)",
+	"text": "Board member and webmaster for <a href=https://www.afihm.org/ca.shtml>AFIHM</a> (French Association for Human-Computer Interaction) (2023 – 2024)",
 	"start": 2023,
-	"finish": 2025
+	"finish": 2024
 }, {
 	"type": "academia",
 	"text": "Co-chair of the French working group <a href=https://ihmecologie.afihm.org/>IHM & écologie</a> (2023 – 2024)",
@@ -452,6 +452,17 @@
 
 
 {
+	"type": "misc",
+	"title": "<a href=https://sites.google.com/view/parachiparis24/home>para.chi.paris'24</a>",
+	"text": "Helped with the preparation of an in-person hub for CHI'24 (Hawaï), to offer a local alternative to air travel for participating at CHI.",
+	"finish": 2024
+}, {
+	"type": "misc",
+	"image": "sia24.jpg",
+	"title": "<a href=https://www.cirad.fr/les-actualites-du-cirad/agenda/2024/sia-2024>Paris International Agricultural Show 2024</a>",
+	"text": "Presenting at the Cirad booth the software I contributed to collect and display a collection of metaphors related to the soil.",
+	"finish": 2024
+}, {
 	"type": "misc",
 	"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2023>Advent of Code 2023</a>",
 	"text": "Going through all the puzzles of this Christmas-themed challenge (two puzzles each morning of December).",
