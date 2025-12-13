@@ -453,6 +453,11 @@
 
 {
 	"type": "misc",
+	"title": "<a href=https://github.com/traffaillac/Advent-of-Code-2025>Advent of Code 2025</a>",
+	"text": "Going through all the puzzles of this year's shorter Advent of Code.",
+	"finish": 2025
+}, {
+	"type": "misc",
 	"title": "<a href=https://sites.google.com/view/parachiparis24/home>para.chi.paris'24</a>",
 	"text": "Helped with the preparation of an in-person hub for CHI'24 (Hawaï), to offer a local alternative to air travel for participating at CHI.",
 	"finish": 2024
