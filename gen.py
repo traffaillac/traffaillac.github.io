@@ -26,7 +26,7 @@ intro_misc = '''
 This section contains stuff that doesn't fit anywhere else.
 I believe technical mastery is essential to tackle impossible societal challenges, so I dedicate a good amount of time to organizing local training sessions for contests and challenges.
 These events are a lot of fun and a good way to test the skills of prospective students.
-My main platform for contests training is Kattis, where I hold the <a href=https://open.kattis.com/countries/FRA>2<sup>nd</sup> place in France</a>.
+My main platform for contests training is Kattis, where I hold the <a href=https://open.kattis.com/countries/FRA>1<sup>st</sup> place in France</a>.
 '''
 footer = f'''<p id=footer style="margin: 100px auto; padding: 10px 15px; border-radius: 30px; font-size: 18px; border: 1px solid #bbb; width: max-content">Page generated on {date.today()} using a <a href=https://github.com/traffaillac/traffaillac.github.io/blob/master/gen.py>custom Python script</a>.</p>
 <!-- Add target=_blank to all outbound links -->
