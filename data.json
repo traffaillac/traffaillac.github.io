@@ -222,6 +222,14 @@
 
 {
 	"type": "talk",
+	"id": "FOSDEM26",
+	"date": "2026-01-31",
+	"title": "Innovations with YAML/CABAC in H.264/AVC software decoding",
+	"venue": "<a href=https://fosdem.org/2026/>FOSDEM 2026</a>, Brussels, Belgium",
+	"misc": "15min <a href=https://fosdem.org/2026/schedule/event/ADXJMU-innovations-with-yaml-cabac-simd-in-h264-decoding>video</a>",
+	"finish": 2026
+}, {
+	"type": "talk",
 	"id": "FOSDEM25",
 	"date": "2025-02-02",
 	"title": "More innovations in H.264/AVC software decoding",
@@ -234,7 +242,7 @@
 	"date": "2024-02-04",
 	"title": "Innovations in H.264/AVC software decoding",
 	"venue": "<a href=https://fosdem.org/2024/>FOSDEM 2024</a>, Brussels, Belgium",
-	"misc": "30min <a href=https://fosdem.org/2024/schedule/event/fosdem-2024-2931-innovations-in-h-264-avc-software-decoding-architecture-and-optimization-of-a-block-based-video-decoder-to-reach-10-faster-speed-and-3x-code-reduction-over-the-state-of-the-art-/>video</a>",
+	"misc": "25min <a href=https://fosdem.org/2024/schedule/event/fosdem-2024-2931-innovations-in-h-264-avc-software-decoding-architecture-and-optimization-of-a-block-based-video-decoder-to-reach-10-faster-speed-and-3x-code-reduction-over-the-state-of-the-art-/>video</a>",
 	"finish": 2024
 }, {
 	"type": "talk",
